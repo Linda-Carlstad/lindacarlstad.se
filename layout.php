@@ -32,6 +32,9 @@
                         <a class="nav-link" href="new-member.php">Bli medlem</a>
                     </li> -->
                     <li class="nav-item">
+                        <a class="nav-link" href="news.php">Nyheter</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="exams.php">Tentor</a>
                     </li>
                     <li class="nav-item">
@@ -93,6 +96,12 @@
                             <!-- <a href="new-member.php">Bli medlem</a>
                             <br> -->
                             <a href="mailto:info@lindacarlstad.se">info@lindacarlstad.se</a>
+                            <br>
+                            <a href="https://www.facebook.com/linda.carlstad/">Facebook</a>
+                            <br>
+                            <a href="https://www.instagram.com/lindacarlstad/">Instagram</a>
+                            <br>
+                            <a href="https://github.com/Linda-Carlstad">Github Team</a>
                             <br>
                             <a href="secret.php" class="special">Secret</a>
                         </p>
