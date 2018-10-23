@@ -28,20 +28,18 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.php">Föreningen</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="new-member.php">Bli medlem</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="exams.php">Tentor</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="store.php">Webshop</a>
                     </li>
-                    <!--
-                        <li class="nav-item">
+                    <!-- <li class="nav-item">
                             <a class="nav-link" href="#">Logga in</a>
-                        </li>
-                      -->
+                    </li> -->
                 </ul>
             </div>
         </nav>
@@ -88,8 +86,8 @@
                             <br>
                             <a href="about.hmtl">Om oss</a>
                             <br>
-                            <a href="new-member.php">Bli medlem</a>
-                            <br>
+                            <!-- <a href="new-member.php">Bli medlem</a>
+                            <br> -->
                             <a href="mailto:info@lindacarlstad.se">info@lindacarlstad.se</a>
                             <br>
                             <a href="secret.php" class="special">Secret</a>
