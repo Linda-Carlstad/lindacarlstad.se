@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-12 col-md-6">
-        <h1>Whoops</h1>
+        <h1>404</h1>
         <br>
         <p>
             Även Trulle hamnar på villovägar ibland, som tex den gången när...
