@@ -1,2 +1,2 @@
-# web
-repository for webpage
+# Linda Carlstad Webbsida 
+Ny webbsida för studentföreningen Linda Carlstad.
