@@ -11,3 +11,19 @@ Våren 2018 valdes en ny IT-ansvarig, Tom Olsson, som hade många tankar om hur 
 
 ### Nytta
 Den nya webbsidan ska locka mer besökare, på ett bättre sätt ge information till nyfikna besökare, samla in nya medlemmar samt hjälpa äldre medlemmar att hitta nya information. 
+
+## Hur gör vi den?
+
+### Design
+TBD
+
+### Front-end
+* HTML
+* Bootstrap
+* CSS
+* JavaScript
+* jQuery
+
+### Back-end
+* PHP
+* Laravel?
