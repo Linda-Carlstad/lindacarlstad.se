@@ -4,6 +4,10 @@ body {
     font-weight: 300;
 }
 
+h1, h2, h3 {
+    font-size: 3rem;
+}
+
 p {
     cursor: default;
 }
