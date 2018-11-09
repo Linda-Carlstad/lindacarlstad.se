@@ -11,41 +11,45 @@
         <title>Linda Carlstad - <?php echo $title ?></title>
     </head>
     <body>
-        <nav class="navbar sticky-top navbar-dark bg-dark navbar-expand-lg">
-            <a class="navbar-brand" href="index.php">
-              <img src="img/small-logo.png" alt="Golden apple with crown">
-              Linda Carlstad
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark main-nav">
+          <div class="container-fluid">
+            <img class="d-block d-md-none" src="img/small-logo.png" alt="Golden apple with crown">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto"></ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.php">Hem <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.php">Föreningen</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="new-member.php">Bli medlem</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="news.php">Nyheter</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://tentahub.se/linda">Tentor</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://lindacarlstad.tictail.com/">Webshop</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                            <a class="nav-link" href="#">Logga in</a>
-                    </li> -->
-                </ul>
+              <ul class="nav navbar-nav w-100">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="about.php">Föreningen</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="news.php">Nyheter</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="http://tentahub.se/linda">Tentor</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="http://lindacarlstad.tictail.com/">Webbshop</a>
+                  </li>
+              </ul>
+              <ul class="nav navbar-nav justify-content-center">
+                  <li class="nav-item d-none d-md-block">
+                    <a class="navbar-brand" href="index.php">
+                      <img src="img/small-logo.png" alt="Golden apple with crown">
+                    </a>
+                  </li>
+              </ul>
+              <ul class="nav navbar-nav w-100 justify-content-end">
+                  <!-- <li class="nav-item">
+                      <a class="nav-link" href="#">Sign up</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Log in</a>
+                  </li> -->
+              </ul>
             </div>
-        </nav>
+          </div>
+      </nav>
 
         <main>
           <div class="container">
