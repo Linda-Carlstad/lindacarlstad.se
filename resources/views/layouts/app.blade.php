@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace( '_', '-', app()->getLocale() ) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>{{ config('app.name', 'Linda Carlstad') }}</title>
+        <title>{{ config( 'app.name', 'Linda Carlstad' ) }}</title>
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link href="{{ asset('css/main.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('img/icon.ico') }}" rel="icon">
+        <link href="{{ asset( 'css/main.min.css' ) }}" rel="stylesheet">
+        <link href="{{ asset( 'img/icon.ico' ) }}" rel="icon">
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark main-nav">
@@ -24,7 +24,7 @@
                             <a class="nav-link" href="{{ route( 'about' ) }}">Föreningen</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="news.php">Nyheter</a>
+                            <a class="nav-link" href="{{ route( 'news' ) }}">Nyheter</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="http://tentahub.se/linda">Tentor</a>
@@ -35,7 +35,7 @@
                     </ul>
                     <ul class="nav navbar-nav justify-content-center">
                         <li class="nav-item d-none d-md-block">
-                            <a class="navbar-brand" href="{{ url('/') }}">
+                            <a class="navbar-brand" href="{{ url( '/' ) }}">
                             <img src="img/small-logo.png" alt="Golden apple with crown">
                             </a>
                         </li>
@@ -43,11 +43,11 @@
                     <ul class="nav navbar-nav w-100 justify-content-end">
                         @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link" href="{{ route( 'login' ) }}">{{ __( 'Login' ) }}</a>
                         </li>
                         <li class="nav-item">
-                            @if (Route::has('register'))
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            @if ( Route::has( 'register' ) )
+                            <a class="nav-link" href="{{ route( 'register' ) }}">{{ __( 'Register' ) }}</a>
                             @endif
                         </li>
                         @else
@@ -56,12 +56,12 @@
                             {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                <a class="dropdown-item" href="{{ route( 'logout' ) }}"
                                     onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                    document.getElementById( 'logout-form' ).submit();">
+                                {{ __( 'Logout' ) }}
                                 </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                <form id="logout-form" action="{{ route( 'logout' ) }}" method="POST" style="display: none;">
                                     @csrf
                                 </form>
                             </div>
@@ -73,7 +73,7 @@
         </nav>
         <main class="py-4">
             <div class="container">
-                @yield('content')
+                @yield( 'content' )
             </div>
         </main>
         <footer class="footer">
@@ -92,7 +92,7 @@
                             <br>
                             651 68 Karlstad
                             <br>
-                            <a href="whoops.php" class="special">Whoops</a>
+                            <a href="{{ url( 'whoops' ) }}" class="special">Whoops</a>
                         </p>
                     </div>
                     <div class="col-12 col-md-3">
@@ -105,7 +105,7 @@
                             <br>
                             <!-- <a href="events.php">Event</a>
                                 <br> -->
-                            <a href="documents.php">Dokument</a>
+                            <a href="{{ route( 'document' ) }}">Dokument</a>
                             <br>
                             <a href="http://lindacarlstad.tictail.com/">Webshop</a>
                         </p>
@@ -114,7 +114,7 @@
                         <p>
                             <span>Föreningen</span>
                             <br>
-                            <a href="about.php">Om oss</a>
+                            <a href="{{ route( 'about' ) }}">Om oss</a>
                             <br>
                             <!-- <a href="new-member.php">Bli medlem</a>
                                 <br> -->
@@ -126,7 +126,7 @@
                             <br>
                             <a href="mailto:info@lindacarlstad.se">info@lindacarlstad.se</a>
                             <br>
-                            <a href="secret.php" class="special">Secret</a>
+                            <a href="{{ route( 'secret' ) }}" class="special">Secret</a>
                         </p>
                     </div>
                 </div>
@@ -136,7 +136,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
-        <script src="{{ asset('js/main.js') }}" type="text/javascript" defer></script>
-        <script src="{{ asset('js/app.js') }}" type="text/javascript" defer></script>
+        <script src="{{ asset( 'js/main.js' ) }}" type="text/javascript" defer></script>
+        <script src="{{ asset( 'js/app.js' ) }}" type="text/javascript" defer></script>
     </body>
 </html>
