@@ -43,11 +43,11 @@
                     <ul class="nav navbar-nav w-100 justify-content-end">
                         @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route( 'login' ) }}">{{ __( 'Login' ) }}</a>
+                            <a class="nav-link" href="{{ route( 'login' ) }}">{{ __( 'Logga in' ) }}</a>
                         </li>
                         <li class="nav-item">
                             @if ( Route::has( 'register' ) )
-                            <a class="nav-link" href="{{ route( 'register' ) }}">{{ __( 'Register' ) }}</a>
+                            <a class="nav-link" href="{{ route( 'register' ) }}">{{ __( 'Registrera' ) }}</a>
                             @endif
                         </li>
                         @else
