@@ -1,8 +1,19 @@
+//
+// Colour variables
+//
 $primary: #722F37 !important
 $secondary: #343a40 !important
 $accent: #C9BC73 !important
 $text-primary: #FFF !important
 $text-secondary: #343a40 !important
+
+//
+// Global elements
+//
+*
+    transition-duration: 0.3s
+    &:hover
+        transition-duration: 0.3s
 
 body
     background-color: $secondary
@@ -17,13 +28,9 @@ p
 
 a
     color: $text-primary
-    text-decoration: none
-    transition-duration: 0.3s
+    text-decoration: none !important
     &:hover
         color: $accent
-
-.navbar-brand img
-    width: 45px !important
 
 main
     background-color: $primary
@@ -36,15 +43,23 @@ hr
 span
     font-size: 1.5rem
 
+//
+// Global classes
+//
 .link
     color: $accent
 
-.hero
-    h1
-        font-size: 3em
-    h3
-        font-size: 2em
-        font-weight: lighter
+.btn-primary
+    background-color: $accent
+    border: $secondary
+
+//
+// Layout
+//
+.navbar-brand img
+    width: 45px !important
+    &:hover
+        filter: blur(1px)
 
 .footer
     position: relative
@@ -55,6 +70,7 @@ span
     width: 100%
     min-height: 100px
     background-color: $secondary
+
     img
         width: 80%
     p
@@ -63,5 +79,14 @@ span
     span
         font-size: 1.5rem
         line-height: 50px
+
     .special
         color: $secondary
+
+// Index
+.hero
+    h1
+        font-size: 3em
+    h3
+        font-size: 2em
+        font-weight: lighter
