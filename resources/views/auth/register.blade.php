@@ -1,3 +1,4 @@
+@section('title', 'Registrering')
 @extends('layouts.app')
 
 @section('content')
