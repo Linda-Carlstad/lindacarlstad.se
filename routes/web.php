@@ -66,4 +66,6 @@ Route::get( 'whoops', function ()
     return view( 'whoops' );
 });
 
-Route::get( '/home', 'HomeController@index' )->name( 'home' );
+Route::get('profil', function () {
+    return view( 'index' );
+})->name('profile');
