@@ -10,11 +10,54 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
 Route::get('/', function () {
     return view('index');
 });
 
-Auth::routes();
+Route::get('om-föreningen', function () {
+    return view('about');
+})-name('about');
+
+Route::get('kalender', function () {
+    return view('calendar');
+})-name('calendar');
+
+
+Route::get('dokument', function () {
+    return view('document');
+})-name('document');
+
+
+Route::get('evenemang', function () {
+    return view('events');
+})-name('events');
+
+
+Route::get('ny-mdelem', function () {
+    return view('new-member');
+})-name('new-member');
+
+
+Route::get('nyheter', function () {
+    return view('news');
+})-name('news');
+
+Route::get('nyheter', function () {
+    return view('news');
+})-name('news');
+
+Route::get('hemlighet', function () {
+    return view('secret');
+})-name('secret');
+
+Route::get('webbshop', function () {
+    return view('store');
+})-name('store');
+
+Route::get('whoops', function () {
+    return view('whoops');
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
