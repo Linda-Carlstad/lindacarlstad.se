@@ -1,3 +1,4 @@
+@section('title', 'Verifiering')
 @extends('layouts.app')
 
 @section('content')
