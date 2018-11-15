@@ -6,7 +6,7 @@
     @auth
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card">
+                <div class="card bg-dark">
                     <div class="card-header">Dashboard</div>
 
                     <div class="card-body">
@@ -24,7 +24,7 @@
     @else
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <h1>hello :) </h1>
+
             </div>
         </div>
     @endauth
