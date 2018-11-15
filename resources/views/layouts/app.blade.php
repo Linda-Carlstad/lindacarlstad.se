@@ -21,7 +21,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="nav navbar-nav w-100">
                         <li class="nav-item active">
-                            <a class="nav-link" href="about.php">Föreningen</a>
+                            <a class="nav-link" href="{{ route( 'about' ) }}">Föreningen</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="news.php">Nyheter</a>
