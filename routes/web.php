@@ -18,43 +18,43 @@ Route::get('/', function () {
 
 Route::get('om-föreningen', function () {
     return view('about');
-})-name('about');
+})->name('about');
 
 Route::get('kalender', function () {
     return view('calendar');
-})-name('calendar');
+})->name('calendar');
 
 
 Route::get('dokument', function () {
     return view('document');
-})-name('document');
+})->name('document');
 
 
 Route::get('evenemang', function () {
     return view('events');
-})-name('events');
+})->name('events');
 
 
 Route::get('ny-mdelem', function () {
     return view('new-member');
-})-name('new-member');
+})->name('new-member');
 
 
 Route::get('nyheter', function () {
     return view('news');
-})-name('news');
+})->name('news');
 
 Route::get('nyheter', function () {
     return view('news');
-})-name('news');
+})->name('news');
 
 Route::get('hemlighet', function () {
     return view('secret');
-})-name('secret');
+})->name('secret');
 
 Route::get('webbshop', function () {
     return view('store');
-})-name('store');
+})->name('store');
 
 Route::get('whoops', function () {
     return view('whoops');
