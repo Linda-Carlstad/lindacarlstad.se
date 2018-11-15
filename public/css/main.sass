@@ -1,6 +1,12 @@
+$primary: #722F37 !important
+$secondary: #343a40 !important
+$accent: #C9BC73 !important
+$text-primary: #FFF !important
+$text-secondary: #343a40 !important
+
 body
-    background-color: #343a40
-    color: #FFF
+    background-color: $secondary
+    color: $text-primary
     font-weight: 300
 
 h1, h2, h3
@@ -10,28 +16,27 @@ p
     cursor: default
 
 a
-    color: #FFF
+    text-decoration: none
     transition-duration: 0.3s
     &:hover
-    text-decoration: underline
-    color: #C9BC73
+        color: $accent
 
 .navbar-brand img
     width: 45px !important
 
 main
-    background-color: #722F37
+    background-color: $primary
     padding: 70px 0
 
 hr
     height: 1px
-    background-color: #FFF
+    background-color: $text-primary
 
 span
     font-size: 1.5rem
 
 .link
-    color: #C9BC73
+    color: $accent
 
 .hero
     h1
@@ -48,7 +53,7 @@ span
     padding: 50px 0
     width: 100%
     min-height: 100px
-    background-color: #343a40
+    background-color: $secondary
     img
         width: 80%
     p
@@ -58,7 +63,4 @@ span
         font-size: 1.5rem
         line-height: 50px
     .special
-        color: #343a40
-        &:hover
-            color: #C9BC73
-            text-decoration: underline
+        color: $secondary
