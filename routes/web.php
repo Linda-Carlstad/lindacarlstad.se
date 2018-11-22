@@ -40,7 +40,7 @@ Route::get( 'evenemang', function ()
 })->name( 'events' );
 
 
-Route::get( 'ny-mdelem', function ()
+Route::get( 'ny-medlem', function ()
 {
     return view( 'new-member' );
 })->name( 'new-member' );
