@@ -67,5 +67,5 @@ Route::get( 'whoops', function ()
 });
 
 Route::get('profil', function () {
-    return view( 'index' );
+    return view( 'user.index' );
 })->name('profile');
