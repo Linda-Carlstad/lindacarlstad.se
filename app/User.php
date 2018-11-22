@@ -28,5 +28,9 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function exams() {
+        return $this->hasMany('App\Exam');
+    }
+
     protected $table = 'users';
 }
