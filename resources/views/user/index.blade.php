@@ -1,10 +1,11 @@
-@section('title', 'Profil' )
-@extends('layouts.app')
+@section( 'title', 'Profil' )
+@extends( 'layouts.app' )
+@section( 'content' )
 
-@section('content')
-
-    <div class="">
-
-    </div>
+    @auth
+        <div class="">
+            <h1>Welcome back {{ Auth::user()->name }}</h1>
+        </div>
+    @endauth
 
 @endsection
