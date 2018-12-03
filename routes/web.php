@@ -70,6 +70,9 @@ Route::get('profil', function () {
     return view( 'user.index' );
 })->name('profile');
 
+
+
 Route::name('exam.')->group(function (){
     Route::get('tentor', 'ExamController@index')->name('index');
+    Route::post('store', 'ExamController@store')->name('store');
 });

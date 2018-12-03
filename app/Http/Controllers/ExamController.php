@@ -27,6 +27,11 @@ class ExamController extends Controller
         //
     }
 
+    public function upload()
+    {
+
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -35,7 +40,16 @@ class ExamController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($request->hasFile('file')) {
+
+
+            $filename = $request->file->getClientOriginalName();
+            $request->file->storeAs('public/upload',$filename);
+
+            return redirect()->back()->with('status', 'Tenta upplagd!');
+        }
+
+        return $request->all();
     }
 
     /**
