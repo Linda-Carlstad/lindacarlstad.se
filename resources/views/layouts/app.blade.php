@@ -36,7 +36,7 @@
                     <ul class="nav navbar-nav justify-content-center">
                         <li class="nav-item d-none d-md-block">
                             <a class="navbar-brand" href="{{ url( '/' ) }}">
-                            <img src="img/small-logo.png" alt="Golden apple with crown">
+                            <img src="{{ asset( 'img/small-logo.svg') }}" alt="Golden apple with crown">
                             </a>
                         </li>
                     </ul>
