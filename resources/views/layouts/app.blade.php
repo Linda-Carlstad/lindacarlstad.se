@@ -117,7 +117,7 @@
                             <br>
                             <a href="{{ route( 'about' ) }}">Om oss</a>
                             <br>
-                            <a href="{{ route( 'new-member' ) }}.php">Bli medlem</a>
+                            <a href="{{ route( 'new-member' ) }}">Bli medlem</a>
                             <br>
                             <a href="https://www.facebook.com/linda.carlstad/">Facebook</a>
                             <br>
