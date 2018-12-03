@@ -1,0 +1,105 @@
+//
+// Colour variables
+//
+$primary: #722F37 !important
+$secondary: #343a40 !important
+$accent: #C9BC73 !important
+$text-primary: #FFF !important
+$text-secondary: #343a40 !important
+
+//
+// Universal elements
+//
+*
+    transition-duration: 0.3s !important
+    &:hover
+        transition-duration: 0.3s !important
+
+body
+    background-color: $secondary
+    color: $text-primary
+    font-weight: 300
+
+h1, h2, h3
+    font-size: 3rem
+
+p
+    cursor: default
+
+a
+    color: $text-primary
+    text-decoration: none !important
+    &:hover
+        color: $accent
+
+main
+    background-color: $primary
+    padding: 70px 0
+
+hr
+    height: 1px
+    background-color: $text-primary
+
+span
+    font-size: 1.5rem
+
+//
+// Universal classes
+//
+.link
+    color: $accent
+
+.btn-primary
+    background-color: $accent
+    border: $secondary
+
+//
+// Layout
+//
+.navbar
+    z-index: 100 !important
+
+.navbar-brand img
+    width: 45px !important
+    &:hover
+        filter: blur(1px)
+
+.footer
+    position: relative
+    right: 0
+    bottom: 0
+    left: 0
+    padding: 50px 0
+    width: 100%
+    min-height: 100px
+    background-color: $secondary
+
+    img
+        width: 80%
+    p
+        line-height: 30px
+
+    span
+        font-size: 1.5rem
+        line-height: 50px
+
+    .special
+        color: $secondary
+
+//
+// Index
+//
+
+.image-bg
+    position: absolute
+    width: 100vw
+    height: 110vh
+    top: 55px
+    left: 0
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+
+.hero
+    height: calc(100vh - 55px) !important
+    margin-bottom: 10vh !important
