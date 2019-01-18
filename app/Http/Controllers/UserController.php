@@ -77,7 +77,9 @@ class UserController extends Controller
                 $reuslt = User::changeName( $request, $user);
                 break;
 
-            
+            case 'password':
+                $result = User::changePassword( $request, $user );
+                break;
 
             default:
                 // code...
