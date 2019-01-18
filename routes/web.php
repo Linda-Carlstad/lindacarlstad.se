@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes();
+Auth::routes( [ 'verify' => true ] );
 
 Route::get( '/', function ()
 {
@@ -66,9 +66,18 @@ Route::get( 'whoops', function ()
     return view( 'whoops' );
 });
 
-Route::get('profil', function () {
-    return view( 'user.index' );
-})->name('profile');
+Route::group( [ 'middleware' => 'verified' ], function ()
+{
+    Route::get( 'dashboard', 'MonthController@index' )->name( 'dashboard' );
+    Route::get( 'previous-months', 'MonthController@previous' )->name( 'previous' );
+
+    Route::get( 'profil', 'UserController@edit' )->name( 'profil' );
+    Route::resources( [
+        'user' => 'UserController',
+        'exam' => 'ExamController',
+        'emailverification' => 'EmailVerificationController',
+    ] );
+} );
 
 
 

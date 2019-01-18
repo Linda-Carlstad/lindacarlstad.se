@@ -28,9 +28,16 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function exams() {
-        return $this->hasMany('App\Exam');
-    }
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+     protected $table = 'users';
 
-    protected $table = 'users';
+
+    public function exams()
+    {
+        return $this->hasMany( 'App\Exam' );
+    }
 }
