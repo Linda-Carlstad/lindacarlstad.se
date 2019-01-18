@@ -66,13 +66,14 @@ Route::get( 'whoops', function ()
     return view( 'whoops' );
 });
 
+Route::get( 'tentor', 'ExamController@index')->name( 'tentor' );
+
 Route::get( 'verifiering-profil', 'VerifyUser' );
 Route::get( 'verifiering-email', 'VerifyNewEmail' );
 
 Route::group( [ 'middleware' => 'verified' ], function ()
 {
     Route::get( 'profil', 'UserController@edit' )->name( 'profil' );
-    Route::get( 'tentor', 'ExamController@index')->name( 'tentor' );
 
     Route::resources( [
         'user' => 'UserController',
