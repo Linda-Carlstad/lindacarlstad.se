@@ -70,18 +70,24 @@ class UserController extends Controller
     public function update( Request $request, $id )
     {
         $user = User::find( $id );
-        dd( $request );
 
         switch ( $request->type )
         {
             case 'name':
-                $reuslt = User::changeName();
+                $reuslt = User::changeName( $request, $user);
                 break;
 
             default:
                 // code...
                 break;
         }
+
+        if (!$reuslt['success'])
+        {
+                abort('403');
+        }
+        //Session::flash('success',$reuslt['success']);
+        return redirect()->back()->with('success', $reuslt['success']);
     }
 
     /**
