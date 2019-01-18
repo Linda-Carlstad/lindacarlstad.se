@@ -84,7 +84,7 @@ class UserController extends Controller
                 break;
         }
 
-        if (!$reuslt['success'])
+        if (!$result['success'])
         {
                 abort('403');
         }
