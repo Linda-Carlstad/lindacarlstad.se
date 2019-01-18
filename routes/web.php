@@ -67,7 +67,7 @@ Route::get( 'whoops', function ()
 });
 
 Route::get('profil', function () {
-    return view( 'user.index' );
+    return view( 'user.edit' );
 })->name('profile');
 
 Route::name('exam.')->group(function (){
