@@ -27,11 +27,6 @@ class ExamController extends Controller
         //
     }
 
-    public function upload()
-    {
-
-    }
-
     /**
      * Store a newly created resource in storage.
      *
