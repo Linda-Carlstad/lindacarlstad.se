@@ -2,7 +2,7 @@
 @extends('layouts.app')
 @section('content')
 
-    <div class="image-bg" style="background-image: url({{ asset( '/img/image1.jpg' ) }})"></div>
+    <div class="image-bg" style="background-image: url({{ asset( '/img/hero-image.jpg' ) }})"></div>
     <div class="hero">
         <div class="row h-100 justify-content-center align-items-center">
             <div class="col-12 text-center">
