@@ -17,7 +17,7 @@ class UsersTableSeeder extends Seeder
            'id_number' => '991212-1919',
            'verified' => true,
            'email' => 'info@lindacarlstad.se',
-           'password' => bcrypt('lindacarlstad'),
+           'password' => bcrypt('secret'),
            'email_verified_at' => now(),
        ]);
        $users = factory(User::class, 10)->create();
