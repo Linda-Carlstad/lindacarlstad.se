@@ -2,10 +2,43 @@
 @extends( 'layouts.app' )
 @section( 'content' )
 
-    @auth
-        <div class="">
-            <h1>Welcome back {{ Auth::user()->name }}</h1>
-        </div>
-    @endauth
+    <div class="text-center">
+        <h4>{{ Auth::user()->name }}</h4>
+    </div>
+
+    <form class="" action="/user/{{ Auth::user()->id }}" method="post">
+        @csrf
+        {{ method_field( 'patch' ) }}
+        <input type="hidden" name="type" value="name">
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="" placeholder="Name">
+    </form>
+    <hr>
+    <form class="" action="/user/{{ Auth::user()->id }}" method="post">
+        @csrf
+        {{ method_field( 'patch' ) }}
+        <input type="hidden" name="type" value="email">
+        <label for="email">Email:</label>
+        <input type="text" name="email" value="" placeholder="email">
+        <br>
+        <label for="emailPassword">Current Password:</label>
+        <input type="text" name="emailPassword" value="" placeholder="password">
+    </form>
+    </form>
+    </form>
+    <hr>
+    <form class="" action="/user/{{ Auth::user()->id }}" method="post">
+        @csrf
+        {{ method_field( 'patch' ) }}
+        <input type="hidden" name="type" value="password">
+        <label for="oldPassword">Current Password:</label>
+        <input type="text" name="oldPassword" value="" placeholder="password">
+        <br>
+        <label for="password">New Password:</label>
+        <input type="text" name="password" value="" placeholder="password">
+        <br>
+        <label for="newPassword">New Password:</label>
+        <input type="text" name="newPassword" value="" placeholder="password">
+    </form>
 
 @endsection
