@@ -33,8 +33,6 @@
         <br>
         <button type="submit" name="button">Send</button>
     </form>
-    </form>
-    </form>
     <hr>
     <form class="" action="/user/{{ Auth::user()->id }}" method="post">
         @csrf
