@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
+
 use App\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
@@ -70,11 +73,12 @@ class UserController extends Controller
     public function update( Request $request, $id )
     {
         $user = User::find( $id );
+        $this->authorize( 'update', Auth::user(), $user );
 
         switch ( $request->type )
         {
             case 'name':
-                $reuslt = User::changeName( $request, $user);
+                $result = User::changeName( $request, $user);
                 break;
 
             case 'password':
@@ -85,13 +89,12 @@ class UserController extends Controller
                 // code...
                 break;
         }
-
-        if (!$reuslt['success'])
+        if ( !isset( $result[ 'success' ] ) )
         {
-                abort('403');
+            return redirect()->back()->with('error', $result[ 'error' ]);
         }
         //Session::flash('success',$reuslt['success']);
-        return redirect()->back()->with('success', $reuslt['success']);
+        return redirect()->back()->with( 'success', $result['success']);
     }
 
     /**

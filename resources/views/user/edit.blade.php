@@ -21,7 +21,7 @@
         <input type="text" name="name" value="" placeholder="Name">
         <br>
         <br>
-        <button type="submit" name="button">Send</button>
+        <button type="submit">Send</button>
     </form>
     <hr>
     <form class="" action="/user/{{ Auth::user()->id }}" method="post">
@@ -37,27 +37,27 @@
         <input type="text" name="emailPassword" value="" placeholder="password">
         <br>
         <br>
-        <button type="submit" name="button">Send</button>
+        <button type="submit">Send</button>
     </form>
     <hr>
     <form class="" action="/user/{{ Auth::user()->id }}" method="post">
         @csrf
         {{ method_field( 'patch' ) }}
         <input type="hidden" name="type" value="password">
-        <label for="oldPassword">Current Password:</label>
+        <label for="currentPassword">Current Password:</label>
         <br>
-        <input type="text" name="oldPassword" value="" placeholder="password">
+        <input type="password" name="currentPassword" value="" placeholder="password">
         <br>
         <label for="password">New Password:</label>
         <br>
-        <input type="text" name="password" value="" placeholder="password">
+        <input type="password" name="password" value="" placeholder="password">
         <br>
-        <label for="newPassword">New Password:</label>
+        <label for="confirmPassword">New Password:</label>
         <br>
-        <input type="text" name="newPassword" value="" placeholder="password">
+        <input type="password" name="confirmPassword" value="" placeholder="password">
         <br>
         <br>
-        <button type="submit" name="button">Send</button>
+        <button type="submit">Send</button>
     </form>
 
 @endsection

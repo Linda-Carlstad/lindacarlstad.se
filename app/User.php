@@ -2,6 +2,14 @@
 
 namespace App;
 
+use Auth;
+use View;
+use Session;
+
+use App\User;
+use App\Mail\PasswordChange;
+use App\Mail\EmailVerificationWithCode;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -48,25 +56,24 @@ class User extends Authenticatable implements MustVerifyEmail
     public static function changeName( Request $request, User $user)
     {
 
-        $request->validate([ 
+        $request->validate([
             'name'=>'required|string|max:255'
          ]);
 
          $user->name=$request->name;
          $user->save();
-         return [ 
+         return [
              'success'=>'Användarnamnet är nu ändrat'
          ];
         }
     public static function changePassword( Request $request, User $user )
     {
         $request->validate( [
-            'oldPassword' => 'required|string',
-            'password'        => 'required|string|min:6|different:oldPassword',
+            'currentPassword' => 'required|string',
+            'password'        => 'required|string|min:6|different:currentPassword',
             'confirmPassword' => 'required|string|same:password',
         ] );
-
-        if( Hash::check( $request->oldPassword, $user->password ) )
+        if( Hash::check( $request->currentPassword, $user->password ) )
         {
             $user->password = Hash::make( $request->password );
             $user->save();
@@ -75,6 +82,6 @@ class User extends Authenticatable implements MustVerifyEmail
                 ->send( new PasswordChange( $user ) );
             return [ 'success' => 'Du har ändrat ditt lösenord!' ];
         }
-        return [ 'error' => 'Old passwordis not correct.' ];
+        return [ 'error' => 'Gammalt lösenord är inte korrekt!' ];
     }
 }
