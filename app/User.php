@@ -60,8 +60,8 @@ class User extends Authenticatable implements MustVerifyEmail
 
             Mail::to( $user->email )
                 ->send( new PasswordChange( $user ) );
-            return [ 'success' => 'Your password has been changed!' ];
+            return [ 'success' => 'Du har ändrat ditt lösenord!' ];
         }
-        return [ 'error' => 'Old passwordis not correct.' ]
+        return [ 'error' => 'Old passwordis not correct.' ];
     }
 }
