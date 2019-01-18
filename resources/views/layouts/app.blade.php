@@ -12,7 +12,7 @@
         <link href="{{ asset( 'img/icon.ico' ) }}" rel="icon">
     </head>
     <body>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark main-nav">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark main-nav fixed-top scrolling-navbar">
             <div class="container-fluid">
                 <img class="d-block d-md-none" src="img/small-logo.png" alt="Golden apple with crown">
                 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,11 +72,21 @@
                 </div>
             </div>
         </nav>
-        <main class="py-4">
-            <div class="container">
-                @yield( 'content' )
+        <main>
+            <div class="container mt-5 py-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="text-center my-4">
+                            <h1>@yield( 'title' )</h1>
+                        </div>
+                        <hr><br>
+                        @yield( 'content' )
+                        <br>
+                    </div>
+                </div>
             </div>
         </main>
+
         <footer class="footer">
             <div class="container">
                 <div class="row">
