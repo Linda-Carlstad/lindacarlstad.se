@@ -18,6 +18,7 @@ class UsersTableSeeder extends Seeder
            'verified' => true,
            'email' => 'info@lindacarlstad.se',
            'password' => bcrypt('lindacarlstad'),
+           'email_verified_at' => now(),
        ]);
        $users = factory(User::class, 10)->create();
     }
