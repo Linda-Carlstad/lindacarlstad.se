@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class EmailVerification extends Model
+class UserVerification extends Model
 {
-    protected $table = 'email_verifications';
+    protected $table = 'user_verifications';
 
     public static function createCode( $length = 5 )
     {
