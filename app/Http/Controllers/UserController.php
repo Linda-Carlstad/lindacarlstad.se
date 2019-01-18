@@ -74,7 +74,7 @@ class UserController extends Controller
         switch ( $request->type )
         {
             case 'name':
-                $reuslt = User::changeName( $request, $user );
+                $reuslt = User::changeName( $request, $user);
                 break;
 
             case 'password':
@@ -85,6 +85,13 @@ class UserController extends Controller
                 // code...
                 break;
         }
+
+        if (!$reuslt['success'])
+        {
+                abort('403');
+        }
+        //Session::flash('success',$reuslt['success']);
+        return redirect()->back()->with('success', $reuslt['success']);
     }
 
     /**

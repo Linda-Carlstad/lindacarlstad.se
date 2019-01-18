@@ -45,6 +45,19 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany( 'App\Exam' );
     }
 
+    public static function changeName( Request $request, User $user)
+    {
+
+        $request->validate([ 
+            'name'=>'required|string|max:255'
+         ]);
+
+         $user->name=$request->name;
+         $user->save();
+         return [ 
+             'success'=>'Användarnamnet är nu ändrat'
+         ];
+        }
     public static function changePassword( Request $request, User $user )
     {
         $request->validate( [
