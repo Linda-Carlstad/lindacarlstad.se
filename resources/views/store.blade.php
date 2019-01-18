@@ -1,6 +1,5 @@
 @section('title', 'Webbshop')
 @extends('layouts.app')
-
 @section('content')
 
 <div class="">
