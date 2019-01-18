@@ -44,4 +44,24 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasMany( 'App\Exam' );
     }
+
+    public static function changePassword( Request $request, User $user )
+    {
+        $request->validate( [
+            'oldPassword' => 'required|string',
+            'password'        => 'required|string|min:6|different:oldPassword',
+            'confirmPassword' => 'required|string|same:password',
+        ] );
+
+        if( Hash::check( $request->oldPassword, $user->password ) )
+        {
+            $user->password = Hash::make( $request->password );
+            $user->save();
+
+            Mail::to( $user->email )
+                ->send( new PasswordChange( $user ) );
+            return [ 'success' => 'Your password has been changed!' ];
+        }
+        return [ 'error' => 'Old passwordis not correct.' ]
+    }
 }
