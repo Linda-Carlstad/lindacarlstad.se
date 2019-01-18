@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -66,9 +67,21 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update( Request $request, $id )
     {
-        //
+        $user = User::find( $id );
+        dd( $request );
+
+        switch ( $request->type )
+        {
+            case 'name':
+                $reuslt = User::changeName();
+                break;
+
+            default:
+                // code...
+                break;
+        }
     }
 
     /**
