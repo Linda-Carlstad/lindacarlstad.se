@@ -73,18 +73,9 @@
             </div>
         </nav>
         <main>
-            <div class="container mt-5 py-5">
-                <div class="row justify-content-center">
-                    <div class="col-md-10">
-                        <div class="text-center my-4">
-                            <h1>@yield( 'title' )</h1>
-                        </div>
-                        <hr><br>
-                        @yield( 'content' )
-                        <br>
-                    </div>
-                </div>
-            </div>
+          <div class="container py-5">
+            @yield( 'content' )
+          </div>
         </main>
 
         <footer class="footer">
