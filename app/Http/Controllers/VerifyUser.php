@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class VerifyNewEmail extends Controller
+class VerifyUser extends Controller
 {
     /**
      * Handle the incoming request.
@@ -15,15 +15,15 @@ class VerifyNewEmail extends Controller
     public function __invoke( Request $request )
     {
         $user = Auth::user();
-        $code = $request->code;
+        $token = $request->token;
 
         $codeExists = EmailVerification::where( 'user_id', $user->id )
-            ->where( 'code', $code )
+            ->where( 'code', $token )
             ->exists();
 
         if ( $codeExists )
         {
-            EmailVerification::verfiyEmailUpdateCode( $request, $user, $code );
+            EmailVerification::verfiyEmailUpdateCode( $request, $user, $token );
 
             return view( 'emailverified' );
         }

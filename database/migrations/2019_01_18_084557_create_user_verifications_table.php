@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEmailVerificationsTable extends Migration
+class CreateUserVerificationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateEmailVerificationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('email_verifications', function (Blueprint $table) {
+        Schema::create('user_verifications', function (Blueprint $table) {
             $table->increments( 'id' );
             $table->integer( 'user_id' );
             $table->string( 'code' );
@@ -28,6 +28,6 @@ class CreateEmailVerificationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('email_verifications');
+        Schema::dropIfExists('verify_users');
     }
 }

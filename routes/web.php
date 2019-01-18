@@ -66,22 +66,16 @@ Route::get( 'whoops', function ()
     return view( 'whoops' );
 });
 
+Route::get( 'verifiering-profil', 'VerifyUser' );
+Route::get( 'verifiering-email', 'VerifyNewEmail' );
+
 Route::group( [ 'middleware' => 'verified' ], function ()
 {
-    Route::get( 'dashboard', 'MonthController@index' )->name( 'dashboard' );
-    Route::get( 'previous-months', 'MonthController@previous' )->name( 'previous' );
-
     Route::get( 'profil', 'UserController@edit' )->name( 'profil' );
+    Route::get( 'tentor', 'ExamController@index')->name( 'tentor' );
+
     Route::resources( [
         'user' => 'UserController',
         'exam' => 'ExamController',
-        'emailverification' => 'EmailVerificationController',
     ] );
 } );
-
-
-
-Route::name('exam.')->group(function (){
-    Route::get('tentor', 'ExamController@index')->name('index');
-    Route::post('store', 'ExamController@store')->name('store');
-});
