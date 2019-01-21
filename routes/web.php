@@ -66,11 +66,6 @@ Route::get( 'whoops', function ()
     return view( 'whoops' );
 });
 
-Route::get( 'verifierad-email', function()
-{
-    return view( 'verifierad-email' );
-} );
-
 Route::get( 'tentor', 'ExamController@index')->name( 'tentor' );
 
 Route::get( 'verifiering-profil', 'VerifyUser' );
