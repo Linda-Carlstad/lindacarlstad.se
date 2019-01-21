@@ -33,6 +33,6 @@ class PasswordChange extends Mailable
         return $this->from( 'no-reply@lindacarlstad.se', 'Linda Carlstad' )
                 ->replyTo( 'no-reply@lindacarlstad.se' )
                 ->subject( 'Ändring av lösenord' )
-                ->view( 'email.password.change' );
+                ->view( 'mail.password.change' );
     }
 }

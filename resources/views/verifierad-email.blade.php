@@ -2,6 +2,6 @@
 @extends('layouts.app')
 @section('content')
 
-    <p>hello@mailadrress.se (email) är nu verifierad.</p>
+    <p>{{ Auth::user()->email }} är nu verifierad.</p>
 
 @endsection

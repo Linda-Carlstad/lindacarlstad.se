@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
+use App\EmailVerification;
 use Illuminate\Http\Request;
 
 class VerifyNewEmail extends Controller
@@ -24,8 +26,7 @@ class VerifyNewEmail extends Controller
         if ( $codeExists )
         {
             EmailVerification::verfiyEmailUpdateCode( $request, $user, $code );
-
-            return view( 'emailverified' );
+            return view( 'verifierad-email' );
         }
     }
 }

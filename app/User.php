@@ -7,6 +7,7 @@ use View;
 use Session;
 
 use App\User;
+use App\EmailVerification;
 use App\Mail\PasswordChange;
 use App\Mail\EmailVerificationWithCode;
 
@@ -83,5 +84,27 @@ class User extends Authenticatable implements MustVerifyEmail
             return [ 'success' => 'Du har ändrat ditt lösenord!' ];
         }
         return [ 'error' => 'Gammalt lösenord är inte korrekt!' ];
+    }
+
+    public static function changeEmail( Request $request, User $user )
+    {
+        $request->validate( [
+            'email'         => 'required|string|email|unique:users,email|max:255',
+            'emailPassword' => 'required',
+        ] );
+
+        $email = $request->email;
+        $code  = EmailVerification::createCode();
+
+        $emailVerification          = new EmailVerification;
+        $emailVerification->code    = $code;
+        $emailVerification->user_id = $user->id;
+        $emailVerification->save();
+
+        Mail::to( $request->email )
+            ->send( new EmailVerificationWithCode( $user, $code, $email ) );
+
+        return [ 'success' => 'New email have been registered and verification mail have been sent.',
+            'result' => $request->email ];
     }
 }

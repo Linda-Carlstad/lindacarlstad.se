@@ -85,10 +85,15 @@ class UserController extends Controller
                 $result = User::changePassword( $request, $user );
                 break;
 
+            case 'email':
+                $result = User::changeEmail( $request, $user );
+                break;
+
             default:
-                // code...
+                $result = [ 'error' => 'Något gick fel.' ];
                 break;
         }
+
         if ( !isset( $result[ 'success' ] ) )
         {
             return redirect()->back()->with('error', $result[ 'error' ]);

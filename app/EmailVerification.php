@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\User;
+use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 
 class EmailVerification extends Model
@@ -38,6 +40,6 @@ class EmailVerification extends Model
         $emailVerificationCode->delete();
 
         return redirect( 'profile' )
-            ->with( 'message', 'Success!' );
+            ->with( 'message', 'Din nya email är verifierad!' );
     }
 }

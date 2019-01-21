@@ -34,7 +34,7 @@
         <br>
         <label for="emailPassword">Current Password:</label>
         <br>
-        <input type="text" name="emailPassword" value="" placeholder="password">
+        <input type="password" name="emailPassword" value="" placeholder="password">
         <br>
         <br>
         <button type="submit">Send</button>
