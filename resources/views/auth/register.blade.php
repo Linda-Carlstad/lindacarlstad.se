@@ -62,6 +62,21 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="id_number" class="col-md-4 col-form-label text-md-right">{{ __('Personnummer') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="id_number" type="text" class="form-control{{ $errors->has('id_number') ? ' is-invalid' : '' }}" name="id_number" required>
+
+                                @if ($errors->has('id_number'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('id_number') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
