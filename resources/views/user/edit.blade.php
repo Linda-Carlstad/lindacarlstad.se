@@ -59,13 +59,16 @@
         <br>
         <button type="submit">Send</button>
     </form>
-    <br>
+    <hr>
     <form class="" action="/user/{{ Auth::user()->id }}" method="post">
         @csrf
         {{ method_field( 'patch' ) }}
-        <input type="hidden" name="type" value="password">
-        <label for="currentPassword">Personnummer</label>
+        <input type="hidden" name="type" value="idNumber">
+        <label for="idNumber">Personnummer:</label>
         <br>
         <input type="text" name="idNumber" value="" placeholder="password">
+        <br>
+        <br>
+        <button type="submit">Send</button>
     </form>
 @endsection
