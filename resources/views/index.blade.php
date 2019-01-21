@@ -9,7 +9,6 @@
                 <img src="{{ asset( '/img/logo.png' ) }}" alt="Linda Carlstads logga">
                 <br>
                 <h1>Linda Carlstad</h1>
-                <h4>Linjeförening för datavetare</h4>
             </div>
         </div>
     </div>
