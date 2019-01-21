@@ -63,14 +63,14 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="id_number" class="col-md-4 col-form-label text-md-right">{{ __('Personnummer') }}</label>
+                            <label for="idNumber" class="col-md-4 col-form-label text-md-right">{{ __('Personnummer') }}</label>
 
                             <div class="col-md-6">
-                                <input id="id_number" type="text" class="form-control{{ $errors->has('id_number') ? ' is-invalid' : '' }}" name="id_number" required>
+                                <input id="idNumber" type="text" class="form-control{{ $errors->has('idNumber') ? ' is-invalid' : '' }}" name="idNumber" required>
 
-                                @if ($errors->has('id_number'))
+                                @if ($errors->has('idNumber'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('id_number') }}</strong>
+                                        <strong>{{ $errors->first('idNumber') }}</strong>
                                     </span>
                                 @endif
                             </div>

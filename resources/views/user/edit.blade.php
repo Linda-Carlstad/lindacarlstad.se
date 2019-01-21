@@ -60,7 +60,12 @@
         <button type="submit">Send</button>
     </form>
     <br>
-    <form class="" action="index.html" method="post">
-        
+    <form class="" action="/user/{{ Auth::user()->id }}" method="post">
+        @csrf
+        {{ method_field( 'patch' ) }}
+        <input type="hidden" name="type" value="password">
+        <label for="currentPassword">Personnummer</label>
+        <br>
+        <input type="text" name="idNumber" value="" placeholder="password">
     </form>
 @endsection
