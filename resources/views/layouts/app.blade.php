@@ -32,7 +32,7 @@
                             <a class="nav-link" href="http://tentahub.se/linda">Tentor</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route( 'store' ) }}">Webbshop</a>
+                            <a class="nav-link" href="http://lindacarlstad.tictail.com/">Webbshop</a>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav justify-content-center">
