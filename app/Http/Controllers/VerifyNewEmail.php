@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use Auth;
 use App\EmailVerification;
+use App\Mail\EmailVerfied;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Http\Controllers\Controller;
 
 class VerifyNewEmail extends Controller
 {
@@ -25,8 +29,21 @@ class VerifyNewEmail extends Controller
 
         if ( $codeExists )
         {
-            EmailVerification::verfiyEmailUpdateCode( $request, $user, $code );
-            return view( 'verifierad-email' );
+            $result = EmailVerification::verfiyEmailUpdateCode( $request, $user, $code );
         }
+        else
+        {
+            $result = [ 'error' => 'Email kunde inte verifieras, vänligen försök igen.' ];
+        }
+
+        if ( !isset( $result[ 'success' ] ) )
+        {
+            redirect( 'profile' )->with( 'error', $result['error']);
+        }
+
+
+        Mail::to( $user->email )
+            ->send( new \App\Mail\EmailVerified( $user ) );
+        return redirect( 'profil' )->with( 'success', 'Ny email är verifierad!' );
     }
 }

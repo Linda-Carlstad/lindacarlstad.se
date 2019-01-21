@@ -59,5 +59,8 @@
         <br>
         <button type="submit">Send</button>
     </form>
-
+    <br>
+    <form class="" action="index.html" method="post">
+        
+    </form>
 @endsection
