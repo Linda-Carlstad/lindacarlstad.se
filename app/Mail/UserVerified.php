@@ -2,8 +2,7 @@
 
 namespace App\Mail;
 
-use App\User;
-
+use Illuminate\Http\Request;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -18,9 +17,9 @@ class UserVerified extends Mailable
      *
      * @return void
      */
-    public function __construct( User $user )
+    public function __construct( Request $request )
     {
-        //
+        $this->request = $request;
     }
 
     /**
@@ -30,9 +29,9 @@ class UserVerified extends Mailable
      */
     public function build()
     {
-        return $this->from( 'no-reply@lindacarlstad.se', 'Linda Carlstad' )
-                ->replyTo( 'no-reply@lindacarlstad.se' )
-                ->subject( 'Användare verifierad' )
-                ->view( 'mail.user.verified' );
+        return $this->from( $this->request->email, $this->request->name )
+                ->replyTo( $this->request->email )
+                ->subject( 'Kontaktformulär' + $this->request->subject )
+                ->view( 'mail.contact.form' );
     }
 }
