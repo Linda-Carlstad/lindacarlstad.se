@@ -38,9 +38,8 @@ class VerifyNewEmail extends Controller
 
         if ( !isset( $result[ 'success' ] ) )
         {
-            redirect( 'profile' )->with( 'error', $result['error']);
+            redirect( 'profil' )->with( 'error', $result['error']);
         }
-
 
         Mail::to( $user->email )
             ->send( new \App\Mail\EmailVerified( $user ) );
