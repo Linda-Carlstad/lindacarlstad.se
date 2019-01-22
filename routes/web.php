@@ -66,6 +66,11 @@ Route::get( 'whoops', function ()
     return view( 'whoops' );
 });
 
+Route::get( 'kontakt', function()
+{
+    return view( 'contact' );
+})->name('contact');
+
 Route::get('profil', function () {
     return view( 'user.edit' );
 })->name('profile');

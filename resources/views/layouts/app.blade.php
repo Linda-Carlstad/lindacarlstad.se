@@ -122,6 +122,8 @@
                             <br>
                             <a href="{{ route( 'new-member' ) }}">Bli medlem</a>
                             <br>
+                            <a href="{{ route( 'contact' ) }}">Kontakt</a>
+                            <br>
                             <a href="https://www.facebook.com/linda.carlstad/">Facebook</a>
                             <br>
                             <a href="https://www.instagram.com/lindacarlstad/">Instagram</a>
