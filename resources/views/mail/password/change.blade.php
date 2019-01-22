@@ -1,4 +1,4 @@
-@section( 'title', 'Profil' )
+@section( 'title', 'Ändring av lösenord' )
 @extends( 'layouts.mail' )
 @section( 'content' )
 
