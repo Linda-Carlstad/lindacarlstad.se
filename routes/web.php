@@ -71,6 +71,11 @@ Route::get( 'kontakt', function()
     return view( 'contact' );
 })->name('contact');
 
+Route::get( 'nollning', function()
+{
+    return view( 'initiation' );
+})->name('initiation');
+
 Route::get('profil', function () {
     return view( 'user.edit' );
 })->name('profile');
