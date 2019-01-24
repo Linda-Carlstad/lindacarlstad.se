@@ -44,5 +44,6 @@
         <img class="img-fluid" src="{{ asset( '/img/logo.png' ) }}" alt="">
     </div>
 </div>
+<hr>
 </div>
 @endsection
