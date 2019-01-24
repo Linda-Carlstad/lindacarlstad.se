@@ -22,7 +22,7 @@
 
   try {
   // Returns a `Facebook\FacebookResponse` object
-  $response = $fb->get('/1513583672218443?fields=posts{caption,full_picture,message,link,created_time}', 'EAAK8tWz2yjIBAOXEQy3D96dW3HtZBKmBOzDKu9hbkHNUWgrjXaLNShJ0L9Ekpb0Fanrsw8aWv3w6X4Up2nhTFHZASyVMoJXSt0ZCJOHBF94JOIpdSyGa2SH1TtHlesHCWeJWhOWj74E837rOswgMXWqpyWzuFYZD');
+  $response = $fb->get('/1513583672218443?fields=posts{caption,full_picture,message,permalink_url,created_time}', 'EAAK8tWz2yjIBAOXEQy3D96dW3HtZBKmBOzDKu9hbkHNUWgrjXaLNShJ0L9Ekpb0Fanrsw8aWv3w6X4Up2nhTFHZASyVMoJXSt0ZCJOHBF94JOIpdSyGa2SH1TtHlesHCWeJWhOWj74E837rOswgMXWqpyWzuFYZD');
   } catch(Facebook\Exceptions\FacebookResponseException $e) {
   echo 'Graph returned an error: ' . $e->getMessage();
   exit;
@@ -59,7 +59,7 @@
 
       echo "<small class='card-text'>" . substr($post->getField('message'), 0, 200) . "...</small><br><br>";
 
-      echo "<a class='btn btn-primary' href='" . $post->getField('link') . "'>Läs mer</a>";
+      echo "<a class='btn btn-primary' href='" . $post->getField('permalink_url') . "'>Läs mer</a>";
 
 
       echo "
