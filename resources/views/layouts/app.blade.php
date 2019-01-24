@@ -22,17 +22,14 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="nav navbar-nav w-100">
-                        <li class="nav-item active">
+                      <li class="nav-item">
+                          <a class="nav-link" href="{{ url( '/' ) }}">Hem</a>
+                      </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route( 'about' ) }}">Föreningen</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route( 'news' ) }}">Nyheter</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="{{ route( 'initiation' ) }}">Nollning</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="http://tentahub.se/linda">Tentor</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="http://lindacarlstad.tictail.com/">Webbshop</a>
@@ -46,6 +43,12 @@
                         </li>
                     </ul>
                     <ul class="nav navbar-nav w-100 justify-content-end">
+                      <li class="nav-item">
+                          <a class="nav-link" href="{{ route( 'news' ) }}">Nyheter</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="http://tentahub.se/linda">Tentor</a>
+                      </li>
                         @guest
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route( 'login' ) }}">{{ __( 'Logga in' ) }}</a>
