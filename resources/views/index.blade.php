@@ -26,14 +26,7 @@
         <div class="col-md-8 p-4">
             <h3>Vilka är Linda?</h3>
             <p>
-              LINDA är en studentförening under karlstad universitet.
-              LINDA bevakar ditt intresse som student, såväl att du har det bra på
-              universitet som på fritiden, utbildningen kommer inte alltid att vara rolig
-              eller lätt och då hoppas vi att vi kan vara till din hjälp med studierna om
-              det så krävs eller med att bara ta det lugnt och umgås.
-              Bland annat brukar många av oss gå till studentpuben Bunkern där man kan gå och
-              ta en öl/läsk/kopp kaffe eller äta god mat och spela spel och ta det lugnt mellan
-              varven på skolan. LINDA grundades 1984.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <a href="{{ route('about') }}" class="btn btn-secondary">Läs mer</a>
         </div>
@@ -57,7 +50,7 @@
     <hr>
     <div class="row px-3 my-5">
         <div class="col-md-8 p-4">
-            <h3>Studentpubben Bunkern</h3>
+            <h3>Studentpuben Bunkern</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
