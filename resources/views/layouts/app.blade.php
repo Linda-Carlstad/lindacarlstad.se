@@ -29,6 +29,9 @@
                             <a class="nav-link" href="{{ route( 'news' ) }}">Nyheter</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route( 'initiation' ) }}">Nollning</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="http://tentahub.se/linda">Tentor</a>
                         </li>
                         <li class="nav-item">
