@@ -19,6 +19,7 @@ body
     background-color: $secondary
     color: $text-primary
     font-weight: 300
+    min-width: 100%
 
 h1, h2, h3
     font-size: 3rem
@@ -49,22 +50,27 @@ span
 .link
     color: $accent
 
-.footer-copyright
-    text-align: center
-
 .btn-primary
     background-color: $primary
     border: $secondary
 
 .btn-secondary
     background-color: $secondary
+    border-color: $secondary
     color: white
-    border-radius: 0
+    border-radius: 0.25rem
+
 //
 // Layout
 //
+@media (min-width: 768px) and (max-width: 770px)
+    .navbar-expand-md .navbar-nav .nav-link
+        padding-left: .4rem
+        padding-right: .4rem
+
 .navbar
     z-index: 100 !important
+    width: 100%
 
 .navbar-brand img
     width: 45px !important
@@ -92,6 +98,10 @@ span
 
     .special
         color: $secondary
+
+.footer-copyright
+    width: 100%
+    text-align: center
 
 //
 // Index
