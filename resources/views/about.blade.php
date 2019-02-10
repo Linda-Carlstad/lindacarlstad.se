@@ -5,8 +5,7 @@
 
 <div>
   <div class="text-center">
-    <h2>Linda Carlstad</h2>
-    <h3>Linje för datavetare</h3>
+    <h1>Om föreningen</h1>
   </div>
   <br>
   <br>
