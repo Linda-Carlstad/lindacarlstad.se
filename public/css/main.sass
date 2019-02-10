@@ -19,10 +19,7 @@ $white: #FFF !important
 body
     background-color: $secondary
     color: $text-primary
-    font-weight: 300
-
-h1, h2, h3
-    font-size: 3rem
+    font-size: 18px
 
 p
     cursor: default
@@ -32,10 +29,6 @@ a
     text-decoration: none !important
     &:hover
         color: $accent
-
-main
-    background-color: $primary
-    padding: 70px 0
 
 hr
     height: 1px
@@ -58,15 +51,33 @@ span
         color: $accent
         box-shadow: 0 7px 20px 0 rgba(0,0,0,.16), 0 7px 20px 0 rgba(0,0,0,.12)
 
-.btn-secondary
+.btn-grey
     background-color: $secondary
-    border-color: $secondary
+    border: 1px solid $secondary
     color: white
-    border-radius: 0.25rem
+    &:hover
+        color: $accent
+        box-shadow: 0 7px 20px 0 rgba(0,0,0,.16), 0 7px 20px 0 rgba(0,0,0,.12)
 
+@media (max-width: 768px)
+    .btn-expand
+        width: 100%
 //
 // Layout
 //
+.hero
+    height: 100vh
+    overflow-x: hidden
+    .bg-img
+        height: 100vh
+        min-width: 100vw
+        filter: blur( 4px )
+    .holder
+        position: absolute
+        top: 35%
+        width: 100%
+        text-align: center
+
 @media (min-width: 768px) and (max-width: 770px)
     .navbar-expand-md .navbar-nav .nav-link
         padding-left: .4rem
@@ -77,30 +88,23 @@ span
     &:hover
         filter: blur(1px)
 
+.content
+    background-color: $primary
+
 .footer
-    position: relative
-    right: 0
-    bottom: 0
-    left: 0
-    padding: 50px 0
     min-height: 100px
     background-color: $secondary
-
     img
         width: 80%
-
     p
         line-height: 30px
-
     span
         font-size: 1.5rem
         line-height: 50px
-
     .special
         color: $secondary
-
-.footer-copyright
-    text-align: center
+    .footer-copyright
+        text-align: center
 
 //
 // Index

@@ -83,17 +83,15 @@
 
         <main class="content">
             @if( Request::is( '/' ) )
-                <div class="py-3">
-                    @yield( 'content' )
-                </div>
+                @yield( 'content' )
             @else
-                <div class="container py-3">
+                <div class="container py-5 mt-5">
                     @yield( 'content' )
                 </div>
             @endif
         </main>
 
-        <footer class="footer">
+        <footer class="footer py-5">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 d-none d-md-block text-center">
