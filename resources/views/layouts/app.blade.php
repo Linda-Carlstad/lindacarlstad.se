@@ -15,9 +15,11 @@
     <body>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top scrolling-navbar">
             <div class="container-fluid">
-                <img class="d-block d-md-none" src="img/small-logo.png" alt="Golden apple with crown">
-                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <a class="navbar-brand d-block d-md-none" href="{{ url( '/' ) }}">
+                    <img class="" src="img/small-logo.png" alt="Golden apple with crown">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="nav navbar-nav w-100">
@@ -158,7 +160,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
         <script src="{{ asset( '/js/main.js' ) }}" type="text/javascript" defer></script>
-        <script src="{{ asset( '/js/app.js' ) }}" type="text/javascript" defer></script>
         <script src="{{ asset( '/js/swiper.js' ) }}" type="text/javascript" defer></script>
     </body>
 </html>
