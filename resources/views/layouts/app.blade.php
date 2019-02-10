@@ -2,7 +2,7 @@
 <html lang="{{ str_replace( '_', '-', app()->getLocale() ) }}">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>{{ config( 'app.name', 'Linda Carlstad' ) }} - @yield('title')</title>
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -14,7 +14,7 @@
         <link href="{{ asset( 'img/icon.ico' ) }}" rel="icon">
     </head>
     <body>
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark main-nav fixed-top scrolling-navbar">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top scrolling-navbar">
             <div class="container-fluid">
                 <img class="d-block d-md-none" src="img/small-logo.png" alt="Golden apple with crown">
                 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +38,7 @@
                     <ul class="nav navbar-nav justify-content-center">
                         <li class="nav-item d-none d-md-block">
                             <a class="navbar-brand" href="{{ url( '/' ) }}">
-                            <img src="{{ asset( 'img/small-logo.svg') }}" alt="Golden apple with crown">
+                                <img src="{{ asset( 'img/small-logo.svg') }}" alt="Golden apple with crown">
                             </a>
                         </li>
                     </ul>
@@ -49,7 +49,7 @@
                       <li class="nav-item">
                           <a class="nav-link" href="http://tentahub.se/linda">Tentor</a>
                       </li>
-                        @guest
+                      @guest
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route( 'login' ) }}">{{ __( 'Logga in' ) }}</a>
                         </li>
@@ -80,21 +80,28 @@
                 </div>
             </div>
         </nav>
-        <main>
-            <div class="container py-3">
-              @yield( 'content' )
-            </div>
+
+        <main class="content">
+            @if( Request::is( '/' ) )
+                <div class="py-3">
+                    @yield( 'content' )
+                </div>
+            @else
+                <div class="container py-3">
+                    @yield( 'content' )
+                </div>
+            @endif
         </main>
 
         <footer class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-md-3 d-none d-md-block text-center">
+                    <div class="col-md-3 d-none d-md-block text-center">
                         <a href="">
                         <img src="img/logo.png" alt="Linda Carlstad logo">
                         </a>
                     </div>
-                    <div class="col-12 col-md-3">
+                    <div class="col-md-3">
                         <p>
                             <span>Linda Carlstad</span>
                             <br>
@@ -105,7 +112,7 @@
                             <a href="{{ url( 'whoops' ) }}" class="special">Whoops</a>
                         </p>
                     </div>
-                    <div class="col-12 col-md-3">
+                    <div class="col-md-3">
                         <p>
                             <span>Länkar</span>
                             <br>
@@ -120,7 +127,7 @@
                             <a href="http://lindacarlstad.tictail.com/">Webshop</a>
                         </p>
                     </div>
-                    <div class="col-12 col-md-3">
+                    <div class="col-md-3">
                         <p>
                             <span>Föreningen</span>
                             <br>
@@ -142,9 +149,9 @@
                         </p>
                     </div>
                 </div>
-            </div>
-            <div class="footer-copyright">
-              <small>Copyright © 2019 - All Rights Reserved - Studentföreningen Linda Carlstad</small>
+                <div class="footer-copyright">
+                  <small>Copyright © 2019 - All Rights Reserved - Studentföreningen Linda Carlstad</small>
+                </div>
             </div>
         </footer>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

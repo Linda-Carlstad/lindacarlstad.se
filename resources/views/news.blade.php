@@ -59,7 +59,7 @@
 
       echo "<small class='card-text'>" . substr($post->getField('message'), 0, 200) . "...</small><br><br>";
 
-      echo "<a class='btn btn-primary' href='" . $post->getField('permalink_url') . "'>Läs mer</a>";
+      echo "<a class='btn btn-red' href='" . $post->getField('permalink_url') . "'>Läs mer</a>";
 
 
       echo "
