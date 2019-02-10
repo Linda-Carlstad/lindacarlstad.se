@@ -4,7 +4,7 @@
 @section('content')
 <div>
   <div class="text-center">
-    <h2>Nollning</h2>
+    <h1>Nollning</h1>
   </div>
   <br>
   <br>
