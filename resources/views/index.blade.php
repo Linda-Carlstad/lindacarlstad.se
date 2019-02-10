@@ -13,15 +13,6 @@
         </div>
     </div>
     <hr>
-    {{-- <div class="row">
-      <div class="col-sm-2 bg-dark" height="20px" width="20px">Sponsor</div>
-      <div class="col-sm-2 bg-dark" height="20px" width="20px">Sponsor</div>
-      <div class="col-sm-2 bg-dark" height="20px" width="20px">Sponsor</div>
-      <div class="col-sm-2 bg-dark" height="20px" width="20px">Sponsor</div>
-      <div class="col-sm-2 bg-dark" height="20px" width="20px">Sponsor</div>
-      <div class="col-sm-2 bg-dark" height="20px" width="20px">Sponsor</div>
-    </div>
-    <hr> --}}
     <div class="row px-3 my-5">
         <div class="col-md-8 p-4">
             <h3>Vilka är Linda?</h3>
