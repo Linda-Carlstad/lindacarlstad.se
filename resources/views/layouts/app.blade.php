@@ -6,12 +6,11 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>{{ config( 'app.name', 'Linda Carlstad' ) }} - @yield('title')</title>
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
-        <link href="{{ asset( 'css/main.min.css' ) }}" rel="stylesheet">
-        <link href="{{ asset( 'img/icon.ico' ) }}" rel="icon">
+        <link href="{{ asset( '/css/main.min.css' ) }}" rel="stylesheet">
+        <link href="{{ asset( '/img/icon.ico' ) }}" rel="icon">
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top scrolling-navbar">
@@ -158,8 +157,8 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
-        <script src="{{ asset( 'js/main.js' ) }}" type="text/javascript" defer></script>
-        <script src="{{ asset( 'js/app.js' ) }}" type="text/javascript" defer></script>
-        <script src="{{ asset( 'js/swiper.js' ) }}" type="text/javascript" defer></script>
+        <script src="{{ asset( '/js/main.js' ) }}" type="text/javascript" defer></script>
+        <script src="{{ asset( '/js/app.js' ) }}" type="text/javascript" defer></script>
+        <script src="{{ asset( '/js/swiper.js' ) }}" type="text/javascript" defer></script>
     </body>
 </html>
