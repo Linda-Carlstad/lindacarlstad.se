@@ -24,7 +24,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="nav navbar-nav w-100">
                       <li class="nav-item">
-                          <a class="nav-link" href="{{ url( '/' ) }}">Hem</a>
+                          <a class="nav-link" href="{{ url( '/' ) }}">Hem <span class="sr-only">(current)</span></a>
                       </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route( 'about' ) }}">Föreningen</a>
