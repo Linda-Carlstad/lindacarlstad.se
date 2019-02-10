@@ -6,6 +6,7 @@ $secondary: #343a40 !important
 $accent: #C9BC73 !important
 $text-primary: #FFF !important
 $text-secondary: #343a40 !important
+$white: #FFF !important
 
 //
 // Universal elements
@@ -49,9 +50,13 @@ span
 .link
     color: $accent
 
-.btn-primary
+.btn-red
     background-color: $primary
-    border: $secondary
+    border: 1px solid $primary
+    color: $white
+    &:hover
+        color: $accent
+        box-shadow: 0 7px 20px 0 rgba(0,0,0,.16), 0 7px 20px 0 rgba(0,0,0,.12)
 
 .btn-secondary
     background-color: $secondary
