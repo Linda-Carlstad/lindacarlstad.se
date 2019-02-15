@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link href="{{ asset( '/css/main.min.css' ) }}" rel="stylesheet">
         <link href="{{ asset( '/img/icon.ico' ) }}" rel="icon">
     </head>
@@ -102,7 +103,11 @@
                     </div>
                     <div class="col-md-3">
                         <p>
-                            <span>Linda Carlstad</span>
+                            <span>Kontakt</span>
+                            <br>
+                            <a href="{{ route( 'contact' ) }}">Kontakta oss</a>
+                            <br>
+                            <a href="mailto:info@lindacarlstad.se">info@lindacarlstad.se</a>
                             <br>
                             Universitetsgatan 2
                             <br>
@@ -123,7 +128,7 @@
                                 <br> -->
                             <a href="{{ route( 'document' ) }}">Dokument</a>
                             <br>
-                            <a href="http://lindacarlstad.tictail.com/">Webshop</a>
+                            <a href="http://lindacarlstad.tictail.com/">Webbshop</a>
                         </p>
                     </div>
                     <div class="col-md-3">
@@ -134,21 +139,23 @@
                             <br>
                             <a href="{{ route( 'new-member' ) }}">Bli medlem</a>
                             <br>
-                            <a href="{{ route( 'contact' ) }}">Kontakt</a>
-                            <br>
-                            <a href="https://www.facebook.com/linda.carlstad/">Facebook</a>
-                            <br>
-                            <a href="https://www.instagram.com/lindacarlstad/">Instagram</a>
-                            <br>
-                            <a href="https://github.com/Linda-Carlstad">Github Team</a>
-                            <br>
-                            <a href="mailto:info@lindacarlstad.se">info@lindacarlstad.se</a>
-                            <br>
                             <a href="{{ route( 'secret' ) }}" class="special">Secret</a>
                         </p>
                     </div>
                 </div>
+                <div class="container">
+                    <div class="row social-footer-icons justify-content-center">
+                      <a href="https://www.facebook.com/linda.carlstad/"><i class="fab fa-facebook"></i></a>
+                      <br>
+                      <a href="https://www.instagram.com/lindacarlstad/"><i class="fab fa-instagram"></i></a>
+                      <br>
+                      <a href="https://github.com/Linda-Carlstad"><i class="fab fa-github"></i></a>
+                      <br>
+                    </div>
+                  </div>
+                </div>
                 <div class="footer-copyright">
+                  <br>
                   <small>Copyright © 2019 - All Rights Reserved - Studentföreningen Linda Carlstad</small>
                 </div>
             </div>
