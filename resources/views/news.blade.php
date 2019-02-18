@@ -1,4 +1,4 @@
-
+@section('title', 'Nyheter')
 @extends('layouts.app')
 
 @section('content')
@@ -6,11 +6,7 @@
 <h1 class="text-center">Nyheter</h1>
 
 <br>
-
-<h4 class="text-center">Facebook-nyheter</h4>
-
 <hr>
-
 @php
   require_once '../vendor/facebookAPI/src/Facebook/autoload.php';
 
