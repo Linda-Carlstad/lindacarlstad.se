@@ -111,7 +111,7 @@ class Signature
      * signature parameter and calculate the correct one. Then call this
      * method and supply the signature that came in with the request.
      *
-     * @param array| string $signature The incoming sig parameter to check
+     * @param array| string $signature The incoming sig parameter to check 
      *      (or all incoming params)
      * @return bool
      * @throws \InvalidArgumentException
@@ -131,7 +131,7 @@ class Signature
 
     /**
      * Allow easy comparison.
-     *
+     * 
      * @return string
      */
     public function __toString()
