@@ -77,16 +77,12 @@ Route::get( 'nollning', function()
     return view( 'initiation' );
 })->name('initiation');
 
-Route::get('profil', function () {
-    return view( 'user.edit' );
-})->name('profile');
-
 Route::get( 'verifiering-profil', 'VerifyUser' );
 Route::get( 'verifiering-email', 'VerifyNewEmail' );
 
 Route::group( [ 'middleware' => 'verified' ], function ()
 {
-    Route::get( 'profil', 'UserController@edit' )->name( 'profil' );
+    Route::get( 'profil', 'UserController@edit' )->name( 'profile' );
 
     Route::resources( [
         'user' => 'UserController',

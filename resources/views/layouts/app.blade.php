@@ -16,14 +16,14 @@
     <body>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top scrolling-navbar">
             <div class="container-fluid">
-                <a class="navbar-brand d-block d-md-none" href="{{ url( '/' ) }}">
+                <a class="navbar-brand" href="{{ url( '/' ) }}">
                     <img class="" src="img/small-logo.png" alt="Golden apple with crown">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="nav navbar-nav w-100">
+                    <ul class="nav navbar-nav">
                       <li class="nav-item">
                           <a class="nav-link" href="{{ url( '/' ) }}">Hem <span class="sr-only">(current)</span></a>
                       </li>
@@ -33,52 +33,45 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route( 'initiation' ) }}">Nollning</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item d-md-none d-lg-block">
                             <a class="nav-link" href="http://lindacarlstad.tictail.com/">Webbshop</a>
                         </li>
-                    </ul>
-                    <ul class="nav navbar-nav justify-content-center">
-                        <li class="nav-item d-none d-md-block">
-                            <a class="navbar-brand" href="{{ url( '/' ) }}">
-                                <img src="{{ asset( 'img/small-logo.svg') }}" alt="Golden apple with crown">
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav w-100 justify-content-end">
-                      <li class="nav-item">
-                          <a class="nav-link" href="{{ route( 'news' ) }}">Nyheter</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="http://tentahub.se/linda">Tentor</a>
-                      </li>
-                      @guest
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route( 'login' ) }}">{{ __( 'Logga in' ) }}</a>
+                        <li class="nav-item d-md-none d-lg-block">
+                            <a class="nav-link" href="{{ route( 'news' ) }}">Nyheter</a>
                         </li>
                         <li class="nav-item">
-                            @if ( Route::has( 'register' ) )
-                                <a class="nav-link" href="{{ route( 'register' ) }}">{{ __( 'Registrera' ) }}</a>
-                            @endif
+                            <a class="nav-link" href="http://tentahub.se/linda">Tentor</a>
                         </li>
-                        @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item bg-dark" href="{{ route( 'profile' ) }}">Profil</a>
-                                <a class="dropdown-item bg-dark" href="{{ route( 'logout' ) }}"
-                                    onclick="event.preventDefault();
-                                    document.getElementById( 'logout-form' ).submit();">
-                                {{ __( 'Logga ut' ) }}
-                                </a>
-                                <form id="logout-form" action="{{ route( 'logout' ) }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
-                        @endguest
                     </ul>
+                    <ul class="nav navbar-nav ml-auto">
+                      @auth
+                          <li class="nav-item dropdown">
+                              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                  {{ Auth::user()->name }}<span class="caret"></span>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item bg-dark" href="{{ route( 'profile' ) }}">Profil</a>
+                                  <a class="dropdown-item bg-dark" href="{{ route( 'logout' ) }}"
+                                      onclick="event.preventDefault();
+                                      document.getElementById( 'logout-form' ).submit();">
+                                  {{ __( 'Logga ut' ) }}
+                                  </a>
+                                  <form id="logout-form" action="{{ route( 'logout' ) }}" method="POST" style="display: none;">
+                                      @csrf
+                                  </form>
+                              </div>
+                          </li>
+                      @else
+                          <li class="nav-item">
+                              <a class="nav-link" href="{{ route( 'login' ) }}">{{ __( 'Logga in' ) }}</a>
+                          </li>
+                          <li class="nav-item">
+                              @if ( Route::has( 'register' ) )
+                                  <a class="nav-link" href="{{ route( 'register' ) }}">{{ __( 'Registrera' ) }}</a>
+                              @endif
+                          </li>
+                      @endauth
+                  </ul>
                 </div>
             </div>
         </nav>
