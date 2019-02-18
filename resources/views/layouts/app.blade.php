@@ -151,6 +151,12 @@
                       <br>
                       <a href="https://github.com/Linda-Carlstad"><i class="fab fa-github"></i></a>
                       <br>
+                      <br>
+                      <a href="https://discordapp.com/invite/u8eNCPk?fbclid=IwAR27Zd8nVHtKmW9_qmoT2WHotDFNkNtgcxJ-M1b1xvb1dZa6avDG9QfTYho"><i class="fab fa-discord"></i></a>
+                      <br>
+                      <br>
+                      <a href="https://www.linkedin.com/company/linda-carlstad/about/"><i class="fab fa-linkedin"></i></a>
+                      <br>
                     </div>
                   </div>
                 </div>
