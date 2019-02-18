@@ -46,6 +46,11 @@ Route::get( 'ny-medlem', function ()
 })->name( 'new-member' );
 
 
+Route::get( 'support', function()
+{
+    return view( 'support' );
+} )->name( 'support' );
+
 Route::get( 'nyheter', function ()
 {
     return view( 'news' );
