@@ -995,17 +995,17 @@
     },
     {
         "name": "laravel/framework",
-        "version": "v5.7.21",
-        "version_normalized": "5.7.21.0",
+        "version": "v5.7.22",
+        "version_normalized": "5.7.22.0",
         "source": {
             "type": "git",
             "url": "https://github.com/laravel/framework.git",
-            "reference": "25f74458a242b61cc9e9c09d31f94fb13ed805f3"
+            "reference": "64a7749bd9e8df68addce1d01a54bcf606141f29"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/laravel/framework/zipball/25f74458a242b61cc9e9c09d31f94fb13ed805f3",
-            "reference": "25f74458a242b61cc9e9c09d31f94fb13ed805f3",
+            "url": "https://api.github.com/repos/laravel/framework/zipball/64a7749bd9e8df68addce1d01a54bcf606141f29",
+            "reference": "64a7749bd9e8df68addce1d01a54bcf606141f29",
             "shasum": ""
         },
         "require": {
@@ -1107,7 +1107,7 @@
             "symfony/dom-crawler": "Required to use most of the crawler integration testing tools (^4.1).",
             "symfony/psr-http-message-bridge": "Required to psr7 bridging features (^1.0)."
         },
-        "time": "2019-01-15T15:20:32+00:00",
+        "time": "2019-01-22T15:08:35+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1375,7 +1375,7 @@
             {
                 "name": "Luís Otávio Cobucci Oblonczyk",
                 "email": "lcobucci@gmail.com",
-                "role": "developer"
+                "role": "Developer"
             }
         ],
         "description": "A simple library to work with JSON Web Token and JSON Web Signature",
@@ -1729,17 +1729,17 @@
     },
     {
         "name": "nexmo/client",
-        "version": "1.6.0",
-        "version_normalized": "1.6.0.0",
+        "version": "1.6.1",
+        "version_normalized": "1.6.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/Nexmo/nexmo-php.git",
-            "reference": "01809cc1e17a5af275913c49bb5d444eb6cc06d4"
+            "reference": "3dc03ca1dab726a23b757110897740e54304fc65"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Nexmo/nexmo-php/zipball/01809cc1e17a5af275913c49bb5d444eb6cc06d4",
-            "reference": "01809cc1e17a5af275913c49bb5d444eb6cc06d4",
+            "url": "https://api.github.com/repos/Nexmo/nexmo-php/zipball/3dc03ca1dab726a23b757110897740e54304fc65",
+            "reference": "3dc03ca1dab726a23b757110897740e54304fc65",
             "shasum": ""
         },
         "require": {
@@ -1755,7 +1755,7 @@
             "phpunit/phpunit": "^5.7",
             "squizlabs/php_codesniffer": "^3.1"
         },
-        "time": "2018-12-17T10:47:50+00:00",
+        "time": "2019-01-02T09:06:47+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
