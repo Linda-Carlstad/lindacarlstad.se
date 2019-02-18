@@ -67,6 +67,19 @@ Route::get( 'whoops', function ()
 });
 
 Route::get( 'tentor', 'ExamController@index')->name( 'tentor' );
+Route::get( 'kontakt', function()
+{
+    return view( 'contact' );
+})->name('contact');
+
+Route::get( 'nollning', function()
+{
+    return view( 'initiation' );
+})->name('initiation');
+
+Route::get('profil', function () {
+    return view( 'user.edit' );
+})->name('profile');
 
 Route::get( 'verifiering-profil', 'VerifyUser' );
 Route::get( 'verifiering-email', 'VerifyNewEmail' );
