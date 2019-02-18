@@ -16,10 +16,9 @@
                 Du måste även vara medlem i Linda för att kunna ha möjligheten till att köpa en ovve.
                 Medlemskapet kostar 300 kr och gäller livet ut, det tillkommer även en serviceavgift på 15kr hos tictail.
               </p>
-              <a class="btn btn-grey btn-expand" href="http://lindacarlstad.tictail.com/product/medlemskap">Köp  </a>
+              <a class="btn btn-grey btn-expand" href="http://lindacarlstad.tictail.com/product/medlemskap">Köp medlemskap</a>
           </div>
       </div>
   </div>
-  <hr>
 
 @endsection
