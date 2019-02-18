@@ -94,3 +94,5 @@ Route::group( [ 'middleware' => 'verified' ], function ()
         'exam' => 'ExamController',
     ] );
 } );
+
+Route::post( '/contactForm', 'ContactForm' );
