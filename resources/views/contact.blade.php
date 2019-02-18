@@ -7,10 +7,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <h1 class="text-center">Kontakta oss</h1>
-            <br>
             <div class="card bg-dark">
-                <div class="card-header"></div>
-
                 <div class="card-body">
                     <form method="POST" action="/contactForm">
                         @csrf
@@ -69,7 +66,6 @@
                         </div>
                     </form>
                 </div>
-                <div class="card-footer"></div>
             </div>
         </div>
     </div>
