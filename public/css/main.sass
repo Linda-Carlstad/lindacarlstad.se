@@ -64,6 +64,7 @@ span
 //
 // Layout
 //
+
 .hero
     height: 100vh
     overflow-x: hidden
@@ -81,6 +82,12 @@ span
     .navbar-expand-md .navbar-nav .nav-link
         padding-left: .4rem
         padding-right: .4rem
+
+@media (min-width: 768px)
+    .navbar-brand
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
 
 .navbar-brand img
     width: 45px !important
