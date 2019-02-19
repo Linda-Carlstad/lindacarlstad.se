@@ -7,9 +7,9 @@
 
 <br>
 
-<h4 class="text-center">Facebook-nyheter</h4>
-
 <hr>
+
+<br>
 
 <div class="row">
   @foreach ($facebookData as $post)
