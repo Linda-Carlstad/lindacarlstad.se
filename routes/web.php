@@ -51,10 +51,7 @@ Route::get( 'support', function()
     return view( 'support' );
 } )->name( 'support' );
 
-Route::get( 'nyheter', function ()
-{
-    return view( 'news' );
-})->name( 'news' );
+Route::get( 'nyheter', 'FetchPosts')->name( 'news' );
 
 Route::get( 'hemlighet', function ()
 {
