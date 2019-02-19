@@ -8,8 +8,6 @@
         <div class="col-md-8">
             <h1 class="text-center">Kontakta oss</h1>
             <div class="card bg-dark">
-                <div class="card-header">{{ __('Kontakta oss') }}</div>
-
                 <div class="card-body">
                     <form method="POST" action="/contactForm">
                         @csrf
