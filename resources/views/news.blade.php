@@ -22,7 +22,7 @@
             <h5  class="card-title">{{$post->getField('caption')}}</h5>
           @endif
 
-          <small class="mb-3">{{$post->getField('created_time')->format('Y-m-d H:i:s')}}</small>
+          <small class="mb-3">{{$post->getField('created_time')->format('Y-m-d')}}</small>
 
           <p>{{substr($post->getField('message'), 0, 200)}}</p>
 
