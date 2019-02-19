@@ -45,7 +45,7 @@
                             Som student vid Karlstads Universitet kan du köpa svaren på en tenta
                             via biblioteket för 50 KR.
                             <br>
-                            <b>Det tycker vi är dumt</b>
+                            <b>Det tycker vi är dumt!</b>
                             <br>
                             I Linda Vill vi att svaren på tentorna ska finnas tillgängliga gratis
                             för alla våra medlemmar och för att lyckas med det behöver vi din hjälp!
