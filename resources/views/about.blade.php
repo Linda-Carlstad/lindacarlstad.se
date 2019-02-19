@@ -8,7 +8,6 @@
     <h1>Om föreningen</h1>
   </div>
   <br>
-  <br>
 <hr>
 <div class="row px-3 my-5">
     <div class="col-md-8 p-4">
