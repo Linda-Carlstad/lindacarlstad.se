@@ -17,7 +17,7 @@
                 <div class="col-md-8">
                     <div class="d-block row d-md-flex flex-md-row py-4">
                         <div class="col-md-5 d-flex align-items-center justify-content-center">
-                            <img class="img-fluid" src="{{ asset('/img/logo.png' ) }}" alt="Linda Carlstad logga med text">
+                            <img class="img-fluid" src="{{ asset('/img/people.svg' ) }}" alt="Linda Carlstad logga med text">
                         </div>
                         <br class="d-block d-md-none">
                         <div class="col-md-7 d-flex align-items-center justify-content-center">
@@ -59,7 +59,7 @@
                     <hr>
                     <div class="d-block row d-md-flex flex-md-row py-4">
                         <div class="col-md-5 d-flex align-items-center justify-content-center">
-                            <img class="img-fluid" src="{{ asset('/img/bunkern.png' ) }}" alt="Studentpuben Bunkern logga">
+                            <img class="img-fluid" src="{{ asset('/img/bottles.svg' ) }}" alt="Studentpuben Bunkern flaska och glas">
                         </div>
                         <br class="d-block d-md-none">
                         <div class="col-md-7 d-flex align-items-center justify-content-center">
