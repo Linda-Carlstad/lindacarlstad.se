@@ -52,6 +52,11 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link href="{{ asset( '/css/main.min.css' ) }}" rel="stylesheet">
         <link href="{{ asset( '/img/icon.ico' ) }}" rel="icon">
+        <script src="https://cdn.jsdelivr.net/ga-lite/latest/ga-lite.min.js" async></script>
+        <script>
+            var galite = galite || {};
+            galite.UA = 'UA-136489552-1';
+        </script>
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top scrolling-navbar">
