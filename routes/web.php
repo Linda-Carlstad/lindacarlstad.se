@@ -71,11 +71,6 @@ Route::get( 'whoops', function ()
     return view( 'whoops' );
 });
 
-Route::get( 'program', function()
-{
-    return redirect()->back();
-})->name( 'programs' );
-
 Route::get( 'tentor', 'ExamController@index')->name( 'tentor' );
 Route::get( 'kontakt', function()
 {
@@ -86,6 +81,31 @@ Route::get( 'nollning', function()
 {
     return view( 'initiation' );
 })->name('initiation');
+
+Route::get( 'program', function()
+{
+    return view( 'programs.index' );
+})->name( 'programs' );
+
+Route::get( 'högskoleingenjör-i-datateknik', function()
+{
+    return view( 'programs.data' );
+})->name('data');
+
+Route::get( 'it-design-affärssystem-och-ekonomi', function()
+{
+    return view( 'programs.business' );
+})->name('business');
+
+Route::get( 'it-design-systemdesign', function()
+{
+    return view( 'programs.system' );
+})->name('system');
+
+Route::get( 'webbutvecklare', function()
+{
+    return view( 'programs.webb' );
+})->name('webb');
 
 Route::get( 'verifiering-profil', 'VerifyUser' );
 Route::get( 'verifiering-email', 'VerifyNewEmail' );
