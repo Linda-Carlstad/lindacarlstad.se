@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="532px" height="516px" viewBox="0 0 532 516" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>calendar</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Final-design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logos" transform="translate(-870.000000, -63.000000)" fill-rule="nonzero" stroke-width="3">
+            <g id="calendar" transform="translate(870.000000, 65.000000)">
+                <rect id="Rectangle" stroke="#C9BC73" x="1.5" y="84.5" width="529" height="428" rx="10"></rect>
+                <rect id="Rectangle" stroke="#CDC07D" x="100" y="0" width="39" height="67" rx="10"></rect>
+                <rect id="Rectangle" stroke="#CDC07D" x="394" y="0" width="39" height="67" rx="10"></rect>
+                <rect id="Rectangle" stroke="#C9BC74" x="67.5" y="172.5" width="57" height="37" rx="10"></rect>
+                <rect id="Rectangle" stroke="#C9BC74" x="152.5" y="172.5" width="57" height="37" rx="10"></rect>
+                <rect id="Rectangle" stroke="#C9BC74" x="237.5" y="172.5" width="57" height="37" rx="10"></rect>
+                <rect id="Rectangle" stroke="#C9BC74" x="322.5" y="172.5" width="57" height="37" rx="10"></rect>
+                <rect id="Rectangle" stroke="#C9BC74" x="407.5" y="172.5" width="57" height="37" rx="10"></rect>
+                <rect id="Rectangle" stroke="#C9BC74" x="67.5" y="244.5" width="57" height="37" rx="10"></rect>
+                <rect id="Rectangle" stroke="#C9BC74" x="152.5" y="244.5" width="57" height="37" rx="10"></rect>
+                <rect id="Rectangle" stroke="#C9BC74" x="237.5" y="244.5" width="57" height="37" rx="10"></rect>
+                <rect id="Rectangle" stroke="#C9BC74" x="322.5" y="244.5" width="57" height="37" rx="10"></rect>
+                <rect id="Rectangle" stroke="#C9BC74" x="407.5" y="244.5" width="57" height="37" rx="10"></rect>
+                <rect id="Rectangle" stroke="#C9BC74" x="67.5" y="316.5" width="57" height="37" rx="10"></rect>
+                <rect id="Rectangle" stroke="#C9BC74" x="152.5" y="316.5" width="57" height="37" rx="10"></rect>
+                <rect id="Rectangle" stroke="#C9BC74" x="237.5" y="316.5" width="57" height="37" rx="10"></rect>
+                <rect id="Rectangle" stroke="#C9BC74" x="322.5" y="316.5" width="57" height="37" rx="10"></rect>
+                <rect id="Rectangle" stroke="#C9BC74" x="407.5" y="316.5" width="57" height="37" rx="10"></rect>
+                <rect id="Rectangle" stroke="#C9BC74" x="67.5" y="388.5" width="57" height="37" rx="10"></rect>
+                <rect id="Rectangle" stroke="#C9BC74" x="152.5" y="388.5" width="57" height="37" rx="10"></rect>
+                <rect id="Rectangle" stroke="#C9BC74" x="237.5" y="388.5" width="57" height="37" rx="10"></rect>
+                <rect id="Rectangle" stroke="#C9BC74" x="322.5" y="388.5" width="57" height="37" rx="10"></rect>
+                <rect id="Rectangle" stroke="#C9BC74" x="407.5" y="388.5" width="57" height="37" rx="10"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
