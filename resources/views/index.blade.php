@@ -3,9 +3,9 @@
 @section('content')
 
     <header class="hero">
-        <img class="bg-img" src="{{ asset( '/img/hero-image.jpg' ) }}" alt="">
+        <img class="bg-img" src="{{ asset( '/img/hero-image.jpg' ) }}" alt="Lindaiter, faddrar och nollor på Dagen K">
         <div class="holder text-center">
-            <img class="logo" src="{{ asset( '/img/logo.png' ) }}" alt="">
+            <img class="logo" src="{{ asset( '/img/small-logo.svg' ) }}" alt="Linda Carlstad logo">
             <h1>Linda Carlstad</h1>
             <h2>Linjeförening för datavetare</h2>
         </div>
@@ -15,7 +15,7 @@
         <div class="container">
             <div class="d-block row d-md-flex flex-md-row py-4">
                 <div class="col-md-5 d-flex align-items-center justify-content-center">
-                    <img class="img-fluid" src="{{ asset( '/img/logo.png' ) }}" alt="">
+                    <img class="img-fluid" src="{{ asset( '/img/logo.png' ) }}" alt="Linda Carlstad logga med text">
                 </div>
                 <br class="d-block d-md-none">
                 <div class="col-md-7 d-flex align-items-center justify-content-center">
@@ -35,7 +35,7 @@
             <hr>
             <div class="d-block row d-md-flex flex-md-row-reverse py-4">
                 <div class="col-md-5 d-flex align-items-center justify-content-center">
-                    <img class="img-fluid" src="{{ asset( '/img/logo.png' ) }}" alt="">
+                    <img class="img-fluid" src="{{ asset( '/img/logo.png' ) }}" alt="Linda Carlstad logga med text">
                 </div>
                 <br class="d-block d-md-none">
                 <div class="col-md-7 d-flex align-items-center justify-content-center">
@@ -57,7 +57,7 @@
             <hr>
             <div class="d-block row d-md-flex flex-md-row py-4">
                 <div class="col-md-5 d-flex align-items-center justify-content-center">
-                    <img class="img-fluid" src="{{ asset( '/img/bunkern.png' ) }}" alt="">
+                    <img class="img-fluid" src="{{ asset( '/img/bunkern.png' ) }}" alt="Studentpuben Bunkern logga">
                 </div>
                 <br class="d-block d-md-none">
                 <div class="col-md-7 d-flex align-items-center justify-content-center">
