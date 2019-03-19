@@ -13,13 +13,13 @@
 
 <div class="row">
     @foreach ($facebookData as $post)
-    <div class='col-sm-4 mb-5 justify-content-center mx-auto'>
+    <div class='col-sm-6 mb-5 justify-content-center mx-auto'>
         <div class='card bg-dark h-100'>
             <div class='card-header d-flex flex-column'>
-                @if (empty($post->getField('caption')))
-                    <h5 class="card-title">Linda Carlstad</h5>
-                @else
+                @if ( !empty($post->getField('caption')) )
                     <h5 class="card-title">{{$post->getField('caption')}}</h5>
+                @else
+                    <h5 class="card-title">Linda Carlstad</h5>
                 @endif
 
                 <small class="mb-3">{{$post->getField('created_time')->format('Y-m-d')}}</small>
@@ -32,10 +32,10 @@
                         Klicka på länken nedan för att se inlägget på Facebook.
                     @endif
                 </p>
-                @if ($condition)
+                @if( !empty( $post->getField('permalink_url') ) )
                     <a class="btn btn-red mt-auto" href="{{$post->getField('permalink_url')}}">Läs mer</a>
                 @else
-                    <a class="btn btn-red mt-auto" href="https://www.facebook.com/linda.carlstad">Läs mer</a>                
+                    <a class="btn btn-red mt-auto" href="https://www.facebook.com/linda.carlstad">Läs mer</a>
                 @endif
             </div>
         </div>
