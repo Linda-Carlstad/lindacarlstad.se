@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale() ) }}">
+<html lang="{{ str_replace( '_', '-', app()->getLocale() ) }}">
 
 <head>
     <meta charset="utf-8">
@@ -9,7 +9,7 @@
     <meta name="subject" content="Social">
     <meta name="image" content="https://lindacarlstad.se/img/logo.png">
     <meta name="copyright" content="Linda Carlstad">
-    <meta name="language" content="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <meta name="language" content="{{ str_replace( '_', '-', app()->getLocale()) }}">
     <meta name="robots" content="index, follow">
     <meta name="Classification" content="Business">
     <meta name="author" content="Linda Carlstad">
@@ -42,17 +42,17 @@
     <meta name="og:image" content="https://lindacarlstad.se/img/logo.png">
     <meta name="og:url" content="https://lindacarlstad.se">
     <meta name="og:site_name" content="Linda Carlstad">
-    <meta name="og:locale" content="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <meta name="og:locale" content="{{ str_replace( '_', '-', app()->getLocale()) }}">
     <meta name="og:type" content="website">
 
-    <title>{{ config('app.name', 'Linda Carlstad' ) }} - @yield('title')</title>
+    <title>{{ config( 'app.name', 'Linda Carlstad' ) }} - @yield( 'title')</title>
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="{{ asset('/css/main.min.css' ) }}" rel="stylesheet">
-    <link href="{{ asset('/img/icon.ico' ) }}" rel="icon">
+    <link href="{{ asset( '/css/main.min.css' ) }}" rel="stylesheet">
+    <link href="{{ asset( '/img/icon.ico' ) }}" rel="icon">
 
     <script src="https://cdn.jsdelivr.net/ga-lite/latest/ga-lite.min.js" async></script>
     <script>
@@ -66,14 +66,14 @@
     <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
-    <script defer src="{{ asset('/js/main.js' ) }}" type="text/javascript"></script>
-    <script defer src="{{ asset('/js/swiper.js' ) }}" type="text/javascript"></script>
+    <script defer src="{{ asset( '/js/main.js' ) }}" type="text/javascript"></script>
+    <script defer src="{{ asset( '/js/swiper.js' ) }}" type="text/javascript"></script>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top scrolling-navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ url('/' ) }}">
+            <a class="navbar-brand" href="{{ url( '/' ) }}">
                 <img class="" src="img/small-logo.png" alt="Golden apple with crown">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -82,64 +82,67 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/' ) }}">Hem <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="{{ url( '/' ) }}">Start<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('about' ) }}">Föreningen</a>
+                        <a class="nav-link" href="{{ route( 'initiation' ) }}">Nollning</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('initiation' ) }}">Nollning</a>
+                        <a class="nav-link" href="{{ route( 'programs' ) }}">Progam</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route( 'about' ) }}">Föreningen</a>
+                    </li>
+                    <li class="nav-item d-md-none d-lg-block">
+                        <a class="nav-link" href="{{ route( 'news' ) }}">Nyheter</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://tentahub.se/linda">Tentor</a>
                     </li>
                     <li class="nav-item d-md-none d-lg-block">
                         <a class="nav-link" href="http://lindacarlstad.tictail.com/">Webbshop</a>
                     </li>
-                    <li class="nav-item d-md-none d-lg-block">
-                        <a class="nav-link" href="{{ route('news' ) }}">Nyheter</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://tentahub.se/linda">Tentor</a>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav ml-auto">
-                    @auth
+                    {{-- @auth
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}<span class="caret"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item bg-dark" href="{{ route('profile' ) }}">Profil</a>
-                            <a class="dropdown-item bg-dark" href="{{ route('logout' ) }}" onclick="event.preventDefault();
-                                      document.getElementById('logout-form' ).submit();">
-                                {{ __('Logga ut' ) }}
+                            <a class="dropdown-item bg-dark" href="{{ route( 'profile' ) }}">Profil</a>
+                            <a class="dropdown-item bg-dark" href="{{ route( 'logout' ) }}" onclick="event.preventDefault();
+                                      document.getElementById( 'logout-form' ).submit();">
+                                {{ __( 'Logga ut' ) }}
                             </a>
-                            <form id="logout-form" action="{{ route('logout' ) }}" method="POST" style="display: none;">
+                            <form id="logout-form" action="{{ route( 'logout' ) }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
                         </div>
                     </li>
                     @else
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login' ) }}">{{ __('Logga in' ) }}</a>
+                        <a class="nav-link" href="{{ route( 'login' ) }}">{{ __( 'Logga in' ) }}</a>
                     </li>
                     <li class="nav-item">
-                        @if ( Route::has('register' ) )
-                        <a class="nav-link" href="{{ route('register' ) }}">{{ __('Registrera' ) }}</a>
+                        @if ( Route::has( 'register' ) )
+                        <a class="nav-link" href="{{ route( 'register' ) }}">{{ __( 'Registrera' ) }}</a>
                         @endif
                     </li>
-                    @endauth
+                    @endauth --}}
                 </ul>
             </div>
         </div>
     </nav>
 
     <main class="content">
-        @if( Request::is('/' ) )
-        @yield('content' )
+        @if( Request::is( '/' ) )
+        @yield( 'content' )
         @else
         <div class="container-fluid mt-5 py-4 py-md-5">
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    @yield('content' )
+                    @yield( 'content' )
                     <br>
                 </div>
             </div>
@@ -165,33 +168,33 @@
                         <br>
                         651 68 Karlstad
                         <br>
-                        <a href="{{ url('whoops' ) }}" class="special">Whoops</a>
+                        <a href="{{ url( 'whoops' ) }}" class="special">Whoops</a>
                     </p>
                 </div>
                 <div class="col-md-3">
                     <p>
                         <span>Föreningen</span>
                         <br>
-                        <a href="{{ route('contact' ) }}">Kontakta oss</a>
+                        <a href="{{ route( 'contact' ) }}">Kontakta oss</a>
                         <br>
-                        <a href="{{ route('about' ) }}">Om oss</a>
+                        <a href="{{ route( 'about' ) }}">Om oss</a>
                         <br>
-                        <a href="{{ route('new-member' ) }}">Bli medlem</a>
+                        <a href="{{ route( 'new-member' ) }}">Bli medlem</a>
                         <br>
-                        <a href="{{ route('secret' ) }}" class="special">Secret</a>
+                        <a href="{{ route( 'secret' ) }}" class="special">Secret</a>
                     </p>
                 </div>
                 <div class="col-md-3">
                     <p>
                         <span>Länkar</span>
                         <br>
-                        <a href="{{ route('programs' ) }}">Program</a>
+                        <a href="{{ route( 'programs' ) }}">Program</a>
                         <br>
                         <a href="http://tentahub.se/linda">Tentor</a>
                         <br>
                         <!-- <a href="events.php">Event</a>
                                 <br> -->
-                        <a href="{{ route('document' ) }}">Dokument</a>
+                        <a href="{{ route( 'document' ) }}">Dokument</a>
                         <br>
                         <a href="http://lindacarlstad.se/robot/terminal.html">Terminal</a>
                         <br>
@@ -206,7 +209,7 @@
                 <br>
                 <a href="https://www.instagram.com/lindacarlstad/"><i class="fab fa-instagram"></i></a>
                 <br>
-                <a href=""><i class="fab fa-snapchat"></i></a>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="@lindacarlstad"><i class="fab fa-snapchat"></i></a>
                 <br>
                 <a href="https://github.com/Linda-Carlstad"><i class="fab fa-github"></i></a>
                 <br>
