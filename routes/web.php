@@ -78,8 +78,13 @@ Route::get( 'kontakt', function()
 
 Route::get( 'nollning', function()
 {
-    return view( 'initiation' );
+    return view( 'initiation.index' );
 })->name('initiation');
+
+Route::get( 'nollnings-schema', function()
+{
+    return view( 'initiation.schedule' );
+})->name('schedule');
 
 Route::get( 'program', function()
 {

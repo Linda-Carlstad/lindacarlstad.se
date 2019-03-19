@@ -85,13 +85,13 @@
                         <a class="nav-link" href="{{ url( '/' ) }}">Start<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route( 'initiation' ) }}">Nollning</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ route( 'programs' ) }}">Progam</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route( 'about' ) }}">Föreningen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route( 'initiation' ) }}">Nollning</a>
                     </li>
                     <li class="nav-item d-md-none d-lg-block">
                         <a class="nav-link" href="{{ route( 'news' ) }}">Nyheter</a>
