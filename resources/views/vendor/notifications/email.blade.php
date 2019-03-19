@@ -19,7 +19,7 @@
             }
             h1
             {
-                color: #722F37 !important;
+                color: #660023 !important;
                 text-align: center !important;
             }
 
