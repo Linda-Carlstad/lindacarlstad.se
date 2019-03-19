@@ -2,8 +2,48 @@
 <html lang="{{ str_replace( '_', '-', app()->getLocale() ) }}">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="keywords" content="Utbildning, Bemanning, Betonghåltagning, Transport, Städ, Bygghjälpen">
+        <meta name="description" content="Vi har resurser och kompetens för att utföra professionella tjänster inom håltagning, transport, bemanning, utbildning och städ. Bredden är vår styrka.">
+        <meta name="subject" content="Social">
+        <meta name="image" content="https://lindacarlstad.se/img/logo.png">
+        <meta name="copyright"content="Linda Carlstad">
+        <meta name="language" content="{{ str_replace('_', '-', app()->getLocale()) }}">
+        <meta name="robots" content="index, follow">
+        <meta name="Classification" content="Business">
+        <meta name="author" content="Linda Carlstad">
+        <meta name="designer" content="Linda Carlstad">
+        <meta name="copyright" content="Linda Carlstad">
+        <meta name="reply-to" content="info@lindacarlstad.se">
+        <meta name="owner" content="Linda Carlstad">
+        <meta name="url" content="https://www.lindacarlstad.se">
+        <meta name="identifier-URL" content="https://www.lindacarlstad.se">
+        <meta name="coverage" content="Worldwide">
+        <meta name="distribution" content="Global">
+        <meta name="rating" content="General">
+        <meta name="revisit-after" content="7 days">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <link rel="canonical" href="{{ Request::url() }}">
+        <link rel="home" href="{{ Request::url() }}">
+        <link rel="alternate" hreflang="x-default" href="{{ Request::url() }}">
+
+        <!-- Schema.org for Google -->
+        <meta itemprop="name" content="Linda Carlstad">
+        <meta itemprop="description" content="Vi har resurser och kompetens för att utföra professionella tjänster inom håltagning, transport, bemanning, utbildning och städ. Bredden är vår styrka.">
+        <meta itemprop="image" content="https://lindacarlstad.se/img/logo.png">
+        <!-- Twitter -->
+        <meta name="twitter:card" content="Vi har resurser och kompetens för att utföra professionella tjänster inom håltagning, transport, bemanning, utbildning och städ. Bredden är vår styrka.">
+        <meta name="twitter:title" content="Linda Carlstad">
+        <meta name="twitter:description" content="Vi har resurser och kompetens för att utföra professionella tjänster inom håltagning, transport, bemanning, utbildning och städ. Bredden är vår styrka.">
+        <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+        <meta name="og:title" content="Linda Carlstad">
+        <meta name="og:description" content="Vi har resurser och kompetens för att utföra professionella tjänster inom håltagning, transport, bemanning, utbildning och städ. Bredden är vår styrka.">
+        <meta name="og:image" content="https://lindacarlstad.se/img/logo.png">
+        <meta name="og:url" content="https://lindacarlstad.se">
+        <meta name="og:site_name" content="Linda Carlstad">
+        <meta name="og:locale" content="{{ str_replace('_', '-', app()->getLocale()) }}">
+        <meta name="og:type" content="website">
+
         <title>{{ config( 'app.name', 'Linda Carlstad' ) }} - @yield('title')</title>
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -80,8 +120,13 @@
             @if( Request::is( '/' ) )
                 @yield( 'content' )
             @else
-                <div class="container py-5 mt-5">
-                    @yield( 'content' )
+                <div class="container-fluid mt-5 py-4 py-md-5">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            @yield( 'content' )
+                            <br>
+                        </div>
+                    </div>
                 </div>
             @endif
         </main>
@@ -96,9 +141,7 @@
                     </div>
                     <div class="col-md-3">
                         <p>
-                            <span>Kontakt</span>
-                            <br>
-                            <a href="{{ route( 'contact' ) }}">Kontakta oss</a>
+                            <span>Linda Carlstad</span>
                             <br>
                             <a href="mailto:info@lindacarlstad.se">info@lindacarlstad.se</a>
                             <br>
@@ -111,28 +154,32 @@
                     </div>
                     <div class="col-md-3">
                         <p>
-                            <span>Länkar</span>
-                            <br>
-                            <a href="http://tentahub.se/linda">Tentor</a>
-                            <br>
-                            <a href="http://lindacarlstad.se/robot/terminal.html">Terminal</a>
-                            <br>
-                            <!-- <a href="events.php">Event</a>
-                                <br> -->
-                            <a href="{{ route( 'document' ) }}">Dokument</a>
-                            <br>
-                            <a href="http://lindacarlstad.tictail.com/">Webbshop</a>
-                        </p>
-                    </div>
-                    <div class="col-md-3">
-                        <p>
                             <span>Föreningen</span>
+                            <br>
+                            <a href="{{ route( 'contact' ) }}">Kontakta oss</a>
                             <br>
                             <a href="{{ route( 'about' ) }}">Om oss</a>
                             <br>
                             <a href="{{ route( 'new-member' ) }}">Bli medlem</a>
                             <br>
                             <a href="{{ route( 'secret' ) }}" class="special">Secret</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <p>
+                            <span>Länkar</span>
+                            <br>
+                            <a href="{{ route( 'programs' ) }}">Program</a>
+                            <br>
+                            <a href="http://tentahub.se/linda">Tentor</a>
+                            <br>
+                            <!-- <a href="events.php">Event</a>
+                                <br> -->
+                            <a href="{{ route( 'document' ) }}">Dokument</a>
+                            <br>
+                            <a href="http://lindacarlstad.se/robot/terminal.html">Terminal</a>
+                            <br>
+                            <a href="http://lindacarlstad.tictail.com/">Webbshop</a>
                         </p>
                     </div>
                 </div>

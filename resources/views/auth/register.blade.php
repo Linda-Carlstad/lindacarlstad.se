@@ -76,6 +76,12 @@
                             </div>
                         </div>
 
+                        <div class="col-md-6 offset-md-4">
+                            <p>
+                                Genom att registrera dig accepterar du
+                                <a class="link" href="{{ route( 'policy' ) }}">avtalet</a>.
+                            </p>
+                        </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

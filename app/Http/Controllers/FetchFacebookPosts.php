@@ -8,7 +8,7 @@ use Facebook\Facebook as Facebook;
 use Facebook\Exceptions\FacebookResponseException as FacebookResponseException;
 use Facebook\Exceptions\FacebookSDKException as FacebookSDKException;
 
-class FetchPosts extends Controller
+class FetchFacebookPosts extends Controller
 {
     /**
      * Handle the incoming request.
@@ -19,7 +19,7 @@ class FetchPosts extends Controller
     public function __invoke(Request $request)
     {
 
-      require_once '../../vendor/facebookAPI/src/Facebook/autoload.php';
+      require_once '../vendor/facebookAPI/src/Facebook/autoload.php';
 
       $fb = new Facebook([
       'app_id' => '770437356636722',

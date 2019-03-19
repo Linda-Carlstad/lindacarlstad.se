@@ -27,6 +27,11 @@ Route::get( 'kalender', function ()
     return view( 'calendar' );
 })->name( 'calendar' );
 
+Route::get( 'integritetspolicy', function ()
+{
+    return view( 'policy' );
+})->name( 'policy' );
+
 
 Route::get( 'dokument', function ()
 {
@@ -51,8 +56,6 @@ Route::get( 'support', function()
     return view( 'support' );
 } )->name( 'support' );
 
-Route::get( 'nyheter', 'FetchPosts')->name( 'news' );
-
 Route::get( 'hemlighet', function ()
 {
     return view( 'secret' );
@@ -67,6 +70,11 @@ Route::get( 'whoops', function ()
 {
     return view( 'whoops' );
 });
+
+Route::get( 'program', function()
+{
+    return redirect()->back();
+})->name( 'programs' );
 
 Route::get( 'tentor', 'ExamController@index')->name( 'tentor' );
 Route::get( 'kontakt', function()
@@ -92,4 +100,5 @@ Route::group( [ 'middleware' => 'verified' ], function ()
     ] );
 } );
 
+Route::get( 'nyheter', 'FetchFacebookPosts')->name( 'news' );
 Route::post( '/contactForm', 'ContactForm' );
