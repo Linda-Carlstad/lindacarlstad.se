@@ -20,6 +20,6 @@
     </p>
     <hr>
     <p><b>Vill du läsa mer om utbildningen? Klicka på knappen nedan.</b></p>
-    <a class="btn btn-grey" href="https://www.kau.se/utbildning/program-och-kurser/program/SGWEB">Läs mer</a>
+    <a target="_blank" class="btn btn-grey" href="https://www.kau.se/utbildning/program-och-kurser/program/SGWEB">Läs mer</a>
 
 @endsection
