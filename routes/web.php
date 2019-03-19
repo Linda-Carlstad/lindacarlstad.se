@@ -71,7 +71,6 @@ Route::get( 'whoops', function ()
     return view( 'whoops' );
 });
 
-Route::get( 'tentor', 'ExamController@index')->name( 'tentor' );
 Route::get( 'kontakt', function()
 {
     return view( 'contact' );
@@ -120,5 +119,6 @@ Route::group( [ 'middleware' => 'verified' ], function ()
     ] );
 } );
 
-Route::get( 'nyheter', 'FetchFacebookPosts')->name( 'news' );
 Route::post( '/contactForm', 'ContactForm' );
+Route::get( 'nyheter', 'FetchFacebookPosts')->name( 'news' );
+Route::get( 'tentor', 'ExamController@index')->name( 'tentor' );
