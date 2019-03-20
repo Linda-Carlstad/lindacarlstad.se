@@ -116,6 +116,9 @@
                 </ul>
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item">
+                        <a class="nav-link" href="old.lindacarlstad.se">Gamla webbsidan</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="http://tentahub.se/linda">Tentor</a>
                     </li>
                     <li class="nav-item d-md-none d-lg-block">
