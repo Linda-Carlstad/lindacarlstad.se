@@ -74,17 +74,17 @@ Route::get( 'whoops', function ()
 Route::get( 'kontakt', function()
 {
     return view( 'contact' );
-})->name('contact');
+})->name( 'contact' );
 
-Route::get( 'nollning', function()
-{
-    return view( 'initiation.index' );
-})->name('initiation');
-
-Route::get( 'nollnings-schema', function()
+Route::get( 'nollning/schema', function()
 {
     return view( 'initiation.schedule' );
-})->name('schedule');
+})->name( 'schedule' );
+
+Route::get( 'nollning/regler', function()
+{
+    return view( 'initiation.rules' );
+})->name( 'schedule' );
 
 Route::get( 'program', function()
 {
@@ -94,22 +94,37 @@ Route::get( 'program', function()
 Route::get( 'högskoleingenjör-i-datateknik', function()
 {
     return view( 'programs.data' );
-})->name('data');
+})->name( 'data' );
 
 Route::get( 'it-design-affärssystem-och-ekonomi', function()
 {
     return view( 'programs.business' );
-})->name('business');
+})->name( 'business' );
 
 Route::get( 'it-design-systemdesign', function()
 {
     return view( 'programs.system' );
-})->name('system');
+})->name( 'system' );
+
+Route::get( 'kandidatprogram-i-datavetenskap', function()
+{
+    return view( 'programs.candidate' );
+})->name( 'candidate' );
 
 Route::get( 'webbutvecklare', function()
 {
     return view( 'programs.webb' );
-})->name('webb');
+})->name( 'webb' );
+
+Route::get( 'masterprogram-i-datavetenskap', function()
+{
+    return view( 'programs.master.data' );
+})->name( 'master.data' );
+
+Route::get( 'masterprogram-i-informatik', function()
+{
+    return view( 'programs.master.info' );
+})->name( 'master.info' );
 
 Route::get( 'verifiering-profil', 'VerifyUser' );
 Route::get( 'verifiering-email', 'VerifyNewEmail' );
@@ -125,5 +140,6 @@ Route::group( [ 'middleware' => 'verified' ], function ()
 } );
 
 Route::post( '/contactForm', 'ContactForm' );
-Route::get( 'nyheter', 'FetchFacebookPosts')->name( 'news' );
-Route::get( 'tentor', 'ExamController@index')->name( 'tentor' );
+Route::get( 'nyheter', 'FetchFacebookPosts' )->name( 'news' );
+Route::get( 'nollning', 'FetchBlogPosts' )->name( 'initiation' );
+Route::get( 'tentor', 'ExamController@index' )->name( 'tentor' );
