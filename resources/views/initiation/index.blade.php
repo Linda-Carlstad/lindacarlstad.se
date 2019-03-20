@@ -6,8 +6,8 @@
     <hr>
     <div class="text-center">
         <h2>Snabbval</h3>
-        <a class="btn btn-lg btn-grey">Schema</a>
-        <a class="btn btn-lg btn-grey">Regler</a>
+        <a class="btn btn-lg btn-grey" href="{{ route( 'schedule' ) }}">Schema</a>
+        <a class="btn btn-lg btn-grey" href="{{ route( 'rules' ) }}">Regler</a>
     </div>
     <hr>
     <div class="updates">
