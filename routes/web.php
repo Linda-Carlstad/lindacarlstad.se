@@ -84,7 +84,7 @@ Route::get( 'nollning/schema', function()
 Route::get( 'nollning/regler', function()
 {
     return view( 'initiation.rules' );
-})->name( 'schedule' );
+})->name( 'rules' );
 
 Route::get( 'program', function()
 {
