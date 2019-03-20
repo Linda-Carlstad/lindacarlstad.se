@@ -68,6 +68,23 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
     <script defer src="{{ asset( '/js/main.js' ) }}" type="text/javascript"></script>
     <script defer src="{{ asset( '/js/swiper.js' ) }}" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#343a40"
+        },
+        "button": {
+          "background": "#660023",
+          "color": "#fff"
+        }
+      }
+    })});
+    </script>
 </head>
 
 <body>
