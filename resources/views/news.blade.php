@@ -4,13 +4,7 @@
 @section('content')
 
 <h1 class="text-center">Nyheter</h1>
-
-<br>
-
 <hr>
-
-<br>
-
 <div class="row">
     @foreach ($facebookData as $post)
     <div class='col-sm-6 mb-5 justify-content-center mx-auto'>

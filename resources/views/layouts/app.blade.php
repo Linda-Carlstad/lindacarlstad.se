@@ -69,8 +69,8 @@
     <script defer src="{{ asset( '/js/main.js' ) }}" type="text/javascript"></script>
     <script defer src="{{ asset( '/js/swiper.js' ) }}" type="text/javascript"></script>
 
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
     <script>
     window.addEventListener("load", function(){
     window.cookieconsent.initialise({
@@ -82,7 +82,12 @@
           "background": "#660023",
           "color": "#fff"
         }
-      }
+    },
+      "content": {
+		"message": "Den här webbplatsen använder cookies för att du ska få den bästa upplevelsen på vår hemsida.",
+		"dismiss": "Uppfattat!",
+		"link": "Läs mer"
+	  }
     })});
     </script>
 </head>
@@ -116,7 +121,7 @@
                 </ul>
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="old.lindacarlstad.se">Gamla webbsidan</a>
+                        <a class="nav-link" href="https://old.lindacarlstad.se">Gamla webbsidan</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="http://tentahub.se/linda">Tentor</a>
@@ -157,16 +162,16 @@
 
     <main class="content">
         @if( Request::is( '/' ) )
-        @yield( 'content' )
+            @yield( 'content' )
         @else
-        <div class="container-fluid mt-5 py-4 py-md-5">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    @yield( 'content' )
-                    <br>
+            <div class="container-fluid mt-5 py-4 py-md-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        @yield( 'content' )
+                        <br>
+                    </div>
                 </div>
             </div>
-        </div>
         @endif
     </main>
 
