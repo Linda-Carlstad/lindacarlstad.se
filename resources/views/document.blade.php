@@ -23,7 +23,7 @@
 	<div id="documentli">
 		<div class="tab-pane fade show active collapse multi-collapse" id="statues" role="tabpanel" aria-labelledby="statues-tab">
 			<div class="tabUl p-4">
-				- <a class="link" href="{{ asset( 'storage/Stadgar-antagna-2017-09-20.pdf' ) }}" target="_blank">
+				- <a class="link" href="{{ asset( '/storage/Stadgar-antagna-2017-09-20.pdf' ) }}" target="_blank">
 					Stadgar antagna 2017 09 20
 				</a>
 			</div>
@@ -40,7 +40,7 @@
 		</div>
 		<div class="tab-pane fade collapse multi-collapse" id="other" role="tabpanel" aria-labelledby="other-tab">
 			<div class="tabUl p-4">
-				- <a class="link" href="{{ asset( 'storage/Linda-Carlstads-personuppgiftspolicy.pdf' ) }}" target="_blank">
+				- <a class="link" href="{{ asset( '/storage/Linda-Carlstads-personuppgiftspolicy.pdf' ) }}" target="_blank">
 					Linda Carlstads personuppgiftspolicy
 				</a>
 			</div>
