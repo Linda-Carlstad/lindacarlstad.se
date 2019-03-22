@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="Utbildning, Bemanning, Betonghåltagning, Transport, Städ, Bygghjälpen">
-    <meta name="description" content="Vi har resurser och kompetens för att utföra professionella tjänster inom håltagning, transport, bemanning, utbildning och städ. Bredden är vår styrka.">
+    <meta name="keywords" content="Utbildning, Förening, Studentförening, Webbutvecklare, Webbutveckling, Data, Dataingenjör, IT-design">
+    <meta name="description" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student, såväl att du har det bra på universitet som på fritiden, utbildningen kommer inte alltid att vara rolig eller lätt och då hoppas vi att vi kan vara till din hjälp med studierna om det så krävs eller med att bara ta det lugnt och umgås.">
     <meta name="subject" content="Social">
     <meta name="image" content="https://lindacarlstad.se/img/logo.png">
     <meta name="copyright" content="Linda Carlstad">
@@ -30,15 +30,15 @@
 
     <!-- Schema.org for Google -->
     <meta itemprop="name" content="Linda Carlstad">
-    <meta itemprop="description" content="Vi har resurser och kompetens för att utföra professionella tjänster inom håltagning, transport, bemanning, utbildning och städ. Bredden är vår styrka.">
+    <meta itemprop="description" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student, såväl att du har det bra på universitet som på fritiden, utbildningen kommer inte alltid att vara rolig eller lätt och då hoppas vi att vi kan vara till din hjälp med studierna om det så krävs eller med att bara ta det lugnt och umgås.">
     <meta itemprop="image" content="https://lindacarlstad.se/img/logo.png">
     <!-- Twitter -->
-    <meta name="twitter:card" content="Vi har resurser och kompetens för att utföra professionella tjänster inom håltagning, transport, bemanning, utbildning och städ. Bredden är vår styrka.">
+    <meta name="twitter:card" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student, såväl att du har det bra på universitet som på fritiden, utbildningen kommer inte alltid att vara rolig eller lätt och då hoppas vi att vi kan vara till din hjälp med studierna om det så krävs eller med att bara ta det lugnt och umgås.">
     <meta name="twitter:title" content="Linda Carlstad">
-    <meta name="twitter:description" content="Vi har resurser och kompetens för att utföra professionella tjänster inom håltagning, transport, bemanning, utbildning och städ. Bredden är vår styrka.">
+    <meta name="twitter:description" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student, såväl att du har det bra på universitet som på fritiden, utbildningen kommer inte alltid att vara rolig eller lätt och då hoppas vi att vi kan vara till din hjälp med studierna om det så krävs eller med att bara ta det lugnt och umgås.">
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
     <meta name="og:title" content="Linda Carlstad">
-    <meta name="og:description" content="Vi har resurser och kompetens för att utföra professionella tjänster inom håltagning, transport, bemanning, utbildning och städ. Bredden är vår styrka.">
+    <meta name="og:description" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student, såväl att du har det bra på universitet som på fritiden, utbildningen kommer inte alltid att vara rolig eller lätt och då hoppas vi att vi kan vara till din hjälp med studierna om det så krävs eller med att bara ta det lugnt och umgås.">
     <meta name="og:image" content="https://lindacarlstad.se/img/logo.png">
     <meta name="og:url" content="https://lindacarlstad.se">
     <meta name="og:site_name" content="Linda Carlstad">
@@ -107,7 +107,7 @@
                         <a class="nav-link" href="{{ url( '/' ) }}">Start<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route( 'programs' ) }}">Progam</a>
+                        <a class="nav-link" href="{{ route( 'programs' ) }}">Program</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route( 'about' ) }}">Föreningen</a>
