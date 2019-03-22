@@ -1,0 +1,9 @@
+.equal {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+.vertical {
+    padding-top:30px; 
+
+}

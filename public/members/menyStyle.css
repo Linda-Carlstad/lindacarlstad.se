@@ -1,0 +1,13 @@
+
+body {
+  background: #a52929; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #a52929, #8c2020);
+  background: -moz-linear-gradient(right, #a52929, #8c2020);
+  background: -o-linear-gradient(right, #a52929, #8c2020);
+  background: linear-gradient(to left, #a52929, #8c2020);
+  font-family: "Roboto", sans-serif;
+ 
+}
+.row{
+    margin-top:1%;
+}
