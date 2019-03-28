@@ -138,15 +138,15 @@
                 <h5 class="card-header">Sexmästare</h5>
                 <div class="card-body">
                     <p class="card-title">
-                        <a href="mailto:sex@lindacarlstad.se">sex@lindacarlstad.se</a>
+                        <a href="mailto:sexmastare@lindacarlstad.se">sexmastare@lindacarlstad.se</a>
                     </p>
                         <br>
                         <div class="row">
                             <div class="col-lg-4">
-                                <img class="img-fluid" src="{{ asset( '/img/board/sex.jpg' ) }}" alt="Linda Carlstad sexmästare - Karin Rääs">
+                                <img class="img-fluid" src="{{ asset( '/img/logo.png' ) }}" alt="Linda Carlstad sexmästare - Arvid Jansson">
                             </div>
                             <div class="col-lg-8">
-                                <p class="card-title font-weight-bold">Karin Rääs</p>
+                                <p class="card-title font-weight-bold">Arvid Jansson</p>
                                 <p class="card-text">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 </p>
