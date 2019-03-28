@@ -27,6 +27,11 @@ Route::get( 'kalender', function ()
     return view( 'calendar' );
 })->name( 'calendar' );
 
+Route::get( 'integritetspolicy', function ()
+{
+    return view( 'policy' );
+})->name( 'policy' );
+
 
 Route::get( 'dokument', function ()
 {
@@ -51,8 +56,6 @@ Route::get( 'support', function()
     return view( 'support' );
 } )->name( 'support' );
 
-Route::get( 'nyheter', 'FetchPosts')->name( 'news' );
-
 Route::get( 'hemlighet', function ()
 {
     return view( 'secret' );
@@ -68,16 +71,60 @@ Route::get( 'whoops', function ()
     return view( 'whoops' );
 });
 
-Route::get( 'tentor', 'ExamController@index')->name( 'tentor' );
 Route::get( 'kontakt', function()
 {
     return view( 'contact' );
-})->name('contact');
+})->name( 'contact' );
 
-Route::get( 'nollning', function()
+Route::get( 'nollning/schema', function()
 {
-    return view( 'initiation' );
-})->name('initiation');
+    return view( 'initiation.schedule' );
+})->name( 'schedule' );
+
+Route::get( 'nollning/regler', function()
+{
+    return view( 'initiation.rules' );
+})->name( 'rules' );
+
+Route::get( 'program', function()
+{
+    return view( 'programs.index' );
+})->name( 'programs' );
+
+Route::get( 'högskoleingenjör-i-datateknik', function()
+{
+    return view( 'programs.data' );
+})->name( 'data' );
+
+Route::get( 'it-design-affärssystem-och-ekonomi', function()
+{
+    return view( 'programs.business' );
+})->name( 'business' );
+
+Route::get( 'it-design-systemdesign', function()
+{
+    return view( 'programs.system' );
+})->name( 'system' );
+
+Route::get( 'kandidatprogram-i-datavetenskap', function()
+{
+    return view( 'programs.candidate' );
+})->name( 'candidate' );
+
+Route::get( 'webbutvecklare', function()
+{
+    return view( 'programs.webb' );
+})->name( 'webb' );
+
+Route::get( 'masterprogram-i-datavetenskap', function()
+{
+    return view( 'programs.master.data' );
+})->name( 'master.data' );
+
+Route::get( 'masterprogram-i-informatik', function()
+{
+    return view( 'programs.master.info' );
+})->name( 'master.info' );
 
 Route::get( 'verifiering-profil', 'VerifyUser' );
 Route::get( 'verifiering-email', 'VerifyNewEmail' );
@@ -93,3 +140,6 @@ Route::group( [ 'middleware' => 'verified' ], function ()
 } );
 
 Route::post( '/contactForm', 'ContactForm' );
+Route::get( 'nyheter', 'FetchFacebookPosts' )->name( 'news' );
+Route::get( 'nollning', 'FetchBlogPosts' )->name( 'initiation' );
+Route::get( 'tentor', 'ExamController@index' )->name( 'tentor' );

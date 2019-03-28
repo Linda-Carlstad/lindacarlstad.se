@@ -1,0 +1,6 @@
+	/*
+		define("DB_HOST", "www.lindacarlstad.se");
+		define("DB_USERNAME", "lindacar_ovvar");
+		define("DB_PASSWORD", "Bordeaux2017");
+		define("DB", "lindacar_medlemmardb");
+	*/

@@ -33,6 +33,15 @@
                 margin: 20px auto;
             }
 
+            @media only screen and (max-width: 768px )
+            {
+                body
+                {
+                    width: 100%;
+                    margin: 20px auto;
+                }
+            }
+
             .wrapper
             {
                 background-color: #efefef;

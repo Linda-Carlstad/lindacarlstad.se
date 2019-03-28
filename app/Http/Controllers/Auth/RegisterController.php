@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
+use Frozzare\Personnummer\Personnummer;
+
 class RegisterController extends Controller
 {
     /*
@@ -48,11 +50,19 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        $valid = Personnummer::valid( $data[ 'idNumber' ] );
+        if( !$valid )
+        {
+            return back()->with( 'error', 'Personnummer är fel' );
+        }
+
+
+
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
-            'idNumber' => ['required', 'string', ],
+            'idNumber' => ['required', 'string' ],
         ]);
     }
 
