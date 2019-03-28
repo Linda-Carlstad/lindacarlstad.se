@@ -19,7 +19,7 @@ class FetchFacebookPosts extends Controller
     public function __invoke(Request $request)
     {
 
-      require_once '../app/vendor/facebookAPI/src/Facebook/autoload.php';
+      require_once '../vendor/facebookAPI/src/Facebook/autoload.php';
 
       $fb = new Facebook([
       'app_id' => '770437356636722',
@@ -43,5 +43,6 @@ class FetchFacebookPosts extends Controller
       $posts_data = $posts->getProperty('posts');
 
       return view('news')->with('facebookData', $posts_data);
+
     }
 }
