@@ -8,7 +8,7 @@ use Facebook\Facebook as Facebook;
 use Facebook\Exceptions\FacebookResponseException as FacebookResponseException;
 use Facebook\Exceptions\FacebookSDKException as FacebookSDKException;
 
-class FetchPosts extends Controller
+class FetchFacebookPosts extends Controller
 {
     /**
      * Handle the incoming request.
@@ -43,6 +43,5 @@ class FetchPosts extends Controller
       $posts_data = $posts->getProperty('posts');
 
       return view('news')->with('facebookData', $posts_data);
-
     }
 }
