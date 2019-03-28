@@ -29,7 +29,7 @@ class FetchFacebookPosts extends Controller
 
       try {
       // Returns a `Facebook\FacebookResponse` object
-      $response = $fb->get('/1513583672218443?fields=posts{caption,full_picture,message,permalink_url,created_time}', 'EAAK8tWz2yjIBANfLpAfdGl6St2hH9sLk7btTEgihpEIrjJgpHyM5sEEfIa6V6ovZBGLbqQzcmKsBgCfJEf5WIJ4EZCED2ZCoIUPn2oGTYcP0udhv7J4RDslMAEk8d90Ri8YZA4ottiZCf6lgnlMEciH5UgnhAwNpmZBdDoy33tnDkZCcUzZAh6Mq3cScXiDoUziS4EWhGAizagZDZD');
+      $response = $fb->get('/1513583672218443?fields=posts{caption,full_picture,message,permalink_url,created_time}', 'EAAK8tWz2yjIBAHsiewJKsF7xvPM8QVZBjTUNbXKwzdC4KePxNeMQDLEHDcN9rvQ2CvqcvXb38qNcxdNWJZCw5EEhjTgwZCgKbOfKaohVAyK8A4XdmIhQyGAibAUlBvuhOEsX9BfZByDZBEQxsZAEgn1u90nhUObG8ZD');
       } catch(Facebook\Exceptions\FacebookResponseException $e) {
       echo 'Graph returned an error: ' . $e->getMessage();
       exit;
