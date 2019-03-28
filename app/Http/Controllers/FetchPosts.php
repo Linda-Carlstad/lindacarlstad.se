@@ -19,7 +19,7 @@ class FetchPosts extends Controller
     public function __invoke(Request $request)
     {
 
-      require_once '../../vendor/facebookAPI/src/Facebook/autoload.php';
+      require_once '../app/vendor/facebookAPI/src/Facebook/autoload.php';
 
       $fb = new Facebook([
       'app_id' => '770437356636722',
@@ -29,7 +29,7 @@ class FetchPosts extends Controller
 
       try {
       // Returns a `Facebook\FacebookResponse` object
-      $response = $fb->get('/1513583672218443?fields=posts{caption,full_picture,message,permalink_url,created_time}', 'EAAK8tWz2yjIBAOXEQy3D96dW3HtZBKmBOzDKu9hbkHNUWgrjXaLNShJ0L9Ekpb0Fanrsw8aWv3w6X4Up2nhTFHZASyVMoJXSt0ZCJOHBF94JOIpdSyGa2SH1TtHlesHCWeJWhOWj74E837rOswgMXWqpyWzuFYZD');
+      $response = $fb->get('/1513583672218443?fields=posts{caption,full_picture,message,permalink_url,created_time}', 'EAAK8tWz2yjIBAEmTEFc5J0enDNZBjHKgGZCdYF4zbCpAm7iRZCuiusCZCfuvZAGT193d4BBDIgRYGLdqZAm5Wbw59tjpi64nH0NZBTZBx3AmXpU4lFFZAAZBq4J9cn0Lpo1U9Euas6jn8ArVhVXx8rGqCYMYLybL7FyKvouZBwi2JyLZBwZDZD');
       } catch(Facebook\Exceptions\FacebookResponseException $e) {
       echo 'Graph returned an error: ' . $e->getMessage();
       exit;
