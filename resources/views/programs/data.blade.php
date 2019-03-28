@@ -18,8 +18,11 @@
         Grundläggande behörighet samt Fysik 2 och Matematik 3c (områdesbehörighet A8 med undantag
         för Kemi 1) alternativt områdesbehörighet 8 med undantag för Kemi A.
     </p>
-    <hr>
     <p><b>Vill du läsa mer om utbildningen? Klicka på knappen nedan.</b></p>
     <a target="_blank" class="btn btn-grey" href="https://www.kau.se/utbildning/program-och-kurser/program/SGWEB">Läs mer</a>
-
+    <hr>
+    <div class="text-center">
+        <p>Klicka nedan för att gå tillbaks till alla program.</p>
+        <a class="btn btn-grey" href="{{ route( 'programs' ) }}">Program</a>
+    </div>
 @endsection

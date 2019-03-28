@@ -16,9 +16,12 @@
         Gymnasiets Engelska kurs 6 eller B eller motsvarande, kandidatexamen 180 hp varav minst 90 hp inom
         Informatik eller Datavetenskap.
     </p>
-    <hr>
     <p><b>Vill du läsa mer om utbildningen? Klicka på knappen nedan.</b></p>
     <a target="_blank" class="btn btn-grey" href="https://www.kau.se/utbildning/program-och-kurser/program/SAINF">Läs mer</a>
-
+    <hr>
+    <div class="text-center">
+        <p>Klicka nedan för att gå tillbaks till alla program.</p>
+        <a class="btn btn-grey" href="{{ route( 'programs' ) }}">Program</a>
+    </div>
 
 @endsection

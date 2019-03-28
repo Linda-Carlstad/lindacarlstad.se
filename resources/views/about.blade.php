@@ -45,12 +45,12 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-6 my-3">
-            <div class="card bg-dark">
+        <div class="col-lg-6 my-3 d-flex">
+            <div class="card flex-fill bg-dark">
                 <h5 class="card-header">Ordförande</h5>
                 <div class="card-body">
                     <p class="card-title">
-                        <a href="mailto:ordforande@lindacarlstad.se">ordforande@lindacarlstad.se</a>
+                        <a target="_blank" href="mailto:ordforande@lindacarlstad.se">ordforande@lindacarlstad.se</a>
                     </p>
                         <br>
                         <div class="row">
@@ -67,12 +67,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 my-3">
-            <div class="card bg-dark">
+        <div class="col-lg-6 my-3 d-flex">
+            <div class="card flex-fill bg-dark">
                 <h5 class="card-header">Vice ordförande</h5>
                 <div class="card-body">
                     <p class="card-title">
-                        <a href="mailto:vice@lindacarlstad.se">vice@lindacarlstad.se</a>
+                        <a target="_blank" href="mailto:vice@lindacarlstad.se">vice@lindacarlstad.se</a>
                     </p>
                         <br>
                         <div class="row">
@@ -89,12 +89,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 my-3">
-            <div class="card bg-dark">
+        <div class="col-lg-6 my-3 d-flex">
+            <div class="card flex-fill bg-dark">
                 <h5 class="card-header">Kassör</h5>
                 <div class="card-body">
                     <p class="card-title">
-                        <a href="mailto:kassor@lindacarlstad.se">kassor@lindacarlstad.se</a>
+                        <a target="_blank" href="mailto:kassor@lindacarlstad.se">kassor@lindacarlstad.se</a>
                     </p>
                         <br>
                         <div class="row">
@@ -111,12 +111,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 my-3">
-            <div class="card bg-dark">
+        <div class="col-lg-6 my-3 d-flex">
+            <div class="card flex-fill bg-dark">
                 <h5 class="card-header">Sekreterare</h5>
                 <div class="card-body">
                     <p class="card-title">
-                        <a href="mailto:sekreterare@lindacarlstad.se">sekreterare@lindacarlstad.se</a>
+                        <a target="_blank" href="mailto:sekreterare@lindacarlstad.se">sekreterare@lindacarlstad.se</a>
                     </p>
                         <br>
                         <div class="row">
@@ -133,12 +133,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 my-3">
-            <div class="card bg-dark">
+        <div class="col-lg-6 my-3 d-flex">
+            <div class="card flex-fill bg-dark">
                 <h5 class="card-header">Sexmästare</h5>
                 <div class="card-body">
                     <p class="card-title">
-                        <a href="mailto:sexmastare@lindacarlstad.se">sexmastare@lindacarlstad.se</a>
+                        <a target="_blank" href="mailto:sexmastare@lindacarlstad.se">sexmastare@lindacarlstad.se</a>
                     </p>
                         <br>
                         <div class="row">
@@ -155,12 +155,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 my-3">
-            <div class="card bg-dark">
+        <div class="col-lg-6 my-3 d-flex">
+            <div class="card flex-fill bg-dark">
                 <h5 class="card-header">IT</h5>
                 <div class="card-body">
                     <p class="card-title">
-                        <a href="mailto:it@lindacarlstad.se">it@lindacarlstad.se</a>
+                        <a target="_blank" href="mailto:it@lindacarlstad.se">it@lindacarlstad.se</a>
                     </p>
                         <br>
                         <div class="row">
@@ -177,12 +177,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 my-3">
-            <div class="card bg-dark">
+        <div class="col-lg-6 my-3 d-flex">
+            <div class="card flex-fill bg-dark">
                 <h5 class="card-header">PR</h5>
                 <div class="card-body">
                     <p class="card-title">
-                        <a href="mailto:pr@lindacarlstad.se">pr@lindacarlstad.se</a>
+                        <a target="_blank" href="mailto:pr@lindacarlstad.se">pr@lindacarlstad.se</a>
                     </p>
                         <br>
                         <div class="row">
@@ -199,12 +199,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 my-3">
-            <div class="card bg-dark">
+        <div class="col-lg-6 my-3 d-flex">
+            <div class="card flex-fill bg-dark">
                 <h5 class="card-header">SNITS</h5>
                 <div class="card-body">
                     <p class="card-title">
-                        <a href="mailto:snits@lindacarlstad.se">snits@lindacarlstad.se</a>
+                        <a target="_blank" href="mailto:snits@lindacarlstad.se">snits@lindacarlstad.se</a>
                     </p>
                         <br>
                         <div class="row">
@@ -221,12 +221,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 my-3">
-            <div class="card bg-dark">
+        <div class="col-lg-6 my-3 d-flex">
+            <div class="card flex-fill bg-dark">
                 <h5 class="card-header">SNITS</h5>
                 <div class="card-body">
                     <p class="card-title">
-                        <a href="mailto:snits@lindacarlstad.se">snits@lindacarlstad.se</a>
+                        <a target="_blank" href="mailto:snits@lindacarlstad.se">snits@lindacarlstad.se</a>
                     </p>
                         <br>
                         <div class="row">
@@ -243,12 +243,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 my-3">
-            <div class="card bg-dark">
+        <div class="col-lg-6 my-3 d-flex">
+            <div class="card flex-fill bg-dark">
                 <h5 class="card-header">Utbildningsansvarig</h5>
                 <div class="card-body">
                     <p class="card-title">
-                        <a href="mailto:utbildning@lindacarlstad.se">utbildning@lindacarlstad.se</a>
+                        <a target="_blank" href="mailto:utbildning@lindacarlstad.se">utbildning@lindacarlstad.se</a>
                     </p>
                         <br>
                         <div class="row">
