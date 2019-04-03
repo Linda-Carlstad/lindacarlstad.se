@@ -77,10 +77,10 @@
                         <br>
                         <div class="row">
                             <div class="col-lg-4">
-                                <img class="img-fluid" src="{{ asset( '/img/board/vice.jpg' ) }}" alt="Linda Carlstad vice ordförande - Jeanette Öhrströmt">
+                                <img class="img-fluid" src="{{ asset( '/img/board/vice.jpg' ) }}" alt="Linda Carlstad vice ordförande - Jeanette Öhrström">
                             </div>
                             <div class="col-lg-8">
-                                <p class="card-title font-weight-bold">Jeanette Öhrströmt</p>
+                                <p class="card-title font-weight-bold">Jeanette Öhrström</p>
                                 <p class="card-text">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 </p>
