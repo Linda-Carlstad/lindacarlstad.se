@@ -91,37 +91,37 @@ Route::get( 'program', function()
     return view( 'programs.index' );
 })->name( 'programs' );
 
-Route::get( 'högskoleingenjör-i-datateknik', function()
+Route::get( 'program/högskoleingenjör-i-datateknik', function()
 {
     return view( 'programs.data' );
 })->name( 'data' );
 
-Route::get( 'it-design-affärssystem-och-ekonomi', function()
+Route::get( 'program/it-design-affärssystem-och-ekonomi', function()
 {
     return view( 'programs.business' );
 })->name( 'business' );
 
-Route::get( 'it-design-systemdesign', function()
+Route::get( 'program/it-design-systemdesign', function()
 {
     return view( 'programs.system' );
 })->name( 'system' );
 
-Route::get( 'kandidatprogram-i-datavetenskap', function()
+Route::get( 'program/kandidatprogram-i-datavetenskap', function()
 {
     return view( 'programs.candidate' );
 })->name( 'candidate' );
 
-Route::get( 'webbutvecklare', function()
+Route::get( 'program/webbutvecklare', function()
 {
     return view( 'programs.webb' );
 })->name( 'webb' );
 
-Route::get( 'masterprogram-i-datavetenskap', function()
+Route::get( 'program/masterprogram-i-datavetenskap', function()
 {
     return view( 'programs.master.data' );
 })->name( 'master.data' );
 
-Route::get( 'masterprogram-i-informatik', function()
+Route::get( 'program/masterprogram-i-informatik', function()
 {
     return view( 'programs.master.info' );
 })->name( 'master.info' );
