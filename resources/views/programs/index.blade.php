@@ -9,6 +9,9 @@
         <p>Här är en lista på de olika item som ingår i Linda Carlstad</p>
         <div class="col-md-8 offset-md-2">
             <ul class="list-group">
+                <a href="{{ route( 'civil' )}}" class="list-group-item bg-dark">
+                    Civilingenjör datateknik
+                </a>
                 <a href="{{ route( 'data' ) }}" class="list-group-item bg-dark">
                     Högskoleingenjör i datateknik
                 </a>
