@@ -129,7 +129,7 @@
                     <li class="nav-item d-md-none d-lg-block">
                         <a class="nav-link" href="http://lindacarlstad.tictail.com/">Webbshop</a>
                     </li>
-                    @auth
+                    {{-- @auth
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}<span class="caret"></span>
@@ -154,7 +154,7 @@
                         <a class="nav-link" href="{{ route( 'register' ) }}">{{ __( 'Registrera' ) }}</a>
                         @endif
                     </li>
-                    @endauth
+                    @endauth --}}
                 </ul>
             </div>
         </div>
