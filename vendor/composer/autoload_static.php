@@ -76,6 +76,7 @@ class ComposerStaticInit50fe7916daa292fc4986ec27e4f81893
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'Spatie\\Sluggable\\' => 17,
         ),
         'R' => 
         array (
@@ -261,6 +262,10 @@ class ComposerStaticInit50fe7916daa292fc4986ec27e4f81893
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Spatie\\Sluggable\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-sluggable/src',
+        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -437,6 +442,7 @@ class ComposerStaticInit50fe7916daa292fc4986ec27e4f81893
     );
 
     public static $classMap = array (
+        'App\\BoardMember' => __DIR__ . '/../..' . '/app/BoardMember.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\EmailVerification' => __DIR__ . '/../..' . '/app/EmailVerification.php',
         'App\\Exam' => __DIR__ . '/../..' . '/app/Exam.php',
@@ -450,8 +456,10 @@ class ComposerStaticInit50fe7916daa292fc4986ec27e4f81893
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\ExamController' => __DIR__ . '/../..' . '/app/Http/Controllers/ExamController.php',
         'App\\Http\\Controllers\\FetchBlogPosts' => __DIR__ . '/../..' . '/app/Http/Controllers/FetchBlogPosts.php',
+        'App\\Http\\Controllers\\FetchBoardMembers' => __DIR__ . '/../..' . '/app/Http/Controllers/FetchBoardMembers.php',
         'App\\Http\\Controllers\\FetchFacebookPosts' => __DIR__ . '/../..' . '/app/Http/Controllers/FetchFacebookPosts.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\InitiationDaysController' => __DIR__ . '/../..' . '/app/Http/Controllers/InitiationDaysController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Controllers\\VerifyNewEmail' => __DIR__ . '/../..' . '/app/Http/Controllers/VerifyNewEmail.php',
         'App\\Http\\Controllers\\VerifyUser' => __DIR__ . '/../..' . '/app/Http/Controllers/VerifyUser.php',
@@ -463,11 +471,13 @@ class ComposerStaticInit50fe7916daa292fc4986ec27e4f81893
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\InitiationDay' => __DIR__ . '/../..' . '/app/InitiationDay.php',
         'App\\Listeners\\LogVerifiedUser' => __DIR__ . '/../..' . '/app/Listeners/LogVerifiedUser.php',
         'App\\Mail\\EmailVerificationWithCode' => __DIR__ . '/../..' . '/app/Mail/EmailVerificationWithCode.php',
         'App\\Mail\\EmailVerified' => __DIR__ . '/../..' . '/app/Mail/EmailVerified.php',
         'App\\Mail\\PasswordChange' => __DIR__ . '/../..' . '/app/Mail/PasswordChange.php',
         'App\\Mail\\UserVerified' => __DIR__ . '/../..' . '/app/Mail/UserVerified.php',
+        'App\\Member' => __DIR__ . '/../..' . '/app/Member.php',
         'App\\Policies\\UserPolicy' => __DIR__ . '/../..' . '/app/Policies/UserPolicy.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
@@ -3469,6 +3479,9 @@ class ComposerStaticInit50fe7916daa292fc4986ec27e4f81893
         'SebastianBergmann\\Timer\\RuntimeException' => __DIR__ . '/..' . '/phpunit/php-timer/src/RuntimeException.php',
         'SebastianBergmann\\Timer\\Timer' => __DIR__ . '/..' . '/phpunit/php-timer/src/Timer.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
+        'Spatie\\Sluggable\\HasSlug' => __DIR__ . '/..' . '/spatie/laravel-sluggable/src/HasSlug.php',
+        'Spatie\\Sluggable\\InvalidOption' => __DIR__ . '/..' . '/spatie/laravel-sluggable/src/InvalidOption.php',
+        'Spatie\\Sluggable\\SlugOptions' => __DIR__ . '/..' . '/spatie/laravel-sluggable/src/SlugOptions.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\CommandLoader\\CommandLoaderInterface' => __DIR__ . '/..' . '/symfony/console/CommandLoader/CommandLoaderInterface.php',
         'Symfony\\Component\\Console\\CommandLoader\\ContainerCommandLoader' => __DIR__ . '/..' . '/symfony/console/CommandLoader/ContainerCommandLoader.php',

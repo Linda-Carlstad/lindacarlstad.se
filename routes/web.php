@@ -10,17 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes( [ 'verify' => true ] );
+
+//Auth::routes( [ 'verify' => true ] );
 
 Route::get( '/', function ()
 {
     return view( 'index' );
 });
 
-Route::get( 'om-föreningen', function ()
-{
-    return view( 'about' );
-})->name( 'about' );
 
 Route::get( 'kalender', function ()
 {
@@ -76,15 +73,11 @@ Route::get( 'kontakt', function()
     return view( 'contact' );
 })->name( 'contact' );
 
-Route::get( 'nollning/schema', function()
-{
-    return view( 'initiation.schedule' );
-})->name( 'schedule' );
 
 Route::get( 'nollning/regler', function()
 {
     return view( 'initiation.rules' );
-})->name( 'rules' );
+})->name( 'initiation.rules' );
 
 Route::get( 'program', function()
 {
@@ -126,8 +119,20 @@ Route::get( 'program/masterprogram-i-informatik', function()
     return view( 'programs.master.info' );
 })->name( 'master.info' );
 
+/* Email */
 Route::get( 'verifiering-profil', 'VerifyUser' );
 Route::get( 'verifiering-email', 'VerifyNewEmail' );
+
+/* Kontaktformulär */
+Route::post( '/contactForm', 'ContactForm' );
+
+/* Hämtar data */
+Route::get( 'nyheter', 'FetchFacebookPosts' )->name( 'news' );
+Route::get( 'nollning', 'FetchBlogPosts' )->name( 'initiation' );
+Route::get( 'tentor', 'ExamController@index' )->name( 'tentor' );
+Route::get( 'föreningen', 'FetchBoardMembers' )->name( 'about' );
+Route::get( 'nollning/schema', 'InitiationDaysController@index' )->name( 'initiation.schedule' );
+Route::get( 'nollning/schema/{slug}', 'InitiationDaysController@show' )->name( 'initiation.show' );
 
 Route::group( [ 'middleware' => 'verified' ], function ()
 {
@@ -138,8 +143,3 @@ Route::group( [ 'middleware' => 'verified' ], function ()
         'exam' => 'ExamController',
     ] );
 } );
-
-Route::post( '/contactForm', 'ContactForm' );
-Route::get( 'nyheter', 'FetchFacebookPosts' )->name( 'news' );
-Route::get( 'nollning', 'FetchBlogPosts' )->name( 'initiation' );
-Route::get( 'tentor', 'ExamController@index' )->name( 'tentor' );

@@ -6,8 +6,8 @@
     <hr>
     <div class="text-center">
         <h2>Snabbval</h3>
-        <a class="btn btn-lg btn-grey" href="{{ route( 'schedule' ) }}">Schema</a>
-        <a class="btn btn-lg btn-grey" href="{{ route( 'rules' ) }}">Regler</a>
+        <a class="btn btn-lg btn-grey" href="{{ route( 'initiation.schedule' ) }}">Schema</a>
+        <a class="btn btn-lg btn-grey" href="{{ route( 'initiation.rules' ) }}">Regler</a>
     </div>
     <hr>
     <div class="updates">
@@ -53,7 +53,7 @@
                     fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
                     culpa qui officia deserunt mollit anim id est laborum.
                 </p>
-                <a class="btn btn-grey" href="{{ route( 'schedule' ) }}">Till schema</a>
+                <a class="btn btn-grey" href="{{ route( 'initiation.schedule' ) }}">Till schema</a>
             </div>
         </div>
     </div>

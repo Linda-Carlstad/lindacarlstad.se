@@ -9,7 +9,8 @@
         "fideloper/proxy": "^4.0",
         "frozzare/personnummer": "^1.2",
         "laravel/framework": "5.7.*",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "spatie/laravel-sluggable": "^2.1"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
