@@ -109,15 +109,20 @@ Route::get( 'program/webbutvecklare', function()
     return view( 'programs.webb' );
 })->name( 'webb' );
 
-Route::get( 'program/masterprogram-i-datavetenskap', function()
+Route::get( 'program/master/masterprogram-i-datavetenskap', function()
 {
     return view( 'programs.master.data' );
 })->name( 'master.data' );
 
-Route::get( 'program/masterprogram-i-informatik', function()
+Route::get( 'program/master/masterprogram-i-informatik', function()
 {
     return view( 'programs.master.info' );
 })->name( 'master.info' );
+
+Route::get( 'program/civilingenjör-i-datateknik', function()
+{
+    return view( 'programs.civil' );
+})->name( 'civil' );
 
 /* Email */
 Route::get( 'verifiering-profil', 'VerifyUser' );
