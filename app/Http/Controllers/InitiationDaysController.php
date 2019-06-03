@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\InitiationDay;
+use App\InitiationKeyPerson;
+use App\InitiationInformation;
 
 use Illuminate\Http\Request;
 
@@ -16,7 +18,13 @@ class InitiationDaysController extends Controller
     public function index()
     {
         $days = InitiationDay::orderBy( 'order', 'asc' )->get();
-        return view( 'initiation.schedule' )->with( 'days', $days );
+        $keyPeople = InitiationKeyPerson::orderBy( 'name', 'asc' )->get();
+        $information = InitiationInformation::first();
+        
+        return view( 'initiation.index' )
+            ->with( 'days', $days )
+            ->with( 'keyPeople', $keyPeople )
+            ->with( 'information', $information );
     }
 
     /**
@@ -49,12 +57,6 @@ class InitiationDaysController extends Controller
     public function show( $slug )
     {
         $day = InitiationDay::where('slug', $slug)->first();
-        return view( 'initiation.day' )->with( 'day', $day );
-    }
-
-    public function showDay( $slug )
-    {
-
         return view( 'initiation.day' )->with( 'day', $day );
     }
 

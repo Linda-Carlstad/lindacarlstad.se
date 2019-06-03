@@ -113,15 +113,12 @@
                         <a class="nav-link" href="{{ route( 'about' ) }}">Föreningen</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route( 'initiation' ) }}">Nollning</a>
-                    </li>
-                    <li class="nav-item d-md-none d-lg-block">
-                        <a class="nav-link" href="{{ route( 'news' ) }}">Nyheter</a>
+                        <a class="nav-link" href="{{ route( 'initiation' ) }}">Nollning {{ date( 'Y' ) }}</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://old.lindacarlstad.se">Gamla webbsidan</a>
+                        <a class="nav-link" href="{{ route( 'news' ) }}">Nyheter</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="http://tentahub.se/linda">Tentor</a>
@@ -129,32 +126,6 @@
                     <li class="nav-item d-md-none d-lg-block">
                         <a class="nav-link" href="http://lindacarlstad.tictail.com/">Webbshop</a>
                     </li>
-                    {{-- @auth
-                    <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }}<span class="caret"></span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item bg-dark" href="{{ route( 'profile' ) }}">Profil</a>
-                            <a class="dropdown-item bg-dark" href="{{ route( 'logout' ) }}" onclick="event.preventDefault();
-                                      document.getElementById( 'logout-form' ).submit();">
-                                {{ __( 'Logga ut' ) }}
-                            </a>
-                            <form id="logout-form" action="{{ route( 'logout' ) }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </div>
-                    </li>
-                    @else
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route( 'login' ) }}">{{ __( 'Logga in' ) }}</a>
-                    </li>
-                    <li class="nav-item">
-                        @if ( Route::has( 'register' ) )
-                        <a class="nav-link" href="{{ route( 'register' ) }}">{{ __( 'Registrera' ) }}</a>
-                        @endif
-                    </li>
-                    @endauth --}}
                 </ul>
             </div>
         </div>

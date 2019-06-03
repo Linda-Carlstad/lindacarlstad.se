@@ -133,11 +133,14 @@ Route::post( '/contactForm', 'ContactForm' );
 
 /* Hämtar data */
 Route::get( 'nyheter', 'FetchFacebookPosts' )->name( 'news' );
-Route::get( 'nollning', 'FetchBlogPosts' )->name( 'initiation' );
+Route::get( 'nollning', 'InitiationDaysController@index' )->name( 'initiation' );
 Route::get( 'tentor', 'ExamController@index' )->name( 'tentor' );
 Route::get( 'föreningen', 'FetchBoardMembers' )->name( 'about' );
-Route::get( 'nollning/schema', 'InitiationDaysController@index' )->name( 'initiation.schedule' );
-Route::get( 'nollning/schema/{slug}', 'InitiationDaysController@show' )->name( 'initiation.show' );
+//Route::get( 'nollning/schema', 'InitiationDaysController@index' )->name( 'initiation.schedule' );
+Route::get( 'nollning/{slug}', 'InitiationDaysController@show' )->name( 'initiation.show' );
+//Route::get( 'nollning/schema/{slug}', 'InitiationDaysController@show' )->name( 'initiation.show' );
+
+
 
 Route::group( [ 'middleware' => 'verified' ], function ()
 {
