@@ -22,7 +22,7 @@
                     IT-design: Systemdesign
                 </a>
                 <a href="{{ route( 'candidate' ) }}" class="list-group-item bg-dark">
-                    Kandidatitem i datavetenskap
+                    Kandidatprogram i datavetenskap
                 </a>
                 <a href="{{ route( 'webb' ) }}" class="list-group-item bg-dark">
                     Webbutvecklare

@@ -123,9 +123,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="http://tentahub.se/linda">Tentor</a>
                     </li>
-                    <li class="nav-item d-md-none d-lg-block">
-                        <a class="nav-link" href="http://lindacarlstad.tictail.com/">Webbshop</a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -150,7 +147,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 d-none d-md-block text-center">
-                    <a href="">
+                    <a href="{{ url( '/' ) }}">
                         <img src="{{ asset( 'img/logo.png') }}" alt="Linda Carlstad logo">
                     </a>
                 </div>
@@ -163,8 +160,6 @@
                         Universitetsgatan 2
                         <br>
                         651 68 Karlstad
-                        <br>
-                        <a href="{{ url( 'whoops' ) }}" class="special">Whoops</a>
                     </p>
                 </div>
                 <div class="col-md-3">
@@ -173,11 +168,9 @@
                         <br>
                         <a href="{{ route( 'contact' ) }}">Kontakta oss</a>
                         <br>
-                        <a href="{{ route( 'about' ) }}">Om oss</a>
+                        <a href="{{ route( 'about' ) }}">Om föreningen</a>
                         <br>
                         <a href="{{ route( 'new-member' ) }}">Bli medlem</a>
-                        <br>
-                        <a href="{{ route( 'secret' ) }}" class="special">Secret</a>
                     </p>
                 </div>
                 <div class="col-md-3">
@@ -188,11 +181,7 @@
                         <br>
                         <a href="http://tentahub.se/linda">Tentor</a>
                         <br>
-                        <!-- <a href="events.php">Event</a>
-                                <br> -->
                         <a href="{{ route( 'document' ) }}">Dokument</a>
-                        <br>
-                        <a href="http://lindacarlstad.se/robot/terminal.html">Terminal</a>
                         <br>
                         <a href="http://lindacarlstad.tictail.com/">Webbshop</a>
                     </p>

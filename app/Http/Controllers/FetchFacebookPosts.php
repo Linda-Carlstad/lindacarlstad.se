@@ -22,9 +22,9 @@ class FetchFacebookPosts extends Controller
       require_once '../vendor/facebookAPI/src/Facebook/autoload.php';
 
       $fb = new Facebook([
-      'app_id' => '770437356636722',
-      'app_secret' => '62e0185cc65a820d038df51ce1592d8c',
-      'default_graph_version' => 'v3.2',
+      'app_id' => '105287106191432',
+      'app_secret' => '25b0be5edaede0f1b58df56019462dbc',
+      'default_graph_version' => 'v3.3',
       ]);
 
       try {

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\UserVerified;
+use App\Mail\Contact;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -25,7 +25,7 @@ class ContactForm extends Controller
             'message' => 'required|string',
         ] );
 
-        Mail::to( env( 'MAIL_FROM_ADDRESS' ) )
-            ->send( new UserVerified( $request ) );
+        Mail::to( 'info@lindacarlstad.se' )
+            ->send( new Contact( $request ) );
     }
 }
