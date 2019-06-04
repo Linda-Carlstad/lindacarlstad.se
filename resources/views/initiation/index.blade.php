@@ -27,10 +27,11 @@
     <div class="d-block row d-md-flex flex-md-row-reverse py-4">
         <div class="col-12 text-center">
             <h3>Schema</h3>
+            @if( $days->isEmpty() )
+                <p class="text-center">Inga dagar tillagda.</p>
+            @endif
             <ul class="list-group col-md-8 offset-md-2">
-                @if( $days->isEmpty() )
-                    <p>Inga dagar tillagda.</p>
-                @endif
+
                 @foreach( $days as $day )
                     <a href="{{ route( 'initiation.show', $day->slug ) }}" class="list-group-item bg-dark">
                         {{ $day->title }}
@@ -75,7 +76,7 @@
         <div class="col-12 mt-3">
             <h4 class="text-center">Kontaktpersoner</h4>
             @if( $keyPeople->isEmpty() )
-                <p>Inga kontaktpersoner tillagda.</p>
+                <p class="text-center">Inga kontaktpersoner tillagda.</p>
             @else
                 <ul class="list-group col-md-8 offset-md-2">
                     @foreach( $keyPeople as $keyPerson )

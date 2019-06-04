@@ -132,7 +132,7 @@ Route::get( 'verifiering-email', 'VerifyNewEmail' );
 Route::post( '/contactForm', 'ContactForm' );
 
 /* Hämtar data */
-Route::get( 'nyheter', 'FetchFacebookPosts' )->name( 'news' );
+//Route::get( 'nyheter', 'FetchFacebookPosts' )->name( 'news' );
 Route::get( 'nollning', 'InitiationDaysController@index' )->name( 'initiation' );
 Route::get( 'tentor', 'ExamController@index' )->name( 'tentor' );
 Route::get( 'föreningen', 'FetchBoardMembers' )->name( 'about' );

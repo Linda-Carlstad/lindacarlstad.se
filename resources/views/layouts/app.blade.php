@@ -112,13 +112,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route( 'about' ) }}">Föreningen</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route( 'initiation' ) }}">Nollning {{ date( 'Y' ) }}</a>
-                    </li>
                 </ul>
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route( 'news' ) }}">Nyheter</a>
+                        <a class="nav-link" href="{{ route( 'initiation' ) }}">Nollning {{ date( 'Y' ) }}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="http://tentahub.se/linda">Tentor</a>
@@ -182,8 +179,6 @@
                         <a href="http://tentahub.se/linda">Tentor</a>
                         <br>
                         <a href="{{ route( 'document' ) }}">Dokument</a>
-                        <br>
-                        <a href="http://lindacarlstad.tictail.com/">Webbshop</a>
                     </p>
                 </div>
             </div>
