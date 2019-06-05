@@ -152,9 +152,13 @@
     <footer class="footer py-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 d-none d-md-block text-center">
+                <div class="col-md-3 mb-3 mb-md-0 text-md-center">
                     <a href="{{ url( '/' ) }}">
-                        <img src="{{ asset( 'img/logo.png') }}" alt="Linda Carlstad logo">
+                        <img class="logo mb-md-4" src="{{ asset( 'img/logo.png') }}" alt="Linda Carlstad logo">
+                    </a>
+                    <br class="d-none d-md-block">
+                    <a href="https://kau.se">
+                        <img class="logo" src="{{ asset( 'img/kau.png') }}" alt="Karlstads Universitets logo">
                     </a>
                 </div>
                 <div class="col-md-3">

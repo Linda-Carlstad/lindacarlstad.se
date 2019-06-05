@@ -20,7 +20,7 @@ class InitiationDaysController extends Controller
         $days = InitiationDay::orderBy( 'order', 'asc' )->get();
         $keyPeople = InitiationKeyPerson::orderBy( 'name', 'asc' )->get();
         $information = InitiationInformation::first();
-        
+
         return view( 'initiation.index' )
             ->with( 'days', $days )
             ->with( 'keyPeople', $keyPeople )
@@ -57,6 +57,7 @@ class InitiationDaysController extends Controller
     public function show( $slug )
     {
         $day = InitiationDay::where('slug', $slug)->first();
+
         return view( 'initiation.day' )->with( 'day', $day );
     }
 
