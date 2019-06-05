@@ -118,7 +118,10 @@
                 </ul>
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route( 'document' ) }}">Dockument</a>
+                        <a class="nav-link" href="{{ route( 'song' ) }}">Sånger</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route( 'document' ) }}">Dokument</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route( 'news' ) }}">Nyheter</a>

@@ -18,61 +18,31 @@ Route::get( '/', function ()
     return view( 'index' );
 });
 
-
-Route::get( 'kalender', function ()
-{
-    return view( 'calendar' );
-})->name( 'calendar' );
-
 Route::get( 'integritetspolicy', function ()
 {
     return view( 'policy' );
 })->name( 'policy' );
-
 
 Route::get( 'dokument', function ()
 {
     return view( 'document' );
 })->name( 'document' );
 
-
-Route::get( 'evenemang', function ()
-{
-    return view( 'events' );
-})->name( 'events' );
-
-
 Route::get( 'ny-medlem', function ()
 {
     return view( 'new-member' );
 })->name( 'new-member' );
-
 
 Route::get( 'support', function()
 {
     return view( 'support' );
 } )->name( 'support' );
 
-Route::get( 'hemlighet', function ()
-{
-    return view( 'secret' );
-})->name( 'secret' );
-
-Route::get( 'webbshop', function ()
-{
-    return view( 'store' );
-})->name( 'store' );
-
-Route::get( 'whoops', function ()
-{
-    return view( 'whoops' );
-});
 
 Route::get( 'kontakt', function()
 {
     return view( 'contact' );
 })->name( 'contact' );
-
 
 Route::get( 'nollning/regler', function()
 {
@@ -133,13 +103,12 @@ Route::post( '/contactForm', 'ContactForm' );
 
 /* Hämtar data */
 Route::get( 'nyheter', 'FetchFacebookPosts' )->name( 'news' );
-Route::get( 'nollning', 'InitiationDaysController@index' )->name( 'initiation' );
 Route::get( 'tentor', 'ExamController@index' )->name( 'tentor' );
 Route::get( 'föreningen', 'FetchBoardMembers' )->name( 'about' );
-//Route::get( 'nollning/schema', 'InitiationDaysController@index' )->name( 'initiation.schedule' );
+Route::get( 'nollning', 'InitiationDaysController@index' )->name( 'initiation' );
 Route::get( 'nollning/{slug}', 'InitiationDaysController@show' )->name( 'initiation.show' );
-//Route::get( 'nollning/schema/{slug}', 'InitiationDaysController@show' )->name( 'initiation.show' );
-
+Route::get( 'sånger', 'SongController@index' )->name( 'song' );
+Route::get( 'sånger/{slug}', 'SongController@show' )->name( 'song.show' );
 
 
 Route::group( [ 'middleware' => 'verified' ], function ()
