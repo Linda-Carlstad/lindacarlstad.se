@@ -16,7 +16,7 @@
         </div>
         <div class="col-md-6">
             <h3>Beskrivning</h3>
-            <p>{{ $day->description }}</p>
+            <p>{!! nl2br( $day->description ) !!}</p>
         </div>
         <div class="col-12 text-center">
             <hr class="d-none d-md-block">

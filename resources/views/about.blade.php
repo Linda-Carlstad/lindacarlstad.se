@@ -57,13 +57,13 @@
                         </p>
                             <br>
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 mb-3 mb-md-0">
                                     <img class="img-fluid" src="{{ asset( '/img/logo.png' ) }}" alt="Linda Carlstad vice ordförande - {{ $boardMember->name }}">
                                 </div>
                                 <div class="col-lg-8">
                                     <p class="card-title font-weight-bold">{{ $boardMember->name }}</p>
                                     <p class="card-text">
-                                        {{ $boardMember->description }}
+                                        {!! nl2br( $boardMember->description ) !!}
                                     </p>
                                 </div>
                             </div>

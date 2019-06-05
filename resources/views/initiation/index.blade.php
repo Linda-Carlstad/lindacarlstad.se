@@ -49,7 +49,7 @@
         <div class="col-md-8 offset-md-2 d-flex align-items-center justify-content-center">
             <div class="text-block">
                 <p>
-                    {{ $information->description }}
+                    {!! nl2br( $information->description ) !!}
                 </p>
                 <p><b>Pris:</b> {{ $information->price }}kr</p>
                 <hr>
