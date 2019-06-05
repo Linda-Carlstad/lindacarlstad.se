@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="Utbildning, Förening, Studentförening, Webbutvecklare, Webbutveckling, Data, Dataingenjör, IT-design">
+    <meta name="keywords" content="Utbildning, Utbildningar, Förening, Föreningar, Studentförening, Studentföreningar, Webbutvecklare, Webbutveckling, Data, Dataingenjör, IT-design">
     <meta name="description" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student, såväl att du har det bra på universitet som på fritiden, utbildningen kommer inte alltid att vara rolig eller lätt och då hoppas vi att vi kan vara till din hjälp med studierna om det så krävs eller med att bara ta det lugnt och umgås.">
     <meta name="subject" content="Social">
     <meta name="image" content="https://lindacarlstad.se/img/logo.png">
@@ -112,10 +112,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route( 'about' ) }}">Föreningen</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route( 'initiation' ) }}">Nollning {{ date( 'Y' ) }}</a>
+                    </li>
                 </ul>
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route( 'initiation' ) }}">Nollning {{ date( 'Y' ) }}</a>
+                        <a class="nav-link" href="{{ route( 'document' ) }}">Dockument</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route( 'news' ) }}">Nyheter</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="http://tentahub.se/linda">Tentor</a>
