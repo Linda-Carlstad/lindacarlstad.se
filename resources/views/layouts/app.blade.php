@@ -188,6 +188,7 @@
                         <span>Länkar</span>
                         <br>
                         <a href="{{ route( 'programs' ) }}">Program</a>
+                        <a href="{{ route( 'partner' ) }}">Samarbetspartners</a>
                         <br>
                         <a href="http://tentahub.se/linda">Tentor</a>
                         <br>

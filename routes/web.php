@@ -109,6 +109,8 @@ Route::get( 'nollning', 'InitiationDaysController@index' )->name( 'initiation' )
 Route::get( 'nollning/{slug}', 'InitiationDaysController@show' )->name( 'initiation.show' );
 Route::get( 'sånger', 'SongController@index' )->name( 'song' );
 Route::get( 'sånger/{slug}', 'SongController@show' )->name( 'song.show' );
+Route::get( 'samarbetspartner', 'PartnerController@index' )->name( 'partner' );
+Route::get( 'samarbetspartner/{slug}', 'PartnerController@show' )->name( 'partner.show' );
 
 
 Route::group( [ 'middleware' => 'verified' ], function ()
