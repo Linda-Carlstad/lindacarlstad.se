@@ -51,7 +51,12 @@
                 <p>
                     {!! nl2br( $information->description ) !!}
                 </p>
-                <p><b>Pris:</b> {{ $information->price }}kr</p>
+                @if( $information->showPrice == true )
+                    <p><b>Pris:</b> {{ $information->price }}kr</p>
+                @else
+                    <p><b>Pris:</b> Kommer snart</p>
+
+                @endif
                 <hr>
                 <h4 class="text-center">Bra tips</h4>
                 <ul class="list-group">
