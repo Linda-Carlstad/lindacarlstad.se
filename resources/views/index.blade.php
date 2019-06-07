@@ -17,13 +17,14 @@
                 <div class="col-md-8">
                     @if( !$sponsors->isEmpty() )
                         <hr>
-                        <h3 class="text-center mb-3">Sponsorer</h3>
-                        <div class="swiper-container">
+                        <div class="swiper-container py-4">
+                            <h3 class="text-center mb-3">Sponsorer</h3>
                             <div class="swiper-wrapper">
                                     @foreach( $sponsors as $sponsor )
                                         <div class="swiper-slide text-center">
-                                            <img class="logo img-fluid" src="{{ asset( '/img/server.svg' ) }}" alt="{{ $sponsor->name }} logga">
-                                            <p>{{ $sponsor->name }}</p>
+                                            <a href="{{ route( 'partner.show', $sponsor->slug ) }}">
+                                                <img class="logo img-fluid" src="{{ asset( '/img/logo.png' ) }}" alt="{{ $sponsor->name }} logga">
+                                            </a>
                                         </div>
                                     @endforeach
                             </div>
