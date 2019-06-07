@@ -12,7 +12,11 @@
         <b>Typ av samarbetspartner:</b> {{ $partner->type }}
     </p>
     <h4>Beskrivning:</h4>
-    <p>{!! nl2br( $partner->description ) !!}</p>
+    <p>
+        {!! nl2br( $partner->description ) !!}
+        <br><br>
+        <a target="_blank" class="btn btn-grey" href="{{ $partner->link }}">{{ $partner->name }}</a>
+    </p>
 
 
     <hr>
