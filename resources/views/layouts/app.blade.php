@@ -178,7 +178,9 @@
                         <br>
                         <a href="{{ route( 'contact' ) }}">Kontakta oss</a>
                         <br>
-                        <a href="{{ route( 'about' ) }}">Om föreningen</a>
+                        <a href="{{ route( 'about' ) }}">Om oss</a>
+                        <br>
+                        <a href="{{ route( 'programs' ) }}">Program</a>
                         <br>
                         <a href="{{ route( 'new-member' ) }}">Bli medlem</a>
                     </p>
@@ -187,27 +189,30 @@
                     <p>
                         <span>Länkar</span>
                         <br>
-                        <a href="{{ route( 'programs' ) }}">Program</a>
                         <a href="{{ route( 'partner' ) }}">Samarbetspartners</a>
                         <br>
-                        <a href="http://tentahub.se/linda">Tentor</a>
+                        <a href="{{ route( 'song' ) }}">Sånger</a>
                         <br>
                         <a href="{{ route( 'document' ) }}">Dokument</a>
+                        <br>
+                        <a href="{{ route( 'news' ) }}">Nyheter</a>
+                        <br>
+                        <a href="http://tentahub.se/linda">Tentor</a>
                     </p>
                 </div>
             </div>
             <div class="row social-footer-icons justify-content-center">
-                <a href="https://www.facebook.com/linda.carlstad/"><i class="fab fa-facebook"></i></a>
+                <a target="_blank" href="https://www.facebook.com/linda.carlstad/"><i class="fab fa-facebook"></i></a>
                 <br>
-                <a href="https://www.linkedin.com/company/linda-carlstad/about/"><i class="fab fa-linkedin"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/company/linda-carlstad/about/"><i class="fab fa-linkedin"></i></a>
                 <br>
-                <a href="https://www.instagram.com/lindacarlstad/"><i class="fab fa-instagram"></i></a>
+                <a target="_blank" href="https://www.instagram.com/lindacarlstad/"><i class="fab fa-instagram"></i></a>
                 <br>
                 <a href="#" data-toggle="tooltip" data-placement="top" title="@lindacarlstad"><i class="fab fa-snapchat"></i></a>
                 <br>
-                <a href="https://github.com/Linda-Carlstad"><i class="fab fa-github"></i></a>
+                <a target="_blank" href="https://github.com/Linda-Carlstad"><i class="fab fa-github"></i></a>
                 <br>
-                <a href="https://discordapp.com/invite/u8eNCPk?fbclid=IwAR27Zd8nVHtKmW9_qmoT2WHotDFNkNtgcxJ-M1b1xvb1dZa6avDG9QfTYho"><i class="fab fa-discord"></i></a>
+                <a target="_blank" href="https://discordapp.com/invite/u8eNCPk?fbclid=IwAR27Zd8nVHtKmW9_qmoT2WHotDFNkNtgcxJ-M1b1xvb1dZa6avDG9QfTYho"><i class="fab fa-discord"></i></a>
                 <br>
             </div>
         </div>
