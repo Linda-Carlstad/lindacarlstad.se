@@ -13,11 +13,6 @@
 
 //Auth::routes( [ 'verify' => true ] );
 
-Route::get( '/', function ()
-{
-    return view( 'index' );
-});
-
 Route::get( 'integritetspolicy', function ()
 {
     return view( 'policy' );
@@ -102,6 +97,7 @@ Route::get( 'verifiering-email', 'VerifyNewEmail' );
 Route::post( '/contactForm', 'ContactForm' );
 
 /* Hämtar data */
+Route::get( '/', 'FetchIndexView' );
 Route::get( 'nyheter', 'FetchFacebookPosts' )->name( 'news' );
 Route::get( 'tentor', 'ExamController@index' )->name( 'tentor' );
 Route::get( 'föreningen', 'FetchBoardMembers' )->name( 'about' );

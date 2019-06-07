@@ -1,21 +1,16 @@
-var mySwiper = new Swiper ('.swiper-container', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
+$(document).ready(function () {
 
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  })
+    var sponsors = $( '.swiper-wrapper' ).children().length;
+    console.log(sponsors);
+    var mySwiper = new Swiper ('.swiper-container', {
+        // Optional parameters
+        loop: true,
+        autoplay: {
+            delay: 3000,
+        },
+        speed: 5000,
+        direction: 'horizontal',
+        freeMode: true,
+        slidesPerView: 2,
+    });
+});

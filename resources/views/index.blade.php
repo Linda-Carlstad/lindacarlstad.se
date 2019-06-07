@@ -15,6 +15,21 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-md-8">
+                    @if( !$sponsors->isEmpty() )
+                        <hr>
+                        <h3 class="text-center mb-3">Sponsorer</h3>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                    @foreach( $sponsors as $sponsor )
+                                        <div class="swiper-slide text-center">
+                                            <img class="logo img-fluid" src="{{ asset( '/img/server.svg' ) }}" alt="{{ $sponsor->name }} logga">
+                                            <p>{{ $sponsor->name }}</p>
+                                        </div>
+                                    @endforeach
+                            </div>
+                        </div>
+                        <hr>
+                    @endif
                     <div class="d-block row d-md-flex flex-md-row py-4">
                         <div class="col-md-5 d-flex align-items-center justify-content-center">
                             <img class="img-fluid" src="{{ asset('/img/people.svg' ) }}" alt="Linda Carlstad medlemmar och studenter">
