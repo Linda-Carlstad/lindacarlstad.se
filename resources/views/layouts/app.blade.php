@@ -158,7 +158,7 @@
                     </a>
                     <br class="d-none d-md-block">
                     <a href="https://kau.se">
-                        <img class="logo" src="{{ asset( 'img/kau.png') }}" alt="Karlstads Universitets logo">
+                        <img class="logo" src="{{ asset( 'img/partner/kau.png') }}" alt="Karlstads Universitets logo">
                     </a>
                 </div>
                 <div class="col-md-3">
