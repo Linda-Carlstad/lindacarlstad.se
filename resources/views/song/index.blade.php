@@ -15,7 +15,7 @@
     <div class="d-block row d-md-flex flex-md-row-reverse py-4">
         <div class="col-12 text-center">
             @if( $songs->isEmpty() )
-                <p class="text-center">Inga dagar tillagda.</p>
+                <p class="text-center">Inga sånger tillagda.</p>
             @endif
             <ul class="list-group col-md-8 offset-md-2">
 
