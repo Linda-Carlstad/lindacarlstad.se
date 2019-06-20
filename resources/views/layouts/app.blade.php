@@ -189,7 +189,7 @@
                     <p>
                         <span>Länkar</span>
                         <br>
-                        <a href="{{ route( 'partner' ) }}">Samarbetspartners</a>
+                        <a href="{{ route( 'partner' ) }}">Partners</a>
                         <br>
                         <a href="{{ route( 'song' ) }}">Sånger</a>
                         <br>

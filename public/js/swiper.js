@@ -6,7 +6,7 @@ $(document).ready(function () {
         // Optional parameters
         loop: true,
         autoplay: {
-            delay: 2200,
+            delay: 1500,
         },
         speed: 5000,
         direction: 'horizontal',

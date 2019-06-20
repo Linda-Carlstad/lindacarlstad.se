@@ -23,7 +23,8 @@
                                     @foreach( $sponsors as $sponsor )
                                         <div class="swiper-slide text-center">
                                             <a href="{{ route( 'partner.show', $sponsor->slug ) }}">
-                                                <img class="logo img-fluid" src="{{ asset( '/img/logo.png' ) }}" alt="{{ $sponsor->name }} logga">
+                                                <img class="logo img-fluid" src="https://admin.lindacarlstad.se{{ $sponsor->image }}" alt="{{ $sponsor->name }} logga">
+                                                {{-- <img class="logo img-fluid" src="http://admin-lindacarlstad-se.test{{ $sponsor->image }}" alt="{{ $sponsor->name }} logga"> --}}
                                             </a>
                                         </div>
                                     @endforeach
