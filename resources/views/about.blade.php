@@ -58,8 +58,8 @@
                             <br>
                             <div class="row">
                                 <div class="col-lg-4 mb-3 mb-md-0">
-                                    <img class="img-fluid" src="https://admin.lindacarlstad.se{{ $boardMember->image }}" alt="Linda Carlstad vice ordförande - {{ $boardMember->name }}">
-                                    {{-- <img class="img-fluid" src="http://admin-lindacarlstad-se.test{{ $boardMember->image }}" alt="Linda Carlstad {{ $boardMember->title }} - {{ $boardMember->name }}"> --}}
+                                    <img class="img-fluid" src="https://admin.lindacarlstad.se{{ !empty( $boardMember->image ) ? $boardMember->image : '/img/logo.png' }}" alt="Linda Carlstad vice ordförande - {{ $boardMember->name }}">
+                                    {{-- <img class="img-fluid" src="http://admin-lindacarlstad-se.test{{ !empty( $boardMember->image ) ? $boardMember->image : '/img/logo.png' }}" alt="Linda Carlstad {{ $boardMember->title }} - {{ $boardMember->name }}"> --}}
                                 </div>
                                 <div class="col-lg-8">
                                     <p class="card-title font-weight-bold">{{ $boardMember->name }}</p>

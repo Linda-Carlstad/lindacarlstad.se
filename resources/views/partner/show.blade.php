@@ -17,9 +17,9 @@
                     {!! nl2br( $partner->description ) !!}
                 </p>
                 <p>
-                    <b>Samarbete sedan:</b> {{ $partner->started }} ({{ date( 'Y' ) - $partner->started + 1 }} år)
+                    <b>Partner sedan:</b> {{ $partner->started }} ({{ date( 'Y' ) - $partner->started + 1 }} år)
                     <br>
-                    <b>Typ av samarbetspartner:</b> {{ $partner->type }}
+                    <b>Typ av partner:</b> {{ $partner->type }}
                 </p>
                 <a target="_blank" class="btn btn-grey" href="{{ $partner->link }}">{{ $partner->name }}</a>
 
