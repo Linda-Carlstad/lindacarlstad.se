@@ -39,5 +39,13 @@ The website uses the information filled in using the custom-build CRM system, [A
 - Create your _beautiful_ code
 - Create a pull request
 
+## Software
+Recommended apps to get going fast:
+- Atom/Sublime/PHPStorm
+- MAMP
+- Sequal Pro
+- Google Chrome/Mozilla FireFox
+- Sketch (design tool)
+
 ## Credits
 Special thanks to Linda Carlstad It-committee 2018/2019 for creating this website.
