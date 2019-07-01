@@ -9,10 +9,12 @@ The official website for the student association Linda Carlstad in Sweden, Karls
 
 #### - Unix
 Follow the official Laravel documentation for a detailed walkthrough using any Unix system, like macOS or any distribution on Linux.
+
 [Laravel documentation](https://laravel.com/docs/5.8/installation)
 
 #### - Windows
 Follow this excellent guide to run a Laravel project on your Windows based computer.
+
 [Codementor guide](https://www.codementor.io/magarrent/how-to-install-laravel-5-xampp-windows-du107u9ji)
 
 ## Usage
