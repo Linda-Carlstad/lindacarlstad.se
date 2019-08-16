@@ -214,7 +214,7 @@
                 <br>
                 <a target="_blank" href="https://www.instagram.com/lindacarlstad/"><i class="fab fa-instagram"></i></a>
                 <br>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="@lindacarlstad"><i class="fab fa-snapchat"></i></a>
+                <a data-toggle="tooltip" data-placement="top" title="@lindacarlstad"><i class="fab fa-snapchat"></i></a>
                 <br>
                 <a target="_blank" href="https://github.com/Linda-Carlstad"><i class="fab fa-github"></i></a>
                 <br>
