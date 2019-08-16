@@ -34,7 +34,7 @@
 
                 @foreach( $days as $day )
                     <a href="{{ route( 'initiation.show', $day->slug ) }}" class="list-group-item bg-dark">
-                        {{ $day->title }}
+                        {{ $day->title }} - {{ $day->date }}
                     </a>
                 @endforeach
             </ul>
