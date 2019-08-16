@@ -149,7 +149,7 @@
         @endif
     </main>
 
-    <footer class="footer py-5">
+    <footer class="footer py-5" id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 mb-3 mb-md-0 text-md-center">
@@ -163,8 +163,10 @@
                 </div>
                 <div class="col-md-3">
                     <p>
+                        <hr class="d-block d-md-none">
                         <span>Linda Carlstad</span>
-                        <br>
+                        <br class="d-block d-md-none">
+                        <hr class="d-none d-md-block">
                         <a href="mailto:info@lindacarlstad.se">info@lindacarlstad.se</a>
                         <br>
                         Universitetsgatan 2
@@ -174,8 +176,10 @@
                 </div>
                 <div class="col-md-3">
                     <p>
+                        <hr class="d-block d-md-none">
                         <span>Föreningen</span>
-                        <br>
+                        <br class="d-block d-md-none">
+                        <hr class="d-none d-md-block">
                         <a href="{{ route( 'contact' ) }}">Kontakta oss</a>
                         <br>
                         <a href="{{ route( 'about' ) }}">Om oss</a>
@@ -187,8 +191,10 @@
                 </div>
                 <div class="col-md-3">
                     <p>
+                        <hr class="d-block d-md-none">
                         <span>Länkar</span>
-                        <br>
+                        <br class="d-block d-md-none">
+                        <hr class="d-none d-md-block">
                         <a href="{{ route( 'partner' ) }}">Partners</a>
                         <br>
                         <a href="{{ route( 'song' ) }}">Sånger</a>
@@ -208,11 +214,13 @@
                 <br>
                 <a target="_blank" href="https://www.instagram.com/lindacarlstad/"><i class="fab fa-instagram"></i></a>
                 <br>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="@lindacarlstad"><i class="fab fa-snapchat"></i></a>
+                <a data-toggle="tooltip" data-placement="top" title="@lindacarlstad"><i class="fab fa-snapchat"></i></a>
                 <br>
                 <a target="_blank" href="https://github.com/Linda-Carlstad"><i class="fab fa-github"></i></a>
                 <br>
                 <a target="_blank" href="https://discordapp.com/invite/u8eNCPk?fbclid=IwAR27Zd8nVHtKmW9_qmoT2WHotDFNkNtgcxJ-M1b1xvb1dZa6avDG9QfTYho"><i class="fab fa-discord"></i></a>
+                <br>
+                <a target="_blank" href="https://www.reddit.com/r/lindacarlstad/"><i class="fab fa-reddit"></i></a>
                 <br>
             </div>
         </div>
