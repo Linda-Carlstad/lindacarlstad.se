@@ -11,8 +11,10 @@
             <p>{{ $day->date }}</p>
             <h3>Starttid</h3>
             <p>Kl {{ $day->time }}</p>
-            <h3>Extra Information</h3>
-            <p>{{ $day->extra }}</p>
+            @if( $day->extra )
+                <h3>Extra Information</h3>
+                <p>{{ $day->extra }}</p>
+            @endif
         </div>
         <div class="col-md-6">
             <h3>Beskrivning</h3>
