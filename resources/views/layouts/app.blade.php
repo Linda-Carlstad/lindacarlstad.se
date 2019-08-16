@@ -163,8 +163,10 @@
                 </div>
                 <div class="col-md-3">
                     <p>
+                        <hr class="d-block d-md-none">
                         <span>Linda Carlstad</span>
-                        <br>
+                        <br class="d-block d-md-none">
+                        <hr class="d-none d-md-block">
                         <a href="mailto:info@lindacarlstad.se">info@lindacarlstad.se</a>
                         <br>
                         Universitetsgatan 2
@@ -174,8 +176,10 @@
                 </div>
                 <div class="col-md-3">
                     <p>
+                        <hr class="d-block d-md-none">
                         <span>Föreningen</span>
-                        <br>
+                        <br class="d-block d-md-none">
+                        <hr class="d-none d-md-block">
                         <a href="{{ route( 'contact' ) }}">Kontakta oss</a>
                         <br>
                         <a href="{{ route( 'about' ) }}">Om oss</a>
@@ -187,8 +191,10 @@
                 </div>
                 <div class="col-md-3">
                     <p>
+                        <hr class="d-block d-md-none">
                         <span>Länkar</span>
-                        <br>
+                        <br class="d-block d-md-none">
+                        <hr class="d-none d-md-block">
                         <a href="{{ route( 'partner' ) }}">Partners</a>
                         <br>
                         <a href="{{ route( 'song' ) }}">Sånger</a>
