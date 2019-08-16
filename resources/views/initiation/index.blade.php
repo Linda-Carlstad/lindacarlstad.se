@@ -30,12 +30,24 @@
             @if( $days->isEmpty() )
                 <p class="text-center">Inga dagar tillagda.</p>
             @endif
+            <p>Vecka 1</p>
             <ul class="list-group col-md-8 offset-md-2">
-
+                @php
+                    $i = 0;
+                @endphp
                 @foreach( $days as $day )
                     <a href="{{ route( 'initiation.show', $day->slug ) }}" class="list-group-item bg-dark">
                         {{ $day->title }} - {{ $day->date }}
                     </a>
+                    @if( $i == 6 )
+                        </ul>
+                        <br>
+                        <p>Vecka 2</p>
+                        <ul class="list-group col-md-8 offset-md-2">
+                    @endif
+                    @php
+                        $i += 1;
+                    @endphp
                 @endforeach
             </ul>
         </div>
