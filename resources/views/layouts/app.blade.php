@@ -127,7 +127,7 @@
                         <a class="nav-link" href="{{ route( 'news' ) }}">Nyheter</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://tentahub.se/linda">Tentor</a>
+                        <a class="nav-link" href="https://tenta.lindacarlstad.se/linda">Tentor</a>
                     </li>
                 </ul>
             </div>
