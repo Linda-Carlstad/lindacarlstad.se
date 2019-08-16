@@ -149,7 +149,7 @@
         @endif
     </main>
 
-    <footer class="footer py-5">
+    <footer class="footer py-5" id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 mb-3 mb-md-0 text-md-center">
