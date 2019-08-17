@@ -19,6 +19,6 @@ if( $( "#error-message" ).length )
         [
             message
         ],
-        typeSpeed: 70,
+        typeSpeed: Math.round( Math.random( 50 ) * 100 ),
     } );
 }
