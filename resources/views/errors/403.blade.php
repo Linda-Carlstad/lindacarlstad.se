@@ -3,12 +3,23 @@
 @section( 'content' )
 
     <section class="error-message d-flex align-items-center justify-content-center">
-        <div class="text-center">
-            <h1>Förbjuden åtkomst</h1>
-            <p>
-                Du har inte tillåtesle att se den här sidan.
-                Tror du att något är fel, kontakta gärna vår support så löser vi det så snart som möjligt.
-            </p>
+        <div class="error-terminal col-12">
+            <header>
+                <a href="{{ url( '/' ) }}" class="button red"></a>
+                <a href="{{ route( 'programs' ) }}" class="button yellow"></a>
+                <a href="{{ route( 'about' ) }}" class="button green"></a>
+            </header>
+            <div class="noise"></div>
+            <div class="overlay"></div>
+
+            <div class="terminal">
+                <p class="d-none" id="error-id">{{ $exception->getStatusCode() }}</p>
+                <p>
+                    <b>> Error: {{ $exception->getStatusCode() }}</b>
+                    <br>
+                    <span id="error-message"></span>
+                </p>
+            </div>
         </div>
     </section>
 

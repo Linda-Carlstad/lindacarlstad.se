@@ -189,3 +189,70 @@ div
 
 .list-group-program
     font-size: 1.5em
+
+//
+// Error
+//
+.error-terminal
+    cursor: default !important
+    header
+        border-top-right-radius: 4px
+        border-top-left-radius: 4px
+        z-index: 100
+        height: 30px
+        width: 100%
+        background-color: $secondary
+        .button
+            display: inline-block
+            width: 10px
+            height: 10px
+            margin: 10px 3px
+            border-radius: 100%
+            &.green
+                background-color: #3BB662
+            &.yellow
+                background-color: #E5C30F
+            &.red
+                margin-left: 15px
+                background-color: #E75448
+
+
+.terminal
+    min-height: 50vh
+    background-color: #000000
+    background-image: radial-gradient(rgba( 0, 0, 0, 0.95 ), rgba( 0, 0, 0, 0.96 )), url("https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif")
+    background-repeat: no-repeat
+    background-size: cover
+    background-color: black
+    color: rgb(32, 128, 32 )
+    padding: 50px
+    p
+        font-size: 1.5rem
+.overlay
+    pointer-events: none
+    position: absolute
+    top: 30px
+    left: 15px
+    width: calc( 100% - 30px )
+    height: calc( 100% - 30px )
+    background: repeating-linear-gradient(180deg,rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%)
+    background-size: auto 4px
+    z-index: 10
+    &::before
+        content: ""
+        pointer-events: none
+        position: absolute
+        display: block
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        width: 100%
+        height: 100%
+        background-image: linear-gradient(0deg, transparent 0%, rgba(32, 128, 32, 0.2) 2%, rgba(32, 128, 32, 0.8) 3%, rgba(32, 128, 32, 0.2) 3%, transparent 100%)
+        background-repeat: no-repeat
+        animation: scan 10s linear 0s infinite
+
+@keyframes scan
+  0%        { background-position: 0 -100vh; }
+  35%, 100% { background-position: 0 100vh; }
