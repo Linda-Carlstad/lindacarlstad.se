@@ -17,6 +17,15 @@
                 <div class="col-md-8">
                     @if( !$sponsors->isEmpty() )
                         <hr>
+                        <h3 class="text-center mb-3">Sponsorer</h3>
+                        <div class="slick-slider">
+                            @foreach( $sponsors as $sponsor )
+                                <div class="justify-content-center">
+                                    <a class="text-center" href="{{ route( 'partner.show', $sponsor->slug ) }}">
+                                        <img class="logo img-fluid" src="https://admin.lindacarlstad.se{{ $sponsor->image }}" alt="{{ $sponsor->name }} logga">
+                                    </a>
+                                </div>
+                            @endforeach
                         </div>
                         <hr>
                     @endif
