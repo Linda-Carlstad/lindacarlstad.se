@@ -1,4 +1,4 @@
-if( $( "#error-message" ) )
+if( $( "#error-message" ).length )
 {
     let error = $( '#error-id' ).text();
     let message = '> Något har gått fel. <br> > Vi kanske drack för mycket guck? ^1000 <br>> <br> > Vänligen testa igen.'
