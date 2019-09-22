@@ -25,36 +25,42 @@
     </div>
     <hr>
     <div class="d-block row d-md-flex py-4">
-        <div class="col-12 text-center">
-            <h3>Schema</h3>
-            @if( $days->isEmpty() )
-                <p class="text-center">Inga dagar tillagda.</p>
-            @endif
-        </div>
-        <div class="col-md-8 offset-md-2">
-            <div class="text-block">
-                <p>Vecka 1</p>
-                <ul class="list-group">
-                    @php
-                        $i = 0;
-                    @endphp
-                    @foreach( $days as $day )
-                        <a href="{{ route( 'initiation.show', $day->slug ) }}" class="list-group-item bg-dark">
-                            {{ $day->title }} - {{ $day->date }}
-                        </a>
-                        @if( $i == 6 )
-                            </ul>
-                            <br>
-                            <p>Vecka 2</p>
-                            <ul class="list-group">
-                        @endif
-                        @php
-                            $i += 1;
-                        @endphp
-                    @endforeach
-                </ul>
+        @if( $days )
+            <div class="col-12 text-center">
+                <h3>Schema</h3>
             </div>
-        </div>
+            <div class="col-md-8 offset-md-2">
+                <div class="text-block">
+                    @if( !$days )
+                        <p>Vecka 1</p>
+                    @endif
+                    <ul class="list-group">
+                        @php
+                            $i = 0;
+                        @endphp
+                        @foreach( $days as $day )
+                            <a href="{{ route( 'initiation.show', $day->slug ) }}" class="list-group-item bg-dark">
+                                {{ $day->title }} - {{ $day->date }}
+                            </a>
+                            @if( $i == 6 )
+                                </ul>
+                                <br>
+                                <p>Vecka 2</p>
+                                <ul class="list-group">
+                            @endif
+                            @php
+                                $i += 1;
+                            @endphp
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        @else
+            <div class="col-12 text-center">
+                <h3>Schema</h3>
+                <p class="text-center">Inga dagar tillagda.</p>
+            </div>
+        @endif
     </div>
     <hr>
     <div class="d-block row d-md-flex flex-md-row py-4">
