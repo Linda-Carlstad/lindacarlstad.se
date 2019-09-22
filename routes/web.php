@@ -39,6 +39,11 @@ Route::get( 'kontakt', function()
     return view( 'contact' );
 })->name( 'contact' );
 
+Route::get( 'it-kommitte', function()
+{
+    return view( 'it-committee' );
+})->name( 'it' );
+
 Route::get( 'nollning/regler', function()
 {
     return view( 'initiation.rules' );
