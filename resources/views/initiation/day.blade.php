@@ -21,11 +21,15 @@
             <p>{!! nl2br( $day->description ) !!}</p>
         </div>
         <div class="col-12 text-center">
-            <hr class="d-none d-md-block">
             <h3>Samlingsplats</h3>
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="{{ $day->location }}"></iframe>
-            </div>
+            <hr class="d-none d-md-block">
+            @if( $day->location )
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="{{ $day->location }}"></iframe>
+                </div>
+            @else
+                <p>Ingen samlingsplats vald.</p>
+            @endif
         </div>
     </div>
     <hr>
