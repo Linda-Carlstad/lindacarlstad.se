@@ -186,6 +186,8 @@
                         <br>
                         <a href="{{ route( 'programs' ) }}">Program</a>
                         <br>
+                        <a href="{{ route( 'it' ) }}">It-kommitté</a>
+                        <br>
                         <a href="{{ route( 'new-member' ) }}">Bli medlem</a>
                     </p>
                 </div>
