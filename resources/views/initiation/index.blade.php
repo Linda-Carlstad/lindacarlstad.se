@@ -25,11 +25,11 @@
     </div>
     <hr>
     <div class="d-block row d-md-flex py-4">
-        @if( $days )
-            <div class="col-12 text-center">
-                <h3>Schema</h3>
-            </div>
-            <div class="col-md-8 offset-md-2">
+        <div class="col-12 text-center">
+            <h3>Schema</h3>
+        </div>
+        @if( !$days->isEmpty() )
+            <div class="col-md-10 offset-md-1">
                 <div class="text-block">
                     @if( !$days )
                         <p>Vecka 1</p>
@@ -57,7 +57,6 @@
             </div>
         @else
             <div class="col-12 text-center">
-                <h3>Schema</h3>
                 <p class="text-center">Inga dagar tillagda.</p>
             </div>
         @endif
@@ -68,7 +67,7 @@
             <h3>Information</h3>
             <br>
         </div>
-        <div class="col-md-8 offset-md-2 d-flex align-items-center justify-content-center">
+        <div class="col-md-10 offset-md-1 d-flex align-items-center justify-content-center">
             <div class="text-block">
                 <p>
                     {!! nl2br( $information->description ) !!}
@@ -98,55 +97,54 @@
                         Kläder efter väder
                     </li>
                 </ul>
+                <br>
+                <h4 class="text-center">Kontaktpersoner</h4>
+                @if( $keyPeople->isEmpty() )
+                    <p class="text-center">Inga kontaktpersoner tillagda.</p>
+                @else
+                    <ul class="list-group">
+                        @foreach( $keyPeople as $keyPerson )
+                            @if( $keyPerson->rank == 'General' )
+                                <li class="list-group-item bg-dark">
+                                    Namn: {{ $keyPerson->name }}
+                                    <br>
+                                    Rank: {{ $keyPerson->rank }}
+                                    <br>
+                                    Email: <a class="link" href="mailto:{{ $keyPerson->email }}">{{ $keyPerson->email }}</a>
+                                    <br>
+                                    Telefonnummer: <a class="link" href="tel:{{ $keyPerson->phone }}">{{ $keyPerson->phone }}</a>
+                                </li>
+                            @endif
+                        @endforeach
+                        @foreach( $keyPeople as $keyPerson )
+                            @if( $keyPerson->rank == 'Kapten' )
+                                <li class="list-group-item bg-dark">
+                                    Namn: {{ $keyPerson->name }}
+                                    <br>
+                                    Rank: {{ $keyPerson->rank }}
+                                    <br>
+                                    Email: <a class="link" href="mailto:{{ $keyPerson->email }}">{{ $keyPerson->email }}</a>
+                                    <br>
+                                    Telefonnummer: <a class="link" href="tel:{{ $keyPerson->phone }}">{{ $keyPerson->phone }}</a>
+                                </li>
+                            @endif
+                        @endforeach
+                        @foreach( $keyPeople as $keyPerson )
+                            @if( $keyPerson->rank !== 'General' && $keyPerson->rank !== 'Kapten' )
+                                <li class="list-group-item bg-dark">
+                                    Namn: {{ $keyPerson->name }}
+                                    <br>
+                                    Rank: {{ $keyPerson->rank }}
+                                    <br>
+                                    Email: <a class="link" href="mailto:{{ $keyPerson->email }}">{{ $keyPerson->email }}</a>
+                                    <br>
+                                    Telefonnummer: <a class="link" href="tel:{{ $keyPerson->phone }}">{{ $keyPerson->phone }}</a>
+                                </li>
+                            @endif
+                        @endforeach
+                    </ul>
+                @endif
             </div>
-        </div>
-        <div class="col-12 mt-3">
-            <h4 class="text-center">Kontaktpersoner</h4>
-            @if( $keyPeople->isEmpty() )
-                <p class="text-center">Inga kontaktpersoner tillagda.</p>
-            @else
-                <ul class="list-group col-md-8 offset-md-2">
-                    @foreach( $keyPeople as $keyPerson )
-                        @if( $keyPerson->rank == 'General' )
-                            <li class="list-group-item bg-dark">
-                                Namn: {{ $keyPerson->name }}
-                                <br>
-                                Rank: {{ $keyPerson->rank }}
-                                <br>
-                                Email: <a class="link" href="mailto:{{ $keyPerson->email }}">{{ $keyPerson->email }}</a>
-                                <br>
-                                Telefonnummer: <a class="link" href="tel:{{ $keyPerson->phone }}">{{ $keyPerson->phone }}</a>
-                            </li>
-                        @endif
-                    @endforeach
-                    @foreach( $keyPeople as $keyPerson )
-                        @if( $keyPerson->rank == 'Kapten' )
-                            <li class="list-group-item bg-dark">
-                                Namn: {{ $keyPerson->name }}
-                                <br>
-                                Rank: {{ $keyPerson->rank }}
-                                <br>
-                                Email: <a class="link" href="mailto:{{ $keyPerson->email }}">{{ $keyPerson->email }}</a>
-                                <br>
-                                Telefonnummer: <a class="link" href="tel:{{ $keyPerson->phone }}">{{ $keyPerson->phone }}</a>
-                            </li>
-                        @endif
-                    @endforeach
-                    @foreach( $keyPeople as $keyPerson )
-                        @if( $keyPerson->rank !== 'General' && $keyPerson->rank !== 'Kapten' )
-                            <li class="list-group-item bg-dark">
-                                Namn: {{ $keyPerson->name }}
-                                <br>
-                                Rank: {{ $keyPerson->rank }}
-                                <br>
-                                Email: <a class="link" href="mailto:{{ $keyPerson->email }}">{{ $keyPerson->email }}</a>
-                                <br>
-                                Telefonnummer: <a class="link" href="tel:{{ $keyPerson->phone }}">{{ $keyPerson->phone }}</a>
-                            </li>
-                        @endif
-                    @endforeach
-                </ul>
-            @endif
         </div>
     </div>
 

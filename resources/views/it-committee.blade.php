@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <h1>It-kommittén</h1>
+    <h1>It-kommitté</h1>
     <hr>
     <div class="d-block row d-md-flex flex-md-row py-4">
         <div class="col-md-5 d-flex align-items-center justify-content-center">
@@ -31,7 +31,7 @@
         <br class="d-block d-md-none">
         <div class="col-md-7 d-flex align-items-center">
             <div class="text-block">
-                <h3>Gå med i it-kommittén!</h3>
+                <h3>Gå med i it-kommittén</h3>
                 <p>
                     Går du in tankarna och vill göra något mer än bara skoluppgifterna? Vi i Lindas it-kommitté välkommnar dig med
                     öppna armar. Vi har massor med projekt hela tiden och har alltid saker att göra. Gillar du front-end utveckling, back-end it-kommittén,

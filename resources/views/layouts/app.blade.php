@@ -186,6 +186,8 @@
                         <br>
                         <a href="{{ route( 'programs' ) }}">Program</a>
                         <br>
+                        <a href="{{ route( 'it' ) }}">It-kommitté</a>
+                        <br>
                         <a href="{{ route( 'new-member' ) }}">Bli medlem</a>
                     </p>
                 </div>
@@ -226,7 +228,7 @@
         </div>
         <div class="footer-copyright">
             <br>
-            <small>Copyright © 2019 - All Rights Reserved - Studentföreningen Linda Carlstad</small>
+            <small>Copyright © 2019 - Alla rättigheter reserverade - Studentföreningen Linda Carlstad</small>
         </div>
         </div>
     </footer>
