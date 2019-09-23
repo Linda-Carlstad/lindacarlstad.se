@@ -220,7 +220,7 @@
                 <br>
                 <a target="_blank" href="https://github.com/Linda-Carlstad"><i class="fab fa-github"></i></a>
                 <br>
-                <a target="_blank" href="https://discordapp.com/invite/u8eNCPk?fbclid=IwAR27Zd8nVHtKmW9_qmoT2WHotDFNkNtgcxJ-M1b1xvb1dZa6avDG9QfTYho"><i class="fab fa-discord"></i></a>
+                <a target="_blank" href="https://discord.gg/ETgeKsz"><i class="fab fa-discord"></i></a>
                 <br>
                 <a target="_blank" href="https://www.reddit.com/r/lindacarlstad/"><i class="fab fa-reddit"></i></a>
                 <br>
