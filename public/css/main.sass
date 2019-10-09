@@ -70,6 +70,18 @@ div
         color: $accent
         box-shadow: 0 7px 20px 0 rgba(0,0,0,.16), 0 7px 20px 0 rgba(0,0,0,.12)
 
+.page-item, .page-link
+    font-size: 1rem
+    background-color: $secondary
+    border: 1px solid $secondary
+    color: white
+    &:hover
+        color: $accent
+        box-shadow: 0 7px 20px 0 rgba(0,0,0,.16), 0 7px 20px 0 rgba(0,0,0,.12)
+
+.page-item.active .page-link
+    color: $accent
+
 @media (max-width: 768px)
     .btn-expand
         width: 100%
