@@ -20,7 +20,7 @@
 	<div id="documentli">
 		<div class="tab-pane fade show active collapse multi-collapse" id="statues" role="tabpanel" aria-labelledby="statues-tab">
 			<div class="tabUl p-4">
-			<a href="{{url('/')}}/{{ Storage::disk('local')->url('Stadgar-antagna-2018-11-07.pdf')}}">Download File</a>
+			<a href="{{url('')}}/{{ Storage::disk('local')->url('Stadgar-antagna-2018-11-07.pdf')}}">Download File</a>
 			<!--
 				- <a class="link" href="{{ asset( '/storage/Stadgar-antagna-2018-11-07.pdf' ) }}" target="_blank">
 					Stadgar antagna 2018 11 07
