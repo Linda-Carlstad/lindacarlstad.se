@@ -66,7 +66,7 @@
                                     I Linda Vill vi att svaren på tentorna ska finnas tillgängliga gratis
                                     för alla våra medlemmar och för att lyckas med det behöver vi din hjälp!
                                 </p>
-                                <a class="btn btn-grey btn-expand" href="http://tentahub.se/linda">Läs mer</a>
+                                <a class="btn btn-grey btn-expand" href="http://tenta.lindacarlstad.se/linda">Läs mer</a>
                             </div>
                         </div>
                     </div>

@@ -205,7 +205,7 @@
                         <br>
                         <a href="{{ route( 'news' ) }}">Nyheter</a>
                         <br>
-                        <a href="http://tentahub.se/linda">Tentor</a>
+                        <a href="http://tenta.lindacarlstad.se/linda">Tentor</a>
                     </p>
                 </div>
             </div>
@@ -220,7 +220,7 @@
                 <br>
                 <a target="_blank" href="https://github.com/Linda-Carlstad"><i class="fab fa-github"></i></a>
                 <br>
-                <a target="_blank" href="https://discord.gg/ETgeKsz"><i class="fab fa-discord"></i></a>
+                <a target="_blank" href="https://discord.gg/xGZNRSD"><i class="fab fa-discord"></i></a>
                 <br>
                 <a target="_blank" href="https://www.reddit.com/r/lindacarlstad/"><i class="fab fa-reddit"></i></a>
                 <br>
