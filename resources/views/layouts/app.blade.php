@@ -135,7 +135,7 @@
                         <a class="nav-link" href="{{ route( 'document' ) }}">Dokument</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route( 'news' ) }}">Nyheter</a>
+                        <a class="nav-link" href="{{ route( 'contact' ) }}">Kontakta oss</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://tenta.lindacarlstad.se/linda">Tentor</a>
