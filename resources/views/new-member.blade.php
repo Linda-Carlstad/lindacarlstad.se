@@ -18,7 +18,8 @@
                     <br><br>
                     Hör av dig till styrelsen om du har några frågor.
                 </p>
-                <a class="btn btn-grey btn-expand" href="{{ route( 'about' ) }}">Om föreningen</a>
+                <a class="btn btn-grey btn-expand" href="https://forms.gle/TXC5uW51jgApvWb48" target="_blank">Bli medlem</a>
+                <a class="btn btn-grey btn-expand" href="{{ route( 'about' ) }}" target="_blank">Om föreningen</a>
             </div>
         </div>
     </div>
