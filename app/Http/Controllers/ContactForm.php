@@ -33,7 +33,7 @@ class ContactForm extends Controller
 
         $options = [
             'http' => [
-                'header'  => 'Content-type: application/x-www-form-urlencoded\r\n',
+                'header'  => 'Content-type: application/x-www-form-urlencoded',
                 'method'  => 'POST',
                 'content' => http_build_query( $data )
             ]
