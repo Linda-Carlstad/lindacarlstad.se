@@ -97,6 +97,17 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-M722PDN');</script>
     <!-- End Google Tag Manager -->
+    <script defer src="https://www.google.com/recaptcha/api.js?render={{ env( 'GOOGLE_RECAPTCHA_KEY' ) }}">
+        grecaptcha.ready(function() {
+            grecaptcha.execute( '{{ env( 'GOOGLE_RECAPTCHA_KEY' ) }}', { action: 'contactForm' } ).then( function( token )
+            {
+                if( token )
+                {
+                    document.getElementById( 'recaptcha' ).value = token;
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
