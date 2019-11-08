@@ -17,6 +17,28 @@ Follow this excellent guide to run a Laravel project on your Windows based compu
 
 [Codementor guide](https://www.codementor.io/magarrent/how-to-install-laravel-5-xampp-windows-du107u9ji)
 
+Before you can run the app, you need run some commands. 
+
+Generate a application key:
+```
+php artisan key:generate
+```
+
+Update vendor files according to the composer.json file
+```
+composer update
+```
+
+Install all neccessary NPM packages:
+```
+npm install
+```
+
+Migrate and seed the DB:
+```
+php artisan migrate refresh --seed
+```
+
 ## Usage
 The website uses the information filled in using the custom-build CMS system, [Admin Linda Carlstad](https://github.com/Linda-Carlstad/admin.lindacarlstad.se). 
 
