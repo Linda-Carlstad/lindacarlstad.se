@@ -34,7 +34,7 @@
     <div class="text-center">
         @if( isset( $search ) )
             <h4>Du sökte på: <i>{{ $search }}</i></h4>
-            <h5>Antal resultat: <i>{{ $songs->count() }}</i></h5>
+            <h5>Antal resultat: <i>{{ $totalSearch }}</i></h5>
         @endif
     </div>
     <hr>
