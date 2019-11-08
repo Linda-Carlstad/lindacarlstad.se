@@ -43,7 +43,7 @@
     </div>
 </nav>
 
-<nav class="navbar navbar-dark bg-dark fixed-bottom scrolling-navbar d-block d-md-none">
+<nav class="navbar navbar-dark bg-dark fixed-bottom scrolling-navbar d-block d-md-none border-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ url( '/' ) }}">
             <img class="" src="{{ asset( 'img/small-logo.png') }}" alt="Golden apple with crown">
