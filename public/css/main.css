@@ -119,6 +119,26 @@ div {
   visibility: collapse !important;
 }
 
+.alert-success {
+  background-color: #343a40 !important;
+  color: #C9BC73 !important;
+  border: 1px solid #C9BC73 !important;
+}
+
+.alert-danger {
+  background-color: #343a40 !important;
+  color: #FFF !important;
+  border: 1px solid #C9BC73 !important;
+}
+
+.alert a.close {
+  color: white !important;
+}
+
+.alert a.close:hover {
+  color: white !important;
+}
+
 .hero {
   height: 100vh;
   overflow-x: hidden;
