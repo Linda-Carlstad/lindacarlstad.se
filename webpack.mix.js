@@ -11,9 +11,13 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.sass( 'resources/sass/main.sass', 'public/css' );
 
 if( mix.inProduction() )
 {
+    mix.sass( 'resources/sass/main.sass', 'public/css' ).version();
     mix.version();
+}
+else
+{
+    mix.sass( 'resources/sass/main.sass', 'public/css' ).version();
 }
