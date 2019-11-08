@@ -42,6 +42,7 @@
 <meta name="og:type" content="website">
 
 <title>{{ config( 'app.name', 'Linda Carlstad' ) }} - @yield( 'title')</title>
+
 <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -49,8 +50,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha256-4hqlsNP9KM6+2eA8VUT0kk4RsMRTeS7QGHIM+MZ5sLY=" crossorigin="anonymous" />
 <link href="{{ asset( '/css/main.min.css' ) }}" rel="stylesheet">
 <link href="{{ asset( '/img/icon.ico' ) }}" rel="icon">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
 
-<script src="https://cdn.jsdelivr.net/ga-lite/latest/ga-lite.min.js" async></script>
+<script defer src="https://cdn.jsdelivr.net/ga-lite/latest/ga-lite.min.js" async></script>
 <script>
     var galite = galite || {};
     galite.UA = 'UA-136489552-1';
@@ -61,13 +63,12 @@
 <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 <script defer src="{{ asset( '/js/main.js' ) }}" type="text/javascript"></script>
 <script defer src="{{ asset( '/js/error.js' ) }}" type="text/javascript"></script>
 
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
-<script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script defer>
     window.addEventListener("load", function(){
         window.cookieconsent.initialise({
             "palette": {
@@ -86,10 +87,21 @@
             }
         })});
 </script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+
+<script defer>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-M722PDN');</script>
-<!-- End Google Tag Manager -->
+
+<script defer src="https://www.google.com/recaptcha/api.js?render={{ env( 'GOOGLE_RECAPTCHA_KEY' ) }}">
+    grecaptcha.ready(function() {
+        grecaptcha.execute( '{{ env( 'GOOGLE_RECAPTCHA_KEY' ) }}', { action: 'contactForm' } ).then( function( token )
+        {
+            if( token )
+            {
+                document.getElementById( 'recaptcha' ).value = token;
+            }
+        });
+    });
+</script>
