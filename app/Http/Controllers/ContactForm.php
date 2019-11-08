@@ -50,5 +50,7 @@ class ContactForm extends Controller
 
         Mail::to( 'info@lindacarlstad.se' )
             ->send( new Contact( $request ) );
+
+        return redirect()->back()->with( 'success', 'Ditt meddelande har skickats.' );
     }
 }
