@@ -11,7 +11,7 @@
         @if( Request::is( '/' ) )
             @yield( 'content' )
         @else
-            <div class="container-fluid mt-5 py-4 py-md-5">
+            <div class="container-fluid mt-md-5 py-4 py-md-5">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         @if( session()->has( 'success' ) )
