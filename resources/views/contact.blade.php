@@ -8,7 +8,7 @@
     <div class="py-4">
         <form method="POST" action="/contactForm">
             @csrf
-            <input type="hidden" id="recaptcha" name="recaptcha" value="{{ env( 'GOOGLE_RECAPTCHA_KEY' ) }}">
+            <input type="hidden" id="recaptcha" name="recaptcha">
 
             <div class="form-group row">
                 <label for="name" class="col-sm-4 col-form-label text-md-right">Namn</label>
