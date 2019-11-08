@@ -1,0 +1,279 @@
+//
+// Colour variables
+//
+$primary: #660023 !important
+$secondary: #343a40 !important
+$accent: #C9BC73 !important
+$text-primary: #FFF !important
+$text-secondary: #343a40 !important
+$white: #FFF !important
+
+//
+// Universal elements
+//
+*
+  transition-duration: 0.3s !important
+  &:hover
+    transition-duration: 0.3s !important
+
+body
+  background-color: $secondary
+  color: $text-primary
+  &::selection, &::-moz-selection
+    background: $accent
+
+p
+  cursor: default
+
+h1, h2
+  text-align: center !important
+
+a
+  color: $text-primary
+  text-decoration: none !important
+  &:hover
+    color: $accent
+
+hr
+  height: 1px
+  background-color: $accent
+
+span
+  font-size: 1.5rem
+
+img.img-fluid
+  max-height: 30vh
+
+div
+  word-wrap: break-word !important
+//
+// Universal classes
+//
+.link
+  color: $accent
+  &:hover
+    text-decoration: underline !important
+
+.btn-red
+  background-color: $primary
+  border: 1px solid $primary
+  color: $white
+  &:hover
+    color: $accent
+    box-shadow: 0 7px 20px 0 rgba(0,0,0,.16), 0 7px 20px 0 rgba(0,0,0,.12)
+
+.btn-grey
+  background-color: $secondary
+  border: 1px solid $secondary
+  color: white
+  &:hover
+    color: $accent
+    box-shadow: 0 7px 20px 0 rgba(0,0,0,.16), 0 7px 20px 0 rgba(0,0,0,.12)
+
+.page-item, .page-link
+  font-size: 1rem
+  background-color: $secondary
+  border: 1px solid $secondary
+  color: white
+  &:hover
+    color: $accent
+    box-shadow: 0 7px 20px 0 rgba(0,0,0,.16), 0 7px 20px 0 rgba(0,0,0,.12)
+
+.page-item.active .page-link
+  color: $accent
+
+@media (max-width: 768px)
+  .btn-expand
+    width: 100%
+
+.grecaptcha-badge
+  visibility: collapse !important
+
+//
+// Layout
+//
+.hero
+  height: 100vh
+  overflow-x: hidden
+  .bg-img
+    height: 100vh
+    min-width: 100vw
+    filter: blur( 4px )
+  .holder
+    position: absolute
+    top: 35%
+    width: 100%
+    text-align: center
+
+@media (min-width: 768px) and (max-width: 770px)
+  .navbar-expand-md .navbar-nav .nav-link
+    padding-left: .4rem
+    padding-right: .4rem
+
+@media (min-width: 768px)
+  .navbar-brand
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+
+.navbar-brand img
+  width: 45px !important
+  &:hover
+    filter: blur(1px)
+
+.navbar.border-top
+  border-top: 2px solid $accent
+
+.content
+  background-color: $primary
+
+#footer
+  border-top: 20px solid #3E454D
+  min-height: 100px
+  background-color: $secondary
+  img
+    max-width: 120px !important
+    max-height: 120px !important
+  p
+    line-height: 30px
+  span
+    font-size: 1.5rem
+    line-height: 50px
+  .special
+    color: $secondary
+  .footer-copyright
+    text-align: center
+
+  .social-footer-icons i
+    font-size: 1.7rem
+    padding: 0.5rem
+
+.error-message
+  min-height: 50vh
+
+.swiper-wrapper
+  -webkit-transition-timing-function: linear !important
+  -o-transition-timing-function: linear !important
+  transition-timing-function: linear !important
+
+//
+// Index
+//
+.hero
+  .logo
+    height: 70px
+
+//
+// Document
+//
+#documentTab
+  border-radius: 5px 5px 0px 0px
+  .active
+    background-color: $secondary
+    border-color: $secondary
+    border-bottom-color: $accent
+    border-bottom-width: thick
+    border-top: none
+    border-left: none
+    border-right: none
+  .nav-item
+    border: none !important
+
+#documentli
+  .tabUl
+    background-color: $secondary
+    border: none
+    border-radius: 0px 0px 5px 5px
+  .tabLi
+    list-style-type: none
+
+.nav-tabs
+  background-color: $secondary
+  border-color: $accent
+
+.tab-content
+  background-color: $secondary
+  padding: 5px
+
+.nav-tabs > li > a
+  &:hover
+    background-color: $secondary
+    border-color: $secondary
+    color: $accent
+
+//
+// News
+//
+.post-image
+  width: 342px
+  height: 342px
+
+.list-group-program
+  font-size: 1.5em
+
+//
+// Error
+//
+.error-terminal
+  cursor: default !important
+  header
+    border-top-right-radius: 4px
+    border-top-left-radius: 4px
+    z-index: 100
+    height: 30px
+    width: 100%
+    background-color: $secondary
+    .button
+      display: inline-block
+      width: 10px
+      height: 10px
+      margin: 10px 3px
+      border-radius: 100%
+      &.green
+        background-color: #3BB662
+      &.yellow
+        background-color: #E5C30F
+      &.red
+        margin-left: 15px
+        background-color: #E75448
+
+
+.terminal
+  min-height: 50vh
+  background-color: #000000
+  background-image: radial-gradient(rgba( 0, 0, 0, 0.95 ), rgba( 0, 0, 0, 0.96 )), url("https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif")
+  background-repeat: no-repeat
+  background-size: cover
+  background-color: black
+  color: rgb(32, 128, 32 )
+  padding: 50px
+  p
+    font-size: 1.5rem
+.overlay
+  pointer-events: none
+  position: absolute
+  top: 30px
+  left: 15px
+  width: calc( 100% - 30px )
+  height: calc( 100% - 30px )
+  background: repeating-linear-gradient(180deg,rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%)
+  background-size: auto 4px
+  z-index: 10
+  &::before
+    content: ""
+    pointer-events: none
+    position: absolute
+    display: block
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    background-image: linear-gradient(0deg, transparent 0%, rgba(32, 128, 32, 0.2) 2%, rgba(32, 128, 32, 0.8) 3%, rgba(32, 128, 32, 0.2) 3%, transparent 100%)
+    background-repeat: no-repeat
+    animation: scan 10s linear 0s infinite
+
+@keyframes scan
+  0%        { background-position: 0 -100vh; }
+  35%, 100% { background-position: 0 100vh; }
