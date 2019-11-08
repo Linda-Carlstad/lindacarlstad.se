@@ -18,6 +18,9 @@ use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
 
+/**
+ * @group legacy
+ */
 class PhpGeneratorDumperTest extends TestCase
 {
     /**
@@ -40,7 +43,7 @@ class PhpGeneratorDumperTest extends TestCase
      */
     private $largeTestTmpFilepath;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -52,7 +55,7 @@ class PhpGeneratorDumperTest extends TestCase
         @unlink($this->largeTestTmpFilepath);
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         parent::tearDown();
 
@@ -119,12 +122,10 @@ class PhpGeneratorDumperTest extends TestCase
         $this->assertEquals('/app.php/foo', $projectUrlGenerator->generate('test'));
     }
 
-    /**
-     * @expectedException \Symfony\Component\Routing\Exception\RouteNotFoundException
-     * @expectedExceptionMessage Unable to generate a URL for the named route "test" as such route does not exist.
-     */
     public function testDumpWithRouteNotFoundLocalizedRoutes()
     {
+        $this->expectException('Symfony\Component\Routing\Exception\RouteNotFoundException');
+        $this->expectExceptionMessage('Unable to generate a URL for the named route "test" as such route does not exist.');
         $this->routeCollection->add('test.en', (new Route('/testing/is/fun'))->setDefault('_locale', 'en')->setDefault('_canonical_route', 'test'));
 
         $code = $this->generatorDumper->dump([
@@ -190,11 +191,9 @@ class PhpGeneratorDumperTest extends TestCase
         $this->assertEquals('/app.php/testing2', $relativeUrlWithoutParameter);
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testDumpWithoutRoutes()
     {
+        $this->expectException('InvalidArgumentException');
         file_put_contents($this->testTmpFilepath, $this->generatorDumper->dump(['class' => 'WithoutRoutesUrlGenerator']));
         include $this->testTmpFilepath;
 
@@ -203,18 +202,16 @@ class PhpGeneratorDumperTest extends TestCase
         $projectUrlGenerator->generate('Test', []);
     }
 
-    /**
-     * @expectedException \Symfony\Component\Routing\Exception\RouteNotFoundException
-     */
     public function testGenerateNonExistingRoute()
     {
+        $this->expectException('Symfony\Component\Routing\Exception\RouteNotFoundException');
         $this->routeCollection->add('Test', new Route('/test'));
 
         file_put_contents($this->testTmpFilepath, $this->generatorDumper->dump(['class' => 'NonExistingRoutesUrlGenerator']));
         include $this->testTmpFilepath;
 
         $projectUrlGenerator = new \NonExistingRoutesUrlGenerator(new RequestContext());
-        $url = $projectUrlGenerator->generate('NonExisting', []);
+        $projectUrlGenerator->generate('NonExisting', []);
     }
 
     public function testDumpForRouteWithDefaults()

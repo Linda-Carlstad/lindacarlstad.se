@@ -660,7 +660,7 @@ class HttpCacheTest extends HttpCacheTestCase
         $this->assertTraceContains('miss');
         $this->assertTraceContains('store');
         $this->assertEquals('Hello World', $this->response->getContent());
-        $this->assertRegExp('/s-maxage=2/', $this->response->headers->get('Cache-Control'));
+        $this->assertRegExp('/s-maxage=(2|3)/', $this->response->headers->get('Cache-Control'));
 
         $this->request('GET', '/');
         $this->assertHttpKernelIsNotCalled();
@@ -668,7 +668,7 @@ class HttpCacheTest extends HttpCacheTestCase
         $this->assertTraceContains('fresh');
         $this->assertTraceNotContains('store');
         $this->assertEquals('Hello World', $this->response->getContent());
-        $this->assertRegExp('/s-maxage=2/', $this->response->headers->get('Cache-Control'));
+        $this->assertRegExp('/s-maxage=(2|3)/', $this->response->headers->get('Cache-Control'));
 
         // expires the cache
         $values = $this->getMetaStorageValues();
@@ -688,7 +688,7 @@ class HttpCacheTest extends HttpCacheTestCase
         $this->assertTraceContains('invalid');
         $this->assertTraceContains('store');
         $this->assertEquals('Hello World', $this->response->getContent());
-        $this->assertRegExp('/s-maxage=2/', $this->response->headers->get('Cache-Control'));
+        $this->assertRegExp('/s-maxage=(2|3)/', $this->response->headers->get('Cache-Control'));
 
         $this->setNextResponse();
 
@@ -698,7 +698,7 @@ class HttpCacheTest extends HttpCacheTestCase
         $this->assertTraceContains('fresh');
         $this->assertTraceNotContains('store');
         $this->assertEquals('Hello World', $this->response->getContent());
-        $this->assertRegExp('/s-maxage=2/', $this->response->headers->get('Cache-Control'));
+        $this->assertRegExp('/s-maxage=(2|3)/', $this->response->headers->get('Cache-Control'));
     }
 
     public function testAssignsDefaultTtlWhenResponseHasNoFreshnessInformationAndAfterTtlWasExpiredWithStatus304()
@@ -711,7 +711,7 @@ class HttpCacheTest extends HttpCacheTestCase
         $this->assertTraceContains('miss');
         $this->assertTraceContains('store');
         $this->assertEquals('Hello World', $this->response->getContent());
-        $this->assertRegExp('/s-maxage=2/', $this->response->headers->get('Cache-Control'));
+        $this->assertRegExp('/s-maxage=(2|3)/', $this->response->headers->get('Cache-Control'));
 
         $this->request('GET', '/');
         $this->assertHttpKernelIsNotCalled();
@@ -739,7 +739,7 @@ class HttpCacheTest extends HttpCacheTestCase
         $this->assertTraceContains('store');
         $this->assertTraceNotContains('miss');
         $this->assertEquals('Hello World', $this->response->getContent());
-        $this->assertRegExp('/s-maxage=2/', $this->response->headers->get('Cache-Control'));
+        $this->assertRegExp('/s-maxage=(2|3)/', $this->response->headers->get('Cache-Control'));
 
         $this->request('GET', '/');
         $this->assertHttpKernelIsNotCalled();
@@ -747,7 +747,7 @@ class HttpCacheTest extends HttpCacheTestCase
         $this->assertTraceContains('fresh');
         $this->assertTraceNotContains('store');
         $this->assertEquals('Hello World', $this->response->getContent());
-        $this->assertRegExp('/s-maxage=2/', $this->response->headers->get('Cache-Control'));
+        $this->assertRegExp('/s-maxage=(2|3)/', $this->response->headers->get('Cache-Control'));
     }
 
     public function testDoesNotAssignDefaultTtlWhenResponseHasMustRevalidateDirective()
@@ -1507,6 +1507,44 @@ class HttpCacheTest extends HttpCacheTestCase
 
         // Surrogate request
         $cache->handle($request, HttpKernelInterface::SUB_REQUEST);
+    }
+
+    public function testTraceHeaderNameCanBeChanged()
+    {
+        $this->cacheConfig['trace_header'] = 'X-My-Header';
+        $this->setNextResponse();
+        $this->request('GET', '/');
+
+        $this->assertTrue($this->response->headers->has('X-My-Header'));
+    }
+
+    public function testTraceLevelDefaultsToFullIfDebug()
+    {
+        $this->setNextResponse();
+        $this->request('GET', '/');
+
+        $this->assertTrue($this->response->headers->has('X-Symfony-Cache'));
+        $this->assertEquals('GET /: miss', $this->response->headers->get('X-Symfony-Cache'));
+    }
+
+    public function testTraceLevelDefaultsToNoneIfNotDebug()
+    {
+        $this->cacheConfig['debug'] = false;
+        $this->setNextResponse();
+        $this->request('GET', '/');
+
+        $this->assertFalse($this->response->headers->has('X-Symfony-Cache'));
+    }
+
+    public function testTraceLevelShort()
+    {
+        $this->cacheConfig['trace_level'] = 'short';
+
+        $this->setNextResponse();
+        $this->request('GET', '/');
+
+        $this->assertTrue($this->response->headers->has('X-Symfony-Cache'));
+        $this->assertEquals('miss', $this->response->headers->get('X-Symfony-Cache'));
     }
 }
 

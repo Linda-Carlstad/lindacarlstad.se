@@ -25,7 +25,32 @@ class ContactForm extends Controller
             'message' => 'required|string',
         ] );
 
+        $url = 'https://www.google.com/recaptcha/api/siteverify';
+        $data = [
+            'secret'   => env( 'GOOGLE_RECAPTCHA_SECRET' ),
+            'response' => $request->recaptcha
+        ];
+
+        $options = [
+            'http' => [
+                'header'  => 'Content-type: application/x-www-form-urlencoded\r\n',
+                'method'  => 'POST',
+                'content' => http_build_query( $data )
+            ]
+        ];
+
+        $context = stream_context_create( $options );
+        $result = file_get_contents( $url, false, $context );
+        $json = json_decode( $result );
+
+        if( $json->success != true )
+        {
+            return back()->with( 'error', 'Capatcha fel!' );
+        }
+
         Mail::to( 'info@lindacarlstad.se' )
             ->send( new Contact( $request ) );
+
+        return redirect()->back()->with( 'success', 'Ditt meddelande har skickats.' );
     }
 }

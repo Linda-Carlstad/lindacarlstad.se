@@ -19,6 +19,9 @@ use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
 
+/**
+ * @group legacy
+ */
 class PhpMatcherDumperTest extends TestCase
 {
     /**
@@ -31,7 +34,7 @@ class PhpMatcherDumperTest extends TestCase
      */
     private $dumpPath;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -39,7 +42,7 @@ class PhpMatcherDumperTest extends TestCase
         $this->dumpPath = sys_get_temp_dir().\DIRECTORY_SEPARATOR.'php_matcher.'.$this->matcherClass.'.php';
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         parent::tearDown();
 
@@ -489,12 +492,10 @@ class PhpMatcherDumperTest extends TestCase
         return $this->matcherClass;
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Symfony\Component\Routing\Route cannot contain objects
-     */
     public function testGenerateDumperMatcherWithObject()
     {
+        $this->expectException('InvalidArgumentException');
+        $this->expectExceptionMessage('Symfony\Component\Routing\Route cannot contain objects');
         $routeCollection = new RouteCollection();
         $routeCollection->add('_', new Route('/', [new \stdClass()]));
         $dumper = new PhpMatcherDumper($routeCollection);

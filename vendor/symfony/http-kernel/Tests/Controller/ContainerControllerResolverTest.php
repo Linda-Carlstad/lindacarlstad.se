@@ -27,11 +27,11 @@ class ContainerControllerResolverTest extends ControllerResolverTest
         $container->expects($this->once())
             ->method('has')
             ->with('foo')
-            ->will($this->returnValue(true));
+            ->willReturn(true);
         $container->expects($this->once())
             ->method('get')
             ->with('foo')
-            ->will($this->returnValue($service))
+            ->willReturn($service)
         ;
 
         $resolver = $this->createControllerResolver(null, $container);
@@ -52,11 +52,11 @@ class ContainerControllerResolverTest extends ControllerResolverTest
         $container->expects($this->once())
             ->method('has')
             ->with('foo')
-            ->will($this->returnValue(true));
+            ->willReturn(true);
         $container->expects($this->once())
             ->method('get')
             ->with('foo')
-            ->will($this->returnValue($service))
+            ->willReturn($service)
         ;
 
         $resolver = $this->createControllerResolver(null, $container);
@@ -77,12 +77,12 @@ class ContainerControllerResolverTest extends ControllerResolverTest
         $container->expects($this->once())
             ->method('has')
             ->with('foo')
-            ->will($this->returnValue(true))
+            ->willReturn(true)
         ;
         $container->expects($this->once())
             ->method('get')
             ->with('foo')
-            ->will($this->returnValue($service))
+            ->willReturn($service)
         ;
 
         $resolver = $this->createControllerResolver(null, $container);
@@ -102,12 +102,12 @@ class ContainerControllerResolverTest extends ControllerResolverTest
         $container->expects($this->once())
             ->method('has')
             ->with(InvokableControllerService::class)
-            ->will($this->returnValue(true))
+            ->willReturn(true)
         ;
         $container->expects($this->once())
             ->method('get')
             ->with(InvokableControllerService::class)
-            ->will($this->returnValue($service))
+            ->willReturn($service)
         ;
 
         $resolver = $this->createControllerResolver(null, $container);
@@ -120,24 +120,50 @@ class ContainerControllerResolverTest extends ControllerResolverTest
     }
 
     /**
-     * Tests where the fallback instantiation fails due to required constructor arguments.
-     *
-     * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Controller "Symfony\Component\HttpKernel\Tests\Controller\ControllerTestService" cannot be fetched from the container because it is private. Did you forget to tag the service with "controller.service_arguments"?
+     * @dataProvider getControllers
      */
+    public function testInstantiateControllerWhenControllerStartsWithABackslash($controller)
+    {
+        $service = new ControllerTestService('foo');
+        $class = ControllerTestService::class;
+
+        $container = $this->createMockContainer();
+        $container->expects($this->once())->method('has')->with($class)->willReturn(true);
+        $container->expects($this->once())->method('get')->with($class)->willReturn($service);
+
+        $resolver = $this->createControllerResolver(null, $container);
+        $request = Request::create('/');
+        $request->attributes->set('_controller', $controller);
+
+        $controller = $resolver->getController($request);
+
+        $this->assertInstanceOf(ControllerTestService::class, $controller[0]);
+        $this->assertSame('action', $controller[1]);
+    }
+
+    public function getControllers()
+    {
+        return [
+            ['\\'.ControllerTestService::class.'::action'],
+            ['\\'.ControllerTestService::class.':action'],
+        ];
+    }
+
     public function testExceptionWhenUsingRemovedControllerServiceWithClassNameAsName()
     {
+        $this->expectException('InvalidArgumentException');
+        $this->expectExceptionMessage('Controller "Symfony\Component\HttpKernel\Tests\Controller\ControllerTestService" cannot be fetched from the container because it is private. Did you forget to tag the service with "controller.service_arguments"?');
         $container = $this->getMockBuilder(Container::class)->getMock();
         $container->expects($this->once())
             ->method('has')
             ->with(ControllerTestService::class)
-            ->will($this->returnValue(false))
+            ->willReturn(false)
         ;
 
         $container->expects($this->atLeastOnce())
             ->method('getRemovedIds')
             ->with()
-            ->will($this->returnValue([ControllerTestService::class => true]))
+            ->willReturn([ControllerTestService::class => true])
         ;
 
         $resolver = $this->createControllerResolver(null, $container);
@@ -147,25 +173,21 @@ class ContainerControllerResolverTest extends ControllerResolverTest
         $resolver->getController($request);
     }
 
-    /**
-     * Tests where the fallback instantiation fails due to non-existing class.
-     *
-     * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage Controller "app.my_controller" cannot be fetched from the container because it is private. Did you forget to tag the service with "controller.service_arguments"?
-     */
     public function testExceptionWhenUsingRemovedControllerService()
     {
+        $this->expectException('InvalidArgumentException');
+        $this->expectExceptionMessage('Controller "app.my_controller" cannot be fetched from the container because it is private. Did you forget to tag the service with "controller.service_arguments"?');
         $container = $this->getMockBuilder(Container::class)->getMock();
         $container->expects($this->once())
             ->method('has')
             ->with('app.my_controller')
-            ->will($this->returnValue(false))
+            ->willReturn(false)
         ;
 
         $container->expects($this->atLeastOnce())
             ->method('getRemovedIds')
             ->with()
-            ->will($this->returnValue(['app.my_controller' => true]))
+            ->willReturn(['app.my_controller' => true])
         ;
 
         $resolver = $this->createControllerResolver(null, $container);

@@ -12,7 +12,7 @@ class Contact extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $information
+    public $request;
     /**
      * Create a new message instance.
      *
@@ -20,7 +20,7 @@ class Contact extends Mailable
      */
     public function __construct( Request $request )
     {
-        $this->information = $request;
+        $this->request = $request;
     }
 
     /**
@@ -30,9 +30,9 @@ class Contact extends Mailable
      */
     public function build()
     {
-        return $this->from( $this->information->email, $this->information->name )
-                ->replyTo( $this->information->email )
-                ->subject( 'Kontaktformulär: ' . $this->information->subject )
+        return $this->from( $this->request->email, $this->request->name )
+                ->replyTo( $this->request->email )
+                ->subject( 'Kontaktformulär: ' . $this->request->subject )
                 ->view( 'mail.contact.form' );
     }
 }
