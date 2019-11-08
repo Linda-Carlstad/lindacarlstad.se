@@ -2,6 +2,76 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
+## 2.1.5 - 2019-10-10
+
+### Added
+
+- Nothing.
+
+### Changed
+
+- Nothing.
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- [#372](https://github.com/zendframework/zend-diactoros/pull/372) fixes issues that occur in the `Zend\Diactoros\Uri` class when invalid UTF-8 characters are present the user-info, path, or query string, ensuring they are URL-encoded before being consumed. Previously, such characters could result in a fatal error, which was particularly problematic when marshaling the request URI for an application request cycle.
+
+## 2.1.4 - 2019-10-08
+
+### Added
+
+- Nothing.
+
+### Changed
+
+- Nothing.
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- [#370](https://github.com/zendframework/zend-diactoros/pull/370) updates `Zend\Diactoros\marshalHeadersFromSapi()` to ensure all underscores in header name keys are converted to dashes (fixing issues with header names such as `CONTENT_SECURITY_POLICY`, which would previously resolve improperly to `content-security_policy`).
+
+- [#370](https://github.com/zendframework/zend-diactoros/pull/370) updates `Zend\Diactoros\marshalHeadersFromSapi()` to ignore header names from the `$server` array that resolve to integers; previously, it would raise a fatal error.
+
+## 2.1.3 - 2019-07-10
+
+### Added
+
+- Nothing.
+
+### Changed
+
+- Nothing.
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- [#363](https://github.com/zendframework/zend-diactoros/issues/363) modifies detection of HTTPS schemas via the `$_SERVER['HTTPS']` value
+  such that an empty HTTPS-key will result in a scheme of `http` and not
+  `https`.
+
 ## 2.1.2 - 2019-04-29
 
 ### Added

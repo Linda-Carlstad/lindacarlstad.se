@@ -20,8 +20,6 @@ use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Controller\ArgumentResolverInterface;
 use Symfony\Component\HttpKernel\Controller\ControllerResolverInterface;
-use Symfony\Component\HttpKernel\Event\FilterControllerArgumentsEvent;
-use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\HttpKernel\Exception\ControllerDoesNotReturnResponseException;
 use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
@@ -31,21 +29,17 @@ use Symfony\Component\HttpKernel\KernelEvents;
 
 class HttpKernelTest extends TestCase
 {
-    /**
-     * @expectedException \RuntimeException
-     */
     public function testHandleWhenControllerThrowsAnExceptionAndCatchIsTrue()
     {
+        $this->expectException('RuntimeException');
         $kernel = $this->getHttpKernel(new EventDispatcher(), function () { throw new \RuntimeException(); });
 
         $kernel->handle(new Request(), HttpKernelInterface::MASTER_REQUEST, true);
     }
 
-    /**
-     * @expectedException \RuntimeException
-     */
     public function testHandleWhenControllerThrowsAnExceptionAndCatchIsFalseAndNoListenerIsRegistered()
     {
+        $this->expectException('RuntimeException');
         $kernel = $this->getHttpKernel(new EventDispatcher(), function () { throw new \RuntimeException(); });
 
         $kernel->handle(new Request(), HttpKernelInterface::MASTER_REQUEST, false);
@@ -128,7 +122,7 @@ class HttpKernelTest extends TestCase
     public function testHandleWhenAnExceptionIsHandledWithASpecificStatusCode($expectedStatusCode)
     {
         $dispatcher = new EventDispatcher();
-        $dispatcher->addListener(KernelEvents::EXCEPTION, function (GetResponseForExceptionEvent $event) use ($expectedStatusCode) {
+        $dispatcher->addListener(KernelEvents::EXCEPTION, function ($event) use ($expectedStatusCode) {
             $event->allowCustomResponseCode();
             $event->setResponse(new Response('', $expectedStatusCode));
         });
@@ -160,11 +154,9 @@ class HttpKernelTest extends TestCase
         $this->assertEquals('hello', $kernel->handle(new Request())->getContent());
     }
 
-    /**
-     * @expectedException \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
-     */
     public function testHandleWhenNoControllerIsFound()
     {
+        $this->expectException('Symfony\Component\HttpKernel\Exception\NotFoundHttpException');
         $dispatcher = new EventDispatcher();
         $kernel = $this->getHttpKernel($dispatcher, false);
 
@@ -215,20 +207,19 @@ class HttpKernelTest extends TestCase
     public function testHandleWhenTheControllerDoesNotReturnAResponse()
     {
         $dispatcher = new EventDispatcher();
-        $kernel = $this->getHttpKernel($dispatcher, function () { return 'foo'; });
+        $kernel = $this->getHttpKernel($dispatcher, function () {});
 
         try {
             $kernel->handle(new Request());
 
             $this->fail('The kernel should throw an exception.');
         } catch (ControllerDoesNotReturnResponseException $e) {
+            $first = $e->getTrace()[0];
+
+            // `file` index the array starting at 0, and __FILE__ starts at 1
+            $line = file($first['file'])[$first['line'] - 2];
+            $this->assertStringContainsString('// call controller', $line);
         }
-
-        $first = $e->getTrace()[0];
-
-        // `file` index the array starting at 0, and __FILE__ starts at 1
-        $line = file($first['file'])[$first['line'] - 2];
-        $this->assertContains('// call controller', $line);
     }
 
     public function testHandleWhenTheControllerDoesNotReturnAResponseButAViewIsRegistered()
@@ -257,7 +248,7 @@ class HttpKernelTest extends TestCase
     public function testHandleAllowChangingControllerArguments()
     {
         $dispatcher = new EventDispatcher();
-        $dispatcher->addListener(KernelEvents::CONTROLLER_ARGUMENTS, function (FilterControllerArgumentsEvent $event) {
+        $dispatcher->addListener(KernelEvents::CONTROLLER_ARGUMENTS, function ($event) {
             $event->setArguments(['foo']);
         });
 
@@ -269,7 +260,7 @@ class HttpKernelTest extends TestCase
     public function testHandleAllowChangingControllerAndArguments()
     {
         $dispatcher = new EventDispatcher();
-        $dispatcher->addListener(KernelEvents::CONTROLLER_ARGUMENTS, function (FilterControllerArgumentsEvent $event) {
+        $dispatcher->addListener(KernelEvents::CONTROLLER_ARGUMENTS, function ($event) {
             $oldController = $event->getController();
             $oldArguments = $event->getArguments();
 
@@ -322,11 +313,9 @@ class HttpKernelTest extends TestCase
         $kernel->handle($request, HttpKernelInterface::MASTER_REQUEST);
     }
 
-    /**
-     * @expectedException \Symfony\Component\HttpKernel\Exception\BadRequestHttpException
-     */
     public function testInconsistentClientIpsOnMasterRequests()
     {
+        $this->expectException('Symfony\Component\HttpKernel\Exception\BadRequestHttpException');
         $request = new Request();
         $request->setTrustedProxies(['1.1.1.1'], Request::HEADER_X_FORWARDED_FOR | Request::HEADER_FORWARDED);
         $request->server->set('REMOTE_ADDR', '1.1.1.1');
@@ -354,13 +343,13 @@ class HttpKernelTest extends TestCase
         $controllerResolver
             ->expects($this->any())
             ->method('getController')
-            ->will($this->returnValue($controller));
+            ->willReturn($controller);
 
         $argumentResolver = $this->getMockBuilder(ArgumentResolverInterface::class)->getMock();
         $argumentResolver
             ->expects($this->any())
             ->method('getArguments')
-            ->will($this->returnValue($arguments));
+            ->willReturn($arguments);
 
         return new HttpKernel($eventDispatcher, $controllerResolver, $requestStack, $argumentResolver);
     }

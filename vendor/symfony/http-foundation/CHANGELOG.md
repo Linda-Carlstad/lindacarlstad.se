@@ -1,6 +1,17 @@
 CHANGELOG
 =========
 
+4.3.0
+-----
+
+ * added PHPUnit constraints: `RequestAttributeValueSame`, `ResponseCookieValueSame`, `ResponseHasCookie`,
+   `ResponseHasHeader`, `ResponseHeaderSame`, `ResponseIsRedirected`, `ResponseIsSuccessful`, and `ResponseStatusCodeSame`
+ * deprecated `MimeTypeGuesserInterface` and `ExtensionGuesserInterface` in favor of `Symfony\Component\Mime\MimeTypesInterface`.
+ * deprecated `MimeType` and `MimeTypeExtensionGuesser` in favor of `Symfony\Component\Mime\MimeTypes`.
+ * deprecated `FileBinaryMimeTypeGuesser` in favor of `Symfony\Component\Mime\FileBinaryMimeTypeGuesser`.
+ * deprecated `FileinfoMimeTypeGuesser` in favor of `Symfony\Component\Mime\FileinfoMimeTypeGuesser`.
+ * added `UrlHelper` that allows to get an absolute URL and a relative path for a given path
+
 4.2.0
 -----
 
@@ -67,7 +78,7 @@ CHANGELOG
 -----
 
  * the `Request::setTrustedProxies()` method takes a new `$trustedHeaderSet` argument,
-   see http://symfony.com/doc/current/components/http_foundation/trusting_proxies.html for more info,
+   see https://symfony.com/doc/current/deployment/proxies.html for more info,
  * deprecated the `Request::setTrustedHeaderName()` and `Request::getTrustedHeaderName()` methods,
  * added `File\Stream`, to be passed to `BinaryFileResponse` when the size of the served file is unknown,
    disabling `Range` and `Content-Length` handling, switching to chunked encoding instead

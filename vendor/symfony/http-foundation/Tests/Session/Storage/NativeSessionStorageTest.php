@@ -33,7 +33,7 @@ class NativeSessionStorageTest extends TestCase
 {
     private $savePath;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->iniSet('session.save_handler', 'files');
         $this->iniSet('session.save_path', $this->savePath = sys_get_temp_dir().'/sftest');
@@ -42,7 +42,7 @@ class NativeSessionStorageTest extends TestCase
         }
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         session_write_close();
         array_map('unlink', glob($this->savePath.'/*'));
@@ -72,20 +72,16 @@ class NativeSessionStorageTest extends TestCase
         $this->assertSame($bag, $storage->getBag($bag->getName()));
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testRegisterBagException()
     {
+        $this->expectException('InvalidArgumentException');
         $storage = $this->getStorage();
         $storage->getBag('non_existing');
     }
 
-    /**
-     * @expectedException \LogicException
-     */
     public function testRegisterBagForAStartedSessionThrowsException()
     {
+        $this->expectException('LogicException');
         $storage = $this->getStorage();
         $storage->start();
         $storage->registerBag(new AttributeBag());
@@ -98,7 +94,7 @@ class NativeSessionStorageTest extends TestCase
 
         $storage->start();
         $id = $storage->getId();
-        $this->assertInternalType('string', $id);
+        $this->assertIsString($id);
         $this->assertNotSame('', $id);
 
         $storage->save();
@@ -149,7 +145,7 @@ class NativeSessionStorageTest extends TestCase
     {
         $this->iniSet('session.cache_limiter', 'nocache');
 
-        $storage = new NativeSessionStorage();
+        new NativeSessionStorage();
         $this->assertEquals('', ini_get('session.cache_limiter'));
     }
 
@@ -157,7 +153,7 @@ class NativeSessionStorageTest extends TestCase
     {
         $this->iniSet('session.cache_limiter', 'nocache');
 
-        $storage = new NativeSessionStorage(['cache_limiter' => 'public']);
+        new NativeSessionStorage(['cache_limiter' => 'public']);
         $this->assertEquals('public', ini_get('session.cache_limiter'));
     }
 
@@ -203,11 +199,9 @@ class NativeSessionStorageTest extends TestCase
         $this->assertSame('200', ini_get('session.cache_expire'));
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testSetSaveHandlerException()
     {
+        $this->expectException('InvalidArgumentException');
         $storage = $this->getStorage();
         $storage->setSaveHandler(new \stdClass());
     }
@@ -230,11 +224,9 @@ class NativeSessionStorageTest extends TestCase
         $this->assertInstanceOf('Symfony\Component\HttpFoundation\Session\Storage\Proxy\SessionHandlerProxy', $storage->getSaveHandler());
     }
 
-    /**
-     * @expectedException \RuntimeException
-     */
     public function testStarted()
     {
+        $this->expectException('RuntimeException');
         $storage = $this->getStorage();
 
         $this->assertFalse($storage->getSaveHandler()->isActive());
