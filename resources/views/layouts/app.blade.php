@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace( '_', '-', app()->getLocale() ) }}">
 <head>
-    @include( 'layouts.head' )
+    @include( 'layouts.partials.head' )
 </head>
 <body>
 
-    @include( 'layouts.nav' )
+    @include( 'layouts.partials.navbar' )
 
     <main class="content">
         @if( Request::is( '/' ) )
@@ -14,7 +14,7 @@
             <div class="container-fluid mt-md-5 py-4 py-md-5">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
-                        @include( 'layouts.flash-messages' )
+                        @include( 'layouts.partials.flash-messages' )
 
                         @yield( 'content' )
                         <br>
@@ -24,7 +24,7 @@
         @endif
     </main>
 
-    @include( 'layouts.footer' )
+    @include( 'layouts.partials.footer' )
 </body>
 
 </html>
