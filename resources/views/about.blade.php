@@ -7,7 +7,7 @@
     <hr>
     <div class="d-block row d-md-flex flex-md-row py-4">
         <div class="col-md-5 d-flex align-items-center justify-content-center">
-            <img class="img-fluid" src="{{ asset('/img/logo.png' ) }}" alt="Linda Carlstad logga med text">
+            <img class="img-fluid" src="{{ asset('/img/board/styrelsen-2019-2020.jpg' ) }}" alt="Linda Carlstad logga med text">
         </div>
         <br class="d-block d-md-none">
         <div class="col-md-7 d-flex align-items-center justify-content-center">
