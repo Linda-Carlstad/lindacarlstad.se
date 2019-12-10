@@ -2,6 +2,9 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M722PDN"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<div class="alert alert-primary" role="alert">
+  Kolla in Linda Carlstads bössa på <a href="https://bossan.musikhjalpen.se/insamlingar/datavetare-for-musikhjalpen">Musihjälpen</a>
+</div>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top scrolling-navbar d-none d-md-block">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ url( '/' ) }}">

@@ -1,9 +1,6 @@
 @section('title', 'Linjeförening för datavetare')
 @extends('layouts.app')
 @section('content')
-<div class="alert alert-primary" role="alert">
-  Kolla in Linda Carlstads bössa på <a href="https://bossan.musikhjalpen.se/insamlingar/datavetare-for-musikhjalpen">Musihjälpen</a>
-    </div>
     <header class="hero">
         <img class="bg-img" src="{{ asset('/img/hero-image.jpg' ) }}" alt="Lindaiter, faddrar och nollor på Dagen K">
         <div class="holder text-center">
