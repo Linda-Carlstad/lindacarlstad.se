@@ -36,19 +36,21 @@ Install all NPM dependencies:
 npm install
 ```
 
-Create and seed database:
+Before migrating, download the admin panel (custom CMS): https://github.com/Linda-Carlstad/admin.lindacarlstad.se to get the correct database migrations. 
+
+Create and seed database (admin panel):
 ```
 php artisan migrate:refresh --seed
-```
-
-Run the local development server: 
-```
-php artisan serve
 ```
 
 Run this to generate CSS and JS files:
 ```
 npm run watch
+```
+
+Run the local development server: 
+```
+php artisan serve
 ```
 
 ## Usage
