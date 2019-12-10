@@ -4,7 +4,9 @@
     @include( 'layouts.partials.head' )
 </head>
 <body>
-
+    <div class="alert alert-primary" role="alert">
+        Kolla in Linda Carlstads bössa på <a href="https://bossan.musikhjalpen.se/insamlingar/datavetare-for-musikhjalpen">Musihjälpen</a>
+    </div>
     @include( 'layouts.partials.navbar' )
 
     <main class="content">
