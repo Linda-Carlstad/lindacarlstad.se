@@ -14,6 +14,9 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-md-8">
+                    <div class="alert alert-success fade show text-center" role="alert">
+                        Kolla in Linda Carlstads bössa på <a href="https://bossan.musikhjalpen.se/insamlingar/datavetare-for-musikhjalpen"><u>Musihjälpen</u></a>
+                    </div>
                     @if( !$sponsors->isEmpty() )
                         <hr>
                         <h3 class="text-center mb-3">Sponsorer</h3>
