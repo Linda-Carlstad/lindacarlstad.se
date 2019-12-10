@@ -4,7 +4,7 @@
     @include( 'layouts.partials.head' )
 </head>
 <body>
-
+    
     @include( 'layouts.partials.navbar' )
 
     <main class="content">

@@ -1,7 +1,6 @@
 @section('title', 'Linjeförening för datavetare')
 @extends('layouts.app')
 @section('content')
-
     <header class="hero">
         <img class="bg-img" src="{{ asset('/img/hero-image.jpg' ) }}" alt="Lindaiter, faddrar och nollor på Dagen K">
         <div class="holder text-center">
