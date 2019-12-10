@@ -10,6 +10,9 @@
             <h2>Linjeförening för datavetare</h2>
         </div>
     </header>
+    <div class="alert alert-primary" role="alert">
+  Kolla in Linda Carlstads bössa på <a href="https://bossan.musikhjalpen.se/insamlingar/datavetare-for-musikhjalpen">Musihjälpen</a>
+    </div>
 
     <section class="about py-5">
         <div class="container-fluid">
