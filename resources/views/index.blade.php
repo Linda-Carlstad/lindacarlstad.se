@@ -2,9 +2,6 @@
 @extends('layouts.app')
 @section('content')
     <header class="hero">
-    <div class="alert alert-primary" role="alert">
-    Kolla in Linda Carlstads bössa på <a href="https://bossan.musikhjalpen.se/insamlingar/datavetare-for-musikhjalpen">Musihjälpen</a>
-    </div>
         <img class="bg-img" src="{{ asset('/img/hero-image.jpg' ) }}" alt="Lindaiter, faddrar och nollor på Dagen K">
         <div class="holder text-center">
             <img class="logo" src="{{ asset('/img/small-logo.svg' ) }}" alt="Linda Carlstad logo">
