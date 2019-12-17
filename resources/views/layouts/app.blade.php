@@ -14,9 +14,9 @@
             <div class="container-fluid mt-md-5 py-4 py-md-5">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
-                        <div class="alert alert-success fade show text-center" role="alert">
+                        {{--<div class="alert alert-success fade show text-center" role="alert">
                             Kolla in Linda Carlstads bössa på <a href="https://bossan.musikhjalpen.se/insamlingar/datavetare-for-musikhjalpen"><u>Musikhjälpen</u></a>
-                        </div>
+                        </div>--}}
                         @include( 'layouts.partials.flash-messages' )
 
                         @yield( 'content' )
