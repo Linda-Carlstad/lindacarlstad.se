@@ -65,7 +65,10 @@
                     @endif
                 </div>
                 <div class="col-md-8 offset-md-4">
-                    <small>Vi sparar inga uppgifter.</small>
+                    <small>
+                        Denna webbplats är skyddad av reCAPTCHA och Googles
+                        <a class="link" href="https://policies.google.com/privacy">sekretesspolicy</a> och
+                        <a class="link" href="https://policies.google.com/terms">användarvillkor</a> gäller.</small>
                 </div>
             </div>
             <div class="form-group row mb-0">
