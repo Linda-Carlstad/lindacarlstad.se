@@ -110,6 +110,8 @@ Route::get( 'föreningen', 'FetchBoardMembers' )->name( 'about' );
 Route::get( 'nollning', 'InitiationDaysController@index' )->name( 'initiation' );
 Route::get( 'nollning/{slug}', 'InitiationDaysController@show' )->name( 'initiation.show' );
 
+Route::get( 'sånger/port', 'SongController@gate' )->name( 'song.gate' );
+Route::get( 'sånger/hemliga', 'SongController@secret' )->name( 'song.secret' );
 Route::get( 'sånger', 'SongController@index' )->name( 'song' );
 Route::get( 'sånger/{slug}', 'SongController@show' )->name( 'song.show' );
 
