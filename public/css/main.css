@@ -13,7 +13,6 @@ body {
   color: #FFF !important;
 }
 
-body::-moz-selection,
 body::-moz-selection {
   background: #C9BC73 !important;
 }
@@ -58,6 +57,12 @@ div {
   word-wrap: break-word !important;
 }
 
+.grey {
+  background-color: #343a40 !important;
+  border: 1px solid #343a40 !important;
+  color: white;
+}
+
 .link {
   color: #C9BC73 !important;
 }
@@ -74,8 +79,7 @@ div {
 
 .btn-red:hover {
   color: #C9BC73 !important;
-  -webkit-box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.16), 0 7px 20px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.16), 0 7px 20px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.16), 0 7px 20px 0 rgba(0, 0, 0, 0.12);
 }
 
 .btn-grey {
@@ -86,8 +90,7 @@ div {
 
 .btn-grey:hover {
   color: #C9BC73 !important;
-  -webkit-box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.16), 0 7px 20px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.16), 0 7px 20px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.16), 0 7px 20px 0 rgba(0, 0, 0, 0.12);
 }
 
 .page-item,
@@ -101,8 +104,7 @@ div {
 .page-item:hover,
 .page-link:hover {
   color: #C9BC73 !important;
-  -webkit-box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.16), 0 7px 20px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.16), 0 7px 20px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.16), 0 7px 20px 0 rgba(0, 0, 0, 0.12);
 }
 
 .page-item.active .page-link {
@@ -160,8 +162,8 @@ div {
 
 @media (min-width: 768px) and (max-width: 770px) {
   .navbar-expand-md .navbar-nav .nav-link {
-    padding-left: .4rem;
-    padding-right: .4rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
   }
 }
 
@@ -344,8 +346,8 @@ div {
   position: absolute;
   top: 30px;
   left: 15px;
-  width: calc( 100% - 30px);
-  height: calc( 100% - 30px);
+  width: calc( 100% - 30px );
+  height: calc( 100% - 30px );
   background: repeating-linear-gradient(180deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
   background-size: auto 4px;
   z-index: 10;
