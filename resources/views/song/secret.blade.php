@@ -14,7 +14,6 @@
                 <p class="text-center">Inga sånger hittade.</p>
             @else
                 <ul class="list-group col-md-8 offset-md-2">
-
                     @foreach( $songs as $song )
                         <a href="{{ route( 'song.show', $song->slug ) }}" class="list-group-item bg-dark">
                             {{ $song->title }}

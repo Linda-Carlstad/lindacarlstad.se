@@ -98,7 +98,7 @@ class SongController extends Controller
             return view( 'song.secret' )->with( 'songs', $songs );
         }
         else {
-            return view( 'song.gate' )->with( 'error', 'För att se de hemliga sångerna, måste du ha en kod, rätt kod.' );
+            return redirect()->back()->with( 'error', 'För att se de hemliga sångerna, måste du ha en kod, rätt kod.' );
         }
 
     }
