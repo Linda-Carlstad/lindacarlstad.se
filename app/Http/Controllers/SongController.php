@@ -22,7 +22,8 @@ class SongController extends Controller
         {
             $search = $request->search;
 
-            $songs = Song::where( 'title', 'LIKE', '%' . $search . '%' )
+            $songs = Song::where( 'secret', 1 )
+                ->orWhere( 'title', 'LIKE', '%' . $search . '%' )
                 ->orWhere( 'melody', 'LIKE', '%' . $search . '%' )
                 ->orWhere( 'text', 'LIKE', '%' . $search . '%' );
 
@@ -36,7 +37,7 @@ class SongController extends Controller
                 ->with( 'totalSearch', $totalSearch );
         }
 
-        $songs = Song::orderBy('title', 'asc')->simplePaginate( 10 );
+        $songs = Song::where( 'secret', 1 )->orderBy('title', 'asc')->simplePaginate( 10 );
 
         return view( 'song.index' )->with( 'songs', $songs )->with( 'total', $total );
     }
@@ -81,6 +82,27 @@ class SongController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    public function gate()
+    {
+        return view( 'song.gate' );
+    }
+
+    public function secret( Request $request )
+    {
+        $code = 'LindaCarlstad' . date( 'Y' );
+        if( $request->code == $code )
+        {
+            $songs = Song::where( 'secret', 1 )->get();
+
+            return view( 'song.secret' )->with( 'songs', $songs );
+        }
+        else {
+            return redirect()->back()->with( 'error', 'För att se de hemliga sångerna, måste du ha en kod, rätt kod.' );
+        }
+
+    }
+
     public function edit($id)
     {
         abort( 404 );

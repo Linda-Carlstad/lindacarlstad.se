@@ -57,6 +57,12 @@ div {
   word-wrap: break-word !important;
 }
 
+.grey {
+  background-color: #343a40 !important;
+  border: 1px solid #343a40 !important;
+  color: white;
+}
+
 .link {
   color: #C9BC73 !important;
 }

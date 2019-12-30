@@ -63,5 +63,9 @@
             <a class="btn btn-grey btn-expand" href="{{ route( 'song' ) }}">Visa alla</a>
         </div>
     @endif
+    <hr>
+    <div class="text-center">
+        <a class="btn btn-grey" href="{{ route( 'song.gate' ) }}">Gömda låtar</a>
+    </div>
 
 @endsection
