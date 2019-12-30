@@ -22,7 +22,7 @@ class SongController extends Controller
         {
             $search = $request->search;
 
-            $songs = Song::where( 'secret', 1 )
+            $songs = Song::where( 'secret', 0 )
                 ->orWhere( 'title', 'LIKE', '%' . $search . '%' )
                 ->orWhere( 'melody', 'LIKE', '%' . $search . '%' )
                 ->orWhere( 'text', 'LIKE', '%' . $search . '%' );
@@ -37,7 +37,7 @@ class SongController extends Controller
                 ->with( 'totalSearch', $totalSearch );
         }
 
-        $songs = Song::where( 'secret', 1 )->orderBy('title', 'asc')->simplePaginate( 10 );
+        $songs = Song::where( 'secret', 0 )->orderBy('title', 'asc')->simplePaginate( 10 );
 
         return view( 'song.index' )->with( 'songs', $songs )->with( 'total', $total );
     }
