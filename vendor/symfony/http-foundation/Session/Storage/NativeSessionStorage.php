@@ -97,9 +97,7 @@ class NativeSessionStorage implements SessionStorageInterface
      * trans_sid_hosts, $_SERVER['HTTP_HOST']
      * trans_sid_tags, "a=href,area=href,frame=src,form="
      *
-     * @param array                         $options Session configuration options
-     * @param \SessionHandlerInterface|null $handler
-     * @param MetadataBag                   $metaBag MetadataBag
+     * @param AbstractProxy|\SessionHandlerInterface|null $handler
      */
     public function __construct(array $options = [], $handler = null, MetadataBag $metaBag = null)
     {
@@ -403,15 +401,13 @@ class NativeSessionStorage implements SessionStorageInterface
      *     ini_set('session.save_path', '/tmp');
      *
      * or pass in a \SessionHandler instance which configures session.save_handler in the
-     * constructor, for a template see NativeFileSessionHandler or use handlers in
-     * composer package drak/native-session
+     * constructor, for a template see NativeFileSessionHandler.
      *
      * @see https://php.net/session-set-save-handler
      * @see https://php.net/sessionhandlerinterface
      * @see https://php.net/sessionhandler
-     * @see https://github.com/zikula/NativeSession
      *
-     * @param \SessionHandlerInterface|null $saveHandler
+     * @param AbstractProxy|\SessionHandlerInterface|null $saveHandler
      *
      * @throws \InvalidArgumentException
      */
