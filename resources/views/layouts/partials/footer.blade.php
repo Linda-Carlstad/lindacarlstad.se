@@ -48,6 +48,8 @@
                 <hr class="d-none d-md-block">
                 <a href="{{ route( 'partner' ) }}">Partners</a>
                 <br>
+                <a href="{{ route( 'association' ) }}">Föreningar</a>
+                <br>
                 <a href="{{ route( 'song' ) }}">Sånger</a>
                 <br>
                 <a href="{{ route( 'document' ) }}">Dokument</a>

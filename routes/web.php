@@ -107,6 +107,9 @@ Route::get( 'nyheter', 'FetchFacebookPosts' )->name( 'news' );
 Route::get( 'tentor', 'ExamController@index' )->name( 'tentor' );
 Route::get( 'föreningen', 'FetchBoardMembers' )->name( 'about' );
 
+Route::get( '/föreningar', 'AssociationController@index' )->name( 'association' );
+Route::get( '/föreningar/{slug}', 'AssociationController@show' )->name( 'association.show' );
+
 Route::get( 'nollning', 'InitiationDaysController@index' )->name( 'initiation' );
 Route::get( 'nollning/{slug}', 'InitiationDaysController@show' )->name( 'initiation.show' );
 
