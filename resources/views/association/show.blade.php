@@ -25,7 +25,7 @@
                 @else
                     <p>Ingen beskrivning.</p>
                 @endif
-                @if( $association->link )
+                @if( $association->email )
                     <p>Kontakt: <a class="link" href="mailto:{{ $association->email }}">{{ $association->email }}</a></p>
                 @endif
                 @if( $association->link )
