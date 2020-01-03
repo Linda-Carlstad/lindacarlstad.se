@@ -6,7 +6,7 @@
     <hr>
     <div class="col-12">
         <p>
-            Här är alla våra tidigare nollningar och deras scheman.
+            Här är alla våra nollningar och deras scheman.
             <br><br>
             Antal nollningar sparade: {{ $initiations->count() }}
         </p>
