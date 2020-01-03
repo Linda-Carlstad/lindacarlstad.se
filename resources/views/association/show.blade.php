@@ -4,7 +4,9 @@
 @section('content')
     <div class="text-center">
         <h1>{{ $association->name }}</h1>
-        <h3>{{ $association->nickname }}</h3>
+        @if( $association->slogan )
+            <h3>{{ $association->slogan }}</h3>
+        @endif
     </div>
     <hr>
     <div class="d-block row d-md-flex flex-md-row-reverse">
