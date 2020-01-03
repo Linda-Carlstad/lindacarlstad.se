@@ -72,7 +72,7 @@ class InitiationController extends Controller
         $initiation = Initiation::where( 'year', $year )->first();
         $day = InitiationDay::where( 'slug', $slug )->where( 'initiation_id', $initiation->id )->first();
 
-        return view( 'initiation.day.show' )->with( 'day', $day );
+        return view( 'initiation.day.show' )->with( 'initiation', $initiation )->with( 'day', $day );
     }
 
     /**
