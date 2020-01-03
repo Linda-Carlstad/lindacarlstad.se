@@ -118,7 +118,7 @@
                                 </li>
                             @endif
                         @endforeach
-                        @foreach( $people as $person )
+                        @foreach( $persons as $person )
                             @if( $person->rank == 'Kapten' )
                                 <li class="list-group-item bg-dark">
                                     Namn: {{ $person->name }}
@@ -131,7 +131,7 @@
                                 </li>
                             @endif
                         @endforeach
-                        @foreach( $people as $person )
+                        @foreach( $persons as $person )
                             @if( $person->rank !== 'General' && $person->rank !== 'Kapten' )
                                 <li class="list-group-item bg-dark">
                                     Namn: {{ $person->name }}
