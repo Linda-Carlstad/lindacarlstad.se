@@ -73,6 +73,14 @@ class SongController extends Controller
     {
         $song = Song::where('slug', $slug)->first();
 
+        if( $song->secret === 1 )
+        {
+            if( !session()->exists('secret') )
+            {
+                session()->flash( 'error', 'För att se de hemliga sångerna, måste du ha en kod, rätt kod.' );
+                return view( 'song.gate' );
+            }
+        }
         return view( 'song.show' )->with( 'song', $song );
     }
 
@@ -85,6 +93,13 @@ class SongController extends Controller
 
     public function gate()
     {
+        if( session()->exists('secret') )
+        {
+            $songs = Song::where( 'secret', 1 )->get();
+
+            return view( 'song.secret' )->with( 'songs', $songs );
+        }
+
         return view( 'song.gate' );
     }
 
@@ -93,6 +108,7 @@ class SongController extends Controller
         $code = 'LindaCarlstad' . date( 'Y' );
         if( $request->code == $code )
         {
+            session(['secret' => true]);
             $songs = Song::where( 'secret', 1 )->get();
 
             return view( 'song.secret' )->with( 'songs', $songs );
