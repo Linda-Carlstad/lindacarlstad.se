@@ -50,6 +50,8 @@
                 <br>
                 <a href="{{ route( 'association' ) }}">Föreningar</a>
                 <br>
+                <a href="{{ route( 'initiation' ) }}">Nollningar</a>
+                <br>
                 <a href="{{ route( 'song' ) }}">Sånger</a>
                 <br>
                 <a href="{{ route( 'document' ) }}">Dokument</a>
