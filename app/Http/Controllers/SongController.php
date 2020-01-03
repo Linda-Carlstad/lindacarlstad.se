@@ -85,6 +85,13 @@ class SongController extends Controller
 
     public function gate()
     {
+        if( session()->exists('secret') )
+        {
+            $songs = Song::where( 'secret', 1 )->get();
+
+            return view( 'song.secret' )->with( 'songs', $songs );
+        }
+
         return view( 'song.gate' );
     }
 
