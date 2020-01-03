@@ -31,7 +31,7 @@
         @if( !$days->isEmpty() )
             <div class="col-md-10 offset-md-1">
                 <div class="text-block">
-                    @if( !$days )
+                    @if( $days )
                         <p>Vecka 1</p>
                     @endif
                     <ul class="list-group">
@@ -39,8 +39,11 @@
                             $i = 0;
                         @endphp
                         @foreach( $days as $day )
-                            <a href="{{ route( 'initiation.day.show', [$initiation->year, $day->slug] ) }}" class="list-group-item bg-dark">
-                                {{ $day->title }} - {{ $day->date }}
+                            <a href="{{ route( 'initiation.day.show', [$initiation->year, $day->slug] ) }}" class="list-group-item bg-dark text-center">
+                                {{ $day->title }}
+                                @if( $day->date )
+                                     - {{ $day->date }}
+                                @endif
                             </a>
                             @if( $i == 6 )
                     </ul>
@@ -69,15 +72,17 @@
         </div>
         <div class="col-md-10 offset-md-1 d-flex align-items-center justify-content-center">
             <div class="initiation text-block">
-                <p>
-                    {!! nl2br( $initiation->description ) !!}
-                </p>
+                @if( $initiation->description )
+                    <p>
+                        {!! nl2br( $initiation->description ) !!}
+                    </p>
+                @endif
                 <p>
                     <b>Pris:</b>
                     @if( $initiation->show_price == true )
                         {{ $initiation->price }}kr
                     @else
-                         Kommer snart
+                         Kommer snart!
                     @endif
                 </p>
                 <hr>
