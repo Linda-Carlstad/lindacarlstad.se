@@ -93,6 +93,7 @@ class SongController extends Controller
         $code = 'LindaCarlstad' . date( 'Y' );
         if( $request->code == $code )
         {
+            session(['secret' => true]);
             $songs = Song::where( 'secret', 1 )->get();
 
             return view( 'song.secret' )->with( 'songs', $songs );
