@@ -18,9 +18,9 @@
                 <p class="text-center">Inga nollningar tillagda.</p>
             @endif
             <ul class="list-group col-md-8 offset-md-2">
-                @foreach( $initiations as $initiations )
-                    <a href="{{ route( 'initiation.show', $initiations->year ) }}" class="list-group-item bg-dark">
-                        {{ $initiations->name }}
+                @foreach( $initiations as $initiation )
+                    <a href="{{ route( 'initiation.show', $initiation->year ) }}" class="list-group-item bg-dark">
+                        {{ $initiation->year }}
                     </a>
                 @endforeach
             </ul>

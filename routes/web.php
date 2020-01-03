@@ -112,7 +112,7 @@ Route::get( '/föreningar/{slug}', 'AssociationController@show' )->name( 'associ
 
 Route::get( 'nollning', 'InitiationController@index' )->name( 'initiation' );
 Route::get( 'nollning/{year}', 'InitiationController@show' )->name( 'initiation.show' );
-Route::get( 'nollning/{year}/{slug}', 'InitiationController@day' )->name( 'initiation.day' );
+Route::get( 'nollning/{year}/{slug}', 'InitiationController@day' )->name( 'initiation.day.show' );
 
 Route::get( 'sånger/port', 'SongController@gate' )->name( 'song.gate' );
 Route::get( 'sånger/hemliga', 'SongController@secret' )->name( 'song.secret' );

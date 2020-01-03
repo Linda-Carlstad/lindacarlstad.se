@@ -51,9 +51,9 @@ class InitiationController extends Controller
      */
     public function show( $year )
     {
-        $initiation = Initiation::where( 'year', $year );
-        $days = InitiationDay::where( 'initiation_id', $initiation->id );
-        $persons = InitiationKeyPerson::where( 'initiation_id', $initiation->id );
+        $initiation = Initiation::where( 'year', $year )->first();
+        $days = InitiationDay::where( 'initiation_id', $initiation->id )->get();
+        $persons = InitiationKeyPerson::where( 'initiation_id', $initiation->id )->get();
 
         return view( 'initiation.show' )
             ->with( 'initiation', $initiation )
@@ -69,10 +69,10 @@ class InitiationController extends Controller
      */
     public function day( $year, $slug )
     {
-        $initiation = Initiation::where( 'year', $year );
+        $initiation = Initiation::where( 'year', $year )->first();
         $day = InitiationDay::where( 'slug', $slug )->where( 'initiation_id', $initiation->id )->first();
 
-        return view( 'initiation.day' )->with( 'day', $day );
+        return view( 'initiation.day.show' )->with( 'day', $day );
     }
 
     /**
