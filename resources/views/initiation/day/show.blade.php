@@ -35,6 +35,6 @@
     <hr>
     <div class="text-center">
         <p>Klicka nedan för att gå tillbaks till nollningsschema.</p>
-        <a class="btn btn-grey" href="{{ route( 'initiation' ) }}">Schema</a>
+        <a class="btn btn-grey" href="{{ route( 'initiation.show', $initiation->year ) }}">Nollning {{ $initiation->year }}</a>
     </div>
 @endsection
