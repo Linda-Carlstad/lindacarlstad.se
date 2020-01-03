@@ -8,7 +8,7 @@
         <p>
             Här är alla våra nollningar och deras scheman.
             <br><br>
-            Antal nollningar sparade: {{ $initiations->count() }}
+            Antal nollningar: {{ $initiations->count() }}
         </p>
     </div>
     <hr>
