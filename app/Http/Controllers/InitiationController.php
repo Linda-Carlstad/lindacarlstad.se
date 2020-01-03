@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Initiation;
 use App\InitiationDay;
 use App\InitiationKeyPerson;
-use App\InitiationInformation;
 
 use Illuminate\Http\Request;
 
-class InitiationDaysController extends Controller
+class InitiationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,14 +17,9 @@ class InitiationDaysController extends Controller
      */
     public function index()
     {
-        $days = InitiationDay::orderBy( 'order', 'asc' )->get();
-        $keyPeople = InitiationKeyPerson::orderBy( 'name', 'asc' )->get();
-        $information = InitiationInformation::first();
+        $initiations = Initiation::all();
 
-        return view( 'initiation.index' )
-            ->with( 'days', $days )
-            ->with( 'keyPeople', $keyPeople )
-            ->with( 'information', $information );
+        return view( 'initiation.index' )->with( 'initiations', $initiations );
     }
 
     /**
@@ -54,9 +49,28 @@ class InitiationDaysController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show( $slug )
+    public function show( $year )
     {
-        $day = InitiationDay::where('slug', $slug)->first();
+        $initiation = Initiation::where( 'year', $year );
+        $days = InitiationDay::where( 'initiation_id', $initiation->id );
+        $persons = InitiationKeyPerson::where( 'initiation_id', $initiation->id );
+
+        return view( 'initiation.show' )
+            ->with( 'initiation', $initiation )
+            ->with( 'days', $days )
+            ->with( 'persons', $persons );
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function day( $year, $slug )
+    {
+        $initiation = Initiation::where( 'year', $year );
+        $day = InitiationDay::where( 'slug', $slug )->where( 'initiation_id', $initiation->id )->first();
 
         return view( 'initiation.day' )->with( 'day', $day );
     }
