@@ -22,7 +22,7 @@
                     <a class="nav-link" href="{{ route( 'about' ) }}">Föreningen</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route( 'initiation' ) }}">Nollning {{ date( 'Y' ) }}</a>
+                    <a class="nav-link" href="{{ route( 'initiation.show', date( 'Y' ) ) }}">Nollning {{ date( 'Y' ) }}</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav ml-auto">
@@ -63,7 +63,7 @@
                     <a class="nav-link" href="{{ route( 'about' ) }}">Föreningen</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route( 'initiation' ) }}">Nollning {{ date( 'Y' ) }}</a>
+                    <a class="nav-link" href="{{ route( 'initiation.show', date( 'Y' ) ) }}">Nollning {{ date( 'Y' ) }}</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav ml-auto">
