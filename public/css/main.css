@@ -235,7 +235,7 @@ div {
   transition-timing-function: linear !important;
 }
 
-.initiation.text-block {
+.initiation .text-block {
   width: 100%;
 }
 
