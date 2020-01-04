@@ -44,10 +44,10 @@ Route::get( 'it-kommitte', function()
     return view( 'it-committee' );
 })->name( 'it' );
 
-Route::get( 'nollning/regler', function()
+Route::get( 'sittning', function()
 {
-    return view( 'initiation.rules' );
-})->name( 'initiation.rules' );
+    return view( 'sitting' );
+})->name( 'sitting' );
 
 Route::get( 'program', function()
 {
