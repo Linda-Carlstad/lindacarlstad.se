@@ -37,6 +37,8 @@
                 <br>
                 <a href="{{ route( 'it' ) }}">It-kommitté</a>
                 <br>
+                <a href="{{ route( 'sitting' ) }}">Sittning</a>
+                <br>
                 <a href="{{ route( 'new-member' ) }}">Bli medlem</a>
                 </p>
             </div>
