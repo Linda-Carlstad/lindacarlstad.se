@@ -15,9 +15,9 @@
                 <h3>Vilka är it-kommittén?</h3>
                 <p>
                     Linda Carlstads it-kommitté är utskott från styrelsen som har hand om allt som rör IT inom föreningen.
-                    Vi underhåller alla webbsidor som föreningen har, fyller på med inehåll, rättar till fel och nyutvecklar såklart.
+                    Vi underhåller alla webbsidor som föreningen har, fyller på med innehåll, rättar till fel och nyutvecklar.
                     Nyligen har vi fått in ett flertal ny medlemmar till it-kommittén och vi vill börja utveckla mer än webbsidor.
-                    Låter det intressant så hör av dig till oss så löser vi något till dig!
+                    Låter det intressant så hör av dig till oss så hjälper vi dig att komma igång!
                 </p>
                 <a class="btn btn-grey btn-expand" target="_blank" href="https://github.com/Linda-Carlstad">Lär dig mer</a>
             </div>
@@ -33,8 +33,8 @@
             <div class="text-block">
                 <h3>Gå med i it-kommittén</h3>
                 <p>
-                    Går du in tankarna och vill göra något mer än bara skoluppgifterna? Vi i Lindas it-kommitté välkommnar dig med
-                    öppna armar. Vi har massor med projekt hela tiden och har alltid saker att göra. Gillar du front-end utveckling, back-end it-kommittén,
+                    Går du i tankarna att göra något mer än bara skoluppgifter? Vi i Lindas it-kommitté välkommnar dig med
+                    öppna armar. Vi har massor med projekt igång hela tiden. Gillar du front-end utveckling, back-end it-utveckling,
                     eller du kanske har en brinnande passion för apputveckling. Vad det än är så har vi platsen och resurserna
                     för dina ideér. På vår <a class="link text-underline" target="_blank" href="https://github.com/Linda-Carlstad">Github</a> hittar du alla pågående projekt.
                     <br><br>
