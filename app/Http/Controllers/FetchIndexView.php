@@ -19,7 +19,7 @@ class FetchIndexView extends Controller
     {
         $sponsors = Partner::where( 'type', 'Sponsor' )->where( 'frontPage', '1' )->orderBy( 'started', 'asc' )->get();
         $events = Event::where( 'active', 1 )->get();
-        session()->flush();
+        session()->forget( [ '_flash', 'event' ] );
         foreach( $events as $event )
         {
             session()->push('event', $event);
