@@ -14,9 +14,10 @@ class AssociationController extends Controller
      */
     public function index()
     {
-        $associations = Association::orderBy( 'name', 'asc' )->get();
+        $special = Association::where( 'name', 'Linda Carlstad' )->first();
+        $associations = Association::where( 'name', '!=', 'Linda Carlstad' )->orderBy( 'name', 'asc' )->get();
 
-        return view( 'association.index' )->with( 'associations', $associations );
+        return view( 'association.index' )->with( 'associations', $associations )->with( 'special', $special );
     }
 
     /**

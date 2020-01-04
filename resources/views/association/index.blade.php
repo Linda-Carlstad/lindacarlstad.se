@@ -16,14 +16,22 @@
         <div class="col-12 text-center">
             @if( $associations->isEmpty() )
                 <p class="text-center">Inga studentföreningar tillagda.</p>
+            @else
+
+                <br>
+                <ul class="list-group col-md-8 offset-md-2">
+                    @if( $special )
+                        <a href="{{ route( 'association.show', $special->slug ) }}" class="list-group-item bg-dark">
+                            {{ $special->name }}
+                        </a>
+                    @endif
+                    @foreach( $associations as $association )
+                        <a href="{{ route( 'association.show', $association->slug ) }}" class="list-group-item bg-dark">
+                            {{ $association->name }}
+                        </a>
+                    @endforeach
+                </ul>
             @endif
-            <ul class="list-group col-md-8 offset-md-2">
-                @foreach( $associations as $association )
-                    <a href="{{ route( 'association.show', $association->slug ) }}" class="list-group-item bg-dark">
-                        {{ $association->name }}
-                    </a>
-                @endforeach
-            </ul>
         </div>
     </div>
 
