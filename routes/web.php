@@ -49,6 +49,11 @@ Route::get( 'sittning', function()
     return view( 'sitting' );
 })->name( 'sitting' );
 
+Route::get( 'terminal', function()
+{
+    return view( 'terminal' );
+})->name( 'terminal' );
+
 Route::get( 'program', function()
 {
     return view( 'programs.index' );

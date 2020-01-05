@@ -56,6 +56,8 @@
                 <a href="{{ route( 'news' ) }}">Nyheter</a>
                 <br>
                 <a href="http://tenta.lindacarlstad.se/linda">Tentor</a>
+                <br>
+                <a href="{{ route( 'terminal' ) }}">Terminal</a>
             </div>
         </div>
         <div class="row social-footer-icons justify-content-center">

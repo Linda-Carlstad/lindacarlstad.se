@@ -1,3 +1,6 @@
 {
-    "/css/main.css": "/css/main.css"
+    "/js/terminal/main.js": "/js/terminal/main.js",
+    "/css/main.css": "/css/main.css",
+    "/css/terminal/main.css": "/css/terminal/main.css",
+    "/css/terminal/normalize.css": "/css/terminal/normalize.css"
 }

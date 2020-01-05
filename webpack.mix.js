@@ -18,5 +18,8 @@ if( mix.inProduction() )
 }
 else
 {
-    mix.sass( 'resources/sass/main.sass', 'public/css' );
+    mix.js( 'resources/js/terminal/main.js', 'public/js/terminal' )
+        .sass( 'resources/sass/main.sass', 'public/css' )
+        .sass( 'resources/sass/terminal/main.sass', 'public/css/terminal' )
+        .sass( 'resources/sass/terminal/normalize.sass', 'public/css/terminal' );
 }
