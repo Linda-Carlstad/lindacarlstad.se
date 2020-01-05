@@ -28,16 +28,16 @@
     <hr>
     <div class="text-center">
         <h3>Sånger på sittning</h3>
-        <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/portos-visa">Portos visa</a>
-        <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/lambo">Lambo</a>
-        <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/jag-ska-festa">Jag ska festa</a>
-        <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/linda-i-baren">Linda i Baren</a>
-        <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/portos-visa">Portos visa</a>
-        <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/strejk-pa-pripps">Strek på Prips</a>
-        <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/ack-varmland">Ack, Värmland</a>
-        <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/feta-fransyskor">Feta fransyskor</a>
-        <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/bordeaux-bordeaux">Bordeaux Bordeaux</a>
-        <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/spritbolaget">Spritbolaget</a>
+        <a target="_blank" class="btn btn-grey m-1" href="https://lindacarlstad.se/s%C3%A5nger/portos-visa">Portos visa</a>
+        <a target="_blank" class="btn btn-grey m-1" href="https://lindacarlstad.se/s%C3%A5nger/lambo">Lambo</a>
+        <a target="_blank" class="btn btn-grey m-1" href="https://lindacarlstad.se/s%C3%A5nger/jag-ska-festa">Jag ska festa</a>
+        <a target="_blank" class="btn btn-grey m-1" href="https://lindacarlstad.se/s%C3%A5nger/linda-i-baren">Linda i Baren</a>
+        <a target="_blank" class="btn btn-grey m-1" href="https://lindacarlstad.se/s%C3%A5nger/portos-visa">Portos visa</a>
+        <a target="_blank" class="btn btn-grey m-1" href="https://lindacarlstad.se/s%C3%A5nger/strejk-pa-pripps">Strek på Prips</a>
+        <a target="_blank" class="btn btn-grey m-1" href="https://lindacarlstad.se/s%C3%A5nger/ack-varmland">Ack, Värmland</a>
+        <a target="_blank" class="btn btn-grey m-1" href="https://lindacarlstad.se/s%C3%A5nger/feta-fransyskor">Feta fransyskor</a>
+        <a target="_blank" class="btn btn-grey m-1" href="https://lindacarlstad.se/s%C3%A5nger/bordeaux-bordeaux">Bordeaux Bordeaux</a>
+        <a target="_blank" class="btn btn-grey m-1" href="https://lindacarlstad.se/s%C3%A5nger/spritbolaget">Spritbolaget</a>
     </div>
     <hr>
     <div class="text-center">
