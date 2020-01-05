@@ -14,16 +14,8 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    @if( session()->has( 'event' ) )
-                        @foreach( session()->get( 'event' ) as $event )
-                            <div class="alert alert-danger fade show text-center" role="alert">
-                                {{ $event->text }}
-                                @if( $event->link && $event->link_title )
-                                    <a class="link" target="_blank" href="{{ $event->link }}">{{ $event->link_title }}</a>
-                                @endif
-                            </div>
-                        @endforeach
-                    @endif
+                    @include( 'layouts.partials.flash-messages' )
+
                     @if( !$sponsors->isEmpty() )
                         <hr>
                         <h3 class="text-center mb-3">Sponsorer</h3>
