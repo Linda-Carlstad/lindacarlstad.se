@@ -13,10 +13,13 @@
             <div class="text-block">
                 <h3>Vad är en sittning?</h3>
                 <p>
-                    Linda Carlstads it-kommitté är utskott från styrelsen som har hand om allt som rör IT inom föreningen.
-                    Vi underhåller alla webbsidor som föreningen har, fyller på med innehåll, rättar till fel och nyutvecklar.
-                    Nyligen har vi fått in ett flertal ny medlemmar till it-kommittén och vi vill börja utveckla mer än webbsidor.
-                    Låter det intressant så hör av dig till oss så hjälper vi dig att komma igång!
+                    Som ny i studentsammanhang hör en ofta talas om sittningar, men det kan vara lite svårt att
+                    veta vad en sittning är. Här är en kort beskrivning.
+                    <br>
+                    <br>
+                    Enkelt sagt är en sittning är en middag, fylld emd sång och spex. Sittningar kan se ganska olika ut.
+                    Det kan vara ett tema så att en ska klä ut sig, det kan röra sig om inomhus eller utomhus, den
+                    kan innehålla en olika mängd aktiviteter. Kort sammanfattat kan det röra sig om mycket olika events.
                 </p>
                 <hr>
                 <h3>Sånger på sittning</h3>
