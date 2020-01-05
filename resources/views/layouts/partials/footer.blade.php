@@ -11,7 +11,6 @@
                 </a>
             </div>
             <div class="col-md-3">
-                <p>
                 <hr class="d-block d-md-none">
                 <span>Linda Carlstad</span>
                 <br class="d-block d-md-none">
@@ -21,10 +20,8 @@
                 Universitetsgatan 2
                 <br>
                 651 68 Karlstad
-                </p>
             </div>
             <div class="col-md-3">
-                <p>
                 <hr class="d-block d-md-none">
                 <span>Föreningen</span>
                 <br class="d-block d-md-none">
@@ -37,22 +34,20 @@
                 <br>
                 <a href="{{ route( 'it' ) }}">It-kommitté</a>
                 <br>
-                <a href="{{ route( 'sitting' ) }}">Sittning</a>
-                <br>
                 <a href="{{ route( 'new-member' ) }}">Bli medlem</a>
-                </p>
             </div>
             <div class="col-md-3">
-                <p>
                 <hr class="d-block d-md-none">
-                <span>Länkar</span>
+                <span>Läs mer</span>
                 <br class="d-block d-md-none">
                 <hr class="d-none d-md-block">
+                <a href="{{ route( 'initiation' ) }}">Nollningar</a>
+                <br>
+                <a href="{{ route( 'sitting' ) }}">Sittning</a>
+                <br>
                 <a href="{{ route( 'partner' ) }}">Partners</a>
                 <br>
                 <a href="{{ route( 'association' ) }}">Föreningar</a>
-                <br>
-                <a href="{{ route( 'initiation' ) }}">Nollningar</a>
                 <br>
                 <a href="{{ route( 'song' ) }}">Sånger</a>
                 <br>
@@ -61,7 +56,6 @@
                 <a href="{{ route( 'news' ) }}">Nyheter</a>
                 <br>
                 <a href="http://tenta.lindacarlstad.se/linda">Tentor</a>
-                </p>
             </div>
         </div>
         <div class="row social-footer-icons justify-content-center">
