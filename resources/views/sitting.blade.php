@@ -21,22 +21,23 @@
                     Det kan vara ett tema så att en ska klä ut sig, det kan röra sig om inomhus eller utomhus, den
                     kan innehålla en olika mängd aktiviteter. Kort sammanfattat kan det röra sig om mycket olika events.
                 </p>
-                <hr>
-                <h3>Sånger på sittning</h3>
-                <div class="text-center text-md-left">
-                    <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/portos-visa">Portos visa</a>
-                    <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/lambo">Lambo</a>
-                    <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/jag-ska-festa">Jag ska festa</a>
-                    <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/linda-i-baren">Linda i Baren</a>
-                    <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/portos-visa">Portos visa</a>
-                    <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/strejk-pa-pripps">Strek på Prips</a>
-                    <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/ack-varmland">Ack, Värmland</a>
-                    <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/feta-fransyskor">Feta fransyskor</a>
-                    <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/bordeaux-bordeaux">Bordeaux Bordeaux</a>
-                    <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/spritbolaget">Spritbolaget</a>
-                </div>
+                <a target="_blank" class="btn btn-grey" href="https://sv.wikipedia.org/wiki/Sittning">Läs mer</a>
             </div>
         </div>
+    </div>
+    <hr>
+    <div class="text-center">
+        <h3>Sånger på sittning</h3>
+        <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/portos-visa">Portos visa</a>
+        <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/lambo">Lambo</a>
+        <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/jag-ska-festa">Jag ska festa</a>
+        <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/linda-i-baren">Linda i Baren</a>
+        <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/portos-visa">Portos visa</a>
+        <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/strejk-pa-pripps">Strek på Prips</a>
+        <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/ack-varmland">Ack, Värmland</a>
+        <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/feta-fransyskor">Feta fransyskor</a>
+        <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/bordeaux-bordeaux">Bordeaux Bordeaux</a>
+        <a class="btn btn-grey m-1" target="_blank" href="https://lindacarlstad.se/s%C3%A5nger/spritbolaget">Spritbolaget</a>
     </div>
     <hr>
     <div class="text-center">
