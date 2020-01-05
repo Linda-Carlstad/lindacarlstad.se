@@ -16,12 +16,12 @@ body {
 
 body {
   padding: 0.5%;
-  background: #171e1d;
+  background: #000;
   font-family: monospace;
 }
 
 #input {
-  background: #171e1d;
+  background: #000;
   font-family: monospace;
 }
 
@@ -34,7 +34,7 @@ body {
 
 #input,
 .input-wrapper {
-  color: #53eb9b;
+  color: #208020;
 }
 
 #input {
