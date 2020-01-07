@@ -146,6 +146,15 @@ div
 
 ul.nav.navbar-nav .nav-item.active .nav-link
   color: $accent
+  border-bottom: 1px solid $accent
+
+// Prevents laggy animation
+ul.nav.navbar-nav .nav-item .nav-link
+  border: 1px solid $secondary
+
+ul.nav.navbar-nav .nav-item:hover .nav-link
+  border-bottom: 1px solid $accent
+
 
 .content
   background-color: $primary
@@ -171,8 +180,15 @@ ul.nav.navbar-nav .nav-item.active .nav-link
     font-size: 1.7rem
     padding: 0.5rem
 
+  // Prevents laggy animation
+  a
+    border-bottom: 1px solid $secondary
+  a:hover
+    border-bottom: 1px solid $accent
+
   .active
     color: $accent
+    border-bottom: 1px solid $accent
 
 .error-message
   min-height: 50vh

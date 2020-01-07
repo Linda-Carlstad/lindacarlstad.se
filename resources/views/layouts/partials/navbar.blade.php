@@ -53,27 +53,27 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="nav navbar-nav">
-                <li class="nav-item">
+                <li class="nav-item {{ Request::is('/') ? 'active' : null }}">
                     <a class="nav-link" href="{{ url( '/' ) }}">Start<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {{ Request::segment(1) === 'program' ? 'active' : null }}">
                     <a class="nav-link" href="{{ route( 'programs' ) }}">Program</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {{ Request::segment(1) === 'föreningen' ? 'active' : null }}">
                     <a class="nav-link" href="{{ route( 'about' ) }}">Föreningen</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {{ Request::segment(1) === 'nollning' && Request::segment(2) === date( 'Y' ) ? 'active' : null }}">
                     <a class="nav-link" href="{{ route( 'initiation.show', date( 'Y' ) ) }}">Nollning {{ date( 'Y' ) }}</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item">
+                <li class="nav-item {{ Request::segment(1) === 'sånger' ? 'active' : null }}">
                     <a class="nav-link" href="{{ route( 'song' ) }}">Sånger</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {{ Request::segment(1) === 'dokument' ? 'active' : null }}">
                     <a class="nav-link" href="{{ route( 'document' ) }}">Dokument</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {{ Request::segment(1) === 'kontakt' ? 'active' : null }}">
                     <a class="nav-link" href="{{ route( 'contact' ) }}">Kontakta oss</a>
                 </li>
                 <li class="nav-item">
