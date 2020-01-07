@@ -2,13 +2,25 @@
 @extends('layouts.app')
 
 @section('content')
-
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute( '{{ env( 'GOOGLE_RECAPTCHA_KEY' ) }}', { action: 'secret_songs' } ).then( function( token )
+            {
+                if( token )
+                {
+                    document.getElementById( 'recaptcha' ).value = token;
+                }
+            });
+        });
+    </script>
     <div class="text-center">
         <h1>Stopp!</h1>
         <p>Du behöver en kod för att komma vidare</p>
     </div>
     <hr>
     <form class="col-md-8 offset-md-2" action="{{ route( 'song.secret' ) }}">
+        @csrf
+        <input type="hidden" id="recaptcha" name="recaptcha">
         <div class="form-group">
             <div class="input-group">
                 <div class="input-group-append">
@@ -24,6 +36,10 @@
                     <strong>{{ $errors->first('code' ) }}</strong>
                 </span>
             @endif
+            <small>
+                Denna webbplats är skyddad av reCAPTCHA och Googles
+                <a class="link" href="https://policies.google.com/privacy">sekretesspolicy</a> och
+                <a class="link" href="https://policies.google.com/terms">användarvillkor</a> gäller.</small>
         </div>
     </form>
     <hr>

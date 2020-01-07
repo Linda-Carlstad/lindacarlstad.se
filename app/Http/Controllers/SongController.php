@@ -108,6 +108,29 @@ class SongController extends Controller
         $code = 'LindaCarlstad' . date( 'Y' );
         if( $request->code == $code )
         {
+            $url = 'https://www.google.com/recaptcha/api/siteverify';
+            $data = [
+                'secret'   => env( 'GOOGLE_RECAPTCHA_SECRET' ),
+                'response' => $request->recaptcha
+            ];
+
+            $options = [
+                'http' => [
+                    'header'  => 'Content-type: application/x-www-form-urlencoded',
+                    'method'  => 'POST',
+                    'content' => http_build_query( $data )
+                ]
+            ];
+
+            $context = stream_context_create( $options );
+            $result = file_get_contents( $url, false, $context );
+            $json = json_decode( $result );
+
+            if( $json->success != true )
+            {
+                return back()->with( 'error', 'Capatcha fel!' );
+            }
+
             session(['_secret' => true]);
             $songs = Song::where( 'secret', 1 )->get();
 
