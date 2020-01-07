@@ -189,6 +189,10 @@ div {
   border-top: 2px solid #C9BC73 !important;
 }
 
+ul.nav.navbar-nav .nav-item.active .nav-link {
+  color: #C9BC73 !important;
+}
+
 .content {
   background-color: #660023 !important;
 }
@@ -224,6 +228,10 @@ div {
 #footer .social-footer-icons i {
   font-size: 1.7rem;
   padding: 0.5rem;
+}
+
+#footer .active {
+  color: #C9BC73 !important;
 }
 
 .error-message {

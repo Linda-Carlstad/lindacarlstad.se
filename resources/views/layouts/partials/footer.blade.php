@@ -26,34 +26,34 @@
                 <span>Föreningen</span>
                 <br class="d-block d-md-none">
                 <hr class="d-none d-md-block">
-                <a href="{{ route( 'contact' ) }}">Kontakta oss</a>
+                <a class="{{ Request::segment(1) === 'kontakt' ? 'active' : null }}" href="{{ route( 'contact' ) }}">Kontakta oss</a>
                 <br>
-                <a href="{{ route( 'about' ) }}">Om oss</a>
+                <a class="{{ Request::segment(1) === 'föreningen' ? 'active' : null }}" href="{{ route( 'about' ) }}">Om oss</a>
                 <br>
-                <a href="{{ route( 'programs' ) }}">Program</a>
+                <a class="{{ Request::segment(1) === 'program' ? 'active' : null }}" href="{{ route( 'programs' ) }}">Program</a>
                 <br>
-                <a href="{{ route( 'it' ) }}">It-kommitté</a>
+                <a class="{{ Request::segment(1) === 'it-kommitte' ? 'active' : null }}" href="{{ route( 'it' ) }}">It-kommitté</a>
                 <br>
-                <a href="{{ route( 'new-member' ) }}">Bli medlem</a>
+                <a class="{{ Request::segment(1) === 'ny-medlem' ? 'active' : null }}" href="{{ route( 'new-member' ) }}">Bli medlem</a>
             </div>
             <div class="col-md-3">
                 <hr class="d-block d-md-none">
                 <span>Läs mer</span>
                 <br class="d-block d-md-none">
                 <hr class="d-none d-md-block">
-                <a href="{{ route( 'initiation' ) }}">Nollningar</a>
+                <a class="{{ Request::segment(1) === 'nollning' ? 'active' : null }}" href="{{ route( 'initiation' ) }}">Nollningar</a>
                 <br>
-                <a href="{{ route( 'sitting' ) }}">Sittning</a>
+                <a class="{{ Request::segment(1) === 'sittning' ? 'active' : null }}" href="{{ route( 'sitting' ) }}">Sittning</a>
                 <br>
-                <a href="{{ route( 'partner' ) }}">Partners</a>
+                <a class="{{ Request::segment(1) === 'partner' ? 'active' : null }}" href="{{ route( 'partner' ) }}">Partners</a>
                 <br>
-                <a href="{{ route( 'association' ) }}">Föreningar</a>
+                <a class="{{ Request::segment(1) === 'föreningar' ? 'active' : null }}" href="{{ route( 'association' ) }}">Föreningar</a>
                 <br>
-                <a href="{{ route( 'song' ) }}">Sånger</a>
+                <a class="{{ Request::segment(1) === 'sånger' ? 'active' : null }}" href="{{ route( 'song' ) }}">Sånger</a>
                 <br>
-                <a href="{{ route( 'document' ) }}">Dokument</a>
+                <a class="{{ Request::segment(1) === 'dokument' ? 'active' : null }}" href="{{ route( 'document' ) }}">Dokument</a>
                 <br>
-                <a href="{{ route( 'news' ) }}">Nyheter</a>
+                <a class="{{ Request::segment(1) === 'nyheter' ? 'active' : null }}" href="{{ route( 'news' ) }}">Nyheter</a>
                 <br>
                 <a href="http://tenta.lindacarlstad.se/linda">Tentor</a>
                 <br>
