@@ -88,9 +88,9 @@
                 @if( $initiation->playlist )
                     <hr>
                     <h4 class="text-center">Året spellista</h4>
-                    <iframe src="{{ $initiation->playlist }}"
-                            width="100%" height="400" frameborder="0"
-                            allowtransparency="true" allow="encrypted-media"></iframe>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="{{ $initiation->playlist }}" allowtransparency="true" allow="encrypted-media"></iframe>
+                        </div>
                 @endif
                 <hr>
                 <h4 class="text-center">Bra tips</h4>
