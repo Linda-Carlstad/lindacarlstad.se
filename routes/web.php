@@ -124,8 +124,8 @@ Route::get( 'sånger/hemliga', 'SongController@secret' )->name( 'song.secret' );
 Route::get( 'sånger', 'SongController@index' )->name( 'song' );
 Route::get( 'sånger/{slug}', 'SongController@show' )->name( 'song.show' );
 
-Route::get( 'samarbetspartner', 'PartnerController@index' )->name( 'partner' );
-Route::get( 'samarbetspartner/{slug}', 'PartnerController@show' )->name( 'partner.show' );
+Route::get( 'partner', 'PartnerController@index' )->name( 'partner' );
+Route::get( 'partner/{slug}', 'PartnerController@show' )->name( 'partner.show' );
 
 
 Route::group( [ 'middleware' => 'verified' ], function ()
