@@ -85,6 +85,13 @@
                          Kommer snart!
                     @endif
                 </p>
+                @if( $initiation->playlist )
+                    <hr>
+                    <h4 class="text-center">Året spellista</h4>
+                    <iframe src="{{ $initiation->playlist }}"
+                            width="100%" height="400" frameborder="0"
+                            allowtransparency="true" allow="encrypted-media"></iframe>
+                @endif
                 <hr>
                 <h4 class="text-center">Bra tips</h4>
                 <ul class="list-group">
