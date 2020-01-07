@@ -2,6 +2,17 @@
 @extends('layouts.app')
 
 @section('content')
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute( '{{ env( 'GOOGLE_RECAPTCHA_KEY' ) }}', { action: 'contact_form' } ).then( function( token )
+            {
+                if( token )
+                {
+                    document.getElementById( 'recaptcha' ).value = token;
+                }
+            });
+        });
+    </script>
 
     <h1 class="text-center">Kontakta oss</h1>
     <hr>

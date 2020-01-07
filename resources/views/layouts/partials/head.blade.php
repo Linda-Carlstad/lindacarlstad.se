@@ -85,16 +85,6 @@
             }
         })});
 
-    grecaptcha.ready(function() {
-        grecaptcha.execute( '{{ env( 'GOOGLE_RECAPTCHA_KEY' ) }}', { action: 'contactForm' } ).then( function( token )
-        {
-            if( token )
-            {
-                document.getElementById( 'recaptcha' ).value = token;
-            }
-        });
-    });
-
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:1618121,hjsv:6};
