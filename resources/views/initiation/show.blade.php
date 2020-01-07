@@ -72,17 +72,19 @@
         </div>
         <div class="col-md-10 offset-md-1 d-flex align-items-center justify-content-center">
             <div class="initiation text-block">
-                @if( $initiation->description )
-                    <p>
-                        {!! nl2br( $initiation->description ) !!}
-                    </p>
-                @endif
+                <p>
+                    @if( $initiation->description )
+                            {!! nl2br( $initiation->description ) !!}
+                    @else
+                        Information kommer snart.
+                    @endif
+                </p>
                 <p>
                     <b>Pris:</b>
                     @if( $initiation->show_price == true )
                         {{ $initiation->price }}kr
                     @else
-                         Kommer snart!
+                         Kommer snart.
                     @endif
                 </p>
                 <hr>
