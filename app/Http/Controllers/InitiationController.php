@@ -52,7 +52,7 @@ class InitiationController extends Controller
     public function show( $year )
     {
         $initiation = Initiation::where( 'year', $year )->first();
-        $days = InitiationDay::where( 'initiation_id', $initiation->id )->get();
+        $days = InitiationDay::where( 'initiation_id', $initiation->id )->orderBy( 'date', 'asc' )->get();
         $persons = InitiationKeyPerson::where( 'initiation_id', $initiation->id )->get();
 
         return view( 'initiation.show' )
