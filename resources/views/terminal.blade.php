@@ -46,8 +46,8 @@
 
     <title>{{ config( 'app.name', 'Linda Carlstad' ) }} - Terminal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="{{ asset( 'css/terminal/normalize.css' ) }}">
-    <link rel="stylesheet" href="{{ asset( 'css/terminal/main.css' ) }}">
+    <link rel="stylesheet" href="{{ mix( 'css/terminal/normalize.css' ) }}">
+    <link rel="stylesheet" href="{{ mix( 'css/terminal/main.css' ) }}">
     <link href="{{ asset( '/img/icon.ico' ) }}" rel="icon">
 </head>
 
@@ -58,7 +58,7 @@
     <span>$&nbsp;</span><input id="input" type="text" autofocus/>
 </div>
 
-<script src="{{ asset( 'js/terminal/main.js' ) }}"></script>
+<script src="{{ mix( 'js/terminal/main.js' ) }}"></script>
 </body>
 
 </html>
