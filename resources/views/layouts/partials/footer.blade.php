@@ -43,6 +43,8 @@
                 <hr class="d-none d-md-block">
                 <a class="{{ Request::segment(1) === 'nollning' ? 'active' : null }}" href="{{ route( 'initiation' ) }}">Nollningar</a>
                 <br>
+                <a class="{{ Request::segment(1) === 'galleri' ? 'active' : null }}" href="{{ route( 'gallery' ) }}">Galleri</a>
+                <br>
                 <a class="{{ Request::segment(1) === 'sittning' ? 'active' : null }}" href="{{ route( 'sitting' ) }}">Sittning</a>
                 <br>
                 <a class="{{ Request::segment(1) === 'partner' ? 'active' : null }}" href="{{ route( 'partner' ) }}">Partners</a>

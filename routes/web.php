@@ -54,6 +54,11 @@ Route::get( 'terminal', function()
     return view( 'terminal' );
 })->name( 'terminal' );
 
+Route::get( 'galleri', function()
+{
+    return view( 'gallery' );
+})->name( 'gallery' );
+
 Route::get( 'program', function()
 {
     return view( 'programs.index' );
