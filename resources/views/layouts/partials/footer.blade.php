@@ -81,7 +81,7 @@
     </div>
     <div class="footer-copyright">
         <br>
-        <small>Copyright © 2019 - Alla rättigheter reserverade - Studentföreningen Linda Carlstad</small>
+        <small>Copyright © {{ date( 'Y' ) }} - Alla rättigheter reserverade - Studentföreningen Linda Carlstad</small>
     </div>
     </div>
 </footer>
