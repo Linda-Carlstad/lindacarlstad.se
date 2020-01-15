@@ -1,4 +1,5 @@
-if( $( "#error-message" ) )
+
+if( document.getElementById( 'error-message' ) )
 {
     let error = $( '#error-id' ).text();
     let message = '';
@@ -32,6 +33,7 @@ if( $( "#error-message" ) )
             break;
 
     }
+
     let typed = new Typed( "#error-message",
     {
         strings:
