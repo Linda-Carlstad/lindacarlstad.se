@@ -111,7 +111,7 @@
                         Kläder efter väder
                     </li>
                 </ul>
-                <br>
+                <hr>
                 <h4 class="text-center">Kontaktpersoner</h4>
                 @if( $persons->isEmpty() )
                     <p class="text-center">Inga kontaktpersoner tillagda.</p>
