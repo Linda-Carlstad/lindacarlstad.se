@@ -5,8 +5,8 @@
         <img class="bg-img" src="{{ asset('/img/hero-image.jpg' ) }}" alt="Lindaiter, faddrar och nollor på Dagen K">
         <div class="holder text-center">
             <img class="logo" src="{{ asset('/img/small-logo.svg' ) }}" alt="Linda Carlstad logo">
-            <h1>Linda Carlstad</h1>
-            <h2>Linjeförening för datavetare</h2>
+            <h1>{{ env( 'APP_NAME' ) }}</h1>
+            <h2>{{ env( 'APP_SLOGAN' ) }}</h2>
         </div>
     </header>
 
