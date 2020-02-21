@@ -20,7 +20,7 @@ Follow this excellent guide to run a Laravel project on your Windows based compu
 
 When steps above are done, do these steps to get going.
 
-Copy and generate application key: 
+Copy enviroment example file and generate a new application key: 
 ```
 cp .env.example .env
 php artisan key:generate
@@ -38,6 +38,7 @@ npm install
 
 Before migrating, download the admin panel (custom CMS): https://github.com/Linda-Carlstad/admin.lindacarlstad.se to get the correct database migrations. 
 
+Once done, continue with the setup. 
 Create and seed database (admin panel):
 ```
 php artisan migrate:refresh --seed
@@ -45,18 +46,16 @@ php artisan migrate:refresh --seed
 
 Run this to generate CSS and JS files:
 ```
-npm run watch
+npm run dev
 ```
 
-Run the local development server: 
+Run the application on a local development server: 
 ```
 php artisan serve
 ```
 
 ## Usage
 The website uses the information filled in using the custom-build CMS system, [Admin Linda Carlstad](https://github.com/Linda-Carlstad/admin.lindacarlstad.se). 
-
-(add pictures of app)
 
 ## Contributing
 #### - Issues
