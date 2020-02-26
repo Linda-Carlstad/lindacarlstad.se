@@ -11,8 +11,13 @@
     <hr>
     <div class="d-block row d-md-flex flex-md-row-reverse">
         <div class="col-md-5 d-flex align-items-center justify-content-center">
-            <img class="img-fluid" src="https://admin.lindacarlstad.se/{{ $association->image }}" alt="{{ $association->name }} logga">
-            {{-- <img class="img-fluid" src="http://admin.lindacarlstad.se.test/{{ $association->image }}" alt="{{ $association->name }} logga"> --}}
+            @if( $association->link )
+                <a target="_blank" class="btn btn-grey" href="{{ $association->link }}">
+                    <img class="img-fluid" src="https://admin.lindacarlstad.se/{{ $association->image }}" alt="{{ $association->name }} logga">
+                </a>
+            @else
+                <img class="img-fluid" src="https://admin.lindacarlstad.se/{{ $association->image }}" alt="{{ $association->name }} logga">
+            @endif
         </div>
         <br class="d-block d-md-none">
         <div class="col-md-7 d-flex">
