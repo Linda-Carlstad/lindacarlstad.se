@@ -20,7 +20,7 @@ Follow this excellent guide to run a Laravel project on your Windows based compu
 
 When steps above are done, do these steps to get going.
 
-Copy and generate application key: 
+Copy enviroment example file and generate a new application key: 
 ```
 cp .env.example .env
 php artisan key:generate
@@ -38,6 +38,7 @@ npm install
 
 Before migrating, download the admin panel (custom CMS): https://github.com/Linda-Carlstad/admin.lindacarlstad.se to get the correct database migrations. 
 
+Once done, continue with the setup. 
 Create and seed database (admin panel):
 ```
 php artisan migrate:refresh --seed
@@ -45,10 +46,10 @@ php artisan migrate:refresh --seed
 
 Run this to generate CSS and JS files:
 ```
-npm run watch
+npm run dev
 ```
 
-Run the local development server: 
+Run the application on a local development server: 
 ```
 php artisan serve
 ```
@@ -56,7 +57,44 @@ php artisan serve
 ## Usage
 The website uses the information filled in using the custom-build CMS system, [Admin Linda Carlstad](https://github.com/Linda-Carlstad/admin.lindacarlstad.se). 
 
-(add pictures of app)
+## Images
+#### Landing page
+![Ladning page](https://i.ibb.co/x6RkHhm/landing.png "Ladning page")
+
+#### About us
+![About us](https://i.ibb.co/DrkxcDM/about.png "About us")
+
+#### Contact form
+![Contact form](https://i.ibb.co/F4s7P7B/contact-form.png "Contact form")
+
+#### Program overview
+![Program overview](https://i.ibb.co/vDry00J/programs.png "Program overview")
+
+#### Footer
+![Footer](https://i.ibb.co/kX4j9Xv/footer.png "Footer")
+
+### Songs
+#### Song overview
+![Song overview](https://i.ibb.co/bzbF0nK/songs.png "Song overview")
+
+#### Hidden songs gate
+![Hidden songs gate](https://i.ibb.co/31FNHkJ/songs-gate.png "Hidden songs gate")
+
+
+
+### Initation
+#### Initiation overview
+![Initiation overview](https://i.ibb.co/0JhD9DV/initiations.png "Initiation overview")
+
+#### Initiation show
+![Initiation 2019](https://i.ibb.co/vqzXhxC/initiation-2019.png "Initiation 2019")
+
+#### Initiation information
+![Initiation 2019 Information](https://i.ibb.co/pZC32vZ/initiation-2019-info.png "Initiation 2019 Information")
+
+#### Initiation contact
+![Initiation contact](https://i.ibb.co/DYtHsVJ/initiation-2019-contact.png "Initiation contact")
+
 
 ## Contributing
 #### - Issues
