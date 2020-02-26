@@ -7,7 +7,7 @@
     <div class="d-block row d-md-flex flex-md-row-reverse">
         <div class="col-md-5 d-flex align-items-center justify-content-center">
             @if( $partner->link )
-                <a target="_blank" class="btn btn-grey" href="{{ $partner->link }}">
+                <a target="_blank" href="{{ $partner->link }}">
                     <img class="img-fluid" src="https://admin.lindacarlstad.se/{{ $partner->image }}" alt="{{ $partner->name }} logga">
                 </a>
             @else
