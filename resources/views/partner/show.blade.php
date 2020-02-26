@@ -6,8 +6,14 @@
     <hr>
     <div class="d-block row d-md-flex flex-md-row-reverse">
         <div class="col-md-5 d-flex align-items-center justify-content-center">
-            <img class="img-fluid" src="https://admin.lindacarlstad.se/{{ $partner->image }}" alt="{{ $partner->name }} logga">
-            {{-- <img class="img-fluid" src="http://admin-lindacarlstad-se.test{{ $partner->image }}" alt="{{ $partner->name }} logga"> --}}
+            @if( $partner->link )
+                <a target="_blank" class="btn btn-grey" href="{{ $partner->link }}">
+                    <img class="img-fluid" src="https://admin.lindacarlstad.se/{{ $partner->image }}" alt="{{ $partner->name }} logga">
+                </a>
+            @else
+                <img class="img-fluid" src="https://admin.lindacarlstad.se/{{ $partner->image }}" alt="{{ $partner->name }} logga">
+            @endif
+
         </div>
         <br class="d-block d-md-none">
         <div class="col-md-7 d-flex">
