@@ -12,7 +12,7 @@
         "ext-json": "*",
         "facebook/graph-sdk": "^5.7",
         "fideloper/proxy": "^4.0",
-        "frozzare/personnummer": "^1.2",
+        "personnummer/personnummer": "^1.2",
         "google/recaptcha": "^1.2",
         "laravel/framework": "^5.8.0",
         "laravel/tinker": "^1.0",
