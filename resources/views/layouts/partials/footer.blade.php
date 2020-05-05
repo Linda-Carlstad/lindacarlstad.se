@@ -2,11 +2,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 mb-3 mb-md-0 text-md-center">
-                <a href="{{ url( '/' ) }}">
+                <a class="footer-img" href="{{ url( '/' ) }}">
                     <img class="logo mb-md-4" src="{{ asset( 'img/logo.png') }}" alt="Linda Carlstad logo">
                 </a>
                 <br class="d-none d-md-block">
-                <a href="https://kau.se">
+                <a class="footer-img" href="https://kau.se">
                     <img class="logo" src="{{ asset( 'img/partner/kau.png') }}" alt="Karlstads Universitets logo">
                 </a>
             </div>
@@ -82,6 +82,5 @@
     <div class="footer-copyright">
         <br>
         <small>Copyright © {{ date( 'Y' ) }} - Alla rättigheter reserverade - Studentföreningen {{ env( 'APP_NAME' ) }}</small>
-    </div>
     </div>
 </footer>
