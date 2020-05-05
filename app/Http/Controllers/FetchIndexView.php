@@ -3,28 +3,37 @@
 namespace App\Http\Controllers;
 
 use App\Event;
+use App\Initiation;
 use App\Partner;
 
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class FetchIndexView extends Controller
 {
     /**
      * Handle the incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Application|Factory|View
      */
     public function __invoke(Request $request)
     {
         $sponsors = Partner::where( 'type', 'Sponsor' )->where( 'frontPage', '1' )->orderBy( 'started', 'asc' )->get();
         $events = Event::where( 'active', 1 )->get();
-        session()->forget( [ '_flash', 'event' ] );
+        $initiation = Initiation::latest()->first();
+
+        session()->forget( [ '_flash', 'event', 'initiation' ] );
+
         foreach( $events as $event )
         {
             session()->push('event', $event);
         }
+        session()->put( 'initiation', $initiation->year );
 
-        return view( 'index' )->with( 'sponsors', $sponsors )->with( 'events', $events );
+        return view( 'index' )->with( 'sponsors', $sponsors )
+            ->with( 'events', $events )->with( 'initiation', $initiation );
     }
 }
