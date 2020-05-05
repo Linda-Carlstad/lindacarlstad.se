@@ -78,8 +78,10 @@
                 <div class="col-md-8 offset-md-4">
                     <small>
                         Denna webbplats är skyddad av reCAPTCHA och Googles
-                        <a class="link" href="https://policies.google.com/privacy">sekretesspolicy</a> och
-                        <a class="link" href="https://policies.google.com/terms">användarvillkor</a> gäller.</small>
+                        <a class="link" href="https://policies.google.com/privacy"
+                           rel="noreferrer" target="_blank">sekretesspolicy</a> och
+                        <a class="link" href="https://policies.google.com/terms"
+                           rel="noreferrer" target="_blank">användarvillkor</a> gäller.</small>
                 </div>
             </div>
             <div class="form-group row mb-0">

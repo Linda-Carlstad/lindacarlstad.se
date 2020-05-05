@@ -21,7 +21,7 @@
         samt Matematik 4, Fysik 2 och Kemi 1.
     </p>
     <p><b>Vill du läsa mer om utbildningen? Klicka på knappen nedan.</b></p>
-    <a target="_blank" class="btn btn-grey" href="https://www.kau.se/utbildning/program-och-kurser/program/TACDA">Läs mer</a>
+    <a rel="noreferrer" target="_blank" class="btn btn-grey" href="https://www.kau.se/utbildning/program-och-kurser/program/TACDA">Läs mer</a>
     <hr>
     <div class="text-center">
         <p>Klicka nedan för att gå tillbaks till alla program.</p>

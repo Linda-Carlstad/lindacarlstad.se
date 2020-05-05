@@ -38,7 +38,7 @@
                     <a class="nav-link" href="{{ route( 'contact' ) }}">Kontakta oss</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://tenta.lindacarlstad.se/linda">Tentor</a>
+                    <a rel="noreferrer" target="_blank" class="nav-link" href="https://tenta.lindacarlstad.se/linda">Tentor</a>
                 </li>
             </ul>
         </div>

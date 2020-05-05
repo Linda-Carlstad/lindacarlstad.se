@@ -6,7 +6,7 @@
                     <img class="logo mb-md-4" src="{{ asset( 'img/logo.png') }}" alt="Linda Carlstad logo">
                 </a>
                 <br class="d-none d-md-block">
-                <a class="footer-img" href="https://kau.se">
+                <a rel="noreferrer" target="_blank" class="footer-img" href="https://kau.se">
                     <img class="logo" src="{{ asset( 'img/partner/kau.png') }}" alt="Karlstads Universitets logo">
                 </a>
             </div>
@@ -57,25 +57,25 @@
                 <br>
                 <a class="{{ Request::segment(1) === 'nyheter' ? 'active' : null }}" href="{{ route( 'news' ) }}">Nyheter</a>
                 <br>
-                <a href="http://tenta.lindacarlstad.se/linda">Tentor</a>
+                <a rel="noreferrer" target="_blank" href="http://tenta.lindacarlstad.se/linda">Tentor</a>
                 <br>
-                <a href="{{ route( 'terminal' ) }}">Terminal</a>
+                <a target="_blank" href="{{ route( 'terminal' ) }}">Terminal</a>
             </div>
         </div>
         <div class="row social-footer-icons justify-content-center">
-            <a target="_blank" href="https://www.facebook.com/linda.carlstad/"><i class="fab fa-facebook"></i></a>
+            <a rel="noreferrer" target="_blank" href="https://www.facebook.com/linda.carlstad/"><i class="fab fa-facebook"></i></a>
             <br>
             <a target="_blank" href="https://www.linkedin.com/company/linda-carlstad/about/"><i class="fab fa-linkedin"></i></a>
             <br>
-            <a target="_blank" href="https://www.instagram.com/lindacarlstad/"><i class="fab fa-instagram"></i></a>
+            <a rel="noreferrer" target="_blank" href="https://www.instagram.com/lindacarlstad/"><i class="fab fa-instagram"></i></a>
             <br>
             <a data-toggle="tooltip" data-placement="top" title="@lindacarlstad"><i class="fab fa-snapchat"></i></a>
             <br>
-            <a target="_blank" href="https://github.com/Linda-Carlstad"><i class="fab fa-github"></i></a>
+            <a rel="noreferrer" target="_blank" href="https://github.com/Linda-Carlstad"><i class="fab fa-github"></i></a>
             <br>
-            <a target="_blank" href="https://discord.gg/xGZNRSD"><i class="fab fa-discord"></i></a>
+            <a rel="noreferrer" target="_blank" href="https://discord.gg/xGZNRSD"><i class="fab fa-discord"></i></a>
             <br>
-            <a target="_blank" href="https://www.reddit.com/r/lindacarlstad/"><i class="fab fa-reddit"></i></a>
+            <a rel="noreferrer" target="_blank" href="https://www.reddit.com/r/lindacarlstad/"><i class="fab fa-reddit"></i></a>
             <br>
         </div>
     </div>

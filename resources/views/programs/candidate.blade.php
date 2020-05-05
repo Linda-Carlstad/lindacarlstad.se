@@ -19,7 +19,7 @@
         undantag för Fysik B samt Kemi A).
     </p>
     <p><b>Vill du läsa mer om utbildningen? Klicka på knappen nedan.</b></p>
-    <a target="_blank" class="btn btn-grey" href="https://www.kau.se/utbildning/program-och-kurser/program/TGKDV">Läs mer</a>
+    <a rel="noreferrer" target="_blank" class="btn btn-grey" href="https://www.kau.se/utbildning/program-och-kurser/program/TGKDV">Läs mer</a>
     <hr>
     <div class="text-center">
         <p>Klicka nedan för att gå tillbaks till alla program.</p>

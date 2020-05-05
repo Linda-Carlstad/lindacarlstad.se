@@ -19,7 +19,8 @@
                     Nyligen har vi fått in ett flertal ny medlemmar till it-kommittén och vi vill börja utveckla mer än webbsidor.
                     Låter det intressant så hör av dig till oss så hjälper vi dig att komma igång!
                 </p>
-                <a class="btn btn-grey btn-expand" target="_blank" href="https://github.com/Linda-Carlstad">Lär dig mer</a>
+                <a class="btn btn-grey btn-expand" href="https://github.com/Linda-Carlstad"
+                   rel="noreferrer" target="_blank">Lär dig mer</a>
             </div>
         </div>
     </div>

@@ -21,7 +21,7 @@
                     Det kan vara ett tema så att en ska klä ut sig, det kan röra sig om inomhus eller utomhus, den
                     kan innehålla en olika mängd aktiviteter. Kort sammanfattat kan det röra sig om mycket olika events.
                 </p>
-                <a target="_blank" class="btn btn-grey" href="https://sv.wikipedia.org/wiki/Sittning">Läs mer</a>
+                <a rel="noreferrer" target="_blank" class="btn btn-grey" href="https://sv.wikipedia.org/wiki/Sittning">Läs mer</a>
             </div>
         </div>
     </div>

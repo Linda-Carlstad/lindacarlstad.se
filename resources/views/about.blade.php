@@ -24,7 +24,8 @@
                     För att bli medlem måste du studera IT (<a class="link" href="{{ route( 'programs' ) }}">se program här</a>)
                     på Karlstads universitet. Medlemsbetalningar görs via Swish, till numret: <b>123-539 51 08</b>.
                 </p>
-                <a class="btn btn-grey btn-expand" href="https://forms.gle/TXC5uW51jgApvWb48" target="_blank">Bli medlem</a>
+                <a class="btn btn-grey btn-expand" href="https://forms.gle/TXC5uW51jgApvWb48"
+                   rel="noreferrer" target="_blank">Bli medlem</a>
             </div>
         </div>
     </div>

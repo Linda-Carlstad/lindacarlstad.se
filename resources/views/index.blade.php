@@ -67,7 +67,8 @@
                                     I Linda Vill vi att svaren på tentorna ska finnas tillgängliga gratis
                                     för alla våra medlemmar och för att lyckas med det behöver vi din hjälp!
                                 </p>
-                                <a class="btn btn-grey btn-expand" href="http://tenta.lindacarlstad.se/linda">Läs mer</a>
+                                <a class="btn btn-grey btn-expand" href="http://tenta.lindacarlstad.se/linda"
+                                   rel=”noreferrer” target="_blank">Läs mer</a>
                             </div>
                         </div>
                     </div>
@@ -86,7 +87,8 @@
                                     bostadsområdet Duvkulla. Placerat i ett cykelförråd som byggdes om för
                                     många år sedan till en mysig studentpub med bra priser.
                                 </p>
-                                <a class="btn btn-grey btn-expand" href="http://www.studentpuben-bunkern.se/">Läs mer</a>
+                                <a class="btn btn-grey btn-expand" href="http://www.studentpuben-bunkern.se/"
+                                   rel=”noreferrer” target="_blank">Läs mer</a>
                             </div>
                         </div>
                     </div>

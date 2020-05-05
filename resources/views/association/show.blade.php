@@ -34,7 +34,7 @@
                     <p>Kontakt: <a class="link" href="mailto:{{ $association->email }}">{{ $association->email }}</a></p>
                 @endif
                 @if( $association->link )
-                    <a target="_blank" class="btn btn-grey" href="{{ $association->link }}">{{ $association->name }}</a>
+                    <a rel="noreferrer" target="_blank" class="btn btn-grey" href="{{ $association->link }}">{{ $association->name }}</a>
                 @endif
             </div>
         </div>
