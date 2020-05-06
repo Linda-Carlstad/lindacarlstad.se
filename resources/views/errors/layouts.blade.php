@@ -4,9 +4,9 @@
     <section class="error-message d-flex align-items-center justify-content-center">
         <div class="error-terminal col-12">
             <header>
-                <a href="{{ url( '/' ) }}" class="button red"></a>
-                <a href="{{ route( 'programs' ) }}" class="button yellow"></a>
-                <a href="{{ route( 'about' ) }}" class="button green"></a>
+                <a aria-label="Return to landing page" href="{{ url( '/' ) }}" class="button red"></a>
+                <a aria-label="Go to program page" href="{{ route( 'programs' ) }}" class="button yellow"></a>
+                <a aria-label="Go to about page" href="{{ route( 'about' ) }}" class="button green"></a>
             </header>
             <div class="noise"></div>
             <div class="overlay"></div>
