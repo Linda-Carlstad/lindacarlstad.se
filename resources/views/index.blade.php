@@ -1,4 +1,4 @@
-@section('title', 'Studentförening under Karlstads universitet')
+@section('title', 'Karlstads universitet')
 @extends('layouts.app')
 @section('content')
     <header class="hero">

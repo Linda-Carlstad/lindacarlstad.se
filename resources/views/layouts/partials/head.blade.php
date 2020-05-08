@@ -43,7 +43,7 @@
 <meta name="og:locale" content="{{ str_replace( '_', '-', app()->getLocale()) }}">
 <meta name="og:type" content="website">
 
-<title>{{ config( 'app.name', 'Linda Carlstad' ) }} {{ config( 'app.slogan' ) }} - @yield( 'title')</title>
+<title>{{ config( 'app.name', 'Linda Carlstad' ) }} - {{ config( 'app.slogan' ) }} | @yield( 'title')</title>
 
 <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
