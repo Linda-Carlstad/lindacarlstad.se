@@ -1,4 +1,4 @@
-@section( 'title', 'Masterprogram i datavetenskap' )
+@section( 'title', 'Civilingenjör datateknik' )
 @extends( 'layouts.app' )
 @section( 'content' )
 
