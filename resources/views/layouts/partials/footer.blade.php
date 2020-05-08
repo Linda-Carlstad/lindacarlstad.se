@@ -12,7 +12,7 @@
             </div>
             <div class="col-md-3">
                 <hr class="d-block d-md-none">
-                <span>{{ env( 'APP_NAME' ) }}</span>
+                <span>{{ config( 'app.name' ) }}</span>
                 <br class="d-block d-md-none">
                 <hr class="d-none d-md-block">
                 <a href="mailto:info@lindacarlstad.se">info@lindacarlstad.se</a>
@@ -81,6 +81,6 @@
     </div>
     <div class="footer-copyright">
         <br>
-        <small>Copyright © {{ date( 'Y' ) }} - Alla rättigheter reserverade - Studentföreningen {{ env( 'APP_NAME' ) }}</small>
+        <small>Copyright © {{ date( 'Y' ) }} - Alla rättigheter reserverade - Studentföreningen {{ config( 'app.name' ) }}</small>
     </div>
 </footer>

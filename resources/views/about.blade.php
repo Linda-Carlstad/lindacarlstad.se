@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <h1>Föreningen - Linda Carlstad</h1>
+    <h1>Föreningen - {{ config( 'app.name' ) }}</h1>
     <hr>
     <div class="d-block row d-md-flex flex-md-row py-4">
         <div class="col-md-5 d-flex align-items-center justify-content-center">
@@ -12,7 +12,7 @@
         <br class="d-block d-md-none">
         <div class="col-md-7 d-flex align-items-center justify-content-center">
             <div class="text-block">
-                <h3>Linda Carlstad</h3>
+                <h3>{{ config( 'app.name' ) }}</h3>
                 <p>
                     LINDA är en studentförening under Karlstads Universitet
                     LINDA bevakar ditt intresse som student, såväl att du har det bra på

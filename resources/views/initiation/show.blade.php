@@ -11,7 +11,7 @@
         <br class="d-block d-md-none">
         <div class="col-md-7 d-flex align-items-center justify-content-center">
             <div class="text-block">
-                <h3>Nollning med Linda Carlstad</h3>
+                <h3>Nollning med {{ config( 'app.name' ) }}</h3>
                 <p>
                     Nollningen är en tradition i vår förening som vi anordnar varje år för nya studenter, det är ett
                     tillfälle att kickstarta ditt studentliv och lära känna andra studenter som börjar sitt första år här på
