@@ -96,3 +96,18 @@
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
+<script defer type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "LINDA Carlstad",
+    "url": "https://www.lindacarlstad.se/",
+    "address": "Universitetsgatan 2, 651 68 Karlstad",
+    "sameAs": [
+      "https://www.facebook.com/linda.carlstad/",
+      "https://twitter.com/lindacarlstad/",
+      "https://www.linkedin.com/company/linda-carlstad/",
+      "https://www.instagram.com/lindacarlstad/"
+    ]
+  }
+</script>
