@@ -31,17 +31,18 @@
 <meta itemprop="description" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
 <meta itemprop="image" content="https://lindacarlstad.se/img/logo.png">
 <!-- Twitter -->
-<meta name="twitter:card" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
-<meta name="twitter:title" content="Linda Carlstad">
-<meta name="twitter:description" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
+<meta property="twitter:card" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
+<meta property="twitter:title" content="Linda Carlstad">
+<meta property="twitter:description" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
+<meta property="twitter:image" content="https://lindacarlstad.se/img/logo.png">
 <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-<meta name="og:title" content="Linda Carlstad">
-<meta name="og:description" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
-<meta name="og:image" content="https://lindacarlstad.se/img/logo.png">
-<meta name="og:url" content="https://lindacarlstad.se">
-<meta name="og:site_name" content="Linda Carlstad">
-<meta name="og:locale" content="{{ str_replace( '_', '-', app()->getLocale()) }}">
-<meta name="og:type" content="website">
+<meta property="og:title" content="Linda Carlstad">
+<meta property="og:description" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
+<meta property="og:image" content="https://lindacarlstad.se/img/logo.png">
+<meta property="og:url" content="https://lindacarlstad.se">
+<meta property="og:site_name" content="Linda Carlstad">
+<meta property="og:locale" content="{{ str_replace( '_', '-', app()->getLocale()) }}">
+<meta property="og:type" content="website">
 
 <title>{{ config( 'app.name', 'Linda Carlstad' ) }} - {{ config( 'app.slogan' ) }} | @yield( 'title')</title>
 
