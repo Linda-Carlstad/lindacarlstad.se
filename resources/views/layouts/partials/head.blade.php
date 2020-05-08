@@ -1,6 +1,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="keywords" content="Utbildning, Utbildningar, Förening, Föreningar, Studentförening, Studentföreningar, Webbutvecklare, Webbutveckling, Data, Dataingenjör, IT-design">
+<meta name="keywords" content="Utbildning, Utbildningar, Förening, Föreningar, Studentförening, Studentföreningar,
+            Webbutvecklare, Webbutveckling, Data, Dataingenjör, IT-design, Datateknink, Teknik, Utbildningsförening,
+            Karlstad, Universitet, Karlstads universitet, KAU, Linda, Linda Carlstad, Carlstad">
 <meta name="description" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
 <meta name="subject" content="Social">
 <meta name="image" content="https://lindacarlstad.se/img/logo.png">
