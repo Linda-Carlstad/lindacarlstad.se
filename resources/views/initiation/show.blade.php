@@ -78,6 +78,10 @@
                     @else
                         Information kommer snart.
                     @endif
+                    @if( $initiation->facebook_group )
+                        <br>
+                        Facebook-grupp: <a href="{{ $initiation->facebook_group }}" class="link" rel=”noreferrer” target="_blank">{{ $initiation->facebook_group }}</a>
+                    @endif
                 </p>
                 <p>
                     <b>Pris:</b>
@@ -121,41 +125,17 @@
                     <ul class="list-group">
                         @foreach( $persons as $person )
                             @if( $person->rank == 'General' )
-                                <li class="list-group-item bg-dark">
-                                    Namn: {{ $person->name }}
-                                    <br>
-                                    Rank: {{ $person->rank }}
-                                    <br>
-                                    Email: <a class="link" href="mailto:{{ $person->email }}">{{ $person->email }}</a>
-                                    <br>
-                                    Telefonnummer: <a class="link" href="tel:{{ $person->phone }}">{{ $person->phone }}</a>
-                                </li>
+                                @include( 'initiation.partials.contact', $person )
                             @endif
                         @endforeach
                         @foreach( $persons as $person )
                             @if( $person->rank == 'Kapten' )
-                                <li class="list-group-item bg-dark">
-                                    Namn: {{ $person->name }}
-                                    <br>
-                                    Rank: {{ $person->rank }}
-                                    <br>
-                                    Email: <a class="link" href="mailto:{{ $person->email }}">{{ $person->email }}</a>
-                                    <br>
-                                    Telefonnummer: <a class="link" href="tel:{{ $person->phone }}">{{ $person->phone }}</a>
-                                </li>
+                                @include( 'initiation.partials.contact', $person )
                             @endif
                         @endforeach
                         @foreach( $persons as $person )
                             @if( $person->rank !== 'General' && $person->rank !== 'Kapten' )
-                                <li class="list-group-item bg-dark">
-                                    Namn: {{ $person->name }}
-                                    <br>
-                                    Rank: {{ $person->rank }}
-                                    <br>
-                                    Email: <a class="link" href="mailto:{{ $person->email }}">{{ $person->email }}</a>
-                                    <br>
-                                    Telefonnummer: <a class="link" href="tel:{{ $person->phone }}">{{ $person->phone }}</a>
-                                </li>
+                                @include( 'initiation.partials.contact', $person )
                             @endif
                         @endforeach
                     </ul>
