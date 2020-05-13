@@ -81,6 +81,11 @@
     </div>
     <div class="footer-copyright">
         <br>
-        <small>Copyright © {{ date( 'Y' ) }} - Alla rättigheter reserverade - Studentföreningen {{ config( 'app.name' ) }}</small>
+        <small>Utbildningsförening under
+            <a rel="noreferrer" target="_blank" href="https://www.kau.se/">Karlstads universitet</a> och en del av
+            <a rel="noreferrer" target="_blank" href="https://www.kau.se/hhk">Handelshögskolan</a>
+        </small>
+        <br>
+        <small>Copyright © {{ date( 'Y' ) }} - Alla rättigheter reserverade - Studentföreningen
     </div>
 </footer>
