@@ -100,5 +100,7 @@
         </small>
         <br>
         <small>Copyright © {{ date( 'Y' ) }} - Alla rättigheter reserverade - Studentföreningen
+            <a href="{{ url( '/' ) }}">{{ config( 'app.name' ) }}</a>
+        </small>
     </div>
 </footer>
