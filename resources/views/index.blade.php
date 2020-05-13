@@ -37,7 +37,7 @@
                         <br class="d-block d-md-none">
                         <div class="col-md-7 d-flex align-items-center justify-content-center">
                             <div class="text-block">
-                                <h3>{{ config( 'app.name' ) }}</h3>
+                                <h3>Föreningen</h3>
                                 <p>
                                     LINDA är en studentförening under Karlstads Universitet
                                     LINDA bevakar ditt intresse som student, såväl att du har det bra på
