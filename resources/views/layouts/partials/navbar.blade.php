@@ -64,9 +64,11 @@
                 <li class="nav-item {{ Request::segment(1) === 'föreningen' ? 'active' : null }}">
                     <a class="nav-link" href="{{ route( 'about' ) }}">Föreningen</a>
                 </li>
-                <li class="nav-item {{ Request::segment(1) === 'nollning' && Request::segment(2) === date( 'Y' ) ? 'active' : null }}">
-                    <a class="nav-link" href="{{ route( 'initiation.show', date( 'Y' ) ) }}">Nollning {{ date( 'Y' ) }}</a>
-                </li>
+                @if( session()->has( 'initiation' ) )
+                    <li class="nav-item {{ Request::segment(1) === 'nollning' && Request::segment(2) === session()->get( 'initiation' ) ? 'active' : null }}">
+                        <a class="nav-link" href="{{ route( 'initiation.show', session()->get( 'initiation' ) ) }}">Nollning {{ session()->get( 'initiation' ) }}</a>
+                    </li>
+                @endif
             </ul>
             <ul class="nav navbar-nav ml-auto">
                 <li class="nav-item {{ Request::segment(1) === 'sånger' ? 'active' : null }}">
