@@ -2,12 +2,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 mb-3 mb-md-0 text-md-center">
-                <a data-toggle="tooltip" data-placement="top" title="Linda Carlstad" class="footer-img" href="{{ url( '/' ) }}">
-                    <img class="logo mb-md-4" src="{{ asset( 'img/logo.png') }}" alt="{{ config( 'app.name' ) }} logga">
+                <a data-toggle="tooltip" data-placement="right" title="Linda Carlstad" class="footer-img" href="{{ url( '/' ) }}">
+                    <img class="img-fluid logo mb-md-4" src="{{ asset( 'img/logo.png') }}" alt="{{ config( 'app.name' ) }} logga">
                 </a>
                 <br class="d-none d-md-block">
-                <a data-toggle="tooltip" data-placement="top" title="Karlstads universtitet" rel="noreferrer" target="_blank" class="footer-img" href="https://kau.se">
-                    <img class="logo" src="{{ asset( 'img/partner/kau.png') }}" alt="Karlstads universitets logga">
+                <a data-toggle="tooltip" data-placement="right" title="Karlstads universtitet" rel="noreferrer" target="_blank" class="footer-img" href="https://kau.se">
+                    <img class="img-fluid logo" src="{{ asset( 'img/partner/kau.png') }}" alt="Karlstads universitets logga">
                 </a>
             </div>
             <div class="col-md-3">
