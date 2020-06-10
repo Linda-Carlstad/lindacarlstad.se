@@ -7,6 +7,7 @@ use App\Initiation;
 use App\InitiationDay;
 use App\InitiationKeyPerson;
 
+use Carbon\Carbon;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
@@ -58,9 +59,11 @@ class InitiationController extends Controller
         $initiation = Initiation::where( 'year', $year )->first();
         $days = InitiationDay::where( 'initiation_id', $initiation->id )->orderBy( 'date', 'asc' )->get();
         $persons = InitiationKeyPerson::where( 'initiation_id', $initiation->id )->get();
+
         $logs = Loggable::model('App\Initiation')
             ->where( 'model_id', $initiation->id )
             ->where( 'action', 'edit' )
+            ->where( 'date', '>=', Carbon::now()->subWeeks(1) )
             ->take( 3 );
 
         return view( 'initiation.show' )
@@ -118,6 +121,7 @@ class InitiationController extends Controller
         $logs = Loggable::model('App\InitiationDay')
             ->where( 'model_id', $day->id )
             ->where( 'action', 'edit' )
+            ->where( 'date', '>=', Carbon::now()->subWeeks(1) )
             ->take( 3 );
 
         return view( 'initiation.day.show' )
