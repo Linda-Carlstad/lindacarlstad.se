@@ -2,6 +2,10 @@
 @extends('layouts.app')
 
 @section('content')
+
+    @if( !$logs->isEmpty() )
+        @include( 'initiation.partials.logs', $logs )
+    @endif
     <h1>Nollning {{ $initiation->year }}</h1>
     <hr>
     <div class="d-block row d-md-flex flex-md-row py-4">

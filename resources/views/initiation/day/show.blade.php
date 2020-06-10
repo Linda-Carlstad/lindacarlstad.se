@@ -3,6 +3,10 @@
 
 @section('content')
 
+    @if( !$logs->isEmpty() )
+        @include( 'initiation.partials.logs', $logs )
+    @endif
+
     <h1>{{ $day->title }}</h1>
     <hr>
     <div class="row">
