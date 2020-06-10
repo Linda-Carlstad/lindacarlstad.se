@@ -103,4 +103,24 @@ class InitiationController extends Controller
     {
         abort( 403 );
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param $year
+     * @param $slug
+     * @return Application|Factory|View
+     */
+    public function day( $year, $slug )
+    {
+        $initiation = Initiation::where( 'year', $year )->first();
+        $day = InitiationDay::where( 'slug', $slug )->where( 'initiation_id', $initiation->id )->first();
+        $logs = Loggable::model('App\InitiationDay')
+            ->where( 'model_id', $day->id )
+            ->where( 'action', 'edit' )
+            ->take( 3 );
+
+        return view( 'initiation.day.show' )->with( 'initiation', $initiation )
+            ->with( 'day', $day )->with( 'logs', $logs );
+    }
 }
