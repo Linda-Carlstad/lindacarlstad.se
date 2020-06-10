@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace( '_', '-', app()->getLocale() ) }}" xml:lang="{{ str_replace( '_', '-', app()->getLocale() ) }}">
 <head>
+    @php
+        Carbon\Carbon::setLocale( 'sv' );
+    @endphp
     @include( 'layouts.partials.head' )
 </head>
 <body>
