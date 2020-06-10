@@ -12,7 +12,7 @@
     <div class="d-block row d-md-flex flex-md-row-reverse">
         <div class="col-md-5 d-flex align-items-center justify-content-center">
             @if( $association->link )
-                <a target="_blank" class="btn btn-grey" href="{{ $association->link }}">
+                <a target="_blank" rel="noreferrer" class="btn btn-grey" href="{{ $association->link }}">
                     <img class="img-fluid" src="https://admin.lindacarlstad.se/{{ $association->image }}" alt="{{ $association->name }} logga">
                 </a>
             @else
