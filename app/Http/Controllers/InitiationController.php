@@ -123,4 +123,15 @@ class InitiationController extends Controller
         return view( 'initiation.day.show' )->with( 'initiation', $initiation )
             ->with( 'day', $day )->with( 'logs', $logs );
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param $year
+     * @return Application|Factory|View
+     */
+    public function logs( $year )
+    {
+
+    }
 }
