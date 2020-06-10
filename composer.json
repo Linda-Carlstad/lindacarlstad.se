@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.1.3",
         "ext-json": "*",
+        "alkhachatryan/laravel-loggable": "^1.2",
         "facebook/graph-sdk": "^5.7",
         "fideloper/proxy": "^4.0",
         "google/recaptcha": "^1.2",

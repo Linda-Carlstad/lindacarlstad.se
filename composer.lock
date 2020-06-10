@@ -4,8 +4,57 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c4716bbfd54dd2e6747cc1ac2730b1a",
+    "content-hash": "09411458d1547991f31cb059d163c25e",
     "packages": [
+        {
+            "name": "alkhachatryan/laravel-loggable",
+            "version": "1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alkhachatryan/laravel-loggable.git",
+                "reference": "a197943fa1ba4baa34ea8cdddb0b942ad484a4ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alkhachatryan/laravel-loggable/zipball/a197943fa1ba4baa34ea8cdddb0b942ad484a4ef",
+                "reference": "a197943fa1ba4baa34ea8cdddb0b942ad484a4ef",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.0"
+            },
+            "type": "package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Alkhachatryan\\LaravelLoggable\\LaravelLoggableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Alkhachatryan\\LaravelLoggable\\": "./src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexey Khachatryan",
+                    "email": "info@khachatryan.org"
+                }
+            ],
+            "description": "Laravel Loggable - Log your model changes in multiple ways.",
+            "keywords": [
+                "laravel"
+            ],
+            "time": "2020-02-10T08:18:27+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "v0.1.1",
