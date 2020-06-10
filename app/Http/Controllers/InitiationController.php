@@ -120,8 +120,10 @@ class InitiationController extends Controller
             ->where( 'action', 'edit' )
             ->take( 3 );
 
-        return view( 'initiation.day.show' )->with( 'initiation', $initiation )
-            ->with( 'day', $day )->with( 'logs', $logs );
+        return view( 'initiation.day.show' )
+            ->with( 'initiation', $initiation )
+            ->with( 'day', $day )
+            ->with( 'logs', $logs );
     }
 
     /**
