@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use Alkhachatryan\LaravelLoggable\Facades\Loggable;
 use App\Initiation;
 use App\InitiationDay;
 use App\InitiationKeyPerson;
 
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class InitiationController extends Controller
 {
@@ -46,33 +50,24 @@ class InitiationController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param $year
+     * @return Application|Factory|View
      */
     public function show( $year )
     {
         $initiation = Initiation::where( 'year', $year )->first();
         $days = InitiationDay::where( 'initiation_id', $initiation->id )->orderBy( 'date', 'asc' )->get();
         $persons = InitiationKeyPerson::where( 'initiation_id', $initiation->id )->get();
+        $logs = Loggable::model('App\Initiation')
+            ->where( 'model_id', $initiation->id )
+            ->where( 'action', 'edit' )
+            ->take( 3 );
 
         return view( 'initiation.show' )
             ->with( 'initiation', $initiation )
             ->with( 'days', $days )
-            ->with( 'persons', $persons );
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function day( $year, $slug )
-    {
-        $initiation = Initiation::where( 'year', $year )->first();
-        $day = InitiationDay::where( 'slug', $slug )->where( 'initiation_id', $initiation->id )->first();
-
-        return view( 'initiation.day.show' )->with( 'initiation', $initiation )->with( 'day', $day );
+            ->with( 'persons', $persons )
+            ->with( 'logs', $logs );
     }
 
     /**
