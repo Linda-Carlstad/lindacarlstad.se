@@ -6,18 +6,18 @@
             Högskolan, Handelshögskolan">
 <meta name="description" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
 <meta name="subject" content="Social">
-<meta name="image" content="https://lindacarlstad.se/img/logo.png">
-<meta name="copyright" content="Linda Carlstad">
+<meta name="image" content="{{ config( 'app.url' ) }}/img/logo.png">
+<meta name="copyright" content="{{ config( 'app.name' ) }}">
 <meta name="language" content="{{ str_replace( '_', '-', app()->getLocale()) }}">
 <meta name="robots" content="index, follow">
 <meta name="Classification" content="Business">
-<meta name="author" content="Linda Carlstad">
-<meta name="designer" content="Linda Carlstad">
-<meta name="copyright" content="Linda Carlstad">
+<meta name="author" content="{{ config( 'app.name' ) }}">
+<meta name="designer" content="{{ config( 'app.name' ) }}">
+<meta name="copyright" content="{{ config( 'app.name' ) }}">
 <meta name="reply-to" content="info@lindacarlstad.se">
-<meta name="owner" content="Linda Carlstad">
-<meta name="url" content="https://www.lindacarlstad.se">
-<meta name="identifier-URL" content="https://www.lindacarlstad.se">
+<meta name="owner" content="{{ config( 'app.name' ) }}">
+<meta name="url" content="{{ config( 'app.url' ) }}">
+<meta name="identifier-URL" content="{{ config( 'app.url' ) }}">
 <meta name="coverage" content="Worldwide">
 <meta name="distribution" content="Global">
 <meta name="rating" content="General">
@@ -28,20 +28,20 @@
 <link rel="alternate" hreflang="x-default" href="{{ Request::url() }}">
 
 <!-- Schema.org for Google -->
-<meta itemprop="name" content="Linda Carlstad">
+<meta itemprop="name" content="{{ config( 'app.name' ) }}">
 <meta itemprop="description" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
-<meta itemprop="image" content="https://lindacarlstad.se/img/logo.png">
+<meta itemprop="image" content="{{ config( 'app.url' ) }}/img/logo.png">
 <!-- Twitter -->
 <meta property="twitter:card" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
-<meta property="twitter:title" content="Linda Carlstad">
+<meta property="twitter:title" content="{{ config( 'app.name' ) }}">
 <meta property="twitter:description" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
-<meta property="twitter:image" content="https://lindacarlstad.se/img/logo.png">
+<meta property="twitter:image" content="{{ config( 'app.url' ) }}/img/logo.png">
 <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-<meta property="og:title" content="Linda Carlstad">
+<meta property="og:title" content="{{ config( 'app.name' ) }}">
 <meta property="og:description" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
-<meta property="og:image" content="https://lindacarlstad.se/img/logo.png">
-<meta property="og:url" content="https://lindacarlstad.se">
-<meta property="og:site_name" content="Linda Carlstad">
+<meta property="og:image" content="{{ config( 'app.url' ) }}/img/logo.png">
+<meta property="og:url" content="{{ config( 'app.url' ) }}">
+<meta property="og:site_name" content="{{ config( 'app.name' ) }}">
 <meta property="og:locale" content="{{ str_replace( '_', '-', app()->getLocale()) }}">
 <meta property="og:type" content="website">
 
