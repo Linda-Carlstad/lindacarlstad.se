@@ -9,9 +9,9 @@
                         $length = count( $attributes )
                     @endphp
                     <br>
-
-                @foreach( $attributes as $attribute => $value )
-                            {{ ucfirst( __( 'initiation.' . $attribute ) ) }}: {{ $value }}
+                    @foreach( $attributes as $attribute => $value )
+                        {{ ucfirst( __( 'initiation.' . $attribute ) ) }}:
+                        {{ strlen( $value ) > 120 ? substr( $value, 0, strpos( $value,' ', 30 ) ) . '...' : $value }}
                         @if( $i != $length - 1 )
                             <br>
                         @endif
