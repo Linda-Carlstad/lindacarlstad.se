@@ -18,7 +18,6 @@
                 <p class="text-center">Inga studentföreningar tillagda.</p>
             @else
 
-                <br>
                 <ul class="list-group col-md-8 offset-md-2">
                     @if( $special )
                         <a href="{{ route( 'association.show', $special->slug ) }}" class="list-group-item bg-dark">
