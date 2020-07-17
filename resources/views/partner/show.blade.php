@@ -7,7 +7,7 @@
     <div class="d-block row d-md-flex flex-md-row-reverse">
         <div class="col-md-5 d-flex align-items-center justify-content-center">
             @if( $partner->link )
-                <a target="_blank" href="{{ $partner->link }}" target="_blank" rel="noreferrer">
+                <a target="_blank" href="{{ $partner->link }}" target="_blank" rel="noreferrer" aria-label="{{ $partner->name }}" title="{{ $partner->name }}">
                     <img class="img-fluid" src="https://admin.lindacarlstad.se/{{ $partner->image }}" alt="{{ $partner->name }} logga">
                 </a>
             @else
@@ -27,7 +27,7 @@
                     <br>
                     <b>Typ av partner:</b> {{ $partner->type }}
                 </p>
-                <a target="_blank" class="btn btn-grey" href="{{ $partner->link }}">{{ $partner->name }}</a>
+                <a target="_blank" class="btn btn-grey" href="{{ $partner->link }}" title="{{ $partner->name }}">{{ $partner->name }}</a>
 
             </div>
         </div>
@@ -35,6 +35,6 @@
     <hr>
     <div class="text-center">
         <p>Klicka nedan för att gå tillbaka.</p>
-        <a class="btn btn-grey" href="{{ route( 'partner' ) }}">Partners</a>
+        <a class="btn btn-grey" href="{{ route( 'partner' ) }} title="Partners">Partners</a>
     </div>
 @endsection
