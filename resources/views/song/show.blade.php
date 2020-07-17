@@ -14,6 +14,6 @@
     <hr>
     <div class="text-center">
         <p>Klicka nedan för att gå tillbaka.</p>
-        <a class="btn btn-grey" href="{{ route( 'song' ) }}">Sånger</a>
+        <a class="btn btn-grey" href="{{ route( 'song' ) }}" title="Sånger">Sånger</a>
     </div>
 @endsection
