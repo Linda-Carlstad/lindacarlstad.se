@@ -63,30 +63,30 @@
             </div>
         </div>
         <div class="row social-footer-icons justify-content-center">
-            <a data-toggle="tooltip" data-placement="top" title="Linda Carlstad Facebook länk" rel="noreferrer"
+            <a data-toggle="tooltip" data-placement="top" title="Linda Carlstad Facebook" rel="noreferrer" aria-label="Linda Carlstad Facebook"
                target="_blank" href="https://www.facebook.com/linda.carlstad/"><i class="fab fa-facebook"></i>
             </a>
             <br>
-            <a data-toggle="tooltip" data-placement="top" title="Linda Carlstad LinkedIn länk" rel="noreferrer"  aria-label=""
-               target="_blank" href="https://www.linkedin.com/company/linda-carlstad/about/"><i class="fab fa-linkedin"></i>
-            </a>
-            <br>
-            <a data-toggle="tooltip" data-placement="top" title="Linda Carlstad Instagram länk" rel="noreferrer"
+            <a data-toggle="tooltip" data-placement="top" title="Linda Carlstad Instagram" rel="noreferrer" aria-label="Linda Carlstad Instagran"
                target="_blank" href="https://www.instagram.com/lindacarlstad/"><i class="fab fa-instagram"></i>
             </a>
             <br>
-            <a data-toggle="tooltip" data-placement="top" title="@lindacarlstad"><i class="fab fa-snapchat"></i>
+            <a data-toggle="tooltip" data-placement="top" title="Linda Carlstad LinkedIn" rel="noreferrer"  aria-label="Linda Carlstad LinkedIn"
+               target="_blank" href="https://www.linkedin.com/company/linda-carlstad/about/"><i class="fab fa-linkedin"></i>
             </a>
             <br>
-            <a data-toggle="tooltip" data-placement="top" title="Linda Carlstad Github länk" rel="noreferrer"
+            <a data-toggle="tooltip" data-placement="top" title="@lindacarlstad" aria-label="Linda Carlstad Snapchat"><i class="fab fa-snapchat"></i>
+            </a>
+            <br>
+            <a data-toggle="tooltip" data-placement="top" title="Linda Carlstad Github" rel="noreferrer" aria-label="Linda Carlstad Github"
                target="_blank" href="https://github.com/Linda-Carlstad"><i class="fab fa-github"></i>
             </a>
             <br>
-            <a data-toggle="tooltip" data-placement="top" title="Linda Carlstad Discord länk" rel="noreferrer"
+            <a data-toggle="tooltip" data-placement="top" title="Linda Carlstad Discord" rel="noreferrer" aria-label="Linda Carlstad Discord"
                target="_blank" href="https://discord.gg/xGZNRSD"><i class="fab fa-discord"></i>
             </a>
             <br>
-            <a data-toggle="tooltip" data-placement="top" title="Linda Carlstad Reddit länk" rel="noreferrer"
+            <a data-toggle="tooltip" data-placement="top" title="Linda Carlstad Reddit" rel="noreferrer" aria-label="Linda Carlstad Reddit"
                target="_blank" href="https://www.reddit.com/r/lindacarlstad/"><i class="fab fa-reddit"></i>
             </a>
             <br>
