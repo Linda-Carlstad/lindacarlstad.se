@@ -23,7 +23,7 @@
                 </li>
                 @if( session()->has( 'initiation' ) )
                     <li class="nav-item {{ Request::segment(1) === 'nollning' && Request::segment(2) === session()->get( 'initiation' ) ? 'active' : null }}">
-                        <a class="nav-link" href="{{ route( 'initiation.show', session()->get( 'initiation' ) ) }}" title="Nollning {{ session()->get( 'initiation ) }}">Nollning {{ session()->get( 'initiation' ) }}</a>
+                        <a class="nav-link" href="{{ route( 'initiation.show', session()->get( 'initiation' ) ) }}" title="Nollning {{ session()->get( 'initiation' ) }}">Nollning {{ session()->get( 'initiation' ) }}</a>
                     </li>
                 @endif
             </ul>
@@ -66,7 +66,7 @@
                 </li>
                 @if( session()->has( 'initiation' ) )
                     <li class="nav-item {{ Request::segment(1) === 'nollning' && Request::segment(2) === session()->get( 'initiation' ) ? 'active' : null }}">
-                        <a class="nav-link" href="{{ route( 'initiation.show', session()->get( 'initiation' ) ) }}" title="Nollning {{ session()->get( 'initiation ) }}">Nollning {{ session()->get( 'initiation' ) }}</a>
+                        <a class="nav-link" href="{{ route( 'initiation.show', session()->get( 'initiation' ) ) }}" title="Nollning {{ session()->get( 'initiation' ) }}">Nollning {{ session()->get( 'initiation' ) }}</a>
                     </li>
                 @endif
             </ul>
