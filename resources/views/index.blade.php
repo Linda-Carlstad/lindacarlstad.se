@@ -22,7 +22,7 @@
                         <div class="slick-slider">
                             @foreach( $sponsors as $sponsor )
                                 <div class="justify-content-center">
-                                    <a class="text-center" href="{{ route( 'partner.show', $sponsor->slug ) }}">
+                                    <a class="text-center" href="{{ route( 'partner.show', $sponsor->slug ) }}" aria-label="{{ $sponsor->name }}" title="{{ $sponsor->name }}">
                                         <img class="logo img-fluid" src="https://admin.lindacarlstad.se{{ $sponsor->image }}" alt="{{ $sponsor->name }} logga">
                                     </a>
                                 </div>
@@ -45,7 +45,7 @@
                                     rolig eller lätt och då hoppas vi att vi kan vara till din hjälp med studierna
                                     om det så krävs eller med att bara ta det lugnt och umgås...
                                 </p>
-                                <a class="btn btn-grey btn-expand" href="{{ route('about' ) }}">Läs mer</a>
+                                <a class="btn btn-grey btn-expand" href="{{ route('about' ) }}" title="Föreningen - Läs mer">Läs mer</a>
                             </div>
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                                     för alla våra medlemmar och för att lyckas med det behöver vi din hjälp!
                                 </p>
                                 <a class="btn btn-grey btn-expand" href="http://tenta.lindacarlstad.se/linda"
-                                   rel=”noreferrer” target="_blank">Läs mer</a>
+                                   rel=”noreferrer” target="_blank" title="Tentahub">Läs mer</a>
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                                     många år sedan till en mysig studentpub med bra priser.
                                 </p>
                                 <a class="btn btn-grey btn-expand" href="http://www.studentpuben-bunkern.se/"
-                                   rel=”noreferrer” target="_blank">Läs mer</a>
+                                   rel=”noreferrer” target="_blank" title="Studentpuben Bunkern">Läs mer</a>
                             </div>
                         </div>
                     </div>
