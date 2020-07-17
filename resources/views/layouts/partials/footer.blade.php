@@ -15,7 +15,7 @@
                 <span>{{ config( 'app.name' ) }}</span>
                 <br class="d-block d-md-none">
                 <hr class="d-none d-md-block">
-                <a href="mailto:info@lindacarlstad.se">info@lindacarlstad.se</a>
+                <a href="mailto:{{ config( 'mail.from.address' ) }}" title="Mail to {{ config( 'mail.from.address' ) }}">{{ config( 'mail.from.address' ) }}</a>
                 <br>
                 Universitetsgatan 2
                 <br>
@@ -26,40 +26,40 @@
                 <span>Föreningen</span>
                 <br class="d-block d-md-none">
                 <hr class="d-none d-md-block">
-                <a class="{{ Request::segment(1) === 'kontakt' ? 'active' : null }}" href="{{ route( 'contact' ) }}">Kontakta oss</a>
+                <a class="{{ Request::segment(1) === 'kontakt' ? 'active' : null }}" href="{{ route( 'contact' ) }}" title="Kontakta oss">Kontakta oss</a>
                 <br>
-                <a class="{{ Request::segment(1) === 'föreningen' ? 'active' : null }}" href="{{ route( 'about' ) }}">Om oss</a>
+                <a class="{{ Request::segment(1) === 'föreningen' ? 'active' : null }}" href="{{ route( 'about' ) }}" title="Om oss">Om oss</a>
                 <br>
-                <a class="{{ Request::segment(1) === 'program' ? 'active' : null }}" href="{{ route( 'programs' ) }}">Program</a>
+                <a class="{{ Request::segment(1) === 'program' ? 'active' : null }}" href="{{ route( 'programs' ) }}" title="Program">Program</a>
                 <br>
-                <a class="{{ Request::segment(1) === 'it-kommitte' ? 'active' : null }}" href="{{ route( 'it' ) }}">It-kommitté</a>
+                <a class="{{ Request::segment(1) === 'it-kommitte' ? 'active' : null }}" href="{{ route( 'it' ) }}" title="It-kommitté">It-kommitté</a>
                 <br>
-                <a class="{{ Request::segment(1) === 'ny-medlem' ? 'active' : null }}" href="{{ route( 'new-member' ) }}">Bli medlem</a>
+                <a class="{{ Request::segment(1) === 'ny-medlem' ? 'active' : null }}" href="{{ route( 'new-member' ) }}" title="Bli medlem">Bli medlem</a>
             </div>
             <div class="col-md-3">
                 <hr class="d-block d-md-none">
                 <span>Läs mer</span>
                 <br class="d-block d-md-none">
                 <hr class="d-none d-md-block">
-                <a class="{{ Request::segment(1) === 'nollning' ? 'active' : null }}" href="{{ route( 'initiation' ) }}">Nollningar</a>
+                <a class="{{ Request::segment(1) === 'nollning' ? 'active' : null }}" href="{{ route( 'initiation' ) }}" title="Nollningar">Nollningar</a>
                 <br>
-                <a class="{{ Request::segment(1) === 'galleri' ? 'active' : null }}" href="{{ route( 'gallery' ) }}">Galleri</a>
+                <a class="{{ Request::segment(1) === 'galleri' ? 'active' : null }}" href="{{ route( 'gallery' ) }}" title="Galleri">Galleri</a>
                 <br>
-                <a class="{{ Request::segment(1) === 'sittning' ? 'active' : null }}" href="{{ route( 'sitting' ) }}">Sittning</a>
+                <a class="{{ Request::segment(1) === 'sittning' ? 'active' : null }}" href="{{ route( 'sitting' ) }}" title="Sittning">Sittning</a>
                 <br>
-                <a class="{{ Request::segment(1) === 'partner' ? 'active' : null }}" href="{{ route( 'partner' ) }}">Partners</a>
+                <a class="{{ Request::segment(1) === 'partner' ? 'active' : null }}" href="{{ route( 'partner' ) }}" title="Partners">Partners</a>
                 <br>
-                <a class="{{ Request::segment(1) === 'föreningar' ? 'active' : null }}" href="{{ route( 'association' ) }}">Föreningar</a>
+                <a class="{{ Request::segment(1) === 'föreningar' ? 'active' : null }}" href="{{ route( 'association' ) }}" title="Föreningar">Föreningar</a>
                 <br>
-                <a class="{{ Request::segment(1) === 'sånger' ? 'active' : null }}" href="{{ route( 'song' ) }}">Sånger</a>
+                <a class="{{ Request::segment(1) === 'sånger' ? 'active' : null }}" href="{{ route( 'song' ) }}" title="Sånger">Sånger</a>
                 <br>
-                <a class="{{ Request::segment(1) === 'dokument' ? 'active' : null }}" href="{{ route( 'document' ) }}">Dokument</a>
+                <a class="{{ Request::segment(1) === 'dokument' ? 'active' : null }}" href="{{ route( 'document' ) }}" title="Dokument">Dokument</a>
                 <br>
-                <a class="{{ Request::segment(1) === 'nyheter' ? 'active' : null }}" href="{{ route( 'news' ) }}">Nyheter</a>
+                <a class="{{ Request::segment(1) === 'nyheter' ? 'active' : null }}" href="{{ route( 'news' ) }}" title="Nyheter">Nyheter</a>
                 <br>
-                <a rel="noreferrer" target="_blank" href="http://tenta.lindacarlstad.se/linda">Tentor</a>
+                <a rel="noreferrer" target="_blank" href="http://tenta.lindacarlstad.se/linda" title="Tentor">Tentor</a>
                 <br>
-                <a target="_blank" href="{{ route( 'terminal' ) }}">Terminal</a>
+                <a target="_blank" href="{{ route( 'terminal' ) }}" title="Terminal">Terminal</a>
             </div>
         </div>
         <div class="row social-footer-icons justify-content-center">
@@ -95,12 +95,12 @@
     <div class="footer-copyright">
         <br>
         <small>Utbildningsförening under
-            <a rel="noreferrer" target="_blank" href="https://www.kau.se/">Karlstads universitet</a> och en del av
-            <a rel="noreferrer" target="_blank" href="https://www.kau.se/hhk">Handelshögskolan</a>
+            <a rel="noreferrer" target="_blank" href="https://www.kau.se/" title="Karlstads univesrsitet">Karlstads universitet</a> och en del av
+            <a rel="noreferrer" target="_blank" href="https://www.kau.se/hhk" title="Handelshögskolan">Handelshögskolan</a>
         </small>
         <br>
         <small>Copyright © {{ date( 'Y' ) }} - Alla rättigheter reserverade - Studentföreningen
-            <a href="{{ url( '/' ) }}">{{ config( 'app.name' ) }}</a>
+            <a href="{{ url( '/' ) }}" title="{{ config( 'app.name' ) }}">{{ config( 'app.name' ) }}</a>
         </small>
     </div>
 </footer>
