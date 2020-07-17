@@ -4,7 +4,7 @@
 <!-- End Google Tag Manager (noscript) -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top scrolling-navbar d-none d-md-block">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ url( '/' ) }}">
+        <a class="navbar-brand" href="{{ url( '/' ) }}" aria-label="Home screen">
             <img class="" src="{{ asset( 'img/small-logo.png') }}" alt="Golden apple with crown">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
