@@ -12,7 +12,7 @@
     <div class="d-block row d-md-flex flex-md-row-reverse">
         <div class="col-md-5 d-flex align-items-center justify-content-center">
             @if( $association->link )
-                <a target="_blank" rel="noreferrer" href="{{ $association->link }}">
+                <a target="_blank" rel="noreferrer" href="{{ $association->link }}" aria-label="{{ $association->name }}" title="{{ $association->name }}">
                     <img class="img-fluid" src="https://admin.lindacarlstad.se/{{ $association->image }}" alt="{{ $association->name }} logga">
                 </a>
             @else
@@ -34,7 +34,7 @@
                     <p>Kontakt: <a class="link" href="mailto:{{ $association->email }}">{{ $association->email }}</a></p>
                 @endif
                 @if( $association->link )
-                    <a rel="noreferrer" target="_blank" class="btn btn-grey" href="{{ $association->link }}">{{ $association->name }}</a>
+                    <a rel="noreferrer" target="_blank" class="btn btn-grey" title="{{ $association->name }}" href="{{ $association->link }}">{{ $association->name }}</a>
                 @endif
             </div>
         </div>
@@ -42,6 +42,6 @@
     <hr>
     <div class="text-center">
         <p>Klicka nedan för att gå tillbaka.</p>
-        <a class="btn btn-grey" href="{{ route( 'association' ) }}">Föreningar</a>
+        <a class="btn btn-grey" href="{{ route( 'association' ) }}" title="Föreingar">Föreningar</a>
     </div>
 @endsection
