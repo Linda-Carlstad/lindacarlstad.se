@@ -69,6 +69,8 @@
                                 </p>
                                 <a class="btn btn-grey btn-expand" href="http://tenta.lindacarlstad.se/linda"
                                    rel=”noreferrer” target="_blank" title="Tentahub">Läs mer</a>
+                                <a class="btn btn-grey btn-expand" href="http://tentahub.lindacarlstad.se/"
+                                   rel=”noreferrer” target="_blank" title="Nya Tentahub">Nya Tentahub</a>
                             </div>
                         </div>
                     </div>
