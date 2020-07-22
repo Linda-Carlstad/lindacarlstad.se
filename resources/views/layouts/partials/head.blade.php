@@ -9,7 +9,7 @@
 <meta name="image" content="{{ config( 'app.url' ) }}/img/logo.png">
 <meta name="copyright" content="{{ config( 'app.name' ) }}">
 <meta name="language" content="{{ str_replace( '_', '-', app()->getLocale()) }}">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <meta name="Classification" content="Business">
 <meta name="author" content="{{ config( 'app.name' ) }}">
 <meta name="designer" content="{{ config( 'app.name' ) }}">
