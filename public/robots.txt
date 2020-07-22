@@ -1,3 +1,4 @@
 sitemap: https://www.lindacarlstad.se/sitemap.xml
 User-agent: *
 Allow: /
+Disallow: /terminal
