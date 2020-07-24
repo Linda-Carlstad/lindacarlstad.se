@@ -147,11 +147,17 @@
             </div>
         </div>
     </div>
+
+    <div class="text-center">
+        <p>Är du intresserad av att veta vad som har ändrats?
+            <a title="Nollning {{ $initiation->year }} loggar" class="link"
+               href="{{ route( 'initiation.logs', $initiation->year ) }}">Klicka här</a> för att se loggarna.
+        </p>
+    </div>
     <hr>
     <div class="text-center">
         <p>Klicka nedan för att gå tillbaks till nollningar.</p>
         <a class="btn btn-grey" href="{{ route( 'initiation' ) }}">Nollningar</a>
-        <a class="btn btn-grey" href="{{ route( 'initiation.logs', $initiation->year ) }}">Loggar</a>
     </div>
 
 @endsection
