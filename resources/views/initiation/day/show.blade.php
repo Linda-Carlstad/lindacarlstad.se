@@ -22,10 +22,12 @@
                 <p>{{ $day->extra }}</p>
             @endif
         </div>
-        <div class="col-md-6">
-            <h3>Beskrivning</h3>
-            <p>{!! nl2br( $day->description ) !!}</p>
-        </div>
+        @if( $day->description )
+            <div class="col-md-6">
+                <h3>Beskrivning</h3>
+                <p>{!! nl2br( $day->description ) !!}</p>
+            </div>
+        @endif
         <div class="col-12 text-center">
             <h3>Samlingsplats</h3>
             <hr class="d-none d-md-block">
