@@ -138,6 +138,28 @@ class InitiationController extends Controller
      */
     public function logs( $year )
     {
+        $initiation = Initiation::where( 'year', $year )->first();
+        $days = InitiationDay::where( 'initiation_id', $initiation->id )->orderBy( 'date', 'asc' )->get();
+        $persons = InitiationKeyPerson::where( 'initiation_id', $initiation->id )->get();
 
+        $yearLogs = Loggable::model('App\Initiation')
+            ->where( 'model_id', $initiation->id )
+            ->where( 'action', 'edit' );
+
+        $dayLogs = null;
+        foreach( $days as $day )
+        {
+            $dayLogs = collect( Loggable::model('App\InitiationDay')
+                ->where( 'model_id', $day->id )
+                ->where( 'action', 'edit' ) );
+        }
+
+        $logs = $yearLogs->merge( $dayLogs )->sortByDesc( 'date' );
+
+        return view( 'initiation.logs' )
+            ->with( 'initiation', $initiation )
+            ->with( 'days', $days )
+            ->with( 'persons', $persons )
+            ->with( 'logs', $logs );
     }
 }

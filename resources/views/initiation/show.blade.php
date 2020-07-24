@@ -151,6 +151,7 @@
     <div class="text-center">
         <p>Klicka nedan för att gå tillbaks till nollningar.</p>
         <a class="btn btn-grey" href="{{ route( 'initiation' ) }}">Nollningar</a>
+        <a class="btn btn-grey" href="{{ route( 'initiation.logs', $initiation->year ) }}">Loggar</a>
     </div>
 
 @endsection

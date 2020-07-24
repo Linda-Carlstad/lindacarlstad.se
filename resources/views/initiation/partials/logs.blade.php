@@ -11,7 +11,11 @@
                     <br>
                     @foreach( $attributes as $attribute => $value )
                         {{ ucfirst( __( 'initiation.' . $attribute ) ) }}:
-                        {{ strlen( $value ) > 120 ? substr( $value, 0, strpos( $value,' ', 30 ) ) . '...' : $value }}
+                        @if( $attribute === 'initiation_id' )
+                            {{ App\Initiation::find( $value )->first()->year }}
+                        @else
+                            {{ strlen( $value ) > 120 ? substr( $value, 0, strpos( $value,' ', 30 ) ) . '...' : $value }}
+                        @endif
                         @if( $i != $length - 1 )
                             <br>
                         @endif
