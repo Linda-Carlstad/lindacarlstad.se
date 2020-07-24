@@ -22,7 +22,7 @@ class InitiationController extends Controller
      */
     public function index()
     {
-        $initiations = Initiation::all();
+        $initiations = Initiation::all()->sortByDesc( 'year' );
 
         return view( 'initiation.index' )->with( 'initiations', $initiations );
     }
