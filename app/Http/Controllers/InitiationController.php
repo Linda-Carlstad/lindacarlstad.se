@@ -140,26 +140,30 @@ class InitiationController extends Controller
     {
         $initiation = Initiation::where( 'year', $year )->first();
         $days = InitiationDay::where( 'initiation_id', $initiation->id )->orderBy( 'date', 'asc' )->get();
-        $persons = InitiationKeyPerson::where( 'initiation_id', $initiation->id )->get();
 
         $yearLogs = Loggable::model('App\Initiation')
             ->where( 'model_id', $initiation->id )
             ->where( 'action', 'edit' );
 
-        $dayLogs = null;
+        $daysLogs = null;
         foreach( $days as $day )
         {
-            $dayLogs = collect( Loggable::model('App\InitiationDay')
+            $daysLogs = collect( Loggable::model('App\InitiationDay')
                 ->where( 'model_id', $day->id )
                 ->where( 'action', 'edit' ) );
         }
 
-        $logs = $yearLogs->merge( $dayLogs )->sortByDesc( 'date' );
+        if( !$daysLogs == null )
+        {
+            $logs = $yearLogs->merge( $daysLogs )->sortByDesc( 'date' );
+        }
+        else
+        {
+            $logs = $yearLogs;
+        }
 
         return view( 'initiation.logs' )
             ->with( 'initiation', $initiation )
-            ->with( 'days', $days )
-            ->with( 'persons', $persons )
             ->with( 'logs', $logs );
     }
 }
