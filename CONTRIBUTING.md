@@ -1,5 +1,5 @@
-## Contributing
-#### - Issues
+# Contributing
+## - Issues
 - Screenshot the problem
 - Open a new issue
 - Give it a meaningful title
@@ -8,7 +8,7 @@
 - Add useful labels
 - Submit issue
 
-#### - Coding
+## - Coding
 - See the [issue list](https://github.com/Linda-Carlstad/lindacarlstad.se/issues)
 - Assign yourself to an issue
 - Open a new branch
