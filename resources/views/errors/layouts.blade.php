@@ -20,6 +20,7 @@
                 </p>
             </div>
         </div>
+        <small class="muted">Powered by <a href="https://mattboldt.com/" rel="noreferrer">mattboldt</a></small>
     </section>
 
 @endsection
