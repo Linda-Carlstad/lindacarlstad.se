@@ -21,6 +21,6 @@
             </div>
         </div>
     </section>
-    <small class="muted pl-2">Powered by <a class="link" href="https://mattboldt.com/" rel="noreferrer">mattboldt</a></small>
+    <small class="muted pl-3">Powered by <a class="link" href="https://mattboldt.com/" rel="noreferrer">mattboldt</a>...</small>
 
 @endsection
