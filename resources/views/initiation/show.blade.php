@@ -98,7 +98,7 @@
                 @if( $initiation->playlist )
                     <hr>
                     <h4 class="text-center">Året spellista</h4>
-                        <div class="embed-responsive embed-responsive-16by9">
+                        <div class="embed-responsive embed-responsive-1by1">
                             <iframe class="embed-responsive-item" src="{{ $initiation->playlist }}" allowtransparency="true" allow="encrypted-media"></iframe>
                         </div>
                 @endif
