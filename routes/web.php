@@ -23,7 +23,7 @@ Route::get( 'dokument', function ()
     return view( 'document' );
 })->name( 'document' );
 
-Route::get( 'ny-medlem', function ()
+Route::get( 'bli-medlem', function ()
 {
     return view( 'new-member' );
 })->name( 'new-member' );
