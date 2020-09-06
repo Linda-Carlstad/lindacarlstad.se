@@ -12,7 +12,7 @@
     <div class="row">
         <div class="col-md-6">
             <h3>Datum</h3>
-            <p>{{ date_format( date_create( $day->date ), 'd M' ) }}</p>
+            <p>{{ Carbon\Carbon::parse($day->date)->translatedFormat( 'd F' ) }}</p>
             @if( $day->time )
                 <h3>Starttid</h3>
                 <p>Kl {{ $day->time }}</p>

@@ -46,7 +46,7 @@
                             <a href="{{ route( 'initiation.day.show', [$initiation->year, $day->slug] ) }}" class="list-group-item bg-dark text-center">
                                 {{ $day->title }}
                                 @if( $day->date )
-                                     - {{ date_format( date_create( $day->date ), 'd M' ) }}
+                                     - {{ Carbon\Carbon::parse($day->date)->translatedFormat( 'd F' ) }}
                                 @endif
                             </a>
                             @if( $i == 6 )
