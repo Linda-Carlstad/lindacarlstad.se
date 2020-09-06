@@ -10,7 +10,7 @@
         <br class="d-block d-md-none">
         <div class="col-md-7 d-flex align-items-center justify-content-center">
             <div class="text-block">
-                <h1>Bli medlem</h1>
+                <h1 class="text-left">Bli medlem</h1>
                 <p>
                     Som medlem i Linda kommer du kunna gå på olika evengemang, som SNITS, nollning och sittningar.
                     Du måste även vara medlem i Linda för att kunna ha möjligheten till att köpa en ovve.
