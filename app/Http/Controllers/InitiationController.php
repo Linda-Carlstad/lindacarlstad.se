@@ -63,7 +63,7 @@ class InitiationController extends Controller
         $logs = Loggable::model('App\Initiation')
             ->where( 'model_id', $initiation->id )
             ->where( 'action', 'edit' )
-            ->where( 'date', '>=', Carbon::now()->subWeeks(1) )
+            ->where( 'date', '>=', Carbon::now()->subDays( 3 ) )
             ->take( 3 );
 
         return view( 'initiation.show' )
@@ -121,7 +121,7 @@ class InitiationController extends Controller
         $logs = Loggable::model('App\InitiationDay')
             ->where( 'model_id', $day->id )
             ->where( 'action', 'edit' )
-            ->where( 'date', '>=', Carbon::now()->subWeeks(1) )
+            ->where( 'date', '>=', Carbon::now()->subDays( 3 ) )
             ->take( 3 );
 
         return view( 'initiation.day.show' )
