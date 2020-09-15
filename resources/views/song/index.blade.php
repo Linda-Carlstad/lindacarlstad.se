@@ -11,7 +11,7 @@
             Antal sånger: {{ $total }}
         </p>
     </div>
-        {--
+        {{--
         @if( !$songs->isEmpty() || isset( $search ) )
             <form class="col-md-8 offset-md-2 mt-2" action="{{ '/sånger' }}" method="get">
                 @csrf
@@ -38,7 +38,7 @@
             <h5>Antal resultat: <i>{{ $totalSearch }}</i></h5>
         @endif
     </div>
-    --}
+    --}}
     <hr>
     <div class="d-block row d-md-flex flex-md-row-reverse py-4">
         <div class="col-12 text-center">
