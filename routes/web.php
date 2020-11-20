@@ -20,7 +20,7 @@ Route::get( 'integritetspolicy', function ()
 
 Route::get( 'dokument', function ()
 {
-    return abort(404);
+    return abort(410);
 })->name( 'document' );
 
 Route::get( 'bli-medlem', function ()
