@@ -26,9 +26,11 @@
             <li class="nav-item {{ Request::segment(1) === 'sånger' ? 'active' : null }}">
                 <a class="nav-link" href="{{ route( 'song' ) }}" title="Sånger">Sånger</a>
             </li>
+            {{--
             <li class="nav-item {{ Request::segment(1) === 'dokument' ? 'active' : null }}">
                 <a class="nav-link" href="{{ route( 'document' ) }}" title="Dokument">Dokument</a>
             </li>
+            --}}
             <li class="nav-item {{ Request::segment(1) === 'kontakt' ? 'active' : null }}">
                 <a class="nav-link" href="{{ route( 'contact' ) }}" title="Kontakta oss">Kontakta oss</a>
             </li>

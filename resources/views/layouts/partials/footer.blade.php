@@ -53,8 +53,10 @@
                 <br>
                 <a class="{{ Request::segment(1) === 'sånger' ? 'active' : null }}" href="{{ route( 'song' ) }}" title="Sånger">Sånger</a>
                 <br>
+                {{--
                 <a class="{{ Request::segment(1) === 'dokument' ? 'active' : null }}" href="{{ route( 'document' ) }}" title="Dokument">Dokument</a>
                 <br>
+                --}}
                 <a class="{{ Request::segment(1) === 'nyheter' ? 'active' : null }}" href="{{ route( 'news' ) }}" title="Nyheter">Nyheter</a>
                 <br>
                 <a rel="noreferrer" target="_blank" href="http://tenta.lindacarlstad.se/linda" title="Tentor">Tentor</a>
