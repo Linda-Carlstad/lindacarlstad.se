@@ -25,7 +25,7 @@ if( document.getElementById( 'error-message' ) )
             message = '> Nu får du sakta ner litegrann. <br> > Kom du inte in på Bunkern ikväll? ^1000 <br>> <br> > Nyktra till och försök igen om ett tag. <br> > :)';
             break;
         case 500:
-            message = '> Servern är full, blev bjuden på guck. <br> > Vem? ^1000 <br>> <br> > Låt servern nyktra till och försök igen om ett tag. <br> > :)';
+            message = '> Servern är full, blev bjuden på guck. <br> > Vem var det som bjöd? ^1000 <br>> <br> > Låt servern nyktra till och försök igen om ett tag. <br> > :)';
             break;
         case 503:
             message = '> Gucken tog ner servern. <br> > Vem söp ner den? ^1000 <br>> <br> > Våra onyktra tekniker kollar på felet. <br> > :)';
