@@ -16,7 +16,7 @@ if( document.getElementById( 'error-message' ) )
             message = '> Du har angett en felatkig länk. <br> > Är du full eller? ^1000 <br>> <br> > Försök med en annan länk. <br> > :)';
             break;
         case 410:
-            message = '> Ölen är slut, och festen fortsätter inte här. <br> > Vad kan du göra nu ^1000 <br>> <br> > Leta upp en annan fest eller gå hem.';
+            message = '> Ölen är slut, och festen fortsätter inte här. <br> > Vad kan du göra nu? ^1000 <br>> <br> > Leta upp en annan fest eller gå hem.';
             break;
         case 419:
             message = '> Festen är slut. <br> > Har Securitas kommit än? ^1000 <br>> <br> > Gå och lägg dig, det är sent. <br> > :)';
