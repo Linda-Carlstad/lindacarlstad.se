@@ -23,7 +23,7 @@ class FetchIndexView extends Controller
     {
         $sponsors = Partner::where( 'type', 'Sponsor' )->where( 'frontPage', '1' )->orderBy( 'started', 'asc' )->get();
         $events = Event::where( 'active', 1 )->get();
-        $initiation = Initiation::latest()->first();
+        $initiation = Initiation::where( 'active', true )->latest()->first();
 
         session()->forget( [ '_flash', 'event', 'initiation' ] );
 
