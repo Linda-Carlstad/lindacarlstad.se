@@ -17,14 +17,7 @@ Follow this excellent guide to run a Laravel project on your Windows based compu
 
 [Codementor guide](https://www.codementor.io/magarrent/how-to-install-laravel-5-xampp-windows-du107u9ji)
 
-
 When steps above are done, do these steps to get going.
-
-Copy enviroment example file and generate a new application key: 
-```
-cp .env.example .env
-php artisan key:generate
-```
 
 Install all composer dependencies: 
 ```
@@ -36,7 +29,23 @@ Install all NPM dependencies:
 npm install
 ```
 
-Before migrating, download the admin panel (custom CMS): https://github.com/Linda-Carlstad/admin.lindacarlstad.se to get the correct database migrations. 
+Copy and generate application key: 
+```
+cp .env.example .env
+php artisan key:generate
+```
+
+> Linda Carlstad website uses the same database as the [Linda Carlstad Admin Panel](https://github.com/Linda-Carlstad/admin.lindacarlstad.se), see how to set up the datbase in that project before continuing with this one. The name of the database is therefore dependent of what you have named the datbase in the [Linda Carlstad Admin Panel](https://github.com/Linda-Carlstad/admin.lindacarlstad.se) prject. Credidentals should match that one to be used in this project See example below.  
+
+Edit the `.env` file with your database credidentials. 
+Here is an example:
+```
+DB_PORT=3306
+DB_DATABASE=adminpanel
+DB_USERNAME=root
+DB_PASSWORD=root
+```
+Before migrating, download the admin panel (custom CMS) [Linda Carlstad Admin Panel](https://github.com/Linda-Carlstad/admin.lindacarlstad.se) to get the correct database migrations. 
 
 Once done, continue with the setup. 
 Create and seed database (admin panel):
@@ -49,7 +58,7 @@ Run this to generate CSS and JS files:
 npm run dev
 ```
 
-Run the application on a local development server: 
+Run the local development server: 
 ```
 php artisan serve
 ```
