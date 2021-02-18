@@ -12,6 +12,11 @@ Follow the official Laravel documentation for a detailed walkthrough using any U
 
 [Laravel documentation](https://laravel.com/docs/5.8/installation)
 
+#### - macOS
+Follow this simple guide to run a Laravel (8.x) project on your macOS based computer.
+
+[Felix Wetell's guide](https://gist.github.com/felixwetell/37e9778a93563d92e751bf9b1e25f5b2)
+
 #### - Windows
 Follow this simple guide to run a Laravel (8.x) project on your Windows based computer.
 
