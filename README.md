@@ -13,9 +13,9 @@ Follow the official Laravel documentation for a detailed walkthrough using any U
 [Laravel documentation](https://laravel.com/docs/5.8/installation)
 
 #### - Windows
-Follow this excellent guide to run a Laravel project on your Windows based computer.
+Follow this simple guide to run a Laravel (8.x) project on your Windows based computer.
 
-[Codementor guide](https://www.codementor.io/magarrent/how-to-install-laravel-5-xampp-windows-du107u9ji)
+[Felix Wetell's guide](https://gist.github.com/felixwetell/9e09136af52766dab4be7f616e39a5b2)
 
 Fetch the project to your machine, either using the GUI or the command below.  
 
