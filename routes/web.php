@@ -13,6 +13,10 @@
 
 //Auth::routes( [ 'verify' => true ] );
 
+Route::get('instagram', function () {
+    return Redirect::to('https://www.instagram.com/lindacarlstad/');
+})->name('instagram');
+
 Route::get( 'integritetspolicy', function ()
 {
     return view( 'policy' );
