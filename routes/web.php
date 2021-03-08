@@ -17,6 +17,14 @@ Route::get('instagram', function () {
     return Redirect::to('https://www.instagram.com/lindacarlstad/');
 })->name('instagram');
 
+Route::get('facebook', function () {
+    return Redirect::to('https://www.facebook.com/linda.carlstad/');
+})->name('facebook');
+
+Route::get('discord', function () {
+    return Redirect::to('https://discord.gg/QNJSfmJqUR');
+})->name('discord');
+
 Route::get( 'integritetspolicy', function ()
 {
     return view( 'policy' );
