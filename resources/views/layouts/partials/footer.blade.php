@@ -19,7 +19,7 @@
                 <br>
                 Universitetsgatan 2
                 <br>
-                651 68 Karlstad
+                651 88 Karlstad
             </div>
             <div class="col-md-3">
                 <hr class="d-block d-md-none">

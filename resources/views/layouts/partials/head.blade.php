@@ -104,7 +104,7 @@
     "@type": "Organization",
     "name": "LINDA Carlstad",
     "url": "https://www.lindacarlstad.se/",
-    "address": "Universitetsgatan 2, 651 68 Karlstad",
+    "address": "Universitetsgatan 2, 651 88 Karlstad",
     "sameAs": [
       "https://www.facebook.com/linda.carlstad/",
       "https://twitter.com/lindacarlstad/",

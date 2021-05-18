@@ -63,7 +63,7 @@
         <br>
         Universitetsgatan 2,
         <br>
-        651 68 Karlstad
+        651 88 Karlstad
         <br>
         E-mail: support@lindacarlstad.se
     </address>
