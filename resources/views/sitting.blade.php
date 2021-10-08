@@ -92,6 +92,9 @@
         <li class="list-group-item bg-dark">
             14. Under bordet: Håll till vänster!
         </li>
+        <li class="list-group-item bg-dark">
+            15. Syns en mobiltelefon, är det lambo på personen som håller i telefonen (gäller ej toastmaster)
+        </li>
     </ul>
 
 @endsection
