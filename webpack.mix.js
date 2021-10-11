@@ -14,7 +14,7 @@ const mix = require('laravel-mix');
 
 if( mix.inProduction() )
 {
-    mix.js( 'resources/js/terminal/main.js', 'public/js/terminal' )
+    mix.js( 'resources/js/app.js', 'public/js/' )
         .sass( 'resources/sass/main.sass', 'public/css' )
         .sass( 'resources/sass/terminal/main.sass', 'public/css/terminal' )
         .sass( 'resources/sass/terminal/normalize.sass', 'public/css/terminal' )
@@ -22,7 +22,7 @@ if( mix.inProduction() )
 }
 else
 {
-    mix.js( 'resources/js/terminal/main.js', 'public/js/terminal' )
+    mix.js( 'resources/js/app.js', 'public/js/' )
         .sass( 'resources/sass/main.sass', 'public/css' )
         .sass( 'resources/sass/terminal/main.sass', 'public/css/terminal' )
         .sass( 'resources/sass/terminal/normalize.sass', 'public/css/terminal' );

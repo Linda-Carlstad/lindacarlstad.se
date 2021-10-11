@@ -1,8 +1,3 @@
-/* global Terminal */
-
-// Utilities
-const Terminal = require( 'javascript-terminal' );
-
 const addKeyDownListener = (eventKey, target, onKeyDown) => {
     target.addEventListener('keydown', e => {
         if (e.key === eventKey) {

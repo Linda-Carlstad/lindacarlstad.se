@@ -1,4 +1,3 @@
-
 if( document.getElementById( 'error-message' ) )
 {
     let error = $( '#error-id' ).text();
@@ -38,11 +37,11 @@ if( document.getElementById( 'error-message' ) )
     }
 
     let typed = new Typed( "#error-message",
-    {
-        strings:
-        [
-            message
-        ],
-        typeSpeed: Math.round( Math.random( 50 ) * 100 ),
-    } );
+        {
+            strings:
+                [
+                    message
+                ],
+            typeSpeed: Math.round( Math.random( 50 ) * 100 ),
+        } );
 }
