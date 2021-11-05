@@ -46,6 +46,13 @@ cp .env.example .env
 php artisan key:generate
 ```
 
+If running Windows:
+
+```
+copy .env.example .env
+php artisan key:generate
+```
+
 > Linda Carlstad website uses the same database as the [Linda Carlstad Admin Panel](https://github.com/Linda-Carlstad/admin.lindacarlstad.se), see how to set up the datbase in that project before continuing with this one. The name of the database is therefore dependent of what you have named the datbase in the [Linda Carlstad Admin Panel](https://github.com/Linda-Carlstad/admin.lindacarlstad.se) prject. Credidentals should match that one to be used in this project See example below.  
 
 Edit the `.env` file with your database credidentials. 
@@ -67,6 +74,12 @@ php artisan migrate:refresh --seed
 Run this to generate CSS and JS files:
 ```
 npm run dev
+```
+
+If Laravel Mix is version 6.X, run this: 
+
+```
+npx mix
 ```
 
 Run the local development server: 
