@@ -92,7 +92,7 @@
                 <br>
                 Universitetsgatan 2
                 <br>
-                651 88 Karlstad
+                656 37 Karlstad
                 <br>
                 <a href="mailto:info@lindacarlstad.se">info@lindacarlstad.se</a>
             </footer>
