@@ -22,7 +22,7 @@ Route::get('facebook', function () {
 })->name('facebook');
 
 Route::get('discord', function () {
-    return Redirect::to('https://discord.gg/QNJSfmJqUR');
+    return Redirect::to('https://discord.gg/788BpX7vVR');
 })->name('discord');
 
 Route::get( 'integritetspolicy', function ()
