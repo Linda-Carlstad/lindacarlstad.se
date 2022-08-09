@@ -32,7 +32,7 @@
     <hr>
     <div class="d-block row d-md-flex flex-md-row-reverse py-4">
         <div class="col-md-5 d-flex align-items-center justify-content-center">
-            <img class="img-fluid" src="{{ asset('/img/board/styrelse-2021.png' ) }}" alt="Linda Carlstad logga med text">
+            <img class="img-fluid" src="{{ asset('/img/board/styrelse-2022.jpg' ) }}" alt="Styrelsen 2022">
         </div>
         <br class="d-block d-md-none">
         <div class="col-md-7 d-flex align-items-center justify-content-center">
