@@ -18,7 +18,7 @@
                 <p>Kl {{ $day->time }}</p>
             @endif
             @if( $day->extra )
-                <h3>Extra Information</h3>
+                <h3>Extra information</h3>
                 <p>{{ $day->extra }}</p>
             @endif
         </div>
