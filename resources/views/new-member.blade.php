@@ -18,9 +18,9 @@
                 </p>
                 <p>
                     För att bli medlem måste du studera IT (<a class="link" href="{{ route( 'programs' ) }}">se program här</a>)
-                    på Karlstads universitet. Medlemsbetalningar görs via Swish, till numret: <b>123-539 51 08</b>.
+                    på Karlstads universitet. <br/>Medlemskap köps i appen Hitract.
                 </p>
-                <a class="btn btn-grey btn-expand" href="https://forms.gle/TXC5uW51jgApvWb48"
+                <a class="btn btn-grey btn-expand" href="https://hitract.se/hitclub/651"
                    rel="noreferrer" target="_blank">Bli medlem</a>
                 <a class="btn btn-grey btn-expand" href="{{ route( 'about' ) }}" target="_blank">Om föreningen</a>
             </div>
