@@ -39,13 +39,14 @@
                             <div class="text-block">
                                 <h3>Föreningen</h3>
                                 <p>
-                                    LINDA är en studentförening under Karlstads Universitet
+                                    LINDA är en studentförening under Karlstads Universitet. 
                                     LINDA bevakar ditt intresse som student, såväl att du har det bra på
                                     universitet som på fritiden, utbildningen kommer inte alltid att vara
                                     rolig eller lätt och då hoppas vi att vi kan vara till din hjälp med studierna
                                     om det så krävs eller med att bara ta det lugnt och umgås...
                                 </p>
                                 <a class="btn btn-grey btn-expand" href="{{ route('about' ) }}" title="Föreningen - Läs mer">Läs mer</a>
+                                <a class="btn btn-grey btn-expand" href="https://hitract.se/hitclub/651" rel="noreferrer" target="_blank">Bli medlem</a>
                             </div>
                         </div>
                     </div>
