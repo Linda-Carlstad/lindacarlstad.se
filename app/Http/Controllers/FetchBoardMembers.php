@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\BoardMember;
 use Illuminate\Http\Request;
+use Jenssegers\Agent\Agent;
 
 class FetchBoardMembers extends Controller
 {
@@ -16,7 +17,8 @@ class FetchBoardMembers extends Controller
     public function __invoke(Request $request)
     {
         $boardMembers = BoardMember::orderBy( 'id', 'asc' )->get();
+        $agent = new Agent();
 
-        return view( 'about' )->with( 'boardMembers', $boardMembers );
+        return view( 'about' )->with( 'boardMembers', $boardMembers )->with( 'uaIsDesktop', $agent->isDesktop() );
     }
 }

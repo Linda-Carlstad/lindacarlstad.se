@@ -37,7 +37,7 @@ Route::get( 'dokument', function ()
 
 Route::get( 'bli-medlem', function ()
 {
-    return view( 'new-member' );
+    return view( 'new-member' )->with( 'uaIsDesktop', (new \Jenssegers\Agent\Agent())->isDesktop() ); // this should eventually be moved to a controller
 })->name( 'new-member' );
 
 Route::get( 'support', function()
