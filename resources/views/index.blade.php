@@ -45,11 +45,8 @@
                                     rolig eller lätt och då hoppas vi att vi kan vara till din hjälp med studierna
                                     om det så krävs eller med att bara ta det lugnt och umgås...
                                 </p>
-                                <a class="btn btn-grey btn-expand" href="{{ route('about' ) }}" title="Föreningen - Läs mer">
-                                    Läs mer {{ $uaIsDesktop ? "och bli medlem" : "" }}</a>
-                                @if( !$uaIsDesktop )
-                                    <a class="btn btn-grey btn-expand mt-2" href="https://hitract.se/hitclub/651" rel="noreferrer" target="_blank">Bli medlem</a>
-                                @endif
+                                <a class="btn btn-grey btn-expand" href="{{ route('about' ) }}" title="Föreningen - Läs mer">Läs mer</a>
+                                <a class="btn btn-grey btn-expand" href="https://hitract.se/hitclub/651" rel="noreferrer" target="_blank">Bli medlem</a>
                             </div>
                         </div>
                     </div>
