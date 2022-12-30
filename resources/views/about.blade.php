@@ -24,8 +24,12 @@
                     För att bli medlem måste du studera IT (<a class="link" href="{{ route( 'programs' ) }}">se program här</a>)
                     på Karlstads universitet. <br/>Medlemskap köps i appen Hitract. 
                 </p>
-                <a class="btn btn-grey btn-expand" href="https://hitract.se/hitclub/651"
-                   rel="noreferrer" target="_blank">Bli medlem</a>
+                @if( $uaIsDesktop )
+                    <p><strong>För att ladda ner Hitract och bli medlem så krävs en iOS- eller androidtelefon.<strong></p>
+                @else
+                    <a class="btn btn-grey btn-expand" href="https://hitract.se/hitclub/651"
+                    rel="noreferrer" target="_blank">Bli medlem</a>
+                @endif
             </div>
         </div>
     </div>
