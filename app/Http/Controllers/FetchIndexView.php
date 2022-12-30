@@ -11,8 +11,6 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
-use Jenssegers\Agent\Agent;
-
 class FetchIndexView extends Controller
 {
     /**
@@ -26,7 +24,6 @@ class FetchIndexView extends Controller
         $sponsors = Partner::where( 'type', 'Sponsor' )->where( 'frontPage', '1' )->orderBy( 'started', 'asc' )->get();
         $events = Event::where( 'active', 1 )->get();
         $initiation = Initiation::where( 'active', true )->latest()->first();
-        $agent = new Agent();
 
         session()->forget( [ '_flash', 'event', 'initiation' ] );
 
@@ -37,6 +34,6 @@ class FetchIndexView extends Controller
         session()->put( 'initiation', $initiation->year );
 
         return view( 'index' )->with( 'sponsors', $sponsors )
-            ->with( 'events', $events )->with( 'initiation', $initiation )->with( 'uaIsDesktop', $agent->isDesktop() );
+            ->with( 'events', $events )->with( 'initiation', $initiation );
     }
 }
