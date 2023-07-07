@@ -18,11 +18,11 @@
                 <h3>Nollning med {{ config( 'app.name' ) }}</h3>
                 <p>
                     Nollningen är en tradition i vår förening som vi anordnar varje år för nya studenter, det är ett
-                    tillfälle att kickstarta ditt studentliv och lära känna andra studenter som börjar sitt första år här på
+                    tillfälle att kickstarta ditt studentliv och lära känna andra studenter som också börjar sitt första år här på
                     Karlstads universitet men även bygga kontakter med dem som redan pluggat ett år eller mer.
-                    Syftet med nollningen är att skapa en gemenskap mellan er studenter och för att ni ska känna
-                    en trygghet under resten av er studietid. Även om tentorna inte riktigt går som tänkt och
-                    misslyckas har man att gäng goa vänner att falla tillbaka på.
+                    Syftet med nollningen är att skapa en gemenskap mellan er studenter och för att ni ska känna 
+                    en god trygghet under resten av er studietid. Även om tentorna inte går som tänkt så har 
+                    man alltid ett gäng goa vänner att falla tillbaka på!
                 </p>
             </div>
         </div>
