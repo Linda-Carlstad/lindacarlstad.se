@@ -2,7 +2,7 @@
 @extends('layouts.app')
 @section('content')
     <header class="hero">
-        <img class="bg-img" src="{{ asset('/img/hero-image-2024.jpg' ) }}" alt="Lindaiter, faddrar och nollor på Intro dagen">
+        <img class="bg-img" src="{{ asset('/img/hero-image-2024-nollning.jpg' ) }}" alt="Lindaiter, faddrar och nollor på Intro dagen">
         <div class="holder text-center">
             <img class="logo" src="{{ asset('/img/small-logo.svg' ) }}" alt="Linda Carlstad logo">
             <h1>{{ config( 'app.name' ) }}</h1>
