@@ -9,6 +9,10 @@
                 <a data-toggle="tooltip" data-placement="right" title="Karlstads universtitet" rel="noreferrer" target="_blank" aria-label="Karlstads universtitet" class="footer-img" href="https://kau.se">
                     <img class="img-fluid logo" src="{{ asset( 'img/partner/kau.png') }}" alt="Karlstads universitets logga">
                 </a>
+                <br class="d-none d-md-block">
+                <a data-toggle="tooltip" data-placement="right" title="Karlstad studentkår" rel="noreferrer" target="_blank" aria-label="Karlstad studentkår" class="footer-img" href="https://karlstadstudentkar.se/">
+                    <img class="img-fluid logo" src="{{ asset( 'img/partner/kår.png') }}" alt="Karlstad studentkår logga">
+                </a>
             </div>
             <div class="col-md-3">
                 <hr class="d-block d-md-none">
