@@ -11,7 +11,7 @@
                 </a>
                 <br class="d-none d-md-block">
                 <a data-toggle="tooltip" data-placement="right" title="Karlstad studentkår" rel="noreferrer" target="_blank" aria-label="Karlstad studentkår" class="footer-img" href="https://karlstadstudentkar.se/">
-                    <img class="img-fluid logo" src="{{ asset( 'img/partner/kår.png') }}" alt="Karlstad studentkår logga">
+                    <img class="img-fluid logo" src="https://karlstadstudentkar.se/app/uploads/2019/04/KS_logotyp_ljusgron.svg" alt="Karlstad studentkår logga">
                 </a>
             </div>
             <div class="col-md-3">
