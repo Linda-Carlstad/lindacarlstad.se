@@ -16,6 +16,11 @@ Route::get('/lindaisnow40yearsold', function () {
     return view('40-years');
 });
 
+// Add the 40th anniversary celebration route
+Route::get('/test', function () {
+    return view('association.index');
+});
+
 //Auth::routes( [ 'verify' => true ] );
 
 Route::get('instagram', function () {
