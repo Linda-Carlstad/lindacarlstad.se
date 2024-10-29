@@ -11,6 +11,11 @@
 |
 */
 
+// Add the 40th anniversary celebration route
+Route::get('/lindaisnow40yearsold', function () {
+    return view('40-years');
+});
+
 //Auth::routes( [ 'verify' => true ] );
 
 Route::get('instagram', function () {
