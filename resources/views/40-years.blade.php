@@ -67,7 +67,7 @@
 
   <div id="message">
     <img src="{{ asset('img/logo.png') }}" alt="Sorority Logo">
-    Congratulations on 40 Years, Linda Carlstad!
+    Congratulations on 40 Years!
   </div>
 
   <canvas id="fireworksCanvas"></canvas>
