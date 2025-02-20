@@ -86,6 +86,11 @@ Route::get( 'program/högskoleingenjör-i-datateknik', function()
     return view( 'programs.data' );
 })->name( 'data' );
 
+Route::get( 'program/artificiell-intelligens', function()
+{
+    return view( 'programs.aidata' );
+})->name( 'aidata' );
+
 Route::get( 'program/it-design-affärssystem-och-ekonomi', function()
 {
     return view( 'programs.business' );
