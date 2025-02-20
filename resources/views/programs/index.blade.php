@@ -9,6 +9,9 @@
         <p>Här är en lista på de olika item som ingår i {{ config( 'app.name' ) }}.</p>
         <div class="col-md-8 offset-md-2">
             <ul class="list-group">
+                <a href="{{ route( 'aidata' )}}" class="list-group-item bg-dark">
+                    Artificiell intelligens
+                </a>
                 <a href="{{ route( 'civil' )}}" class="list-group-item bg-dark">
                     Civilingenjör datateknik
                 </a>
