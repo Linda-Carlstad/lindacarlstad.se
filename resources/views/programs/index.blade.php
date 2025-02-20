@@ -36,6 +36,9 @@
         <div class="col-md-8 offset-md-2">
             <h3>Avancerade utbildningar</h3>
             <ul class="list-group">
+                <a href="{{ route( 'master.cyber' ) }}" class="list-group-item bg-dark">
+                    Masterprogram i cybersäkerhet
+                </a>
                 <a href="{{ route( 'master.data' ) }}" class="list-group-item bg-dark">
                     Masterprogram i datavetenskap
                 </a>
