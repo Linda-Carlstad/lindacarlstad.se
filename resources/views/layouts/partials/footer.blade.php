@@ -81,10 +81,12 @@
             <a data-toggle="tooltip" data-placement="top" title="Linda Carlstad LinkedIn" rel="noreferrer"  aria-label="Linda Carlstad LinkedIn"
                target="_blank" href="https://www.linkedin.com/company/linda-carlstad/about/"><i class="fab fa-linkedin"></i>
             </a>
+            <!-- Removed 2025-02-20
             <br>
             <a data-toggle="tooltip" data-placement="top" title="@lindacarlstad" aria-label="Linda Carlstad Snapchat"><i class="fab fa-snapchat"></i>
             </a>
             <br>
+            -->
             <a data-toggle="tooltip" data-placement="top" title="Linda Carlstad Github" rel="noreferrer" aria-label="Linda Carlstad Github"
                target="_blank" href="https://github.com/Linda-Carlstad"><i class="fab fa-github"></i>
             </a>
@@ -92,11 +94,13 @@
             <a data-toggle="tooltip" data-placement="top" title="Linda Carlstad Discord" rel="noreferrer" aria-label="Linda Carlstad Discord"
                target="_blank" href="https://discord.gg/xGZNRSD"><i class="fab fa-discord"></i>
             </a>
+            <!-- Removed 2025-02-20
             <br>
             <a data-toggle="tooltip" data-placement="top" title="Linda Carlstad Reddit" rel="noreferrer" aria-label="Linda Carlstad Reddit"
                target="_blank" href="https://www.reddit.com/r/lindacarlstad/"><i class="fab fa-reddit"></i>
             </a>
             <br>
+            -->
         </div>
     </div>
     <div class="footer-copyright">
