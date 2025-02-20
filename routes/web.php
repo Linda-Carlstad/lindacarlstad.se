@@ -111,6 +111,11 @@ Route::get( 'program/webbutvecklare', function()
     return view( 'programs.webb' );
 })->name( 'webb' );
 
+Route::get( 'program/master/masterprogram-i-cybersäkerhet', function()
+{
+    return view( 'programs.master.cyber' );
+})->name( 'master.cyber' );
+
 Route::get( 'program/master/masterprogram-i-datavetenskap', function()
 {
     return view( 'programs.master.data' );
