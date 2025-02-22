@@ -46,7 +46,7 @@
                     Masterprogram i Datavetenskap
                 </a>
                 <a href="{{ route( 'master.info' ) }}" class="list-group-item bg-dark">
-                    Masterprogram i Datavetenskap
+                    Masterprogram i informatik
                 </a>
                 <a href="{{ route( 'master.intelcom' ) }}" class="list-group-item bg-dark">
                     Masterprogram i intelligenta kommunikationssystem
