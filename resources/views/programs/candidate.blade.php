@@ -14,9 +14,7 @@
     <p><b>Utbildningsnivå:</b> Grundutbildning</p>
     <h3>Behöringhetskrav</h3>
     <p>
-        Grundläggande behörighet och Matematik 3c (områdesbehörighet A8 med undantag för Fysik 2
-        samt Kemi 1), alternativt grundläggande behörighet och Matematik D (områdesbehörighet 8 med
-        undantag för Fysik B samt Kemi A).
+        Grundläggande behörighet samt Matematik 3c/Matematik D
     </p>
     <p><b>Vill du läsa mer om utbildningen? Klicka på knappen nedan.</b></p>
     <a rel="noreferrer" target="_blank" class="btn btn-grey" href="https://www.kau.se/utbildning/program-och-kurser/program/TGKDV">Läs mer</a>

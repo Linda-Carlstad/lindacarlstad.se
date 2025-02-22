@@ -18,13 +18,8 @@
         <b>Utbildningsnivå:</b> Grundutbildning
     </p>
     <h3>Behörighetskrav</h3>
-    <p>Grundläggande behörighet samt antingen
-        <br>
-        - områdesbehörighet A4 (Matematik 3b eller 3c, Samhällskunskap 1b eller 1al + 1a2) med kravet i
-        matematik sänkt till Matematik 2a eller 2b eller 2c eller
-        <br>
-        - områdesbehörighet 4 (Engelska B, Matematik C och Samhällskunskap A) med kravet i matematik
-        sänkt till Matematik B.
+    <p>
+        Grundläggande behörighet + Matematik 2a eller 2b eller 2c och Samhällskunskap 1b eller 1al + 1a2.
     </p>
     <p><b>Vill du läsa mer om utbildningen? Klicka på knappen nedan.</b></p>
     <a rel="noreferrer" target="_blank" class="btn btn-grey" href="https://www.kau.se/utbildning/program-och-kurser/program/SGWEB">Läs mer</a>

@@ -1,8 +1,8 @@
-@section( 'title', 'Masterprogram i datavetenskap' )
+@section( 'title', 'Masterprogram i Datavetenskap' )
 @extends( 'layouts.app' )
 @section( 'content' )
 
-    <h1>Masterprogram i datavetenskap</h1>
+    <h1>Masterprogram i Datavetenskap</h1>
     <hr>
     <p>
         Detta program är ett 2-årigt program som bygger på en 3-årig kandidatexamen i datavetenskap
