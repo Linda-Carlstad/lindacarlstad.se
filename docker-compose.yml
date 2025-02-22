@@ -1,0 +1,20 @@
+services:
+  linda-frontend:
+    build: ./
+    network_mode: host
+    command: /bin/bash
+    container_name: linda_frontend
+    env_file: ".env"
+    volumes:
+      - website_volume:/website
+    working_dir: /website
+    stdin_open: true
+    tty: true
+
+volumes:
+  website_volume:
+    driver: local
+    driver_opts:
+      type: none
+      device: ${PWD}
+      o: bind
