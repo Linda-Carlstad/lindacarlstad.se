@@ -30,6 +30,7 @@ Route::get('discord', function () {
     return Redirect::to('https://discord.gg/788BpX7vVR');
 })->name('discord');
 
+// Routed linked pages, some are unfortunately unfinished
 Route::get( 'integritetspolicy', function ()
 {
     return view( 'policy' );
@@ -49,7 +50,6 @@ Route::get( 'support', function()
 {
     return view( 'support' );
 } )->name( 'support' );
-
 
 Route::get( 'kontakt', function()
 {
@@ -81,11 +81,7 @@ Route::get( 'program', function()
     return view( 'programs.index' );
 })->name( 'programs' );
 
-Route::get( 'program/högskoleingenjör-i-datateknik', function()
-{
-    return view( 'programs.data' );
-})->name( 'data' );
-
+// Program-pages
 Route::get( 'program/artificiell-intelligens', function()
 {
     return view( 'programs.aidata' );
@@ -101,6 +97,11 @@ Route::get( 'program/it-design-systemdesign', function()
     return view( 'programs.system' );
 })->name( 'system' );
 
+Route::get( 'program/it-projektledning-och-affärssystem', function()
+{
+    return view( 'programs.management' );
+})->name( 'management' );
+
 Route::get( 'program/kandidatprogram-i-datavetenskap', function()
 {
     return view( 'programs.candidate' );
@@ -111,6 +112,17 @@ Route::get( 'program/webbutvecklare', function()
     return view( 'programs.webb' );
 })->name( 'webb' );
 
+Route::get( 'program/civilingenjör-i-datateknik', function()
+{
+    return view( 'programs.civil' );
+})->name( 'civil' );
+
+Route::get( 'program/högskoleingenjör-i-datateknik', function()
+{
+    return view( 'programs.data' );
+})->name( 'data' );
+
+// Masterprogram-pages
 Route::get( 'program/master/masterprogram-i-cybersäkerhet', function()
 {
     return view( 'programs.master.cyber' );
@@ -126,19 +138,24 @@ Route::get( 'program/master/masterprogram-i-informatik', function()
     return view( 'programs.master.info' );
 })->name( 'master.info' );
 
-Route::get( 'program/civilingenjör-i-datateknik', function()
+Route::get( 'program/master/masterprogram-i-intelligenta-kommunikationssystem', function()
 {
-    return view( 'programs.civil' );
-})->name( 'civil' );
+    return view( 'programs.master.intelcom' );
+})->name( 'master.intelcom' );
 
-/* Email */
+Route::get( 'program/master/masterprogram-i-intelligenta-mjukvarusystem', function()
+{
+    return view( 'programs.master.intelsoft' );
+})->name( 'master.intelsoft' );
+
+// Email
 Route::get( 'verifiering-profil', 'VerifyUser' );
 Route::get( 'verifiering-email', 'VerifyNewEmail' );
 
-/* Kontaktformulär */
+// Kontaktformulär
 Route::post( '/contactForm', 'ContactForm' );
 
-/* Hämtar data */
+// Hämtar data
 Route::get( '/', 'FetchIndexView' );
 Route::get( 'nyheter', 'FetchFacebookPosts' )->name( 'news' );
 Route::get( 'tentor', 'ExamController@index' )->name( 'tentor' );
@@ -159,7 +176,6 @@ Route::get( 'sånger/{slug}', 'SongController@show' )->name( 'song.show' );
 
 Route::get( 'partner', 'PartnerController@index' )->name( 'partner' );
 Route::get( 'partner/{slug}', 'PartnerController@show' )->name( 'partner.show' );
-
 
 Route::group( [ 'middleware' => 'verified' ], function ()
 {
