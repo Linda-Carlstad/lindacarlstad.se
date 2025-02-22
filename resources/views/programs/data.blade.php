@@ -1,8 +1,8 @@
-@section( 'title', 'Högskoleingenjör i datateknik' )
+@section( 'title', 'Högskoleingenjör i Datateknik' )
 @extends( 'layouts.app' )
 @section( 'content' )
 
-    <h1>Högskoleingenjör i datateknik</h1>
+    <h1>Högskoleingenjör i Datateknik</h1>
     <hr>
     <p>
         Datorer används inom de flesta verksamheter idag - inom företag, myndigheter och
