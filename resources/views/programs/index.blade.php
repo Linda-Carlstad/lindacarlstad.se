@@ -40,10 +40,13 @@
                     Masterprogram i cybersäkerhet
                 </a>
                 <a href="{{ route( 'master.data' ) }}" class="list-group-item bg-dark">
-                    Masterprogram i datavetenskap
+                    Masterprogram i Datavetenskap
                 </a>
                 <a href="{{ route( 'master.info' ) }}" class="list-group-item bg-dark">
                     Masterprogram i informatik
+                </a>
+                <a href="{{ route( 'master.intelcom' ) }}" class="list-group-item bg-dark">
+                    Masterprogram i intelligenta kommunikationssystem
                 </a>
             </ul>
         </div>

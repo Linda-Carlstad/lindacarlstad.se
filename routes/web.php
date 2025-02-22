@@ -126,6 +126,11 @@ Route::get( 'program/master/masterprogram-i-informatik', function()
     return view( 'programs.master.info' );
 })->name( 'master.info' );
 
+Route::get( 'program/master/masterprogram-i-intelligenta-kommunikationssystem', function()
+{
+    return view( 'programs.master.intelcom' );
+})->name( 'master.intelcom' );
+
 Route::get( 'program/civilingenjör-i-datateknik', function()
 {
     return view( 'programs.civil' );
