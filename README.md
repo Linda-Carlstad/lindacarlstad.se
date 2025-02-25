@@ -7,6 +7,12 @@ The official website for the student association Linda Carlstad in Sweden, Karls
 
 ## Installation
 
+#### - Docker
+
+```sh
+docker compose build
+```
+
 #### - Unix
 Follow the official Laravel documentation for a detailed walkthrough using any Unix system, like macOS or any distribution on Linux.
 
@@ -29,6 +35,27 @@ git clone https://github.com/Linda-Carlstad/lindacarlstad.se.git
 ```
 
 Locate the project on your machine via the terminal and follow the steps below. 
+
+Initialize the projects environment file
+```sh
+cp .env.example .env
+```
+
+#### - Optional docker setup
+*Start the docker instances*
+```sh
+docker compose up -d
+```
+*Enter a bash shell within the php docker image (`exit` to end the session)*
+```sh
+docker exec -it linda_admin_frontend /bin/bash
+```
+*To stop the docker instances, run the command below in a new terminal session:*
+```sh
+docker compose stop
+```
+
+## Installation part 2
 
 Install all composer dependencies: 
 ```
@@ -57,6 +84,10 @@ php artisan key:generate
 
 Edit the `.env` file with your database credidentials. 
 Here is an example:
+
+*Note: If using Docker on Windows, DB_HOST will need to be set to the containers gateway adress:*
+`docker inspect linda_admin_frontend | jq ".[0].NetworkSettings.Networks.host.Gateway"`
+
 ```
 DB_PORT=3306
 DB_DATABASE=adminpanel
@@ -64,12 +95,6 @@ DB_USERNAME=root
 DB_PASSWORD=root
 ```
 Before migrating, download the admin panel (custom CMS) [Linda Carlstad Admin Panel](https://github.com/Linda-Carlstad/admin.lindacarlstad.se) to get the correct database migrations. 
-
-Once done, continue with the setup. 
-Create and seed database (admin panel):
-```
-php artisan migrate:refresh --seed
-```
 
 Run this to generate CSS and JS files:
 ```
