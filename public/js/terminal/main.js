@@ -1,118 +1,6 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./resources/js/terminal/main.js":
-/*!***************************************!*\
-  !*** ./resources/js/terminal/main.js ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-var _outputToHTMLNode;
-
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-/* global Terminal */
-// Utilities
-var Terminal = __webpack_require__(/*! javascript-terminal */ "./node_modules/javascript-terminal/lib/terminal.js");
-
-var addKeyDownListener = function addKeyDownListener(eventKey, target, onKeyDown) {
-  target.addEventListener('keydown', function (e) {
-    if (e.key === eventKey) {
-      onKeyDown();
-      e.preventDefault();
-    }
-  });
-};
-
-var scrollToPageEnd = function scrollToPageEnd() {
-  window.scrollTo(0, document.body.scrollHeight);
-}; // User interface
-
-
-var viewRefs = {
-  input: document.getElementById('input'),
-  output: document.getElementById('output-wrapper')
-};
-
-var createOutputDiv = function createOutputDiv(className, textContent) {
-  var div = document.createElement('div');
-  div.className = className;
-  div.appendChild(document.createTextNode(textContent));
-  return div;
-};
-
-var outputToHTMLNode = (_outputToHTMLNode = {}, _defineProperty(_outputToHTMLNode, Terminal.OutputType.TEXT_OUTPUT_TYPE, function (content) {
-  return createOutputDiv('text-output', content);
-}), _defineProperty(_outputToHTMLNode, Terminal.OutputType.TEXT_ERROR_OUTPUT_TYPE, function (content) {
-  return createOutputDiv('error-output', content);
-}), _defineProperty(_outputToHTMLNode, Terminal.OutputType.HEADER_OUTPUT_TYPE, function (content) {
-  return createOutputDiv('header-output', "$ ".concat(content.command));
-}), _outputToHTMLNode);
-
-var displayOutputs = function displayOutputs(outputs) {
-  viewRefs.output.innerHTML = '';
-  var outputNodes = outputs.map(function (output) {
-    return outputToHTMLNode[output.type](output.content);
-  });
-
-  var _iterator = _createForOfIteratorHelper(outputNodes),
-      _step;
-
-  try {
-    for (_iterator.s(); !(_step = _iterator.n()).done;) {
-      var outputNode = _step.value;
-      viewRefs.output.append(outputNode);
-    }
-  } catch (err) {
-    _iterator.e(err);
-  } finally {
-    _iterator.f();
-  }
-};
-
-var getInput = function getInput() {
-  return viewRefs.input.value;
-};
-
-var setInput = function setInput(input) {
-  viewRefs.input.value = input;
-};
-
-var clearInput = function clearInput() {
-  setInput('');
-}; // Execution
-
-
-var emulator = new Terminal.Emulator();
-var emulatorState = Terminal.EmulatorState.createEmpty();
-var historyKeyboardPlugin = new Terminal.HistoryKeyboardPlugin(emulatorState);
-var plugins = [historyKeyboardPlugin];
-addKeyDownListener('Enter', viewRefs.input, function () {
-  var commandStr = getInput();
-  emulatorState = emulator.execute(emulatorState, commandStr, plugins);
-  displayOutputs(emulatorState.getOutputs());
-  scrollToPageEnd();
-  clearInput();
-});
-addKeyDownListener('ArrowUp', viewRefs.input, function () {
-  setInput(historyKeyboardPlugin.completeUp());
-});
-addKeyDownListener('ArrowDown', viewRefs.input, function () {
-  setInput(historyKeyboardPlugin.completeDown());
-});
-addKeyDownListener('Tab', viewRefs.input, function () {
-  var autoCompletionStr = emulator.autocomplete(emulatorState, getInput());
-  setInput(autoCompletionStr);
-});
-
-/***/ }),
-
 /***/ "./node_modules/javascript-terminal/lib/terminal.js":
 /*!**********************************************************!*\
   !*** ./node_modules/javascript-terminal/lib/terminal.js ***!
@@ -1263,47 +1151,47 @@ if("undefined" !== typeof module.exports)
   !*** ./node_modules/immutable/dist/immutable.es.js ***!
   \*****************************************************/
 /*! exports provided: default, version, Collection, Iterable, Seq, Map, OrderedMap, List, Stack, Set, OrderedSet, Record, Range, Repeat, is, fromJS, hash, isImmutable, isCollection, isKeyed, isIndexed, isAssociative, isOrdered, isValueObject, get, getIn, has, hasIn, merge, mergeDeep, mergeWith, mergeDeepWith, remove, removeIn, set, setIn, update, updateIn */
-/***/ (function(module, __webpack_exports__, __nested_webpack_require_31097__) {
+/***/ (function(module, __nested_webpack_exports__, __nested_webpack_require_31097__) {
 
 "use strict";
-__nested_webpack_require_31097__.r(__webpack_exports__);
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "version", function() { return version; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "Collection", function() { return Collection; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "Iterable", function() { return Iterable; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "Seq", function() { return Seq; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "Map", function() { return Map; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "OrderedMap", function() { return OrderedMap; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "List", function() { return List; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "Stack", function() { return Stack; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "Set", function() { return Set; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "OrderedSet", function() { return OrderedSet; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "Record", function() { return Record; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "Range", function() { return Range; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "Repeat", function() { return Repeat; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "is", function() { return is; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "fromJS", function() { return fromJS; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "hash", function() { return hash; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "isImmutable", function() { return isImmutable; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "isCollection", function() { return isCollection; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "isKeyed", function() { return isKeyed; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "isIndexed", function() { return isIndexed; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "isAssociative", function() { return isAssociative; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "isOrdered", function() { return isOrdered; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "isValueObject", function() { return isValueObject; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "get", function() { return get; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "getIn", function() { return getIn; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "has", function() { return has; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "hasIn", function() { return hasIn; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "merge", function() { return merge$1; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "mergeDeep", function() { return mergeDeep; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "mergeWith", function() { return mergeWith$1; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "mergeDeepWith", function() { return mergeDeepWith; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "remove", function() { return remove; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "removeIn", function() { return removeIn; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "set", function() { return set; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "setIn", function() { return setIn; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "update", function() { return update; });
-/* harmony export (binding) */ __nested_webpack_require_31097__.d(__webpack_exports__, "updateIn", function() { return updateIn; });
+__nested_webpack_require_31097__.r(__nested_webpack_exports__);
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "version", function() { return version; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "Collection", function() { return Collection; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "Iterable", function() { return Iterable; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "Seq", function() { return Seq; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "Map", function() { return Map; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "OrderedMap", function() { return OrderedMap; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "List", function() { return List; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "Stack", function() { return Stack; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "Set", function() { return Set; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "OrderedSet", function() { return OrderedSet; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "Record", function() { return Record; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "Range", function() { return Range; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "Repeat", function() { return Repeat; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "is", function() { return is; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "fromJS", function() { return fromJS; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "hash", function() { return hash; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "isImmutable", function() { return isImmutable; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "isCollection", function() { return isCollection; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "isKeyed", function() { return isKeyed; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "isIndexed", function() { return isIndexed; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "isAssociative", function() { return isAssociative; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "isOrdered", function() { return isOrdered; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "isValueObject", function() { return isValueObject; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "get", function() { return get; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "getIn", function() { return getIn; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "has", function() { return has; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "hasIn", function() { return hasIn; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "merge", function() { return merge$1; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "mergeDeep", function() { return mergeDeep; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "mergeWith", function() { return mergeWith$1; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "mergeDeepWith", function() { return mergeDeepWith; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "remove", function() { return remove; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "removeIn", function() { return removeIn; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "set", function() { return set; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "setIn", function() { return setIn; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "update", function() { return update; });
+/* harmony export (binding) */ __nested_webpack_require_31097__.d(__nested_webpack_exports__, "updateIn", function() { return updateIn; });
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -7120,7 +7008,7 @@ var Immutable = {
 // Note: Iterable is deprecated
 var Iterable = Collection;
 
-/* harmony default export */ __webpack_exports__["default"] = (Immutable);
+/* harmony default export */ __nested_webpack_exports__["default"] = (Immutable);
 
 
 
@@ -13253,6 +13141,106 @@ module.exports = __nested_webpack_require_427997__(/*! /Users/user/PersonalCode/
 
 /***/ }),
 
+/***/ "./resources/js/terminal/main.js":
+/*!***************************************!*\
+  !*** ./resources/js/terminal/main.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t["return"] || t["return"](); } finally { if (u) throw o; } } }; }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+/* global Terminal */
+
+// Utilities
+var Terminal = __webpack_require__(/*! javascript-terminal */ "./node_modules/javascript-terminal/lib/terminal.js");
+var addKeyDownListener = function addKeyDownListener(eventKey, target, onKeyDown) {
+  target.addEventListener('keydown', function (e) {
+    if (e.key === eventKey) {
+      onKeyDown();
+      e.preventDefault();
+    }
+  });
+};
+var scrollToPageEnd = function scrollToPageEnd() {
+  window.scrollTo(0, document.body.scrollHeight);
+};
+
+// User interface
+var viewRefs = {
+  input: document.getElementById('input'),
+  output: document.getElementById('output-wrapper')
+};
+var createOutputDiv = function createOutputDiv(className, textContent) {
+  var div = document.createElement('div');
+  div.className = className;
+  div.appendChild(document.createTextNode(textContent));
+  return div;
+};
+var outputToHTMLNode = _defineProperty(_defineProperty(_defineProperty({}, Terminal.OutputType.TEXT_OUTPUT_TYPE, function (content) {
+  return createOutputDiv('text-output', content);
+}), Terminal.OutputType.TEXT_ERROR_OUTPUT_TYPE, function (content) {
+  return createOutputDiv('error-output', content);
+}), Terminal.OutputType.HEADER_OUTPUT_TYPE, function (content) {
+  return createOutputDiv('header-output', "$ ".concat(content.command));
+});
+var displayOutputs = function displayOutputs(outputs) {
+  viewRefs.output.innerHTML = '';
+  var outputNodes = outputs.map(function (output) {
+    return outputToHTMLNode[output.type](output.content);
+  });
+  var _iterator = _createForOfIteratorHelper(outputNodes),
+    _step;
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      var outputNode = _step.value;
+      viewRefs.output.append(outputNode);
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+};
+var getInput = function getInput() {
+  return viewRefs.input.value;
+};
+var setInput = function setInput(input) {
+  viewRefs.input.value = input;
+};
+var clearInput = function clearInput() {
+  setInput('');
+};
+
+// Execution
+var emulator = new Terminal.Emulator();
+var emulatorState = Terminal.EmulatorState.createEmpty();
+var historyKeyboardPlugin = new Terminal.HistoryKeyboardPlugin(emulatorState);
+var plugins = [historyKeyboardPlugin];
+addKeyDownListener('Enter', viewRefs.input, function () {
+  var commandStr = getInput();
+  emulatorState = emulator.execute(emulatorState, commandStr, plugins);
+  displayOutputs(emulatorState.getOutputs());
+  scrollToPageEnd();
+  clearInput();
+});
+addKeyDownListener('ArrowUp', viewRefs.input, function () {
+  setInput(historyKeyboardPlugin.completeUp());
+});
+addKeyDownListener('ArrowDown', viewRefs.input, function () {
+  setInput(historyKeyboardPlugin.completeDown());
+});
+addKeyDownListener('Tab', viewRefs.input, function () {
+  var autoCompletionStr = emulator.autocomplete(emulatorState, getInput());
+  setInput(autoCompletionStr);
+});
+
+/***/ }),
+
 /***/ "./resources/sass/main.sass":
 /*!**********************************!*\
   !*** ./resources/sass/main.sass ***!
@@ -13416,7 +13404,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
 /******/ 					installedChunks[chunkId][0]();
 /******/ 				}
-/******/ 				installedChunks[chunkIds[i]] = 0;
+/******/ 				installedChunks[chunkId] = 0;
 /******/ 			}
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
