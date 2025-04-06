@@ -7,11 +7,9 @@ The official website for the student association Linda Carlstad in Sweden, Karls
 
 ## Installation
 
-#### - Docker
+#### - Docker (Recommended)
 
-```sh
-docker compose build
-```
+Install Docker on your system and follow the docker steps below.
 
 #### - Unix
 Follow the official Laravel documentation for a detailed walkthrough using any Unix system, like macOS or any distribution on Linux.
@@ -41,11 +39,28 @@ Initialize the projects environment file
 cp .env.example .env
 ```
 
-#### - Optional docker setup
-*Start the docker instances*
+> Linda Carlstad website uses the same database as the [Linda Carlstad Admin Panel](https://github.com/Linda-Carlstad/admin.lindacarlstad.se), see how to set up the datbase in that project before continuing with this one. The name of the database is therefore dependent of what you have named the database in the [Linda Carlstad Admin Panel](https://github.com/Linda-Carlstad/admin.lindacarlstad.se) project. Credentials should match that one to be used in this project See example below.
+
+Edit the `.env` file with your database credentials.
+Here is an example:
+
+```
+DB_HOST=mariadb
+DB_PORT=3306
+DB_DATABASE=adminpanel
+DB_USERNAME=user
+DB_PASSWORD=my_secure_password
+```
+
+#### - Docker setup
+
+*Start the docker instances and the website.*
 ```sh
 docker compose up -d
 ```
+
+##### - Useful commands
+
 *Enter a bash shell within the php docker image (`exit` to end the session)*
 ```sh
 docker exec -it linda_admin_frontend /bin/bash
@@ -55,56 +70,25 @@ docker exec -it linda_admin_frontend /bin/bash
 docker compose stop
 ```
 
-## Installation part 2
+## Installation part 2 (non-docker users)
 
 Install all composer dependencies: 
 ```
 composer install
 ```
 
-Install all NPM dependencies: 
+Install all NPM dependencies:
 ```
 npm install
 ```
 
-Copy and generate application key: 
+Copy and generate application key:
 ```
-cp .env.example .env
 php artisan key:generate
 ```
-
-If running Windows:
-
-```
-copy .env.example .env
-php artisan key:generate
-```
-
-> Linda Carlstad website uses the same database as the [Linda Carlstad Admin Panel](https://github.com/Linda-Carlstad/admin.lindacarlstad.se), see how to set up the datbase in that project before continuing with this one. The name of the database is therefore dependent of what you have named the datbase in the [Linda Carlstad Admin Panel](https://github.com/Linda-Carlstad/admin.lindacarlstad.se) prject. Credidentals should match that one to be used in this project See example below.  
-
-Edit the `.env` file with your database credidentials. 
-Here is an example:
-
-*Note: If using Docker on Windows, DB_HOST will need to be set to the containers gateway adress:*
-`docker inspect linda_admin_frontend | jq ".[0].NetworkSettings.Networks.host.Gateway"`
-
-```
-DB_PORT=3306
-DB_DATABASE=adminpanel
-DB_USERNAME=root
-DB_PASSWORD=root
-```
-Before migrating, download the admin panel (custom CMS) [Linda Carlstad Admin Panel](https://github.com/Linda-Carlstad/admin.lindacarlstad.se) to get the correct database migrations. 
-
 Run this to generate CSS and JS files:
 ```
 npm run dev
-```
-
-If Laravel Mix is version 6.X, run this: 
-
-```
-npx mix
 ```
 
 Run the local development server: 
@@ -114,6 +98,12 @@ php artisan serve
 
 ## Usage
 The website uses the information filled in using the custom-build CMS system, [Admin Linda Carlstad](https://github.com/Linda-Carlstad/admin.lindacarlstad.se). 
+
+Ports if docker is used:
+
+- phpmyadmin: 8090
+- MariaDB: $DB_PORT (default is 3306)
+- laravel: 8000
 
 ## Images
 #### Landing page
