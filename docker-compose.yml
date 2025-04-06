@@ -1,10 +1,13 @@
 services:
   linda-frontend:
     build: ./
-    network_mode: host
-    command: /bin/bash
+    ports:
+      - "8001:8001"
+    networks:
+      - custom_network
     container_name: linda_frontend
     env_file: ".env"
+    command: /bin/bash ./entrypoint.sh
     volumes:
       - website_volume:/website
     working_dir: /website
@@ -18,3 +21,7 @@ volumes:
       type: none
       device: ${PWD}
       o: bind
+
+networks:
+  custom_network:
+    external: true
