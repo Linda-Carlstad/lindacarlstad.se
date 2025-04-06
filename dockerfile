@@ -11,7 +11,8 @@ RUN apt install -y \
         unzip \
         zip \
         sassc \
-        webpack
+        webpack \
+        telnet
 
 # Install PHP extensions
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
