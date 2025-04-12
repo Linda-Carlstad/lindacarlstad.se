@@ -12,8 +12,8 @@
             <div class="text-block">
                 <h1 class="text-left">Bli medlem</h1>
                 <p>
-                    Som medlem i Linda kommer du kunna gå på olika evengemang, som SNITS, nollning och sittningar.
-                    Du måste även vara medlem i Linda för att kunna ha möjligheten till att köpa en ovve.
+                    Som medlem i LINDA kommer du kunna gå på olika evengemang, som SNITS, nollning och sittningar.
+                    Du måste även vara medlem i LINDA för att kunna ha möjligheten till att köpa en ovve.
                     Medlemskapet kostar 300 kr och gäller hela livet ut.
                 </p>
                 <p>
