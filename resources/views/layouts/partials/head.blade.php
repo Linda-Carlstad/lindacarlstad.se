@@ -2,9 +2,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="keywords" content="Utbildning, Utbildningar, Förening, Föreningar, Studentförening, Studentföreningar,
             Webbutvecklare, Webbutveckling, Data, Dataingenjör, IT-design, Datateknink, Teknik, Utbildningsförening,
-            Karlstad, Universitet, Karlstads universitet, KAU, Linda, Linda Carlstad, Carlstad, HHK, Handels,
+            Karlstad, Universitet, Karlstads universitet, KAU, LINDA, Linda Carlstad, Carlstad, HHK, Handels,
             Högskolan, Handelshögskolan">
-<meta name="description" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
+<meta name="description" content="LINDA är en studentförening under Karlstads universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
 <meta name="subject" content="Social">
 <meta name="image" content="{{ config( 'app.url' ) }}/img/logo.png">
 <meta name="copyright" content="{{ config( 'app.name' ) }}">
@@ -29,16 +29,16 @@
 
 <!-- Schema.org for Google -->
 <meta itemprop="name" content="{{ config( 'app.name' ) }}">
-<meta itemprop="description" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
+<meta itemprop="description" content="LINDA är en studentförening under Karlstads universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
 <meta itemprop="image" content="{{ config( 'app.url' ) }}/img/logo.png">
 <!-- Twitter -->
-<meta property="twitter:card" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
+<meta property="twitter:card" content="LINDA är en studentförening under Karlstads universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
 <meta property="twitter:title" content="{{ config( 'app.name' ) }}">
-<meta property="twitter:description" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
+<meta property="twitter:description" content="LINDA är en studentförening under Karlstads universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
 <meta property="twitter:image" content="{{ config( 'app.url' ) }}/img/logo.png">
 <!-- Open Graph general (Facebook, Pinterest & Google+) -->
 <meta property="og:title" content="{{ config( 'app.name' ) }}">
-<meta property="og:description" content="LINDA är en studentförening under Karlstads Universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
+<meta property="og:description" content="LINDA är en studentförening under Karlstads universitet. LINDA bevakar ditt intresse som student - @yield( 'title')">
 <meta property="og:image" content="{{ config( 'app.url' ) }}/img/logo.png">
 <meta property="og:url" content="{{ config( 'app.url' ) }}">
 <meta property="og:site_name" content="{{ config( 'app.name' ) }}">
@@ -102,14 +102,14 @@
   {
     "@context": "http://schema.org",
     "@type": "Organization",
-    "name": "LINDA Carlstad",
+    "name": "Linda Carlstad",
     "url": "https://www.lindacarlstad.se/",
     "address": "Universitetsgatan 2, 651 88 Karlstad",
     "sameAs": [
+      "https://www.instagram.com/lindacarlstad/",
       "https://www.facebook.com/linda.carlstad/",
-      "https://twitter.com/lindacarlstad/",
-      "https://www.linkedin.com/company/linda-carlstad/",
-      "https://www.instagram.com/lindacarlstad/"
+      "https://hitract.se/hitclub/651/",
+      "https://www.linkedin.com/company/linda-carlstad/"
     ]
   }
 </script>

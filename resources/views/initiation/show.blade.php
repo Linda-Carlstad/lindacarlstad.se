@@ -112,10 +112,10 @@
                         Drick mycket vatten
                     </li>
                     <li class="list-group-item bg-dark">
-                        Köp <a class="link" href="https://karlstad.se/Karlstadsbuss/">busskort</a> (2 veckor)
+                        Köp <a class="link" href="https://www.varmlandstrafik.se/">busskort</a> (2 veckor)
                     </li>
                     <li class="list-group-item bg-dark">
-                        Gå med i <a class="link" href="http://www.karlstadstudentkar.se/">Karlstads studentkår</a> (flera fester behöver medlemskapet)
+                        Gå med i <a class="link" href="http://www.karlstadstudentkar.se/">Karlstad Studentkår</a> (flera fester behöver medlemskapet)
                     </li>
                     <li class="list-group-item bg-dark">
                         Kläder efter väder
