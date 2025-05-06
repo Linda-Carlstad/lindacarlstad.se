@@ -11,8 +11,8 @@
                 </a>
                 <br class="d-none d-md-block">
                 <br class="d-none d-md-block">
-                <a data-toggle="tooltip" data-placement="right" title="Karlstad studentkår" rel="noreferrer" target="_blank" aria-label="Karlstad studentkår" class="footer-img" href="https://karlstadstudentkar.se/">
-                    <img class="img-fluid logo" src="https://karlstadstudentkar.se/app/uploads/2019/04/KS_logotyp_ljusgron.svg" alt="Karlstad studentkår logga">
+                <a data-toggle="tooltip" data-placement="right" title="Karlstad Studentkår" rel="noreferrer" target="_blank" aria-label="Karlstad Studentkår" class="footer-img" href="https://karlstadstudentkar.se/">
+                    <img class="img-fluid logo" src="https://karlstadstudentkar.se/app/uploads/2019/04/KS_logotyp_ljusgron.svg" alt="Karlstad Studentkår logga">
                 </a>
             </div>
             <div class="col-md-3">

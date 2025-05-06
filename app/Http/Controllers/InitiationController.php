@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Alkhachatryan\LaravelLoggable\Facades\Loggable;
+use LindaCarlstad\LaravelLoggable\Facades\Loggable;
 use App\Initiation;
 use App\InitiationDay;
 use App\InitiationKeyPerson;

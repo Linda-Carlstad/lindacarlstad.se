@@ -14,7 +14,7 @@
             <div class="text-block">
                 <h3>{{ config( 'app.name' ) }}</h3>
                 <p>
-                    LINDA är en studentförening under Karlstads Universitet. 
+                    LINDA är en studentförening under Karlstads universitet. 
                     LINDA bevakar ditt intresse som student, såväl att du har det bra på
                     universitet som på fritiden, utbildningen kommer inte alltid att vara
                     rolig eller lätt och då hoppas vi att vi kan vara till din hjälp med studierna
@@ -39,7 +39,7 @@
             <div class="text-block">
                 <h3>Styrelsen</h3>
                 <p>
-                    LINDA är en studentförening under Karlstads Universitet
+                    LINDA är en studentförening under Karlstads universitet
                     LINDA bevakar ditt intresse som student, såväl att du har det bra på
                     universitet som på fritiden, utbildningen kommer inte alltid att vara
                     rolig eller lätt och då hoppas vi att vi kan vara till din hjälp med studierna

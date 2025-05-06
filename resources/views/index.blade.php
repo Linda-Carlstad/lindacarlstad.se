@@ -2,7 +2,7 @@
 @extends('layouts.app')
 @section('content')
     <header class="hero">
-        <img class="bg-img" src="{{ asset('/img/hero-image-2024-nollning.jpg' ) }}" alt="Lindaiter, faddrar och nollor på Intro dagen">
+        <img class="bg-img" src="{{ asset('/img/hero-image-2024-nollning.jpg' ) }}" alt="Lindaiter, faddrar och nollor på Faddrar VS Nollor år 2023">
         <div class="holder text-center">
             <img class="logo" src="{{ asset('/img/small-logo.svg' ) }}" alt="Linda Carlstad logo">
             <h1>{{ config( 'app.name' ) }}</h1>
@@ -37,9 +37,9 @@
                         <br class="d-block d-md-none">
                         <div class="col-md-7 d-flex align-items-center justify-content-center">
                             <div class="text-block">
-                                <h3>Föreningen</h3>
+                                <h3>Om Föreningen</h3>
                                 <p>
-                                    LINDA är en studentförening under Karlstads Universitet. 
+                                    LINDA är en studentförening under Karlstads universitet. 
                                     LINDA bevakar ditt intresse som student, såväl att du har det bra på
                                     universitet som på fritiden, utbildningen kommer inte alltid att vara
                                     rolig eller lätt och då hoppas vi att vi kan vara till din hjälp med studierna
@@ -60,12 +60,12 @@
                             <div class="text-block">
                                 <h3>Tentahub</h3>
                                 <p>
-                                    Som student vid Karlstads Universitet kan du köpa svaren på en tenta
+                                    Som student vid Karlstads universitet kan du köpa svaren på en tenta
                                     via biblioteket för 50 KR.
                                     <br>
                                     <b>Det tycker vi är dumt!</b>
                                     <br>
-                                    I Linda Vill vi att svaren på tentorna ska finnas tillgängliga gratis
+                                    I LINDA Vill vi att svaren på tentorna ska finnas tillgängliga gratis
                                     för alla våra medlemmar och för att lyckas med det behöver vi din hjälp!
                                 </p>
                                 <a class="btn btn-grey btn-expand" href="http://tenta.lindacarlstad.se/linda"
@@ -86,7 +86,7 @@
                                 <h3>Studentpuben Bunkern</h3>
                                 <p>
                                     Bunkern är Karlstads äldsta studentpub av studenter, för studenter på
-                                    Karlstad Universitet. Endast en kort promenad från Universitetet i
+                                    Karlstads universitet. Endast en kort promenad från Universitetet i
                                     bostadsområdet Duvkulla. Placerat i ett cykelförråd som byggdes om för
                                     många år sedan till en mysig studentpub med bra priser.
                                 </p>

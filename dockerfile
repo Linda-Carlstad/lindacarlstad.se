@@ -1,4 +1,4 @@
-FROM php:7.3
+FROM php:8.2
 
 RUN apt update
 RUN apt install -y \
@@ -11,7 +11,8 @@ RUN apt install -y \
         unzip \
         zip \
         sassc \
-        webpack
+        webpack \
+        telnet
 
 # Install PHP extensions
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd

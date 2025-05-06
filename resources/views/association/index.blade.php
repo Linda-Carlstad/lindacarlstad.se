@@ -6,7 +6,7 @@
     <hr>
     <div class="col-12">
         <p>
-            Här finner du alla studentföreningar på Karlstads Universitet.
+            Här finner du alla studentföreningar på Karlstads universitet.
             <br><br>
             Antal studentföreningar: {{ $associations->count() }}
         </p>

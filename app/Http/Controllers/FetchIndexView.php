@@ -31,7 +31,9 @@ class FetchIndexView extends Controller
         {
             session()->push('event', $event);
         }
-        session()->put( 'initiation', $initiation->year );
+        if ($initiation != null) {
+            session()->put( 'initiation', $initiation->year );
+        }
 
         return view( 'index' )->with( 'sponsors', $sponsors )
             ->with( 'events', $events )->with( 'initiation', $initiation );
